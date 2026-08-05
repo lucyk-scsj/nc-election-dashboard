@@ -12,18 +12,20 @@
 <script src="vendor/chart.umd.js"></script>
 <style>
   :root{
-    /* SCSJ brand palette, from Brand Guidelines 2026 p.31 */
-    --ink:#000000;
-    --ink-2:#1C1B19;
-    --paper:#F2F0EE;
-    --paper-dim:#9E9B94;
-    --gold:#F5CF51;
-    --gold-dim:#D79925;
-    --teal:#72AE82;
-    --teal-dim:#2F6C3F;
-    --brick:#D05744;
-    --indigo:#7168D9;
-    --line:#424345;
+    /* SCSJ brand palette, light variant, from Brand Guidelines 2026 p.31 */
+    --ink:#F2F0EE;
+    --ink-2:#FFFFFF;
+    --paper:#1C1B19;
+    --paper-dim:#5A5854;
+    --gold:#894607;
+    --gold-fill:#F5CF51;
+    --teal:#2F6C3F;
+    --teal-fill:#72AE82;
+    --brick:#872921;
+    --brick-fill:#D05744;
+    --indigo:#4F27D3;
+    --indigo-fill:#7168D9;
+    --line:#D6D1CD;
   }
   *{box-sizing:border-box;}
   body{
@@ -133,7 +135,7 @@
   .kpi-value.gold{ color:var(--gold); }
   .kpi-value.teal{ color:var(--teal); }
   .kpi-value.brick{ color:var(--brick); }
-  .brand-logo{ height:40px; width:auto; display:block; margin-bottom:10px; }
+  .brand-logo{ height:26px; width:auto; display:block; margin-bottom:12px; }
   .kpi-sub{ margin-top:8px; font-size:12px; color:var(--paper-dim); }
 
   /* ---------- Section headers ---------- */
@@ -224,7 +226,7 @@
 
 <header class="masthead">
   <div>
-    <img src="assets/scsj-logo.svg" alt="Southern Coalition for Social Justice" class="brand-logo">
+    <img src="assets/scsj-wordmark-black.png" alt="Southern Coalition for Social Justice" class="brand-logo">
     <h1 class="masthead-title">2026 NC General Election <span class="accent">Data Dashboard</span></h1>
     <p class="masthead-sub">
       Daily data on absentee, same-day-registration, and provisional ballots
@@ -255,15 +257,15 @@
 
 <script>
 const PALETTE = {
-  paper: '#F2F0EE',
-  paperDim: '#9E9B94',
+  paper: '#1C1B19',
+  paperDim: '#8A8781',
   gold: '#F5CF51',
-  goldDim: '#D79925',
+  goldText: '#894607',
   teal: '#72AE82',
   tealDim: '#2F6C3F',
   brick: '#D05744',
   indigo: '#7168D9',
-  line: 'rgba(242,240,238,0.14)'
+  line: 'rgba(28,27,25,0.12)'
 };
 const CHART_AVAILABLE = typeof Chart !== 'undefined';
 if (CHART_AVAILABLE) {
@@ -345,7 +347,7 @@ function lineChart(ctx, labels, series){
 function doughnutChart(ctx, labels, data, colors){
   return new Chart(ctx, {
     type: 'doughnut',
-    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: '#16233D', borderWidth: 2 }] },
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: '#FFFFFF', borderWidth: 2 }] },
     options: {
       responsive:true, maintainAspectRatio:false,
       cutout:'62%',
