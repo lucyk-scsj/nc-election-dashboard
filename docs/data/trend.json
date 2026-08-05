@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "date": "2026-08-05",
+    "pct_curable": 0.03,
+    "curable": 82,
+    "cured": 107,
+    "sdr_failed": 0,
+    "provisional_total": 10700,
+    "provisional_approved": 0
+  }
+]
