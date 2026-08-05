@@ -1,6 +1,6 @@
 {
-  "election_date": "2025-11-04",
-  "election_label": "2025 Nov 4 Election (TEST)",
+  "election_date": "2026-11-03",
+  "election_label": "2026 Nov 3 Election",
 
   "_comment_status_lists": "These lists classify the raw values NCSBE uses in 'ballot_rtn_status' and 'mail_veri_status'. They are best-guess defaults based on prior NC general elections (2024/2025). VERIFY these against the real file once it goes live for this election -- run `python scripts/build_data.py --inspect` and check docs/data/status_breakdown_debug.json, then edit the lists below to match exactly what NCSBE is using this cycle.",
 
