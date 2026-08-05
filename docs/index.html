@@ -3,21 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NC Ballot Ledger — 2026 Election Data Dashboard</title>
+<title>2026 NC General Election Data Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Brand note: SCSJ's actual typefaces are VTC Martin (headlines) and ABC Marist (body) --
+     both are licensed fonts not available on a free CDN. Anton + Source Serif 4 are free
+     stand-ins with a similar character. Swap in real @font-face files here if/when available. -->
 <script src="vendor/chart.umd.js"></script>
 <style>
   :root{
-    --ink:#0F1B2E;
-    --ink-2:#16233D;
-    --paper:#F4F1E6;
-    --paper-dim:#C9C6BA;
-    --gold:#D2A23D;
-    --gold-dim:#8A6E2E;
-    --teal:#3E9C82;
-    --brick:#C4573F;
-    --line:#2A3A57;
+    /* SCSJ brand palette, from Brand Guidelines 2026 p.31 */
+    --ink:#000000;
+    --ink-2:#1C1B19;
+    --paper:#F2F0EE;
+    --paper-dim:#9E9B94;
+    --gold:#F5CF51;
+    --gold-dim:#D79925;
+    --teal:#72AE82;
+    --teal-dim:#2F6C3F;
+    --brick:#D05744;
+    --indigo:#7168D9;
+    --line:#424345;
   }
   *{box-sizing:border-box;}
   body{
@@ -40,7 +46,7 @@
     gap:16px;
   }
   .masthead-title{
-    font-family:'Fraunces',serif;
+    font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:0.01em;
     font-weight:700;
     font-size:clamp(28px,4vw,42px);
     letter-spacing:-0.01em;
@@ -50,9 +56,10 @@
   .masthead-sub{
     margin:6px 0 0;
     color:var(--paper-dim);
-    font-size:14px;
+    font-family:'Source Serif 4',serif;
+    font-size:15px;
     max-width:560px;
-    line-height:1.5;
+    line-height:1.55;
   }
   .masthead-meta{
     text-align:right;
@@ -88,12 +95,12 @@
     margin:40px auto;
   }
   .empty-state h2{
-    font-family:'Fraunces',serif;
+    font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:0.01em;
     font-weight:600;
     font-size:22px;
     margin:0 0 12px;
   }
-  .empty-state p{ color:var(--paper-dim); line-height:1.6; font-size:14px; }
+  .empty-state p{ color:var(--paper-dim); font-family:'Source Serif 4',serif; line-height:1.6; font-size:15px; }
 
   /* ---------- KPI strip ---------- */
   .kpi-strip{
@@ -126,6 +133,7 @@
   .kpi-value.gold{ color:var(--gold); }
   .kpi-value.teal{ color:var(--teal); }
   .kpi-value.brick{ color:var(--brick); }
+  .brand-logo{ height:40px; width:auto; display:block; margin-bottom:10px; }
   .kpi-sub{ margin-top:8px; font-size:12px; color:var(--paper-dim); }
 
   /* ---------- Section headers ---------- */
@@ -139,7 +147,7 @@
     padding-bottom:8px;
   }
   .section-head h2{
-    font-family:'Fraunces',serif;
+    font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:0.01em;
     font-weight:600;
     font-size:18px;
     margin:0;
@@ -203,7 +211,8 @@
     border-top:1px solid var(--line);
     padding:24px 32px 40px;
     color:var(--paper-dim);
-    font-size:12px;
+    font-family:'Source Serif 4',serif;
+    font-size:13px;
     line-height:1.7;
     max-width:1180px;
     margin:0 auto;
@@ -215,11 +224,12 @@
 
 <header class="masthead">
   <div>
-    <h1 class="masthead-title">NC Ballot <span class="accent">Ledger</span></h1>
+    <img src="assets/scsj-logo.svg" alt="Southern Coalition for Social Justice" class="brand-logo">
+    <h1 class="masthead-title">2026 NC General Election <span class="accent">Data Dashboard</span></h1>
     <p class="masthead-sub">
-      Actionable absentee, same-day-registration, and provisional ballot data
-      for North Carolina — updated daily from the State Board of Elections.
-      Built to surface what's still fixable, not just what's final.
+      Daily data on absentee, same-day-registration, and provisional ballots
+      in North Carolina. Updated automatically from the State Board of
+      Elections to show what's still fixable, not just what's final.
     </p>
   </div>
   <div class="masthead-meta">
@@ -245,12 +255,15 @@
 
 <script>
 const PALETTE = {
-  paper: '#F4F1E6',
-  paperDim: '#8B8A80',
-  gold: '#D2A23D',
-  teal: '#3E9C82',
-  brick: '#C4573F',
-  line: 'rgba(244,241,230,0.12)'
+  paper: '#F2F0EE',
+  paperDim: '#9E9B94',
+  gold: '#F5CF51',
+  goldDim: '#D79925',
+  teal: '#72AE82',
+  tealDim: '#2F6C3F',
+  brick: '#D05744',
+  indigo: '#7168D9',
+  line: 'rgba(242,240,238,0.14)'
 };
 const CHART_AVAILABLE = typeof Chart !== 'undefined';
 if (CHART_AVAILABLE) {
@@ -446,6 +459,17 @@ function renderDashboard(latest, trend){
     </section>
   `;
 
+  // county table (independent of chart library -- always populate this)
+  const tbody = document.querySelector('#county-table tbody');
+  const counties = (a.by_county || []).slice().sort((x,y) => (y.curable||0)-(x.curable||0)).slice(0,15);
+  tbody.innerHTML = counties.map(c => `
+    <tr>
+      <td>${c.county_desc}</td>
+      <td>${fmt(c.returned)}</td>
+      <td>${fmt(c.accepted)}</td>
+      <td>${fmt(c.curable)}</td>
+    </tr>`).join('') || '<tr><td colspan="4">No county data yet.</td></tr>';
+
   if (!CHART_AVAILABLE){
     document.querySelectorAll('.chart-wrap').forEach(el => {
       el.innerHTML = '<p style="color:var(--paper-dim); font-size:12px; padding-top:40px; text-align:center;">Chart library didn\'t load (likely blocked by network/ad-blocker) — numbers above and the table below are still accurate.</p>';
@@ -471,7 +495,7 @@ function renderDashboard(latest, trend){
   doughnutChart(document.getElementById('chart-status'),
     ['Accepted','Curable','Cured','Rejected / Spoiled'],
     [a.accepted||0, a.curable||0, a.cured||0, a.rejected_or_spoiled||0],
-    [PALETTE.teal, PALETTE.gold, '#6FB6A3', PALETTE.brick]);
+    [PALETTE.teal, PALETTE.gold, PALETTE.tealDim, PALETTE.brick]);
 
   // SDR funnel
   barChart(document.getElementById('chart-sdr'),
@@ -498,18 +522,7 @@ function renderDashboard(latest, trend){
   barChart(document.getElementById('chart-gender'), gender.map(r=>r[0]), gender.map(r=>r[1]), PALETTE.teal);
 
   const party = topEntries((a.demographics||{}).party, 6);
-  barChart(document.getElementById('chart-party'), party.map(r=>r[0]), party.map(r=>r[1]), PALETTE.paper);
-
-  // county table
-  const tbody = document.querySelector('#county-table tbody');
-  const counties = (a.by_county || []).slice().sort((x,y) => (y.curable||0)-(x.curable||0)).slice(0,15);
-  tbody.innerHTML = counties.map(c => `
-    <tr>
-      <td>${c.county_desc}</td>
-      <td>${fmt(c.returned)}</td>
-      <td>${fmt(c.accepted)}</td>
-      <td>${fmt(c.curable)}</td>
-    </tr>`).join('') || '<tr><td colspan="4">No county data yet.</td></tr>';
+  barChart(document.getElementById('chart-party'), party.map(r=>r[0]), party.map(r=>r[1]), PALETTE.indigo);
 }
 
 (async function init(){
