@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NC Ballot Ledger — 2026 Election Data Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#0F1B2E;
+    --ink-2:#16233D;
+    --paper:#F4F1E6;
+    --paper-dim:#C9C6BA;
+    --gold:#D2A23D;
+    --gold-dim:#8A6E2E;
+    --teal:#3E9C82;
+    --brick:#C4573F;
+    --line:#2A3A57;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold);}
+
+  /* ---------- Masthead ---------- */
+  header.masthead{
+    border-bottom:1px solid var(--line);
+    padding:28px 32px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .masthead-title{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:clamp(28px,4vw,42px);
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .masthead-title .accent{ color:var(--gold); }
+  .masthead-sub{
+    margin:6px 0 0;
+    color:var(--paper-dim);
+    font-size:14px;
+    max-width:560px;
+    line-height:1.5;
+  }
+  .masthead-meta{
+    text-align:right;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--paper-dim);
+  }
+  .status-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:4px 10px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .status-dot{ width:7px; height:7px; border-radius:50%; background:var(--teal); }
+  .status-pill.waiting .status-dot{ background:var(--gold); }
+
+  main{ max-width:1180px; margin:0 auto; padding:32px; }
+
+  /* ---------- Empty state ---------- */
+  .empty-state{
+    border:1px dashed var(--line);
+    border-radius:4px;
+    padding:48px 32px;
+    text-align:center;
+    max-width:640px;
+    margin:40px auto;
+  }
+  .empty-state h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:22px;
+    margin:0 0 12px;
+  }
+  .empty-state p{ color:var(--paper-dim); line-height:1.6; font-size:14px; }
+
+  /* ---------- KPI strip ---------- */
+  .kpi-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  .kpi{
+    background:var(--ink);
+    padding:20px 18px;
+    position:relative;
+  }
+  .kpi-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--paper-dim);
+    margin-bottom:10px;
+  }
+  .kpi-value{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:34px;
+    line-height:1;
+    color:var(--paper);
+  }
+  .kpi-value.gold{ color:var(--gold); }
+  .kpi-value.teal{ color:var(--teal); }
+  .kpi-value.brick{ color:var(--brick); }
+  .kpi-sub{ margin-top:8px; font-size:12px; color:var(--paper-dim); }
+
+  /* ---------- Section headers ---------- */
+  .section{ margin-bottom:44px; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:16px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+  }
+  .section-head h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:18px;
+    margin:0;
+  }
+  .section-head .section-note{
+    font-size:12px;
+    color:var(--paper-dim);
+  }
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:24px;
+  }
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  @media (max-width:840px){
+    .grid-2, .grid-3{ grid-template-columns:1fr; }
+  }
+
+  .panel{
+    border:1px solid var(--line);
+    background:var(--ink-2);
+    padding:18px 20px 8px;
+    border-radius:2px;
+  }
+  .panel h3{
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--paper-dim);
+    margin:0 0 12px;
+  }
+  .chart-wrap{ position:relative; height:260px; }
+  .chart-wrap.tall{ height:340px; }
+
+  table.data-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  table.data-table th, table.data-table td{
+    text-align:left;
+    padding:8px 6px;
+    border-bottom:1px solid var(--line);
+  }
+  table.data-table th{
+    color:var(--paper-dim);
+    font-weight:500;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:.05em;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:24px 32px 40px;
+    color:var(--paper-dim);
+    font-size:12px;
+    line-height:1.7;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  footer a{ text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div>
+    <h1 class="masthead-title">NC Ballot <span class="accent">Ledger</span></h1>
+    <p class="masthead-sub">
+      Actionable absentee, same-day-registration, and provisional ballot data
+      for North Carolina — updated daily from the State Board of Elections.
+      Built to surface what's still fixable, not just what's final.
+    </p>
+  </div>
+  <div class="masthead-meta">
+    <div id="status-pill" class="status-pill waiting"><span class="status-dot"></span>LOADING</div>
+    <div id="election-label">—</div>
+    <div id="last-updated">—</div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- populated by dashboard.js -->
+</main>
+
+<footer>
+  Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data" target="_blank" rel="noopener">NC State Board of Elections — Absentee &amp; Provisional Data</a>.
+  Figures are aggregate counts only; no individual voter records are stored or displayed on this page.
+  &ldquo;Curable&rdquo; ballots are returned ballots currently pending a fixable issue (e.g. missing witness
+  information or signature) rather than accepted, cured, or rejected — see the methodology note in this
+  project&rsquo;s README for exactly how each category is defined and how to recalibrate it against NCSBE's
+  current status codes.
+  <div id="generated-note" style="margin-top:8px;"></div>
+</footer>
+
+<script>
+const PALETTE = {
+  paper: '#F4F1E6',
+  paperDim: '#8B8A80',
+  gold: '#D2A23D',
+  teal: '#3E9C82',
+  brick: '#C4573F',
+  line: 'rgba(244,241,230,0.12)'
+};
+Chart.defaults.color = PALETTE.paperDim;
+Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+Chart.defaults.font.size = 11;
+Chart.defaults.borderColor = PALETTE.line;
+
+function fmt(n){
+  if (n === null || n === undefined) return '—';
+  return Number(n).toLocaleString('en-US');
+}
+function pctFmt(n){
+  if (n === null || n === undefined) return '—';
+  return n.toFixed(1) + '%';
+}
+
+async function loadJSON(path){
+  const res = await fetch(path, {cache: 'no-store'});
+  if (!res.ok) throw new Error('fetch failed: ' + path);
+  return res.json();
+}
+
+function topEntries(obj, n){
+  if (!obj) return [];
+  return Object.entries(obj)
+    .filter(([k]) => k && k !== 'NAN' && k.trim() !== '')
+    .sort((a,b) => b[1]-a[1])
+    .slice(0, n);
+}
+
+function barChart(ctx, labels, data, color){
+  return new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data, backgroundColor: color, borderRadius: 2, maxBarThickness: 34 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display:false } },
+      scales: {
+        x: { grid: { display:false } },
+        y: { grid: { color: PALETTE.line }, beginAtZero:true }
+      }
+    }
+  });
+}
+
+function horizontalBarChart(ctx, labels, data, color){
+  return new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data, backgroundColor: color, borderRadius: 2 }] },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display:false } },
+      scales: {
+        x: { grid: { color: PALETTE.line }, beginAtZero:true },
+        y: { grid: { display:false } }
+      }
+    }
+  });
+}
+
+function lineChart(ctx, labels, series){
+  return new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: series },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position:'bottom', labels:{ boxWidth:10, boxHeight:10 } } },
+      scales: {
+        x: { grid: { display:false } },
+        y: { grid: { color: PALETTE.line }, beginAtZero:true }
+      }
+    }
+  });
+}
+
+function doughnutChart(ctx, labels, data, colors){
+  return new Chart(ctx, {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: '#16233D', borderWidth: 2 }] },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      cutout:'62%',
+      plugins:{ legend:{ position:'bottom', labels:{ boxWidth:10, boxHeight:10, font:{ family:"'Inter'", size:11 } } } }
+    }
+  });
+}
+
+function renderEmptyState(latest){
+  const main = document.getElementById('main');
+  main.innerHTML = `
+    <div class="empty-state">
+      <h2>No data published yet</h2>
+      <p>${latest.note || 'NCSBE has not yet published files for this election.'}</p>
+      <p style="margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:12px;">
+        Election date on file: ${latest.election_date}
+      </p>
+    </div>`;
+}
+
+function renderDashboard(latest, trend){
+  const a = latest.absentee || {};
+  const p = latest.provisional || {};
+  const sdr = a.sdr || {};
+  const main = document.getElementById('main');
+
+  main.innerHTML = `
+    <div class="kpi-strip">
+      <div class="kpi">
+        <div class="kpi-label">Curable mail ballots</div>
+        <div class="kpi-value gold">${pctFmt(a.pct_curable_of_returned)}</div>
+        <div class="kpi-sub">${fmt(a.curable)} of ${fmt(a.total_returned)} returned</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">SDR failed verification</div>
+        <div class="kpi-value brick">${fmt(sdr.failed_verification)}</div>
+        <div class="kpi-sub">${pctFmt(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">SDR cured</div>
+        <div class="kpi-value teal">${fmt(sdr.cured)}</div>
+        <div class="kpi-sub">of ${fmt(sdr.total_sdr_ballots)} same-day registrations</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Absentee cured</div>
+        <div class="kpi-value teal">${fmt(a.cured)}</div>
+        <div class="kpi-sub">across all return types</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Provisionals approved</div>
+        <div class="kpi-value">${pctFmt(p.pct_approved)}</div>
+        <div class="kpi-sub">${fmt(p.approved)} of ${fmt(p.total)} cast</div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Curable ballots over time</h2>
+        <span class="section-note">daily snapshots, statewide</span>
+      </div>
+      <div class="panel">
+        <div class="chart-wrap tall"><canvas id="chart-trend"></canvas></div>
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <h3>Ballot status breakdown</h3>
+        <div class="chart-wrap"><canvas id="chart-status"></canvas></div>
+      </div>
+      <div class="panel">
+        <h3>Same-day registration funnel</h3>
+        <div class="chart-wrap"><canvas id="chart-sdr"></canvas></div>
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <h3>Provisional ballot outcomes</h3>
+        <div class="chart-wrap"><canvas id="chart-provisional"></canvas></div>
+      </div>
+      <div class="panel">
+        <h3>Top reasons provisionals weren't counted</h3>
+        <div class="chart-wrap tall"><canvas id="chart-reasons"></canvas></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Demographics of returned absentee ballots</h2>
+        <span class="section-note">race · gender · party</span>
+      </div>
+      <div class="grid-3">
+        <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-race"></canvas></div></div>
+        <div class="panel"><h3>By gender</h3><div class="chart-wrap"><canvas id="chart-gender"></canvas></div></div>
+        <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-party"></canvas></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>By county</h2>
+        <span class="section-note">top 15 by curable ballot count</span>
+      </div>
+      <div class="panel">
+        <table class="data-table" id="county-table">
+          <thead><tr><th>County</th><th>Returned</th><th>Accepted</th><th>Curable</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  `;
+
+  // trend
+  if (trend && trend.length){
+    lineChart(document.getElementById('chart-trend'),
+      trend.map(d => d.date),
+      [
+        { label:'Curable', data: trend.map(d => d.curable), borderColor: PALETTE.gold, backgroundColor: PALETTE.gold, tension:.25 },
+        { label:'Cured', data: trend.map(d => d.cured), borderColor: PALETTE.teal, backgroundColor: PALETTE.teal, tension:.25 },
+        { label:'SDR failed verification', data: trend.map(d => d.sdr_failed), borderColor: PALETTE.brick, backgroundColor: PALETTE.brick, tension:.25 }
+      ]);
+  } else {
+    document.getElementById('chart-trend').parentElement.innerHTML =
+      '<p style="color:var(--paper-dim); font-size:13px; padding-top:60px; text-align:center;">Trend builds up day by day — check back after a few pipeline runs.</p>';
+  }
+
+  // status breakdown
+  doughnutChart(document.getElementById('chart-status'),
+    ['Accepted','Curable','Cured','Rejected / Spoiled'],
+    [a.accepted||0, a.curable||0, a.cured||0, a.rejected_or_spoiled||0],
+    [PALETTE.teal, PALETTE.gold, '#6FB6A3', PALETTE.brick]);
+
+  // SDR funnel
+  barChart(document.getElementById('chart-sdr'),
+    ['Total SDR ballots','Failed verification','Cured'],
+    [sdr.total_sdr_ballots||0, sdr.failed_verification||0, sdr.cured||0],
+    [PALETTE.paperDim, PALETTE.brick, PALETTE.teal]);
+
+  // provisional outcomes
+  barChart(document.getElementById('chart-provisional'),
+    ['Approved','Not counted','Partial'],
+    [p.approved||0, p.not_counted||0, p.partial||0],
+    [PALETTE.teal, PALETTE.brick, PALETTE.gold]);
+
+  // provisional reasons
+  const reasons = topEntries(p.not_counted_reasons, 8);
+  horizontalBarChart(document.getElementById('chart-reasons'),
+    reasons.map(r => r[0]), reasons.map(r => r[1]), PALETTE.brick);
+
+  // demographics
+  const race = topEntries((a.demographics||{}).race, 8);
+  barChart(document.getElementById('chart-race'), race.map(r=>r[0]), race.map(r=>r[1]), PALETTE.gold);
+
+  const gender = topEntries((a.demographics||{}).gender, 6);
+  barChart(document.getElementById('chart-gender'), gender.map(r=>r[0]), gender.map(r=>r[1]), PALETTE.teal);
+
+  const party = topEntries((a.demographics||{}).party, 6);
+  barChart(document.getElementById('chart-party'), party.map(r=>r[0]), party.map(r=>r[1]), PALETTE.paper);
+
+  // county table
+  const tbody = document.querySelector('#county-table tbody');
+  const counties = (a.by_county || []).slice().sort((x,y) => (y.curable||0)-(x.curable||0)).slice(0,15);
+  tbody.innerHTML = counties.map(c => `
+    <tr>
+      <td>${c.county_desc}</td>
+      <td>${fmt(c.returned)}</td>
+      <td>${fmt(c.accepted)}</td>
+      <td>${fmt(c.curable)}</td>
+    </tr>`).join('') || '<tr><td colspan="4">No county data yet.</td></tr>';
+}
+
+(async function init(){
+  try{
+    const latest = await loadJSON('data/latest.json');
+    const pill = document.getElementById('status-pill');
+    document.getElementById('election-label').textContent = latest.election_label || '';
+    document.getElementById('last-updated').textContent = 'Updated ' + new Date(latest.generated_at).toLocaleString('en-US', { dateStyle:'medium', timeStyle:'short' });
+    document.getElementById('generated-note').textContent = 'Last pipeline run: ' + latest.generated_at;
+
+    if (latest.status === 'no_data_yet'){
+      pill.classList.add('waiting');
+      pill.innerHTML = '<span class="status-dot"></span>AWAITING DATA';
+      renderEmptyState(latest);
+      return;
+    }
+
+    pill.classList.remove('waiting');
+    pill.innerHTML = '<span class="status-dot"></span>' + (latest.status === 'partial' ? 'PARTIAL DATA' : 'LIVE');
+
+    let trend = [];
+    try { trend = await loadJSON('data/trend.json'); } catch(e) { /* fine if missing */ }
+
+    renderDashboard(latest, trend);
+  } catch(err){
+    document.getElementById('main').innerHTML =
+      '<div class="empty-state"><h2>Couldn\'t load data</h2><p>' + err.message + '</p></div>';
+    console.error(err);
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.{
+  "election_date": "2026-11-03",
+  "election_label": "2026 General Election",
+
+  "_comment_status_lists": "These lists classify the raw values NCSBE uses in 'ballot_rtn_status' and 'mail_veri_status'. They are best-guess defaults based on prior NC general elections (2024/2025). VERIFY these against the real file once it goes live for this election -- run `python scripts/build_data.py --inspect` and check docs/data/status_breakdown_debug.json, then edit the lists below to match exactly what NCSBE is using this cycle.",
+
+  "accepted_statuses": ["ACCEPTED", "ACCEPTED - CURED"],
+
+  "curable_statuses": [
+    "PENDING",
+    "PENDING CURE",
+    "WITNESS INFO INCOMPLETE",
+    "SIGNATURE MISSING"
+  ],
+
+  "cured_statuses": ["ACCEPTED - CURED", "CURED"],
+
+  "spoiled_or_rejected_statuses": [
+    "SPOILED",
+    "SPOILED - EV",
+    "RETURNED UNDELIVERABLE",
+    "REJECTED"
+  ],
+
+  "sdr_failed_verification_statuses": ["PENDING", "FAILED"],
+  "sdr_verified_statuses": ["VERIFIED", "CONFIRMED"],
+
+  "provisional_cured_reasons_note": "Provisional 'pv_status' values observed in real files: APPROVED, NOT COUNTED, PARTIAL. No further mapping needed -- these are used directly.",
+
+  "counties": "all"
+}
