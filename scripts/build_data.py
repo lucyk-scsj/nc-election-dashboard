@@ -66,8 +66,14 @@ def fetch_absentee_df(cfg):
     with zipfile.ZipFile(io.BytesIO(raw)) as zf:
         # the zip contains one CSV named absentee_<date>.csv
         member = next(n for n in zf.namelist() if n.lower().endswith(".csv"))
-        with zf.open(member) as f:
-            df = pd.read_csv(f, dtype=str, low_memory=False)
+        csv_bytes = zf.read(member)
+    # NCSBE's files aren't guaranteed clean UTF-8 (stray Windows-1252 bytes
+    # show up in name/address fields). Decode leniently rather than crash.
+    try:
+        text = csv_bytes.decode("utf-8")
+    except UnicodeDecodeError:
+        text = csv_bytes.decode("cp1252", errors="replace")
+    df = pd.read_csv(io.StringIO(text), dtype=str, low_memory=False)
     df.columns = [c.strip().lower() for c in df.columns]
     cols_present = [c for c in keep_cols if c in df.columns]
     df = df[cols_present].copy()
