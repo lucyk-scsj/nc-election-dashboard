@@ -6,7 +6,7 @@
 <title>NC Ballot Ledger — 2026 Election Data Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="vendor/chart.umd.js"></script>
 <style>
   :root{
     --ink:#0F1B2E;
@@ -252,10 +252,13 @@ const PALETTE = {
   brick: '#C4573F',
   line: 'rgba(244,241,230,0.12)'
 };
-Chart.defaults.color = PALETTE.paperDim;
-Chart.defaults.font.family = "'IBM Plex Mono', monospace";
-Chart.defaults.font.size = 11;
-Chart.defaults.borderColor = PALETTE.line;
+const CHART_AVAILABLE = typeof Chart !== 'undefined';
+if (CHART_AVAILABLE) {
+  Chart.defaults.color = PALETTE.paperDim;
+  Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+  Chart.defaults.font.size = 11;
+  Chart.defaults.borderColor = PALETTE.line;
+}
 
 function fmt(n){
   if (n === null || n === undefined) return '—';
@@ -442,6 +445,13 @@ function renderDashboard(latest, trend){
       </div>
     </section>
   `;
+
+  if (!CHART_AVAILABLE){
+    document.querySelectorAll('.chart-wrap').forEach(el => {
+      el.innerHTML = '<p style="color:var(--paper-dim); font-size:12px; padding-top:40px; text-align:center;">Chart library didn\'t load (likely blocked by network/ad-blocker) — numbers above and the table below are still accurate.</p>';
+    });
+    return;
+  }
 
   // trend
   if (trend && trend.length){
