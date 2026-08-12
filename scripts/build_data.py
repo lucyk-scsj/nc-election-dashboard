@@ -17,7 +17,9 @@ Usage:
 import argparse
 import io
 import json
+import shutil
 import sys
+import tempfile
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -44,16 +46,26 @@ def election_date_parts(cfg):
     return d.strftime("%Y_%m_%d"), d.strftime("%Y%m%d")
 
 
-def fetch_bytes(url):
+def download_to_file(url, dest_path, timeout=180):
+    """Stream a URL to disk in chunks rather than loading it all into
+    memory at once -- needed for the large general-election files."""
     req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=60) as resp:
+    with urlopen(req, timeout=timeout) as resp, open(dest_path, "wb") as out:
+        shutil.copyfileobj(resp, out, length=1024 * 1024)
+
+
+def fetch_bytes(url, timeout=180):
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
 
 def fetch_absentee_df(cfg):
     """Statewide absentee file: one row per absentee/early-voting ballot.
-    Columns we keep (everything else, including name/address, is dropped
-    on load so no PII ever enters a pandas DataFrame we might persist)."""
+    Streams to disk and only loads the columns we need, since this file can
+    be huge in a general election (every early-voting ballot statewide) --
+    loading it fully into memory (raw bytes + decoded text + dataframe all
+    at once) is what was causing out-of-memory kills on large files."""
     us_date, compact_date = election_date_parts(cfg)
     url = f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us_date}/absentee_{compact_date}.zip"
     keep_cols = [
@@ -62,21 +74,35 @@ def fetch_absentee_df(cfg):
         "ballot_send_dt", "ballot_rtn_dt", "ballot_rtn_status",
         "sdr", "mail_veri_status",
     ]
-    raw = fetch_bytes(url)
-    with zipfile.ZipFile(io.BytesIO(raw)) as zf:
-        # the zip contains one CSV named absentee_<date>.csv
-        member = next(n for n in zf.namelist() if n.lower().endswith(".csv"))
-        csv_bytes = zf.read(member)
-    # NCSBE's files aren't guaranteed clean UTF-8 (stray Windows-1252 bytes
-    # show up in name/address fields). Decode leniently rather than crash.
-    try:
-        text = csv_bytes.decode("utf-8")
-    except UnicodeDecodeError:
-        text = csv_bytes.decode("cp1252", errors="replace")
-    df = pd.read_csv(io.StringIO(text), dtype=str, low_memory=False)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        zip_path = Path(tmpdir) / "absentee.zip"
+        download_to_file(url, zip_path)
+
+        with zipfile.ZipFile(zip_path) as zf:
+            member = next(n for n in zf.namelist() if n.lower().endswith(".csv"))
+            csv_path = Path(tmpdir) / "absentee.csv"
+            # stream the member out to disk rather than zf.read() (which
+            # would load the whole thing into memory at once)
+            with zf.open(member) as src, open(csv_path, "wb") as dst:
+                shutil.copyfileobj(src, dst, length=1024 * 1024)
+
+        # peek at the header to know which of our wanted columns actually
+        # exist in this file, so usecols doesn't error on a missing one
+        header = pd.read_csv(csv_path, nrows=0, encoding="utf-8",
+                              encoding_errors="replace")
+        header.columns = [c.strip().lower() for c in header.columns]
+        cols_present = [c for c in keep_cols if c in header.columns]
+
+        # encoding_errors="replace" handles the stray non-UTF-8 bytes NCSBE
+        # files sometimes have (e.g. curly quotes in name fields) without
+        # needing a second full-file decode pass
+        df = pd.read_csv(
+            csv_path, dtype=str, low_memory=False,
+            usecols=cols_present, encoding="utf-8", encoding_errors="replace",
+        )
+
     df.columns = [c.strip().lower() for c in df.columns]
-    cols_present = [c for c in keep_cols if c in df.columns]
-    df = df[cols_present].copy()
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
     return df
@@ -89,12 +115,20 @@ def fetch_provisional_df(cfg):
         "county_name", "pv_status", "pv_party", "pv_gender",
         "pv_ethnicity", "pv_race", "not_counted_reason",
     ]
-    raw = fetch_bytes(url)
-    text = raw.decode("utf-8-sig", errors="replace")
-    df = pd.read_csv(io.StringIO(text), sep="\t", dtype=str, low_memory=False)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        txt_path = Path(tmpdir) / "provisional.txt"
+        download_to_file(url, txt_path)
+
+        header = pd.read_csv(txt_path, sep="\t", nrows=0,
+                              encoding="utf-8-sig", encoding_errors="replace")
+        header.columns = [c.strip().lower() for c in header.columns]
+        cols_present = [c for c in keep_cols if c in header.columns]
+
+        df = pd.read_csv(
+            txt_path, sep="\t", dtype=str, low_memory=False,
+            usecols=cols_present, encoding="utf-8-sig", encoding_errors="replace",
+        )
     df.columns = [c.strip().lower() for c in df.columns]
-    cols_present = [c for c in keep_cols if c in df.columns]
-    df = df[cols_present].copy()
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
     return df
