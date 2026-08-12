@@ -93,22 +93,38 @@ def fetch_absentee_df(cfg):
                               encoding_errors="replace")
         header.columns = [c.strip().lower() for c in header.columns]
         cols_present = [c for c in keep_cols if c in header.columns]
+        print(f"[build_data] absentee file header columns: {list(header.columns)}")
+        print(f"[build_data] absentee columns matched: {cols_present}")
 
-        # encoding_errors="replace" handles the stray non-UTF-8 bytes NCSBE
-        # files sometimes have (e.g. curly quotes in name fields) without
-        # needing a second full-file decode pass
-        df = pd.read_csv(
-            csv_path, dtype=str, low_memory=False,
-            usecols=cols_present, encoding="utf-8", encoding_errors="replace",
-        )
+        if not cols_present:
+            # none of our expected column names matched -- rather than
+            # silently reading zero rows (a real pandas gotcha with an
+            # empty usecols list), fall back to reading everything so we
+            # don't lose data, and make the mismatch loud in the logs
+            print("[build_data] WARNING: no expected absentee columns matched "
+                  "the file header -- reading all columns as a fallback. "
+                  "Check the header columns printed above against config.json.")
+            df = pd.read_csv(csv_path, dtype=str, low_memory=False,
+                              encoding="utf-8", encoding_errors="replace")
+        else:
+            # encoding_errors="replace" handles the stray non-UTF-8 bytes NCSBE
+            # files sometimes have (e.g. curly quotes in name fields) without
+            # needing a second full-file decode pass
+            df = pd.read_csv(
+                csv_path, dtype=str, low_memory=False,
+                usecols=cols_present, encoding="utf-8", encoding_errors="replace",
+            )
 
     df.columns = [c.strip().lower() for c in df.columns]
+    # safety net: never keep known PII-bearing columns, even on the
+    # fallback path where we read everything
+    pii_cols = ["voter_last_name", "voter_first_name", "voter_full_name",
+                "full_name", "res_addr_street", "mail_addr_street",
+                "phone_num", "voter_reg_num", "ncid"]
+    df = df.drop(columns=[c for c in pii_cols if c in df.columns], errors="ignore")
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
     return df
-
-
-def fetch_provisional_df(cfg):
     us_date, compact_date = election_date_parts(cfg)
     url = f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us_date}/provisional_{compact_date}.txt"
     keep_cols = [
@@ -123,12 +139,24 @@ def fetch_provisional_df(cfg):
                               encoding="utf-8-sig", encoding_errors="replace")
         header.columns = [c.strip().lower() for c in header.columns]
         cols_present = [c for c in keep_cols if c in header.columns]
+        print(f"[build_data] provisional file header columns: {list(header.columns)}")
+        print(f"[build_data] provisional columns matched: {cols_present}")
 
-        df = pd.read_csv(
-            txt_path, sep="\t", dtype=str, low_memory=False,
-            usecols=cols_present, encoding="utf-8-sig", encoding_errors="replace",
-        )
+        if not cols_present:
+            print("[build_data] WARNING: no expected provisional columns matched "
+                  "the file header -- reading all columns as a fallback. "
+                  "Check the header columns printed above against config.json.")
+            df = pd.read_csv(txt_path, sep="\t", dtype=str, low_memory=False,
+                              encoding="utf-8-sig", encoding_errors="replace")
+        else:
+            df = pd.read_csv(
+                txt_path, sep="\t", dtype=str, low_memory=False,
+                usecols=cols_present, encoding="utf-8-sig", encoding_errors="replace",
+            )
     df.columns = [c.strip().lower() for c in df.columns]
+    pii_cols = ["full_name", "res_addr_street", "res_addr_csz", "phone_num",
+                "voter_reg_num", "reasonable_impediment_reason"]
+    df = df.drop(columns=[c for c in pii_cols if c in df.columns], errors="ignore")
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
     return df
@@ -186,6 +214,10 @@ def summarize_absentee(df, cfg):
         "by_county": by_county,
         "demographics": demographics,
         "raw_status_counts": status_counts,
+        "raw_mail_veri_status_counts": (
+            df["mail_veri_status"].value_counts().to_dict()
+            if "mail_veri_status" in df else {}
+        ),
     }
 
 
