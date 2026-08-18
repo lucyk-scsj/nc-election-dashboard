@@ -125,6 +125,9 @@ def fetch_absentee_df(cfg):
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
     return df
+
+
+def fetch_provisional_df(cfg):
     us_date, compact_date = election_date_parts(cfg)
     url = f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us_date}/provisional_{compact_date}.txt"
     keep_cols = [
