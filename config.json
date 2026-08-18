@@ -1,6 +1,6 @@
 {
-  "election_date": "2024-11-05",
-  "election_label": "2024 General Election (TEST)",
+  "election_date": "2026-11-03",
+  "election_label": "2026 General Election",
 
   "_comment_status_lists": "These lists classify the raw values NCSBE uses in 'ballot_rtn_status' and 'mail_veri_status'. They are best-guess defaults based on prior NC general elections (2024/2025). VERIFY these against the real file once it goes live for this election -- run `python scripts/build_data.py --inspect` and check docs/data/status_breakdown_debug.json, then edit the lists below to match exactly what NCSBE is using this cycle.",
 
@@ -17,11 +17,13 @@
 
   "spoiled_or_rejected_statuses": [
     "SPOILED",
-    "SPOILED - EV",
+    "SPOILED-EV",
     "RETURNED UNDELIVERABLE",
     "REJECTED"
   ],
 
+  "sdr_failed_verification_ballot_statuses": ["SDR-FAILED VERIFICATION"],
+  "_comment_sdr": "SDR failed/verified status lives in ballot_rtn_status, NOT mail_veri_status -- confirmed against real 2024 data. The mail_veri_status field tracks something different (voter record verification stage: NEW VOTER, 1ST VFY, 2ND VFY, DENIED, CONFIRM, etc.) and isn't currently used for the SDR KPI.",
   "sdr_failed_verification_statuses": ["PENDING", "FAILED"],
   "sdr_verified_statuses": ["VERIFIED", "CONFIRMED"],
 

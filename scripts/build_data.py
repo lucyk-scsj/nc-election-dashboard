@@ -180,8 +180,8 @@ def summarize_absentee(df, cfg):
 
     sdr_mask = df["sdr"].eq("Y") if "sdr" in df else pd.Series([False] * len(df))
     sdr_total = int(sdr_mask.sum())
-    sdr_failed = int((sdr_mask & df["mail_veri_status"].isin(
-        [s.upper() for s in cfg["sdr_failed_verification_statuses"]])).sum()) if "mail_veri_status" in df else 0
+    sdr_failed = int((sdr_mask & df["ballot_rtn_status"].isin(
+        [s.upper() for s in cfg.get("sdr_failed_verification_ballot_statuses", [])])).sum())
     sdr_cured = int((sdr_mask & df["ballot_rtn_status"].isin(
         [s.upper() for s in cfg["cured_statuses"]])).sum())
 
