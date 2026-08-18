@@ -127,6 +127,25 @@ def fetch_absentee_df(cfg):
     return df
 
 
+def detect_working_encoding(file_path, expected_keywords, sep="\t"):
+    """Some NCSBE files come out as UTF-16 rather than UTF-8. Try a few
+    encodings and use whichever one actually produces a header containing
+    at least one keyword we recognize, rather than assuming UTF-8."""
+    for enc in ["utf-8-sig", "utf-16", "utf-16-le", "utf-16-be", "cp1252"]:
+        try:
+            header = pd.read_csv(file_path, sep=sep, nrows=0, encoding=enc)
+            cols = [c.strip().lower() for c in header.columns]
+            if any(any(kw in c for kw in expected_keywords) for c in cols):
+                return enc, cols
+        except (UnicodeError, pd.errors.ParserError):
+            continue
+    # nothing matched -- fall back to utf-8-sig with replacement so we at
+    # least don't crash, but this will likely need investigation
+    header = pd.read_csv(file_path, sep=sep, nrows=0, encoding="utf-8-sig",
+                          encoding_errors="replace")
+    return "utf-8-sig", [c.strip().lower() for c in header.columns]
+
+
 def fetch_provisional_df(cfg):
     us_date, compact_date = election_date_parts(cfg)
     url = f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us_date}/provisional_{compact_date}.txt"
@@ -138,11 +157,12 @@ def fetch_provisional_df(cfg):
         txt_path = Path(tmpdir) / "provisional.txt"
         download_to_file(url, txt_path)
 
-        header = pd.read_csv(txt_path, sep="\t", nrows=0,
-                              encoding="utf-8-sig", encoding_errors="replace")
-        header.columns = [c.strip().lower() for c in header.columns]
-        cols_present = [c for c in keep_cols if c in header.columns]
-        print(f"[build_data] provisional file header columns: {list(header.columns)}")
+        enc, cols = detect_working_encoding(
+            txt_path, expected_keywords=["county", "pv_status", "pv_party", "status"]
+        )
+        print(f"[build_data] provisional file detected encoding: {enc}")
+        print(f"[build_data] provisional file header columns: {cols}")
+        cols_present = [c for c in keep_cols if c in cols]
         print(f"[build_data] provisional columns matched: {cols_present}")
 
         if not cols_present:
@@ -150,11 +170,11 @@ def fetch_provisional_df(cfg):
                   "the file header -- reading all columns as a fallback. "
                   "Check the header columns printed above against config.json.")
             df = pd.read_csv(txt_path, sep="\t", dtype=str, low_memory=False,
-                              encoding="utf-8-sig", encoding_errors="replace")
+                              encoding=enc, encoding_errors="replace")
         else:
             df = pd.read_csv(
                 txt_path, sep="\t", dtype=str, low_memory=False,
-                usecols=cols_present, encoding="utf-8-sig", encoding_errors="replace",
+                usecols=cols_present, encoding=enc, encoding_errors="replace",
             )
     df.columns = [c.strip().lower() for c in df.columns]
     pii_cols = ["full_name", "res_addr_street", "res_addr_csz", "phone_num",
