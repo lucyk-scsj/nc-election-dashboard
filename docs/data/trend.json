@@ -7,14 +7,5 @@
     "sdr_failed": 0,
     "provisional_total": 0,
     "provisional_approved": 0
-  },
-  {
-    "date": "2026-08-18",
-    "pct_curable": 0.15,
-    "curable": 6866,
-    "cured": 4094,
-    "sdr_failed": 0,
-    "provisional_total": 130462,
-    "provisional_approved": 0
   }
 ]
