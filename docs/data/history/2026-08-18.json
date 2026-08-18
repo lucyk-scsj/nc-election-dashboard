@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T15:47:50.341121+00:00",
+  "generated_at": "2026-08-18T15:55:05.778477+00:00",
   "election_date": "2024-11-05",
   "election_label": "2024 General Election (TEST)",
   "status": "ok",
@@ -696,18 +696,463 @@
     }
   },
   "provisional": {
-    "total": 130462,
-    "approved": 0,
-    "not_counted": 0,
-    "partial": 0,
-    "pct_approved": 0.0,
-    "by_county": [],
-    "not_counted_reasons": {},
-    "demographics": {
-      "race": {},
-      "gender": {},
-      "party": {}
+    "total": 65230,
+    "approved": 20532,
+    "not_counted": 40294,
+    "partial": 4404,
+    "pct_approved": 31.48,
+    "by_county": [
+      {
+        "county_name": "ALAMANCE",
+        "count": 1288
+      },
+      {
+        "county_name": "ALEXANDER",
+        "count": 130
+      },
+      {
+        "county_name": "ALLEGHANY",
+        "count": 40
+      },
+      {
+        "county_name": "ANSON",
+        "count": 94
+      },
+      {
+        "county_name": "ASHE",
+        "count": 142
+      },
+      {
+        "county_name": "AVERY",
+        "count": 218
+      },
+      {
+        "county_name": "BEAUFORT",
+        "count": 274
+      },
+      {
+        "county_name": "BERTIE",
+        "count": 148
+      },
+      {
+        "county_name": "BLADEN",
+        "count": 169
+      },
+      {
+        "county_name": "BRUNSWICK",
+        "count": 1103
+      },
+      {
+        "county_name": "BUNCOMBE",
+        "count": 1415
+      },
+      {
+        "county_name": "BURKE",
+        "count": 302
+      },
+      {
+        "county_name": "CABARRUS",
+        "count": 1694
+      },
+      {
+        "county_name": "CALDWELL",
+        "count": 393
+      },
+      {
+        "county_name": "CAMDEN",
+        "count": 62
+      },
+      {
+        "county_name": "CARTERET",
+        "count": 445
+      },
+      {
+        "county_name": "CASWELL",
+        "count": 60
+      },
+      {
+        "county_name": "CATAWBA",
+        "count": 570
+      },
+      {
+        "county_name": "CHATHAM",
+        "count": 342
+      },
+      {
+        "county_name": "CHEROKEE",
+        "count": 123
+      },
+      {
+        "county_name": "CHOWAN",
+        "count": 55
+      },
+      {
+        "county_name": "CLAY",
+        "count": 45
+      },
+      {
+        "county_name": "CLEVELAND",
+        "count": 759
+      },
+      {
+        "county_name": "COLUMBUS",
+        "count": 217
+      },
+      {
+        "county_name": "CRAVEN",
+        "count": 776
+      },
+      {
+        "county_name": "CUMBERLAND",
+        "count": 2727
+      },
+      {
+        "county_name": "CURRITUCK",
+        "count": 243
+      },
+      {
+        "county_name": "DARE",
+        "count": 190
+      },
+      {
+        "county_name": "DAVIDSON",
+        "count": 1207
+      },
+      {
+        "county_name": "DAVIE",
+        "count": 246
+      },
+      {
+        "county_name": "DUPLIN",
+        "count": 327
+      },
+      {
+        "county_name": "DURHAM",
+        "count": 2387
+      },
+      {
+        "county_name": "EDGECOMBE",
+        "count": 246
+      },
+      {
+        "county_name": "FORSYTH",
+        "count": 3075
+      },
+      {
+        "county_name": "FRANKLIN",
+        "count": 445
+      },
+      {
+        "county_name": "GASTON",
+        "count": 1338
+      },
+      {
+        "county_name": "GATES",
+        "count": 80
+      },
+      {
+        "county_name": "GRAHAM",
+        "count": 65
+      },
+      {
+        "county_name": "GRANVILLE",
+        "count": 416
+      },
+      {
+        "county_name": "GREENE",
+        "count": 154
+      },
+      {
+        "county_name": "GUILFORD",
+        "count": 2643
+      },
+      {
+        "county_name": "HALIFAX",
+        "count": 187
+      },
+      {
+        "county_name": "HARNETT",
+        "count": 1150
+      },
+      {
+        "county_name": "HAYWOOD",
+        "count": 298
+      },
+      {
+        "county_name": "HENDERSON",
+        "count": 480
+      },
+      {
+        "county_name": "HERTFORD",
+        "count": 121
+      },
+      {
+        "county_name": "HOKE",
+        "count": 424
+      },
+      {
+        "county_name": "HYDE",
+        "count": 41
+      },
+      {
+        "county_name": "IREDELL",
+        "count": 820
+      },
+      {
+        "county_name": "JACKSON",
+        "count": 440
+      },
+      {
+        "county_name": "JOHNSTON",
+        "count": 1467
+      },
+      {
+        "county_name": "JONES",
+        "count": 70
+      },
+      {
+        "county_name": "LEE",
+        "count": 310
+      },
+      {
+        "county_name": "LENOIR",
+        "count": 470
+      },
+      {
+        "county_name": "LINCOLN",
+        "count": 467
+      },
+      {
+        "county_name": "MACON",
+        "count": 211
+      },
+      {
+        "county_name": "MADISON",
+        "count": 147
+      },
+      {
+        "county_name": "MARTIN",
+        "count": 102
+      },
+      {
+        "county_name": "MCDOWELL",
+        "count": 217
+      },
+      {
+        "county_name": "MECKLENBURG",
+        "count": 5222
+      },
+      {
+        "county_name": "MITCHELL",
+        "count": 101
+      },
+      {
+        "county_name": "MONTGOMERY",
+        "count": 233
+      },
+      {
+        "county_name": "MOORE",
+        "count": 752
+      },
+      {
+        "county_name": "NASH",
+        "count": 614
+      },
+      {
+        "county_name": "NEW HANOVER",
+        "count": 1955
+      },
+      {
+        "county_name": "NORTHAMPTON",
+        "count": 47
+      },
+      {
+        "county_name": "ONSLOW",
+        "count": 1418
+      },
+      {
+        "county_name": "ORANGE",
+        "count": 601
+      },
+      {
+        "county_name": "PAMLICO",
+        "count": 81
+      },
+      {
+        "county_name": "PASQUOTANK",
+        "count": 324
+      },
+      {
+        "county_name": "PENDER",
+        "count": 654
+      },
+      {
+        "county_name": "PERQUIMANS",
+        "count": 96
+      },
+      {
+        "county_name": "PERSON",
+        "count": 260
+      },
+      {
+        "county_name": "PITT",
+        "count": 2033
+      },
+      {
+        "county_name": "POLK",
+        "count": 89
+      },
+      {
+        "county_name": "RANDOLPH",
+        "count": 843
+      },
+      {
+        "county_name": "RICHMOND",
+        "count": 395
+      },
+      {
+        "county_name": "ROBESON",
+        "count": 1167
+      },
+      {
+        "county_name": "ROCKINGHAM",
+        "count": 522
+      },
+      {
+        "county_name": "ROWAN",
+        "count": 764
+      },
+      {
+        "county_name": "RUTHERFORD",
+        "count": 457
+      },
+      {
+        "county_name": "SAMPSON",
+        "count": 257
+      },
+      {
+        "county_name": "SCOTLAND",
+        "count": 342
+      },
+      {
+        "county_name": "STANLY",
+        "count": 494
+      },
+      {
+        "county_name": "STOKES",
+        "count": 173
+      },
+      {
+        "county_name": "SURRY",
+        "count": 497
+      },
+      {
+        "county_name": "SWAIN",
+        "count": 147
+      },
+      {
+        "county_name": "TRANSYLVANIA",
+        "count": 153
+      },
+      {
+        "county_name": "TYRRELL",
+        "count": 23
+      },
+      {
+        "county_name": "UNION",
+        "count": 1426
+      },
+      {
+        "county_name": "VANCE",
+        "count": 171
+      },
+      {
+        "county_name": "WAKE",
+        "count": 6213
+      },
+      {
+        "county_name": "WARREN",
+        "count": 113
+      },
+      {
+        "county_name": "WASHINGTON",
+        "count": 60
+      },
+      {
+        "county_name": "WATAUGA",
+        "count": 489
+      },
+      {
+        "county_name": "WAYNE",
+        "count": 911
+      },
+      {
+        "county_name": "WILKES",
+        "count": 299
+      },
+      {
+        "county_name": "WILSON",
+        "count": 480
+      },
+      {
+        "county_name": "YADKIN",
+        "count": 124
+      },
+      {
+        "county_name": "YANCEY",
+        "count": 155
+      }
+    ],
+    "not_counted_reasons": {
+      "NOT REGISTERED": 29095,
+      "VOTING OUT OF PRECINCT": 4263,
+      "REGISTRATION AFTER DEADLINE": 3711,
+      "REMOVED": 2744,
+      "ID NOT PROVIDED": 2051,
+      "MOVED OUT OF COUNTY MORE THAN 30 DAYS": 1121,
+      "PREVIOUSLY DENIED": 458,
+      "OTHER": 431,
+      "NOT ELIGIBLE TO VOTE IN CURRENT ELECTION": 209,
+      "VOTER ALREADY VOTED": 194,
+      "INELIGIBLE TO VOTE": 194,
+      "PROVISIONAL APPLICATION INCOMPLETE/ILLEGIBLE": 174,
+      "BALLOT MISSING FROM ENVELOPE": 30,
+      "TRANSACTION CANCELLED": 21,
+      "NON-MATCHING SIGNATURE": 1,
+      "WRONG PARTY BALLOT": 1
     },
-    "raw_status_counts": {}
+    "demographics": {
+      "race": {
+        "W": 21458,
+        "B": 13946,
+        "O": 2345,
+        "U": 2177,
+        "M": 921,
+        "A": 891,
+        "I": 856,
+        "P": 75
+      },
+      "gender": {
+        "F": 22531,
+        "M": 22232,
+        "U": 1255
+      },
+      "party": {
+        "DEM": 22061,
+        "UNA": 20860,
+        "REP": 20760,
+        "NLB": 779,
+        "LIB": 486,
+        "WTP": 118,
+        "GRE": 89,
+        "JFA": 40,
+        "CST": 37
+      }
+    },
+    "raw_status_counts": {
+      "NOT COUNTED": 40294,
+      "APPROVED": 20532,
+      "PARTIAL": 4404
+    }
   }
 }
