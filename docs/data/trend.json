@@ -16,5 +16,14 @@
     "sdr_failed": 1055,
     "provisional_total": 65230,
     "provisional_approved": 20532
+  },
+  {
+    "date": "2026-08-19",
+    "pct_curable": 0.15,
+    "curable": 6866,
+    "cured": 4094,
+    "sdr_failed": 1055,
+    "provisional_total": 65230,
+    "provisional_approved": 20532
   }
 ]
