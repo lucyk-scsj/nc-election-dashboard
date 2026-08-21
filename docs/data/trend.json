@@ -1,20 +1,83 @@
 [
   {
-    "date": "2026-08-12",
-    "pct_curable": 0.15,
-    "curable": 6866,
-    "cured": 4094,
+    "date": "2024-10-17",
+    "pct_curable": 0.99,
+    "curable": 691,
+    "cured": 544,
     "sdr_failed": 0,
-    "provisional_total": 0,
-    "provisional_approved": 0
+    "provisional_total": null,
+    "provisional_approved": null
   },
   {
-    "date": "2026-08-18",
+    "date": "2024-10-18",
+    "pct_curable": 0.17,
+    "curable": 744,
+    "cured": 606,
+    "sdr_failed": 0,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-21",
+    "pct_curable": 0.09,
+    "curable": 940,
+    "cured": 728,
+    "sdr_failed": 0,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-22",
+    "pct_curable": 0.07,
+    "curable": 1029,
+    "cured": 783,
+    "sdr_failed": 0,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-23",
+    "pct_curable": 0.07,
+    "curable": 1137,
+    "cured": 908,
+    "sdr_failed": 2,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-25",
+    "pct_curable": 0.06,
+    "curable": 1420,
+    "cured": 1128,
+    "sdr_failed": 10,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-27",
+    "pct_curable": 0.05,
+    "curable": 1441,
+    "cured": 1319,
+    "sdr_failed": 20,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-10-28",
+    "pct_curable": 0.05,
+    "curable": 1509,
+    "cured": 1405,
+    "sdr_failed": 52,
+    "provisional_total": null,
+    "provisional_approved": null
+  },
+  {
+    "date": "2024-11-05",
     "pct_curable": 0.15,
     "curable": 6866,
     "cured": 4094,
     "sdr_failed": 1055,
-    "provisional_total": 130462,
-    "provisional_approved": 0
+    "provisional_total": 65230,
+    "provisional_approved": 20532
   }
 ]

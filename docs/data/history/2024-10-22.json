@@ -1,0 +1,669 @@
+{
+  "generated_at": "2026-08-21T15:52:50.104209+00:00",
+  "election_date": "2024-11-05",
+  "election_label": "2024 General Election (TEST \u2014 historical backfill)",
+  "status": "ok",
+  "absentee": {
+    "total_returned": 1388175,
+    "accepted": 1381184,
+    "curable": 1029,
+    "cured": 783,
+    "rejected_or_spoiled": 42,
+    "pct_curable_of_returned": 0.07,
+    "sdr": {
+      "total_sdr_ballots": 12358,
+      "failed_verification": 0,
+      "cured": 0,
+      "pct_failed_of_sdr": 0.0
+    },
+    "by_county": [
+      {
+        "county_desc": "ALAMANCE",
+        "returned": 17975,
+        "accepted": 17871,
+        "curable": 25
+      },
+      {
+        "county_desc": "ALEXANDER",
+        "returned": 5915,
+        "accepted": 5893,
+        "curable": 3
+      },
+      {
+        "county_desc": "ALLEGHANY",
+        "returned": 1750,
+        "accepted": 1738,
+        "curable": 4
+      },
+      {
+        "county_desc": "ANSON",
+        "returned": 2468,
+        "accepted": 2461,
+        "curable": 0
+      },
+      {
+        "county_desc": "ASHE",
+        "returned": 3659,
+        "accepted": 3656,
+        "curable": 0
+      },
+      {
+        "county_desc": "AVERY",
+        "returned": 1843,
+        "accepted": 1835,
+        "curable": 0
+      },
+      {
+        "county_desc": "BEAUFORT",
+        "returned": 5847,
+        "accepted": 5817,
+        "curable": 1
+      },
+      {
+        "county_desc": "BERTIE",
+        "returned": 2475,
+        "accepted": 2472,
+        "curable": 0
+      },
+      {
+        "county_desc": "BLADEN",
+        "returned": 4796,
+        "accepted": 4762,
+        "curable": 2
+      },
+      {
+        "county_desc": "BRUNSWICK",
+        "returned": 30318,
+        "accepted": 30156,
+        "curable": 31
+      },
+      {
+        "county_desc": "BUNCOMBE",
+        "returned": 34929,
+        "accepted": 34595,
+        "curable": 39
+      },
+      {
+        "county_desc": "BURKE",
+        "returned": 11609,
+        "accepted": 11522,
+        "curable": 0
+      },
+      {
+        "county_desc": "CABARRUS",
+        "returned": 24928,
+        "accepted": 24895,
+        "curable": 6
+      },
+      {
+        "county_desc": "CALDWELL",
+        "returned": 12152,
+        "accepted": 12062,
+        "curable": 7
+      },
+      {
+        "county_desc": "CAMDEN",
+        "returned": 1445,
+        "accepted": 1441,
+        "curable": 3
+      },
+      {
+        "county_desc": "CARTERET",
+        "returned": 13524,
+        "accepted": 13486,
+        "curable": 1
+      },
+      {
+        "county_desc": "CASWELL",
+        "returned": 2516,
+        "accepted": 2512,
+        "curable": 2
+      },
+      {
+        "county_desc": "CATAWBA",
+        "returned": 23988,
+        "accepted": 23771,
+        "curable": 12
+      },
+      {
+        "county_desc": "CHATHAM",
+        "returned": 16327,
+        "accepted": 16323,
+        "curable": 1
+      },
+      {
+        "county_desc": "CHEROKEE",
+        "returned": 3641,
+        "accepted": 3625,
+        "curable": 0
+      },
+      {
+        "county_desc": "CHOWAN",
+        "returned": 2210,
+        "accepted": 2198,
+        "curable": 2
+      },
+      {
+        "county_desc": "CLAY",
+        "returned": 2249,
+        "accepted": 2232,
+        "curable": 0
+      },
+      {
+        "county_desc": "CLEVELAND",
+        "returned": 13931,
+        "accepted": 13873,
+        "curable": 10
+      },
+      {
+        "county_desc": "COLUMBUS",
+        "returned": 6260,
+        "accepted": 6244,
+        "curable": 0
+      },
+      {
+        "county_desc": "CRAVEN",
+        "returned": 14207,
+        "accepted": 14181,
+        "curable": 8
+      },
+      {
+        "county_desc": "CUMBERLAND",
+        "returned": 33989,
+        "accepted": 33835,
+        "curable": 13
+      },
+      {
+        "county_desc": "CURRITUCK",
+        "returned": 2749,
+        "accepted": 2738,
+        "curable": 0
+      },
+      {
+        "county_desc": "DARE",
+        "returned": 5925,
+        "accepted": 5908,
+        "curable": 3
+      },
+      {
+        "county_desc": "DAVIDSON",
+        "returned": 20959,
+        "accepted": 20865,
+        "curable": 35
+      },
+      {
+        "county_desc": "DAVIE",
+        "returned": 7251,
+        "accepted": 7220,
+        "curable": 8
+      },
+      {
+        "county_desc": "DUPLIN",
+        "returned": 5833,
+        "accepted": 5746,
+        "curable": 4
+      },
+      {
+        "county_desc": "DURHAM",
+        "returned": 53582,
+        "accepted": 53407,
+        "curable": 22
+      },
+      {
+        "county_desc": "EDGECOMBE",
+        "returned": 6440,
+        "accepted": 6437,
+        "curable": 1
+      },
+      {
+        "county_desc": "FORSYTH",
+        "returned": 54714,
+        "accepted": 54484,
+        "curable": 42
+      },
+      {
+        "county_desc": "FRANKLIN",
+        "returned": 12134,
+        "accepted": 12084,
+        "curable": 0
+      },
+      {
+        "county_desc": "GASTON",
+        "returned": 27999,
+        "accepted": 27870,
+        "curable": 9
+      },
+      {
+        "county_desc": "GATES",
+        "returned": 1145,
+        "accepted": 1144,
+        "curable": 0
+      },
+      {
+        "county_desc": "GRAHAM",
+        "returned": 1141,
+        "accepted": 1138,
+        "curable": 0
+      },
+      {
+        "county_desc": "GRANVILLE",
+        "returned": 9684,
+        "accepted": 9655,
+        "curable": 2
+      },
+      {
+        "county_desc": "GREENE",
+        "returned": 2134,
+        "accepted": 2124,
+        "curable": 6
+      },
+      {
+        "county_desc": "GUILFORD",
+        "returned": 70032,
+        "accepted": 69504,
+        "curable": 120
+      },
+      {
+        "county_desc": "HALIFAX",
+        "returned": 5520,
+        "accepted": 5502,
+        "curable": 1
+      },
+      {
+        "county_desc": "HARNETT",
+        "returned": 17909,
+        "accepted": 17859,
+        "curable": 9
+      },
+      {
+        "county_desc": "HAYWOOD",
+        "returned": 9414,
+        "accepted": 9323,
+        "curable": 5
+      },
+      {
+        "county_desc": "HENDERSON",
+        "returned": 14675,
+        "accepted": 14584,
+        "curable": 32
+      },
+      {
+        "county_desc": "HERTFORD",
+        "returned": 2168,
+        "accepted": 2167,
+        "curable": 0
+      },
+      {
+        "county_desc": "HOKE",
+        "returned": 5805,
+        "accepted": 5799,
+        "curable": 0
+      },
+      {
+        "county_desc": "HYDE",
+        "returned": 264,
+        "accepted": 262,
+        "curable": 0
+      },
+      {
+        "county_desc": "IREDELL",
+        "returned": 25635,
+        "accepted": 25544,
+        "curable": 4
+      },
+      {
+        "county_desc": "JACKSON",
+        "returned": 5339,
+        "accepted": 5337,
+        "curable": 0
+      },
+      {
+        "county_desc": "JOHNSTON",
+        "returned": 32410,
+        "accepted": 32305,
+        "curable": 17
+      },
+      {
+        "county_desc": "JONES",
+        "returned": 1300,
+        "accepted": 1291,
+        "curable": 0
+      },
+      {
+        "county_desc": "LEE",
+        "returned": 8620,
+        "accepted": 8569,
+        "curable": 5
+      },
+      {
+        "county_desc": "LENOIR",
+        "returned": 8297,
+        "accepted": 8237,
+        "curable": 0
+      },
+      {
+        "county_desc": "LINCOLN",
+        "returned": 14894,
+        "accepted": 14786,
+        "curable": 18
+      },
+      {
+        "county_desc": "MACON",
+        "returned": 5811,
+        "accepted": 5808,
+        "curable": 3
+      },
+      {
+        "county_desc": "MADISON",
+        "returned": 2928,
+        "accepted": 2917,
+        "curable": 2
+      },
+      {
+        "county_desc": "MARTIN",
+        "returned": 2386,
+        "accepted": 2368,
+        "curable": 0
+      },
+      {
+        "county_desc": "MCDOWELL",
+        "returned": 5318,
+        "accepted": 5295,
+        "curable": 3
+      },
+      {
+        "county_desc": "MECKLENBURG",
+        "returned": 134537,
+        "accepted": 133797,
+        "curable": 138
+      },
+      {
+        "county_desc": "MITCHELL",
+        "returned": 2098,
+        "accepted": 2089,
+        "curable": 2
+      },
+      {
+        "county_desc": "MONTGOMERY",
+        "returned": 2946,
+        "accepted": 2944,
+        "curable": 0
+      },
+      {
+        "county_desc": "MOORE",
+        "returned": 14264,
+        "accepted": 14158,
+        "curable": 13
+      },
+      {
+        "county_desc": "NASH",
+        "returned": 15089,
+        "accepted": 15031,
+        "curable": 0
+      },
+      {
+        "county_desc": "NEW HANOVER",
+        "returned": 28208,
+        "accepted": 27992,
+        "curable": 35
+      },
+      {
+        "county_desc": "NORTHAMPTON",
+        "returned": 2293,
+        "accepted": 2285,
+        "curable": 3
+      },
+      {
+        "county_desc": "ONSLOW",
+        "returned": 19369,
+        "accepted": 19302,
+        "curable": 17
+      },
+      {
+        "county_desc": "ORANGE",
+        "returned": 26032,
+        "accepted": 25839,
+        "curable": 10
+      },
+      {
+        "county_desc": "PAMLICO",
+        "returned": 2083,
+        "accepted": 2067,
+        "curable": 2
+      },
+      {
+        "county_desc": "PASQUOTANK",
+        "returned": 5556,
+        "accepted": 5525,
+        "curable": 19
+      },
+      {
+        "county_desc": "PENDER",
+        "returned": 9112,
+        "accepted": 9093,
+        "curable": 1
+      },
+      {
+        "county_desc": "PERQUIMANS",
+        "returned": 1413,
+        "accepted": 1410,
+        "curable": 0
+      },
+      {
+        "county_desc": "PERSON",
+        "returned": 5315,
+        "accepted": 5298,
+        "curable": 4
+      },
+      {
+        "county_desc": "PITT",
+        "returned": 21805,
+        "accepted": 21734,
+        "curable": 10
+      },
+      {
+        "county_desc": "POLK",
+        "returned": 4024,
+        "accepted": 3950,
+        "curable": 5
+      },
+      {
+        "county_desc": "RANDOLPH",
+        "returned": 18179,
+        "accepted": 18108,
+        "curable": 7
+      },
+      {
+        "county_desc": "RICHMOND",
+        "returned": 4243,
+        "accepted": 4229,
+        "curable": 0
+      },
+      {
+        "county_desc": "ROBESON",
+        "returned": 9653,
+        "accepted": 9629,
+        "curable": 2
+      },
+      {
+        "county_desc": "ROCKINGHAM",
+        "returned": 13884,
+        "accepted": 13789,
+        "curable": 0
+      },
+      {
+        "county_desc": "ROWAN",
+        "returned": 16865,
+        "accepted": 16804,
+        "curable": 6
+      },
+      {
+        "county_desc": "RUTHERFORD",
+        "returned": 6552,
+        "accepted": 6508,
+        "curable": 3
+      },
+      {
+        "county_desc": "SAMPSON",
+        "returned": 5542,
+        "accepted": 5538,
+        "curable": 2
+      },
+      {
+        "county_desc": "SCOTLAND",
+        "returned": 3888,
+        "accepted": 3870,
+        "curable": 0
+      },
+      {
+        "county_desc": "STANLY",
+        "returned": 9059,
+        "accepted": 8998,
+        "curable": 14
+      },
+      {
+        "county_desc": "STOKES",
+        "returned": 7234,
+        "accepted": 7207,
+        "curable": 13
+      },
+      {
+        "county_desc": "SURRY",
+        "returned": 8879,
+        "accepted": 8813,
+        "curable": 9
+      },
+      {
+        "county_desc": "SWAIN",
+        "returned": 1637,
+        "accepted": 1632,
+        "curable": 0
+      },
+      {
+        "county_desc": "TRANSYLVANIA",
+        "returned": 5992,
+        "accepted": 5978,
+        "curable": 0
+      },
+      {
+        "county_desc": "TYRRELL",
+        "returned": 346,
+        "accepted": 345,
+        "curable": 0
+      },
+      {
+        "county_desc": "UNION",
+        "returned": 35276,
+        "accepted": 35141,
+        "curable": 9
+      },
+      {
+        "county_desc": "VANCE",
+        "returned": 5096,
+        "accepted": 5061,
+        "curable": 6
+      },
+      {
+        "county_desc": "WAKE",
+        "returned": 144111,
+        "accepted": 143333,
+        "curable": 158
+      },
+      {
+        "county_desc": "WARREN",
+        "returned": 2510,
+        "accepted": 2494,
+        "curable": 0
+      },
+      {
+        "county_desc": "WASHINGTON",
+        "returned": 1701,
+        "accepted": 1692,
+        "curable": 0
+      },
+      {
+        "county_desc": "WATAUGA",
+        "returned": 9045,
+        "accepted": 9010,
+        "curable": 0
+      },
+      {
+        "county_desc": "WAYNE",
+        "returned": 16019,
+        "accepted": 15943,
+        "curable": 8
+      },
+      {
+        "county_desc": "WILKES",
+        "returned": 7162,
+        "accepted": 7108,
+        "curable": 4
+      },
+      {
+        "county_desc": "WILSON",
+        "returned": 9735,
+        "accepted": 9692,
+        "curable": 4
+      },
+      {
+        "county_desc": "YADKIN",
+        "returned": 3724,
+        "accepted": 3706,
+        "curable": 4
+      },
+      {
+        "county_desc": "YANCEY",
+        "returned": 2333,
+        "accepted": 2309,
+        "curable": 0
+      }
+    ],
+    "demographics": {
+      "race": {
+        "WHITE": 982912,
+        "BLACK OR AFRICAN AMERICAN": 257565,
+        "UNDESIGNATED": 84430,
+        "OTHER": 31627,
+        "ASIAN": 19658,
+        "INDIAN AMERICAN OR ALASKA NATIVE": 6961,
+        "TWO OR MORE RACES": 4898,
+        "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 124
+      },
+      "gender": {
+        "F": 719344,
+        "M": 590681,
+        "U": 78149
+      },
+      "party": {
+        "DEM": 485839,
+        "REP": 465894,
+        "UNA": 429754,
+        "LIB": 4010,
+        "NLB": 2080,
+        "GRE": 377,
+        "WTP": 124,
+        "CST": 58,
+        "JFA": 39
+      },
+      "ballot_type": {
+        "EARLY VOTING": 1281181,
+        "MAIL": 106994
+      }
+    },
+    "raw_status_counts": {
+      "ACCEPTED": 1380401,
+      "AFFIDAVIT REVIEW PENDING": 4280,
+      "CANCELLED": 1175,
+      "PENDING CURE": 1029,
+      "ACCEPTED - CURED": 783,
+      "CONFLICT": 427,
+      "SPOILED-EV": 42,
+      "ID NOT PROVIDED": 24,
+      "DUPLICATE": 8,
+      "PHOTO ID CURABLE": 3,
+      "AFFIDAVIT INCOMPLETE": 3
+    }
+  },
+  "provisional": null,
+  "_snapshot_note": "Historical backfill from NCSBE daily archive, snapshot date 2024-10-22"
+}

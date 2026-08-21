@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-21T11:17:38.522765+00:00",
+  "election_date": "2024-11-05",
+  "election_label": "2024 General Election (TEST)",
+  "status": "ok",
+  "absentee": {
+    "total_returned": 4700602,
+    "accepted": 4521943,
+    "curable": 6866,
+    "cured": 4094,
+    "rejected_or_spoiled": 81753,
+    "pct_curable_of_returned": 0.15,
+    "sdr": {
+      "total_sdr_ballots": 130695,
+      "failed_verification": 1055,
+      "cured": 0,
+      "pct_failed_of_sdr": 0.81
+    }
+  },
+  "provisional": {
+    "total": 65230,
+    "approved": 20532,
+    "not_counted": 40294,
+    "partial": 4404,
+    "pct_approved": 31.48
+  },
+  "_snapshot_note": "Final confirmed snapshot, election date 2024-11-05 (kept minimal here -- full detail lives in docs/data/latest.json, untouched by this backfill)"
+}
