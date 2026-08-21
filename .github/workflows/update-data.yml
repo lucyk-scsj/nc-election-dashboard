@@ -1,13 +1,9 @@
 name: Update election data
 
 on:
-  schedule:
-    # 11:00 UTC = 6:00 or 7:00 AM Eastern (adjust as you like).
-    # NCSBE refreshes absentee files daily once ballots start going out,
-    # and provisional files really only matter Election Day onward --
-    # feel free to add a second, more frequent cron closer to Election Day.
-    - cron: "0 11 * * *"
-  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+  # schedule:
+  #   - cron: "0 11 * * *"   # paused during 2024 test/demo period -- re-enable before Nov 2026
+  workflow_dispatch: {}
 
 permissions:
   contents: write
