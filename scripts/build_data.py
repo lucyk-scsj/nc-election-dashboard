@@ -333,7 +333,7 @@ def main():
 
     # append to dated history (one file per day this ran, keyed by run date)
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    (HISTORY_DIR / f"{run_date}.json").write_text(json.dumps(result, indent=2))
+    (HISTORY_DIR / f"{cfg['election_date']}.json").write_text(json.dumps(result, indent=2))
 
     # rebuild a lightweight trend index for the dashboard's time-series charts
     trend = []
