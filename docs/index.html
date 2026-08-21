@@ -306,7 +306,7 @@ function barChart(ctx, labels, data, color){
       responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display:false } },
       scales: {
-        x: { grid: { display:false } },
+        x: { grid: { display:false }, ticks: { autoSkip: false, maxRotation: 60, minRotation: 0, font: { size: 10 } } },
         y: { grid: { color: PALETTE.line }, beginAtZero:true }
       }
     }
@@ -441,7 +441,7 @@ function renderDashboard(latest, trend){
         <span class="section-note">race · gender · party</span>
       </div>
       <div class="grid-3">
-        <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-race"></canvas></div></div>
+        <div class="panel"><h3>By race</h3><div class="chart-wrap tall"><canvas id="chart-race"></canvas></div></div>
         <div class="panel"><h3>By gender</h3><div class="chart-wrap"><canvas id="chart-gender"></canvas></div></div>
         <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-party"></canvas></div></div>
       </div>
