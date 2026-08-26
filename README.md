@@ -23,10 +23,11 @@ Everything is an aggregate count. The pipeline drops voter name/address/phone co
 
 ## How it works
 
-scripts/build_data.py -> downloads + aggregates NCSBE files, writes docs/data/*.json
-.github/workflows/... -> runs the script daily, commits the data, deploys docs/ to Pages
-docs/index.html -> the dashboard itself, reads docs/data/latest.json + trend.json
-
+```
+scripts/build_data.py   -> downloads + aggregates NCSBE files, writes docs/data/*.json
+.github/workflows/...   -> runs the script daily, commits the data, deploys docs/ to Pages
+docs/index.html         -> the dashboard itself, reads docs/data/latest.json + trend.json
+```
 
 ---
 
