@@ -1,13 +1,11 @@
-# NC Ballot Ledger — 2026 Election Data Dashboard
+# NC Election Dashboard — 2026 Election Data Dashboard
 
 A public, auto-updating dashboard of actionable NC absentee/provisional data —
 built to answer "what's still fixable?" rather than just showing final counts.
 Pulls directly from the [NC State Board of Elections public data files](https://www.ncsbe.gov/results-data/absentee-and-provisional-data)
 every day via GitHub Actions, and is hosted for free on GitHub Pages.
 
-**Public, no login required.** Nothing in this repo talks to hotline data or
-any partner-only system — this is deliberately kept separate (see *Decisions*
-below).
+**Public, no login required.** 
 
 ## What it shows
 
