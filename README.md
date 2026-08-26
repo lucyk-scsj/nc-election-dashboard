@@ -82,7 +82,7 @@ Styled to SCSJ's 2026 brand guidelines. Colors are pulled exactly from the palet
 
 This dashboard was built with the assistance of Claude (Anthropic's AI assistant). Claude was used as a technical collaborator throughout the build — not as a push-button solution, but as a tool that required direction, review, and iteration.
 
-Claude wrote the initial pipeline, dashboard, and automation workflow from a plain-language description of what the tool needed to do. Real bugs were then found by testing against actual NCSBE data — including a UTF-16 encoding issue in the provisional file, a status-code mismatch that was silently undercounting 70,907 spoiled early-voting ballots, and a memory problem that crashed the pipeline on large general-election files. Each was diagnosed by sending Claude the actual error log or raw data output, getting a fix, and verifying the result against official NCSBE figures.
+Claude wrote the initial pipeline, dashboard, and automation workflow from a plain-language description of what the tool needed to do. Real bugs were then found by testing against actual NCSBE data.
 
 Claude can also help diagnose future bugs. If something breaks, paste the error text from the "Run data pipeline" step in the Actions tab into a new Claude session along with a brief description of what you were trying to do. See `OPERATIONS.md` for more detail on how to do this effectively.
 
