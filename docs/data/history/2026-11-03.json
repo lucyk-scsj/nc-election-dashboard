@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-09T15:36:10.311060+00:00",
+  "generated_at": "2026-09-09T15:47:30.899040+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
   "absentee_mail": {
     "total_returned": 294,
-    "accepted": 287,
+    "accepted": 294,
     "curable": 0,
     "cured": 0,
     "rejected_or_spoiled": 0,
@@ -38,7 +38,7 @@
       {
         "county_desc": "BUNCOMBE",
         "returned": 50,
-        "accepted": 49,
+        "accepted": 50,
         "curable": 0
       },
       {
@@ -56,7 +56,7 @@
       {
         "county_desc": "CARTERET",
         "returned": 8,
-        "accepted": 7,
+        "accepted": 8,
         "curable": 0
       },
       {
@@ -80,7 +80,7 @@
       {
         "county_desc": "CUMBERLAND",
         "returned": 24,
-        "accepted": 23,
+        "accepted": 24,
         "curable": 0
       },
       {
@@ -104,13 +104,13 @@
       {
         "county_desc": "DURHAM",
         "returned": 3,
-        "accepted": 2,
+        "accepted": 3,
         "curable": 0
       },
       {
         "county_desc": "FORSYTH",
         "returned": 16,
-        "accepted": 15,
+        "accepted": 16,
         "curable": 0
       },
       {
@@ -164,7 +164,7 @@
       {
         "county_desc": "MECKLENBURG",
         "returned": 49,
-        "accepted": 48,
+        "accepted": 49,
         "curable": 0
       },
       {
@@ -260,7 +260,7 @@
       {
         "county_desc": "WAYNE",
         "returned": 2,
-        "accepted": 1,
+        "accepted": 2,
         "curable": 0
       },
       {
@@ -272,18 +272,15 @@
     ],
     "demographics": {
       "race_accepted": {
-        "WHITE": 190,
-        "UNDESIGNATED": 63,
+        "WHITE": 193,
+        "UNDESIGNATED": 67,
         "BLACK OR AFRICAN AMERICAN": 15,
         "OTHER": 8,
         "ASIAN": 7,
         "TWO OR MORE RACES": 3,
         "INDIAN AMERICAN OR ALASKA NATIVE": 1
       },
-      "race_not_accepted": {
-        "UNDESIGNATED": 4,
-        "WHITE": 3
-      },
+      "race_not_accepted": {},
       "race_cured": {},
       "gender": {
         "M": 151,
