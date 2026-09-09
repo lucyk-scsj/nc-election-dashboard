@@ -393,7 +393,7 @@ if(CHART_OK){
 }
 
 // ── helpers ──────────────────────────────────────────────────────────────────
-const fmt = n => (n===null||n===undefined) ? '—' : Number(n).toLocaleString('en-US');
+const fmt = n => (n===null||n===undefined||isNaN(n)) ? '—' : Number(n).toLocaleString('en-US');
 const pf  = n => (n===null||n===undefined) ? '—' : n.toFixed(1)+'%';
 const topN = (obj,n=8) => Object.entries(obj||{})
   .filter(([k])=>k&&k!=='NAN'&&k.trim()!=='')
@@ -488,7 +488,9 @@ function kpiHTML(items){
 function countyTable(tbodyId, rows, cols){
   const tbody = document.querySelector('#'+tbodyId+' tbody');
   if(!tbody) return;
-  tbody.innerHTML = (rows||[]).sort((a,b)=>(b[cols[1]]||0)-(a[cols[1]]||0))
+  tbody.innerHTML = (rows||[])
+    .filter(r => r[cols[0]] && r[cols[0]].toString().toUpperCase() !== 'NAN')
+    .sort((a,b)=>(Number(b[cols[1]])||0)-(Number(a[cols[1]])||0))
     .map(r=>'<tr>'+cols.map(c=>`<td>${fmt(r[c])}</td>`).join('')+'</tr>')
     .join('') || '<tr><td colspan="'+cols.length+'">No county data yet.</td></tr>';
 }
