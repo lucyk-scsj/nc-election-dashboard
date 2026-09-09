@@ -264,7 +264,7 @@
 <main>
   <div id="ev-empty" class="empty-state" style="display:none">
     <h2>Early voting hasn't started yet</h2>
-    <p>In-person early voting in NC typically begins in late October. This tab will populate automatically once NCSBE publishes early-voting data.</p>
+    <p>Early voting starts Thursday, Oct. 15, 2026. This tab will populate automatically once NCSBE publishes early-voting data.</p>
   </div>
   <div id="ev-content">
 
@@ -446,14 +446,17 @@ const noChart = el => {
     '<p style="color:var(--ink-2);font-size:12px;padding:60px 0;text-align:center">No data yet</p>';
 };
 
-function csvDownload(rows, filename){
+function csvDownload(rows, filenameBase){
+  if(!rows||!rows.length) return;
+  const today = new Date().toISOString().slice(0,10);
   const keys = Object.keys(rows[0]);
   const csv  = [keys.join(','),
     ...rows.map(r=>keys.map(k=>JSON.stringify(r[k]??'')).join(','))
   ].join('\n');
   const a = document.createElement('a');
   a.href = 'data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
-  a.download = filename; a.click();
+  a.download = `${filenameBase}-downloaded-${today}.csv`;
+  a.click();
 }
 
 async function loadJSON(path){
@@ -560,7 +563,7 @@ function renderMail(d, req, trend){
       requested: reqMap[r.county_desc]||'',
       returned: r.returned, accepted: r.accepted, curable: r.curable,
     }));
-    csvDownload(rows, '2026-nc-absentee-mail.csv');
+    csvDownload(rows, '2026-nc-absentee-mail');
   };
 }
 
@@ -621,7 +624,7 @@ function renderEV(d, trend){
     const rows = (ev.by_county||[]).map(r=>({
       county:r.county_desc, returned:r.returned, accepted:r.accepted, curable:r.curable
     }));
-    csvDownload(rows, '2026-nc-early-voting.csv');
+    csvDownload(rows, '2026-nc-early-voting');
   };
 }
 
@@ -675,7 +678,7 @@ function renderProvisional(d, trend){
   countyTable('prov-county-table', p.by_county, ['county_name','count']);
 
   document.getElementById('prov-csv-btn').onclick = ()=>{
-    csvDownload(p.by_county||[], '2026-nc-provisional.csv');
+    csvDownload(p.by_county||[], '2026-nc-provisional');
   };
 }
 

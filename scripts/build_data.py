@@ -32,7 +32,7 @@ HIST_DIR   = DATA_DIR / "history"
 USER_AGENT = "Mozilla/5.0 (compatible; nc-election-dashboard/2.0)"
 
 # ── status-code sets (confirmed against real 2024 data) ─────────────────────
-ACCEPTED   = ["ACCEPTED", "ACCEPTED - CURED"]
+ACCEPTED   = ["ACCEPTED", "ACCEPTED - CURED", "ACCEPTED - EXCEPTION"]
 CURABLE    = ["PENDING", "PENDING CURE", "WITNESS INFO INCOMPLETE",
               "SIGNATURE MISSING", "AFFIDAVIT INCOMPLETE",
               "ASSISTANT INFO INCOMPLETE", "PHOTO ID CURABLE"]
@@ -193,10 +193,8 @@ def fetch_absentee_df(cfg):
             ev_cured    += ecu2;ev_rejected += er;  ev_sdr_total+=est
             ev_sdr_failed+=esf; ev_sdr_cured+=esc
 
-    mail_total = m_accepted + m_curable + m_cured + m_rejected
-    # mail_total from chunk is more accurate
-    mail_returned = sum(v["returned"] for v in m_county.values())
-    ev_returned   = sum(v["returned"] for v in ev_county.values())
+    mail_returned = sum(v["returned"] for k, v in m_county.items() if k and k.upper() != "NAN")
+    ev_returned   = sum(v["returned"] for k, v in ev_county.items() if k and k.upper() != "NAN")
 
     return {
         "mail": {
@@ -209,7 +207,8 @@ def fetch_absentee_df(cfg):
                     "cured": m_sdr_cured,
                     "pct_failed_of_sdr": pct(m_sdr_failed, m_sdr_total)},
             "by_county": [{"county_desc": k, **v}
-                          for k, v in m_county.items()],
+                          for k, v in m_county.items()
+                          if k and k.upper() != "NAN"],
             "demographics": {
                 "race_accepted": dict(m_race_acc),
                 "race_not_accepted": dict(m_race_rej),
@@ -229,7 +228,8 @@ def fetch_absentee_df(cfg):
                     "cured": ev_sdr_cured,
                     "pct_failed_of_sdr": pct(ev_sdr_failed, ev_sdr_total)},
             "by_county": [{"county_desc": k, **v}
-                          for k, v in ev_county.items()],
+                          for k, v in ev_county.items()
+                          if k and k.upper() != "NAN"],
             "demographics": {
                 "race": dict(ev_race),
                 "gender": dict(ev_gender),
