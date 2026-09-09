@@ -491,7 +491,9 @@ function countyTable(tbodyId, rows, cols){
   tbody.innerHTML = (rows||[])
     .filter(r => r[cols[0]] && r[cols[0]].toString().toUpperCase() !== 'NAN')
     .sort((a,b)=>(Number(b[cols[1]])||0)-(Number(a[cols[1]])||0))
-    .map(r=>'<tr>'+cols.map(c=>`<td>${fmt(r[c])}</td>`).join('')+'</tr>')
+    .map(r=>'<tr>'+cols.map((c,i)=>
+      `<td>${i===0 ? (r[c]||'—') : fmt(r[c])}</td>`
+    ).join('')+'</tr>')
     .join('') || '<tr><td colspan="'+cols.length+'">No county data yet.</td></tr>';
 }
 
