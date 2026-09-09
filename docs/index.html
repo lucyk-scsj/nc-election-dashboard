@@ -29,8 +29,9 @@
 
   /* ── Masthead ── */
   header{
-    background:var(--ink);
-    color:var(--bg);
+    background:var(--surface);
+    border-bottom:2px solid var(--line);
+    color:var(--ink);
     padding:24px 32px 20px;
     display:flex;
     justify-content:space-between;
@@ -38,19 +39,19 @@
     flex-wrap:wrap;
     gap:16px;
   }
-  .brand-logo{height:22px;width:auto;display:block;margin-bottom:10px;filter:invert(1);}
+  .brand-logo{height:22px;width:auto;display:block;margin-bottom:10px;}
   .masthead-title{
     font-family:'Anton',sans-serif;
     text-transform:uppercase;
     font-size:clamp(22px,3.5vw,36px);
     letter-spacing:0.01em;
-    color:var(--bg);
+    color:var(--ink);
     margin:0;
   }
-  .masthead-title .accent{color:var(--gold);}
+  .masthead-title .accent{color:var(--gold-text);}
   .masthead-sub{
     margin:6px 0 0;
-    color:#B8B5AF;
+    color:var(--ink-2);
     font-family:'Source Serif 4',serif;
     font-size:14px;
     max-width:520px;
@@ -60,14 +61,14 @@
     text-align:right;
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;
-    color:#8A8781;
+    color:var(--ink-2);
   }
   .status-pill{
     display:inline-flex;align-items:center;gap:6px;
-    padding:4px 10px;border:1px solid #3A3835;border-radius:100px;
+    padding:4px 10px;border:1px solid var(--line);border-radius:100px;
     font-family:'IBM Plex Mono',monospace;font-size:11px;
     letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;
-    color:var(--bg);
+    color:var(--ink);
   }
   .status-dot{width:7px;height:7px;border-radius:50%;background:var(--teal-fill);}
   .status-pill.waiting .status-dot{background:var(--gold);}
@@ -394,7 +395,7 @@ if(CHART_OK){
 // ── helpers ──────────────────────────────────────────────────────────────────
 const fmt = n => (n===null||n===undefined) ? '—' : Number(n).toLocaleString('en-US');
 const pf  = n => (n===null||n===undefined) ? '—' : n.toFixed(1)+'%';
-const top = (obj,n=8) => Object.entries(obj||{})
+const topN = (obj,n=8) => Object.entries(obj||{})
   .filter(([k])=>k&&k!=='NAN'&&k.trim()!=='')
   .sort((a,b)=>b[1]-a[1]).slice(0,n);
 
@@ -532,18 +533,18 @@ function renderMail(d, req, trend){
     [P.indigoDark, P.inkDim, P.tealDark]);
 
   // requested demographics
-  const reqRace = top(req?.by_race,8);
+  const reqRace = topN(req?.by_race,8);
   bar(document.getElementById('chart-req-race'), reqRace.map(r=>r[0]), reqRace.map(r=>r[1]), P.gold);
-  const reqGender = top(req?.by_gender,6);
+  const reqGender = topN(req?.by_gender,6);
   bar(document.getElementById('chart-req-gender'), reqGender.map(r=>r[0]), reqGender.map(r=>r[1]), P.teal);
-  const reqParty = top(req?.by_party,6);
+  const reqParty = topN(req?.by_party,6);
   bar(document.getElementById('chart-req-party'), reqParty.map(r=>r[0]), reqParty.map(r=>r[1]), P.indigo);
 
   // returned demographics — accepted vs not
   const demo = m.demographics || {};
-  const raceAcc = top(demo.race_accepted,8);
+  const raceAcc = topN(demo.race_accepted,8);
   bar(document.getElementById('chart-race-accepted'), raceAcc.map(r=>r[0]), raceAcc.map(r=>r[1]), P.teal);
-  const raceNot = top(demo.race_not_accepted,8);
+  const raceNot = topN(demo.race_not_accepted,8);
   bar(document.getElementById('chart-race-not-accepted'), raceNot.map(r=>r[0]), raceNot.map(r=>r[1]), P.brick);
 
   // county table — all 100
@@ -607,11 +608,11 @@ function renderEV(d, trend){
 
   // SDR demographics
   const demo = ev.demographics || {};
-  const evRace = top(demo.race,8);
+  const evRace = topN(demo.race,8);
   bar(document.getElementById('chart-sdr-race'), evRace.map(r=>r[0]), evRace.map(r=>r[1]), P.gold);
-  const evGender = top(demo.gender,6);
+  const evGender = topN(demo.gender,6);
   bar(document.getElementById('chart-sdr-gender'), evGender.map(r=>r[0]), evGender.map(r=>r[1]), P.teal);
-  const evParty = top(demo.party,6);
+  const evParty = topN(demo.party,6);
   bar(document.getElementById('chart-sdr-party'), evParty.map(r=>r[0]), evParty.map(r=>r[1]), P.indigo);
 
   countyTable('ev-county-table', ev.by_county, ['county_desc','returned','accepted','curable']);
@@ -658,17 +659,17 @@ function renderProvisional(d, trend){
     [P.teal, P.brick, P.gold]);
 
   // reasons
-  const reasons = top(p.not_counted_reasons,8);
+  const reasons = topN(p.not_counted_reasons,8);
   hbar(document.getElementById('chart-prov-reasons'),
     reasons.map(r=>r[0]), reasons.map(r=>r[1]), P.brick);
 
   // demographics
   const demo = p.demographics || {};
-  const pRace = top(demo.race,8);
+  const pRace = topN(demo.race,8);
   bar(document.getElementById('chart-prov-race'), pRace.map(r=>r[0]), pRace.map(r=>r[1]), P.gold);
-  const pGender = top(demo.gender,6);
+  const pGender = topN(demo.gender,6);
   bar(document.getElementById('chart-prov-gender'), pGender.map(r=>r[0]), pGender.map(r=>r[1]), P.teal);
-  const pParty = top(demo.party,6);
+  const pParty = topN(demo.party,6);
   bar(document.getElementById('chart-prov-party'), pParty.map(r=>r[0]), pParty.map(r=>r[1]), P.indigo);
 
   countyTable('prov-county-table', p.by_county, ['county_name','count']);
