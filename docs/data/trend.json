@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "date": "2026-11-03",
+    "mail_curable": 0,
+    "mail_cured": 0,
+    "mail_pct_curable": 0.0,
+    "mail_sdr_failed": 0,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_failed": 0,
+    "prov_total": null,
+    "prov_approved": null
+  }
+]
