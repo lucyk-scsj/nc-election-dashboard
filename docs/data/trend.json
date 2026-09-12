@@ -2,8 +2,8 @@
   {
     "date": "2026-11-03",
     "mail_curable": 12,
-    "mail_cured": 2,
-    "mail_pct_curable": 0.96,
+    "mail_cured": 8,
+    "mail_pct_curable": 0.73,
     "mail_sdr_failed": 0,
     "ev_curable": 0,
     "ev_cured": 0,
