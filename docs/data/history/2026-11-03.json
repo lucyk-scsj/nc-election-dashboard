@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-12T13:54:42.119679+00:00",
+  "generated_at": "2026-09-13T14:49:20.243144+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
   "absentee_mail": {
-    "total_returned": 1635,
-    "accepted": 1622,
+    "total_returned": 1640,
+    "accepted": 1627,
     "curable": 12,
     "cured": 8,
     "rejected_or_spoiled": 0,
@@ -283,8 +283,8 @@
       },
       {
         "county_desc": "ORANGE",
-        "returned": 116,
-        "accepted": 116,
+        "returned": 121,
+        "accepted": 121,
         "curable": 0
       },
       {
@@ -428,10 +428,10 @@
     ],
     "demographics": {
       "race_accepted": {
-        "WHITE": 1102,
-        "UNDESIGNATED": 309,
+        "WHITE": 1105,
+        "UNDESIGNATED": 310,
         "BLACK OR AFRICAN AMERICAN": 130,
-        "ASIAN": 38,
+        "ASIAN": 39,
         "OTHER": 32,
         "TWO OR MORE RACES": 7,
         "INDIAN AMERICAN OR ALASKA NATIVE": 4
@@ -447,20 +447,20 @@
         "OTHER": 1
       },
       "gender": {
-        "M": 772,
-        "F": 700,
-        "U": 163
+        "M": 775,
+        "F": 701,
+        "U": 164
       },
       "party": {
-        "DEM": 862,
-        "UNA": 651,
+        "DEM": 866,
+        "UNA": 652,
         "REP": 120,
         "LIB": 1,
         "GRE": 1
       }
     },
     "raw_status_counts": {
-      "ACCEPTED": 1519,
+      "ACCEPTED": 1524,
       "ACCEPTED - EXCEPTION": 95,
       "PENDING CURE": 12,
       "ACCEPTED - CURED": 8,
@@ -488,34 +488,34 @@
     }
   },
   "requested_ballots": {
-    "total_requested": 61206,
+    "total_requested": 61246,
     "by_race": {
-      "WHITE": 45457,
-      "UNDESIGNATED": 6117,
-      "BLACK or AFRICAN AMERICAN": 6114,
-      "OTHER": 1617,
-      "ASIAN": 1460,
+      "WHITE": 45486,
+      "UNDESIGNATED": 6122,
+      "BLACK or AFRICAN AMERICAN": 6117,
+      "OTHER": 1618,
+      "ASIAN": 1461,
       "TWO or MORE RACES": 295,
-      "INDIAN AMERICAN or ALASKA NATIVE": 143,
+      "INDIAN AMERICAN or ALASKA NATIVE": 144,
       "NATIVE HAWAIIAN or PACIFIC ISLANDER": 3
     },
     "by_gender": {
-      "FEMALE": 32156,
-      "MALE": 24268,
-      "UNDESIGNATED": 4782
+      "FEMALE": 32182,
+      "MALE": 24278,
+      "UNDESIGNATED": 4786
     },
     "by_party": {
-      "DEMOCRATIC": 25840,
-      "UNAFFILIATED": 24387,
-      "REPUBLICAN": 10787,
-      "LIBERTARIAN": 160,
+      "DEMOCRATIC": 25860,
+      "UNAFFILIATED": 24398,
+      "REPUBLICAN": 10795,
+      "LIBERTARIAN": 161,
       "GREEN": 32
     },
     "by_age": {
-      "Age 18 - 25": 4975,
-      "Age 26 - 40": 7367,
-      "Age 41 - 65": 16775,
-      "Age Over 65": 32089
+      "Age 18 - 25": 4986,
+      "Age 26 - 40": 7371,
+      "Age 41 - 65": 16787,
+      "Age Over 65": 32102
     },
     "by_week": {
       "1": 38,
@@ -548,7 +548,7 @@
       "34": 4162,
       "35": 8199,
       "36": 9917,
-      "37": 9290,
+      "37": 9330,
       "38": 60,
       "39": 52,
       "4": 1171,
@@ -604,7 +604,7 @@
       },
       {
         "county_name": "ORANGE",
-        "requested": 1647
+        "requested": 1666
       },
       {
         "county_name": "HENDERSON",
@@ -664,7 +664,7 @@
       },
       {
         "county_name": "ROWAN",
-        "requested": 551
+        "requested": 564
       },
       {
         "county_name": "CRAVEN",
@@ -672,7 +672,7 @@
       },
       {
         "county_name": "FRANKLIN",
-        "requested": 477
+        "requested": 480
       },
       {
         "county_name": "RANDOLPH",
@@ -680,7 +680,7 @@
       },
       {
         "county_name": "HAYWOOD",
-        "requested": 442
+        "requested": 445
       },
       {
         "county_name": "PITT",
@@ -704,7 +704,7 @@
       },
       {
         "county_name": "WAYNE",
-        "requested": 303
+        "requested": 305
       },
       {
         "county_name": "PENDER",
