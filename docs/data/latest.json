@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T14:49:20.243144+00:00",
+  "generated_at": "2026-09-14T16:49:01.337589+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
@@ -488,34 +488,34 @@
     }
   },
   "requested_ballots": {
-    "total_requested": 61246,
+    "total_requested": 61344,
     "by_race": {
-      "WHITE": 45486,
-      "UNDESIGNATED": 6122,
-      "BLACK or AFRICAN AMERICAN": 6117,
-      "OTHER": 1618,
-      "ASIAN": 1461,
+      "WHITE": 45562,
+      "UNDESIGNATED": 6130,
+      "BLACK or AFRICAN AMERICAN": 6123,
+      "OTHER": 1621,
+      "ASIAN": 1466,
       "TWO or MORE RACES": 295,
       "INDIAN AMERICAN or ALASKA NATIVE": 144,
       "NATIVE HAWAIIAN or PACIFIC ISLANDER": 3
     },
     "by_gender": {
-      "FEMALE": 32182,
-      "MALE": 24278,
-      "UNDESIGNATED": 4786
+      "FEMALE": 32233,
+      "MALE": 24319,
+      "UNDESIGNATED": 4792
     },
     "by_party": {
-      "DEMOCRATIC": 25860,
-      "UNAFFILIATED": 24398,
-      "REPUBLICAN": 10795,
+      "DEMOCRATIC": 25895,
+      "UNAFFILIATED": 24444,
+      "REPUBLICAN": 10812,
       "LIBERTARIAN": 161,
       "GREEN": 32
     },
     "by_age": {
-      "Age 18 - 25": 4986,
-      "Age 26 - 40": 7371,
-      "Age 41 - 65": 16787,
-      "Age Over 65": 32102
+      "Age 18 - 25": 5003,
+      "Age 26 - 40": 7379,
+      "Age 41 - 65": 16817,
+      "Age Over 65": 32145
     },
     "by_week": {
       "1": 38,
@@ -548,8 +548,8 @@
       "34": 4162,
       "35": 8199,
       "36": 9917,
-      "37": 9330,
-      "38": 60,
+      "37": 9398,
+      "38": 90,
       "39": 52,
       "4": 1171,
       "40": 51,
@@ -599,12 +599,12 @@
         "requested": 1860
       },
       {
-        "county_name": "NEW HANOVER",
-        "requested": 1696
+        "county_name": "ORANGE",
+        "requested": 1698
       },
       {
-        "county_name": "ORANGE",
-        "requested": 1666
+        "county_name": "NEW HANOVER",
+        "requested": 1696
       },
       {
         "county_name": "HENDERSON",
@@ -631,12 +631,12 @@
         "requested": 1071
       },
       {
-        "county_name": "GASTON",
-        "requested": 1024
+        "county_name": "IREDELL",
+        "requested": 1041
       },
       {
-        "county_name": "IREDELL",
-        "requested": 995
+        "county_name": "GASTON",
+        "requested": 1024
       },
       {
         "county_name": "ALAMANCE",
@@ -664,7 +664,7 @@
       },
       {
         "county_name": "ROWAN",
-        "requested": 564
+        "requested": 577
       },
       {
         "county_name": "CRAVEN",
@@ -680,7 +680,7 @@
       },
       {
         "county_name": "HAYWOOD",
-        "requested": 445
+        "requested": 448
       },
       {
         "county_name": "PITT",
@@ -704,7 +704,7 @@
       },
       {
         "county_name": "WAYNE",
-        "requested": 305
+        "requested": 309
       },
       {
         "county_name": "PENDER",
