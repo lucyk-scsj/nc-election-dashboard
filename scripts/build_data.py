@@ -192,6 +192,8 @@ def fetch_absentee_df(cfg):
         mc_race_acc = defaultdict(Counter); mc_race_rej = defaultdict(Counter)
         mc_age_acc  = defaultdict(Counter); mc_age_rej  = defaultdict(Counter)
         mc_ethnicity = defaultdict(Counter)
+        mc_ethn_acc  = defaultdict(Counter)
+        mc_ethn_rej  = defaultdict(Counter)
 
         # early voting
         ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
@@ -321,13 +323,19 @@ def fetch_absentee_df(cfg):
                     # route to the right accumulator based on which df_chunk we're in
                     if cr_race_a is mc_race_acc:  # mail
                         m_ethn_acc.update(ethn_acc); m_ethn_rej.update(ethn_rej); m_ethn_cur.update(ethn_cur)
-                        # per-county ethnicity
+                        # per-county ethnicity — flat total and accepted/rejected split
                         if "county_desc" in df_chunk:
                             for county, grp in df_chunk.groupby("county_desc"):
                                 if not county or county == "NAN":
                                     continue
                                 mc_ethnicity[county].update(
                                     grp["ethnicity"].value_counts().to_dict())
+                                gam = grp["ballot_rtn_status"].isin(ACCEPTED)
+                                gcm = grp["ballot_rtn_status"].isin(CURED)
+                                mc_ethn_acc[county].update(
+                                    grp.loc[gam, "ethnicity"].value_counts().to_dict())
+                                mc_ethn_rej[county].update(
+                                    grp.loc[~gam & ~gcm, "ethnicity"].value_counts().to_dict())
                     else:  # early voting
                         ev_ethn_acc.update(ethn_acc); ev_ethn_rej.update(ethn_rej); ev_ethn_cur.update(ethn_cur)
 
@@ -346,7 +354,9 @@ def fetch_absentee_df(cfg):
                             s["age"].update(age_bucket(age_num))
 
     # ── build county rows ─────────────────────────────────────────────────────
-    def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r, county_curable=None, county_ethn=None):
+    def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r,
+                    county_curable=None, county_ethn=None,
+                    county_ethn_acc=None, county_ethn_rej=None):
         rows = []
         # ensure all 100 NC counties appear, filling missing ones with zeros
         all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
@@ -368,11 +378,17 @@ def fetch_absentee_df(cfg):
                 row["curable_categories"] = dict(county_curable.get(k, {}))
             if county_ethn is not None:
                 row["ethnicity"] = dict(county_ethn.get(k, {}))
+            if county_ethn_acc is not None and county_ethn_rej is not None:
+                row["ethnicity_pct"] = race_pct_table(
+                    dict(county_ethn_acc.get(k, {})),
+                    dict(county_ethn_rej.get(k, {})),
+                    {})
             rows.append(row)
         return rows
 
     mail_rows = county_rows(m_county, mc_race_acc, mc_race_rej,
-                            mc_age_acc, mc_age_rej, m_county_curable_cats, mc_ethnicity)
+                            mc_age_acc, mc_age_rej, m_county_curable_cats,
+                            mc_ethnicity, mc_ethn_acc, mc_ethn_rej)
     ev_rows   = county_rows(ev_county, ec_race_acc, ec_race_rej,
                             ec_age_acc, ec_age_rej)
 

@@ -652,9 +652,9 @@ function renderMailTab(county){
   renderPctTable('#mail-race-pct-table',racePct,'race');
   renderPctTable('#mail-age-pct-table', agePct, 'age_group');
 
-  // ethnicity pct table
+  // ethnicity pct table — county-aware
   const ethnPct=isCounty?(cd?.ethnicity_pct||[]):(m.demographics?.ethnicity_pct||[]);
-  renderPctTable('#mail-ethn-pct-table',ethnPct,'race');  // 'race' key used by race_pct_table for the label field
+  renderPctTable('#mail-ethn-pct-table',ethnPct,'race');
 
   // county table (statewide only)
   const reqMap={};
