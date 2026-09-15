@@ -548,6 +548,10 @@ function renderMail(d, req, trend){
   bar(document.getElementById('chart-req-gender'), reqGender.map(r=>r[0]), reqGender.map(r=>r[1]), P.teal);
   const reqParty = topN(req?.by_party,6);
   bar(document.getElementById('chart-req-party'), reqParty.map(r=>r[0]), reqParty.map(r=>r[1]), P.indigo);
+  const reqAge = topN(req?.by_age,4);
+  bar(document.getElementById('chart-req-age'), reqAge.map(r=>r[0]), reqAge.map(r=>r[1]), P.gold);
+  const reqEthnicity = topN(req?.by_ethnicity,6);
+  bar(document.getElementById('chart-req-ethnicity'), reqEthnicity.map(r=>r[0]), reqEthnicity.map(r=>r[1]), P.indigo);
 
   // returned demographics — accepted vs not
   const demo = m.demographics || {};
