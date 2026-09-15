@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:59:50.408818+00:00",
+  "generated_at": "2026-09-15T20:08:06.175901+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
@@ -187,6 +187,112 @@
         }
       },
       {
+        "county_desc": "ALLEGHANY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
+        "county_desc": "ANSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "ASHE",
         "returned": 1,
         "accepted": 1,
@@ -251,6 +357,59 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 1
         }
+      },
+      {
+        "county_desc": "AVERY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "BEAUFORT",
@@ -338,6 +497,59 @@
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 2
         }
+      },
+      {
+        "county_desc": "BERTIE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "BLADEN",
@@ -882,6 +1094,59 @@
         }
       },
       {
+        "county_desc": "CAMDEN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "CARTERET",
         "returned": 15,
         "accepted": 15,
@@ -958,6 +1223,59 @@
           "UNDESIGNATED": 7,
           "HISPANIC OR LATINO": 1
         }
+      },
+      {
+        "county_desc": "CASWELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "CATAWBA",
@@ -1142,6 +1460,59 @@
           "NOT HISPANIC OR NOT LATINO": 9,
           "UNDESIGNATED": 8
         }
+      },
+      {
+        "county_desc": "CHEROKEE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "CHOWAN",
@@ -1385,6 +1756,59 @@
           "NOT HISPANIC OR NOT LATINO": 8,
           "UNDESIGNATED": 4
         }
+      },
+      {
+        "county_desc": "COLUMBUS",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "CRAVEN",
@@ -1636,6 +2060,59 @@
         "ethnicity": {
           "UNDESIGNATED": 3
         }
+      },
+      {
+        "county_desc": "DARE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "DAVIDSON",
@@ -1977,6 +2454,59 @@
           "UNDESIGNATED": 65,
           "HISPANIC OR LATINO": 5
         }
+      },
+      {
+        "county_desc": "EDGECOMBE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "FORSYTH",
@@ -2692,6 +3222,59 @@
         }
       },
       {
+        "county_desc": "HALIFAX",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "HARNETT",
         "returned": 50,
         "accepted": 50,
@@ -2952,6 +3535,165 @@
           "NOT HISPANIC OR NOT LATINO": 20,
           "UNDESIGNATED": 19
         }
+      },
+      {
+        "county_desc": "HERTFORD",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
+        "county_desc": "HOKE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
+        "county_desc": "HYDE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "IREDELL",
@@ -3248,6 +3990,59 @@
           "UNDESIGNATED": 20,
           "HISPANIC OR LATINO": 2
         }
+      },
+      {
+        "county_desc": "JONES",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "LEE",
@@ -3588,6 +4383,112 @@
         }
       },
       {
+        "county_desc": "MADISON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
+        "county_desc": "MARTIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "MCDOWELL",
         "returned": 4,
         "accepted": 4,
@@ -3782,6 +4683,112 @@
           "UNDESIGNATED": 96,
           "HISPANIC OR LATINO": 9
         }
+      },
+      {
+        "county_desc": "MITCHELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
+        "county_desc": "MONTGOMERY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "MOORE",
@@ -4056,6 +5063,59 @@
           "NOT HISPANIC OR NOT LATINO": 33,
           "HISPANIC OR LATINO": 1
         }
+      },
+      {
+        "county_desc": "NORTHAMPTON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "ONSLOW",
@@ -4505,6 +5565,59 @@
         }
       },
       {
+        "county_desc": "PERQUIMANS",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "PERSON",
         "returned": 33,
         "accepted": 32,
@@ -4854,6 +5967,59 @@
           "NOT HISPANIC OR NOT LATINO": 9,
           "UNDESIGNATED": 3
         }
+      },
+      {
+        "county_desc": "RICHMOND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "ROBESON",
@@ -5259,6 +6425,59 @@
         }
       },
       {
+        "county_desc": "SCOTLAND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "STANLY",
         "returned": 7,
         "accepted": 7,
@@ -5479,6 +6698,59 @@
         }
       },
       {
+        "county_desc": "SWAIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
+      },
+      {
         "county_desc": "TRANSYLVANIA",
         "returned": 12,
         "accepted": 12,
@@ -5564,6 +6836,59 @@
           "UNDESIGNATED": 10,
           "NOT HISPANIC OR NOT LATINO": 2
         }
+      },
+      {
+        "county_desc": "TYRRELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "UNION",
@@ -5849,6 +7174,59 @@
           "UNDESIGNATED": 152,
           "HISPANIC OR LATINO": 10
         }
+      },
+      {
+        "county_desc": "WARREN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ],
+        "curable_categories": {},
+        "ethnicity": {}
       },
       {
         "county_desc": "WASHINGTON",
@@ -6568,7 +7946,5108 @@
       "cured": 0,
       "pct_failed_of_sdr": null
     },
-    "by_county": [],
+    "by_county": [
+      {
+        "county_desc": "ALAMANCE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ALEXANDER",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ALLEGHANY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ANSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ASHE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "AVERY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BEAUFORT",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BERTIE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BLADEN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BRUNSWICK",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BUNCOMBE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "BURKE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CABARRUS",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CALDWELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CAMDEN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CARTERET",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CASWELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CATAWBA",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CHATHAM",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CHEROKEE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CHOWAN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CLAY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CLEVELAND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "COLUMBUS",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CRAVEN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CUMBERLAND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "CURRITUCK",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "DARE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "DAVIDSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "DAVIE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "DUPLIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "DURHAM",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "EDGECOMBE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "FORSYTH",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "FRANKLIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GASTON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GATES",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GRAHAM",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GRANVILLE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GREENE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "GUILFORD",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HALIFAX",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HARNETT",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HAYWOOD",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HENDERSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HERTFORD",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HOKE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "HYDE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "IREDELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "JACKSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "JOHNSTON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "JONES",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "LEE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "LENOIR",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "LINCOLN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MACON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MADISON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MARTIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MCDOWELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MECKLENBURG",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MITCHELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MONTGOMERY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "MOORE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "NASH",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "NEW HANOVER",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "NORTHAMPTON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ONSLOW",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ORANGE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PAMLICO",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PASQUOTANK",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PENDER",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PERQUIMANS",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PERSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "PITT",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "POLK",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "RANDOLPH",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "RICHMOND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ROBESON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ROCKINGHAM",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "ROWAN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "RUTHERFORD",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "SAMPSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "SCOTLAND",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "STANLY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "STOKES",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "SURRY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "SWAIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "TRANSYLVANIA",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "TYRRELL",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "UNION",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "VANCE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WAKE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WARREN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WASHINGTON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WATAUGA",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WAYNE",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WILKES",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "WILSON",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "YADKIN",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      },
+      {
+        "county_desc": "YANCEY",
+        "returned": 0,
+        "accepted": 0,
+        "curable": 0,
+        "cured": 0,
+        "rejected": 0,
+        "race_pct": [],
+        "age_pct": [
+          {
+            "age_group": "18-25",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "26-40",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "41-65",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          },
+          {
+            "age_group": "66+",
+            "total": 0,
+            "accepted": 0,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": null,
+            "not_accepted_pct": null,
+            "cured_pct": null
+          }
+        ]
+      }
+    ],
     "sites_by_county": {},
     "demographics": {
       "race_pct": [],
