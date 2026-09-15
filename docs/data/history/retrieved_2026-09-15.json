@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:50:49.870884+00:00",
+  "generated_at": "2026-09-15T19:59:50.408818+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
@@ -6508,6 +6508,38 @@
         "LIB": 6,
         "GRE": 1
       },
+      "ethnicity_pct": [
+        {
+          "race": "NOT HISPANIC OR NOT LATINO",
+          "total": 1561,
+          "accepted": 1528,
+          "not_accepted": 14,
+          "cured": 19,
+          "accepted_pct": 97.89,
+          "not_accepted_pct": 0.9,
+          "cured_pct": 1.22
+        },
+        {
+          "race": "UNDESIGNATED",
+          "total": 919,
+          "accepted": 904,
+          "not_accepted": 9,
+          "cured": 6,
+          "accepted_pct": 98.37,
+          "not_accepted_pct": 0.98,
+          "cured_pct": 0.65
+        },
+        {
+          "race": "HISPANIC OR LATINO",
+          "total": 50,
+          "accepted": 48,
+          "not_accepted": 0,
+          "cured": 2,
+          "accepted_pct": 96.0,
+          "not_accepted_pct": 0.0,
+          "cured_pct": 4.0
+        }
+      ],
       "ethnicity": {
         "NOT HISPANIC OR NOT LATINO": 1542,
         "UNDESIGNATED": 913,
@@ -6584,6 +6616,7 @@
       ],
       "gender": {},
       "party": {},
+      "ethnicity_pct": [],
       "ethnicity": {}
     }
   },
