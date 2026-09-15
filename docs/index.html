@@ -916,13 +916,25 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     try{TREND_DATA=await loadJSON('data/trend.json');}catch(e){TREND_DATA=[];}
 
     // populate county dropdowns
-    const mailCounties=(MAIL_DATA?.by_county||[])
-      .map(r=>r.county_desc).filter(Boolean).sort();
-    populateCountyFilter('mail-county-filter',mailCounties);
-    populateCountyFilter('ev-county-filter',
-      (EV_DATA?.by_county||[]).map(r=>r.county_desc).filter(Boolean).sort());
-    populateCountyFilter('prov-county-filter',
-      (PROV_DATA?.by_county||[]).map(r=>r.county_name).filter(Boolean).sort());
+    // always show all 100 NC counties in the dropdown, even if some have no data yet
+    const NC_COUNTIES=[
+      "ALAMANCE","ALEXANDER","ALLEGHANY","ANSON","ASHE","AVERY","BEAUFORT","BERTIE",
+      "BLADEN","BRUNSWICK","BUNCOMBE","BURKE","CABARRUS","CALDWELL","CAMDEN","CARTERET",
+      "CASWELL","CATAWBA","CHATHAM","CHEROKEE","CHOWAN","CLAY","CLEVELAND","COLUMBUS",
+      "CRAVEN","CUMBERLAND","CURRITUCK","DARE","DAVIDSON","DAVIE","DUPLIN","DURHAM",
+      "EDGECOMBE","FORSYTH","FRANKLIN","GASTON","GATES","GRAHAM","GRANVILLE","GREENE",
+      "GUILFORD","HALIFAX","HARNETT","HAYWOOD","HENDERSON","HERTFORD","HOKE","HYDE",
+      "IREDELL","JACKSON","JOHNSTON","JONES","LEE","LENOIR","LINCOLN","MACON",
+      "MADISON","MARTIN","MCDOWELL","MECKLENBURG","MITCHELL","MONTGOMERY","MOORE",
+      "NASH","NEW HANOVER","NORTHAMPTON","ONSLOW","ORANGE","PAMLICO","PASQUOTANK",
+      "PENDER","PERQUIMANS","PERSON","PITT","POLK","RANDOLPH","RICHMOND","ROBESON",
+      "ROCKINGHAM","ROWAN","RUTHERFORD","SAMPSON","SCOTLAND","STANLY","STOKES","SURRY",
+      "SWAIN","TRANSYLVANIA","TYRRELL","UNION","VANCE","WAKE","WARREN","WASHINGTON",
+      "WATAUGA","WAYNE","WILKES","WILSON","YADKIN","YANCEY",
+    ];
+    populateCountyFilter('mail-county-filter', NC_COUNTIES);
+    populateCountyFilter('ev-county-filter', NC_COUNTIES);
+    populateCountyFilter('prov-county-filter', NC_COUNTIES);
 
     renderMailTab('');
     renderEVTab('');

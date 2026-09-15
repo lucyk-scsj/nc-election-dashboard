@@ -38,6 +38,22 @@ CURED      = ["ACCEPTED - CURED", "CURED"]
 REJECTED   = ["SPOILED", "SPOILED-EV", "RETURNED UNDELIVERABLE", "REJECTED"]
 SDR_FAILED = ["SDR-FAILED VERIFICATION"]
 
+NC_COUNTIES = [
+    "ALAMANCE","ALEXANDER","ALLEGHANY","ANSON","ASHE","AVERY","BEAUFORT","BERTIE",
+    "BLADEN","BRUNSWICK","BUNCOMBE","BURKE","CABARRUS","CALDWELL","CAMDEN","CARTERET",
+    "CASWELL","CATAWBA","CHATHAM","CHEROKEE","CHOWAN","CLAY","CLEVELAND","COLUMBUS",
+    "CRAVEN","CUMBERLAND","CURRITUCK","DARE","DAVIDSON","DAVIE","DUPLIN","DURHAM",
+    "EDGECOMBE","FORSYTH","FRANKLIN","GASTON","GATES","GRAHAM","GRANVILLE","GREENE",
+    "GUILFORD","HALIFAX","HARNETT","HAYWOOD","HENDERSON","HERTFORD","HOKE","HYDE",
+    "IREDELL","JACKSON","JOHNSTON","JONES","LEE","LENOIR","LINCOLN","MACON",
+    "MADISON","MARTIN","MCDOWELL","MECKLENBURG","MITCHELL","MONTGOMERY","MOORE",
+    "NASH","NEW HANOVER","NORTHAMPTON","ONSLOW","ORANGE","PAMLICO","PASQUOTANK",
+    "PENDER","PERQUIMANS","PERSON","PITT","POLK","RANDOLPH","RICHMOND","ROBESON",
+    "ROCKINGHAM","ROWAN","RUTHERFORD","SAMPSON","SCOTLAND","STANLY","STOKES","SURRY",
+    "SWAIN","TRANSYLVANIA","TYRRELL","UNION","VANCE","WAKE","WARREN","WASHINGTON",
+    "WATAUGA","WAYNE","WILKES","WILSON","YADKIN","YANCEY",
+]
+
 AGE_BUCKETS = [
     ("18-25",  18, 25),
     ("26-40",  26, 40),
@@ -332,9 +348,10 @@ def fetch_absentee_df(cfg):
     # ── build county rows ─────────────────────────────────────────────────────
     def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r, county_curable=None, county_ethn=None):
         rows = []
-        for k, v in county_d.items():
-            if not k or k.upper() == "NAN":
-                continue
+        # ensure all 100 NC counties appear, filling missing ones with zeros
+        all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+                        for c in NC_COUNTIES}
+        for k, v in all_counties.items():
             row = {
                 "county_desc": k,
                 **v,
