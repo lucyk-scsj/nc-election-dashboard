@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T20:14:14.026324+00:00",
+  "generated_at": "2026-09-15T20:19:17.203187+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
@@ -108,7 +108,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 24,
           "UNDESIGNATED": 17
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 24,
+            "accepted": 24,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 17,
+            "accepted": 16,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 94.12,
+            "not_accepted_pct": 5.88,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "ALEXANDER",
@@ -184,7 +206,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "ALLEGHANY",
@@ -237,7 +271,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "ANSON",
@@ -290,7 +325,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "ASHE",
@@ -356,7 +392,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "AVERY",
@@ -409,7 +457,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "BEAUFORT",
@@ -496,7 +545,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "BERTIE",
@@ -549,7 +620,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "BLADEN",
@@ -615,7 +687,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "BRUNSWICK",
@@ -702,7 +786,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 17,
           "UNDESIGNATED": 16
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 17,
+            "accepted": 17,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 16,
+            "accepted": 16,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "BUNCOMBE",
@@ -830,7 +936,39 @@
           "NOT HISPANIC OR NOT LATINO": 86,
           "UNDESIGNATED": 77,
           "HISPANIC OR LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 86,
+            "accepted": 86,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 77,
+            "accepted": 77,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "BURKE",
@@ -907,7 +1045,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 10,
           "UNDESIGNATED": 6
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 6,
+            "accepted": 6,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CABARRUS",
@@ -1014,7 +1174,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 21,
           "UNDESIGNATED": 15
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 21,
+            "accepted": 21,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 15,
+            "accepted": 15,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CALDWELL",
@@ -1091,7 +1273,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CAMDEN",
@@ -1144,7 +1348,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "CARTERET",
@@ -1222,7 +1427,39 @@
           "NOT HISPANIC OR NOT LATINO": 7,
           "UNDESIGNATED": 7,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 7,
+            "accepted": 7,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 7,
+            "accepted": 7,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CASWELL",
@@ -1275,7 +1512,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "CATAWBA",
@@ -1372,7 +1610,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 23,
           "UNDESIGNATED": 13
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 23,
+            "accepted": 23,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 13,
+            "accepted": 13,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CHATHAM",
@@ -1459,7 +1719,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 9,
           "UNDESIGNATED": 8
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 9,
+            "accepted": 9,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 8,
+            "accepted": 8,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CHEROKEE",
@@ -1512,7 +1794,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "CHOWAN",
@@ -1579,7 +1862,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CLAY",
@@ -1658,7 +1963,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 0,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 0.0,
+            "not_accepted_pct": 100.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CLEVELAND",
@@ -1755,7 +2082,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 8,
           "UNDESIGNATED": 4
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 8,
+            "accepted": 8,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "COLUMBUS",
@@ -1808,7 +2157,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "CRAVEN",
@@ -1875,7 +2225,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 7,
           "UNDESIGNATED": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 7,
+            "accepted": 7,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CUMBERLAND",
@@ -1983,7 +2355,39 @@
           "NOT HISPANIC OR NOT LATINO": 29,
           "UNDESIGNATED": 26,
           "HISPANIC OR LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 29,
+            "accepted": 29,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 26,
+            "accepted": 26,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "CURRITUCK",
@@ -2059,7 +2463,19 @@
         "curable_categories": {},
         "ethnicity": {
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "DARE",
@@ -2112,7 +2528,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "DAVIDSON",
@@ -2199,7 +2616,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 22,
           "UNDESIGNATED": 7
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 22,
+            "accepted": 22,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 7,
+            "accepted": 7,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "DAVIE",
@@ -2276,7 +2715,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5,
           "UNDESIGNATED": 4
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "DUPLIN",
@@ -2342,7 +2803,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "DURHAM",
@@ -2453,7 +2926,39 @@
           "NOT HISPANIC OR NOT LATINO": 97,
           "UNDESIGNATED": 65,
           "HISPANIC OR LATINO": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 97,
+            "accepted": 96,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 98.97,
+            "not_accepted_pct": 1.03,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 65,
+            "accepted": 64,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 98.46,
+            "not_accepted_pct": 1.54,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "EDGECOMBE",
@@ -2506,7 +3011,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "FORSYTH",
@@ -2606,7 +3112,39 @@
           "NOT HISPANIC OR NOT LATINO": 22,
           "UNDESIGNATED": 21,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 22,
+            "accepted": 20,
+            "not_accepted": 2,
+            "cured": 0,
+            "accepted_pct": 90.91,
+            "not_accepted_pct": 9.09,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 21,
+            "accepted": 20,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 95.24,
+            "not_accepted_pct": 4.76,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "FRANKLIN",
@@ -2683,7 +3221,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GASTON",
@@ -2793,7 +3353,39 @@
           "NOT HISPANIC OR NOT LATINO": 27,
           "UNDESIGNATED": 8,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 27,
+            "accepted": 25,
+            "not_accepted": 2,
+            "cured": 0,
+            "accepted_pct": 92.59,
+            "not_accepted_pct": 7.41,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 8,
+            "accepted": 8,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GATES",
@@ -2869,7 +3461,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GRAHAM",
@@ -2945,7 +3549,19 @@
         "curable_categories": {},
         "ethnicity": {
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GRANVILLE",
@@ -3032,7 +3648,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GREENE",
@@ -3109,7 +3747,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 21,
           "UNDESIGNATED": 12
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 21,
+            "accepted": 21,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 12,
+            "accepted": 12,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "GUILFORD",
@@ -3219,7 +3879,39 @@
           "NOT HISPANIC OR NOT LATINO": 53,
           "UNDESIGNATED": 37,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 53,
+            "accepted": 53,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 37,
+            "accepted": 36,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 97.3,
+            "not_accepted_pct": 2.7,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "HALIFAX",
@@ -3272,7 +3964,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "HARNETT",
@@ -3380,7 +4073,39 @@
           "NOT HISPANIC OR NOT LATINO": 37,
           "UNDESIGNATED": 10,
           "HISPANIC OR LATINO": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 37,
+            "accepted": 37,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "HAYWOOD",
@@ -3457,7 +4182,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 6,
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 6,
+            "accepted": 6,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 2,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 66.67,
+            "not_accepted_pct": 33.33,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "HENDERSON",
@@ -3534,7 +4281,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 20,
           "UNDESIGNATED": 19
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 20,
+            "accepted": 20,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 19,
+            "accepted": 19,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "HERTFORD",
@@ -3587,7 +4356,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "HOKE",
@@ -3640,7 +4410,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "HYDE",
@@ -3693,7 +4464,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "IREDELL",
@@ -3792,7 +4564,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 32,
           "UNDESIGNATED": 13
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 32,
+            "accepted": 31,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 96.88,
+            "not_accepted_pct": 3.12,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 13,
+            "accepted": 13,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "JACKSON",
@@ -3879,7 +4673,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 17,
           "UNDESIGNATED": 6
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 17,
+            "accepted": 17,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 6,
+            "accepted": 6,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "JOHNSTON",
@@ -3989,7 +4805,39 @@
           "NOT HISPANIC OR NOT LATINO": 31,
           "UNDESIGNATED": 20,
           "HISPANIC OR LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 31,
+            "accepted": 31,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 20,
+            "accepted": 19,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 95.0,
+            "not_accepted_pct": 5.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "JONES",
@@ -4042,7 +4890,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "LEE",
@@ -4150,7 +4999,39 @@
           "UNDESIGNATED": 5,
           "NOT HISPANIC OR NOT LATINO": 4,
           "HISPANIC OR LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "LENOIR",
@@ -4227,7 +5108,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "LINCOLN",
@@ -4314,7 +5217,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 25,
           "UNDESIGNATED": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 25,
+            "accepted": 25,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "MACON",
@@ -4380,7 +5305,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "MADISON",
@@ -4433,7 +5370,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "MARTIN",
@@ -4486,7 +5424,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "MCDOWELL",
@@ -4552,7 +5491,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 4
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "MECKLENBURG",
@@ -4682,7 +5633,39 @@
           "NOT HISPANIC OR NOT LATINO": 175,
           "UNDESIGNATED": 96,
           "HISPANIC OR LATINO": 9
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 175,
+            "accepted": 174,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 99.43,
+            "not_accepted_pct": 0.57,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 96,
+            "accepted": 96,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 9,
+            "accepted": 9,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "MITCHELL",
@@ -4735,7 +5718,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "MONTGOMERY",
@@ -4788,7 +5772,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "MOORE",
@@ -4885,7 +5870,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 25,
           "UNDESIGNATED": 23
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 25,
+            "accepted": 25,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 23,
+            "accepted": 23,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "NASH",
@@ -4962,7 +5969,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 6,
           "UNDESIGNATED": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 6,
+            "accepted": 6,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "NEW HANOVER",
@@ -5062,7 +6091,39 @@
           "UNDESIGNATED": 41,
           "NOT HISPANIC OR NOT LATINO": 33,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 41,
+            "accepted": 41,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 33,
+            "accepted": 30,
+            "not_accepted": 3,
+            "cured": 0,
+            "accepted_pct": 90.91,
+            "not_accepted_pct": 9.09,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "NORTHAMPTON",
@@ -5115,7 +6176,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "ONSLOW",
@@ -5213,7 +6275,39 @@
           "NOT HISPANIC OR NOT LATINO": 17,
           "UNDESIGNATED": 8,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 17,
+            "accepted": 17,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 8,
+            "accepted": 8,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "ORANGE",
@@ -5331,7 +6425,39 @@
           "NOT HISPANIC OR NOT LATINO": 88,
           "UNDESIGNATED": 67,
           "HISPANIC OR LATINO": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 88,
+            "accepted": 88,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 67,
+            "accepted": 67,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "PAMLICO",
@@ -5408,7 +6534,29 @@
         "ethnicity": {
           "UNDESIGNATED": 5,
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "PASQUOTANK",
@@ -5495,7 +6643,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "PENDER",
@@ -5562,7 +6732,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 1,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "PERQUIMANS",
@@ -5615,7 +6807,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "PERSON",
@@ -5704,7 +6897,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 19,
           "UNDESIGNATED": 14
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 19,
+            "accepted": 19,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 14,
+            "accepted": 13,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 92.86,
+            "not_accepted_pct": 7.14,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "PITT",
@@ -5801,7 +7016,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 18,
           "UNDESIGNATED": 10
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 18,
+            "accepted": 18,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "POLK",
@@ -5879,7 +7116,39 @@
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 4,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "RANDOLPH",
@@ -5966,7 +7235,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 9,
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 9,
+            "accepted": 9,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "RICHMOND",
@@ -6019,7 +7310,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "ROBESON",
@@ -6105,7 +7397,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "ROCKINGHAM",
@@ -6171,7 +7475,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "ROWAN",
@@ -6279,7 +7595,39 @@
           "NOT HISPANIC OR NOT LATINO": 17,
           "UNDESIGNATED": 5,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 17,
+            "accepted": 17,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "RUTHERFORD",
@@ -6356,7 +7704,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5,
           "UNDESIGNATED": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "SAMPSON",
@@ -6422,7 +7792,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "SCOTLAND",
@@ -6475,7 +7857,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "STANLY",
@@ -6552,7 +7935,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5,
           "UNDESIGNATED": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "STOKES",
@@ -6618,7 +8023,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "SURRY",
@@ -6695,7 +8112,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 10,
           "UNDESIGNATED": 4
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "SWAIN",
@@ -6748,7 +8187,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "TRANSYLVANIA",
@@ -6835,7 +8275,29 @@
         "ethnicity": {
           "UNDESIGNATED": 10,
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "UNDESIGNATED",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "TYRRELL",
@@ -6888,7 +8350,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "UNION",
@@ -6976,7 +8439,39 @@
           "NOT HISPANIC OR NOT LATINO": 16,
           "UNDESIGNATED": 2,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 16,
+            "accepted": 15,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 93.75,
+            "not_accepted_pct": 6.25,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "VANCE",
@@ -7043,7 +8538,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 4,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 4,
+            "accepted": 4,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WAKE",
@@ -7173,7 +8690,39 @@
           "NOT HISPANIC OR NOT LATINO": 324,
           "UNDESIGNATED": 152,
           "HISPANIC OR LATINO": 10
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 324,
+            "accepted": 322,
+            "not_accepted": 2,
+            "cured": 0,
+            "accepted_pct": 99.38,
+            "not_accepted_pct": 0.62,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 152,
+            "accepted": 151,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 99.34,
+            "not_accepted_pct": 0.66,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 10,
+            "accepted": 10,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WARREN",
@@ -7226,7 +8775,8 @@
           }
         ],
         "curable_categories": {},
-        "ethnicity": {}
+        "ethnicity": {},
+        "ethnicity_pct": []
       },
       {
         "county_desc": "WASHINGTON",
@@ -7292,7 +8842,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WATAUGA",
@@ -7370,7 +8932,39 @@
           "NOT HISPANIC OR NOT LATINO": 16,
           "UNDESIGNATED": 5,
           "HISPANIC OR LATINO": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 16,
+            "accepted": 16,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "HISPANIC OR LATINO",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WAYNE",
@@ -7457,7 +9051,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 11,
           "UNDESIGNATED": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 11,
+            "accepted": 11,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WILKES",
@@ -7524,7 +9140,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 3,
           "UNDESIGNATED": 1
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 3,
+            "accepted": 3,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 1,
+            "accepted": 1,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "WILSON",
@@ -7613,7 +9251,29 @@
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 8,
           "UNDESIGNATED": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 8,
+            "accepted": 7,
+            "not_accepted": 1,
+            "cured": 0,
+            "accepted_pct": 87.5,
+            "not_accepted_pct": 12.5,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "YADKIN",
@@ -7690,7 +9350,29 @@
         "ethnicity": {
           "UNDESIGNATED": 2,
           "NOT HISPANIC OR NOT LATINO": 2
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          },
+          {
+            "race": "UNDESIGNATED",
+            "total": 2,
+            "accepted": 2,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       },
       {
         "county_desc": "YANCEY",
@@ -7756,7 +9438,19 @@
         "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 5
-        }
+        },
+        "ethnicity_pct": [
+          {
+            "race": "NOT HISPANIC OR NOT LATINO",
+            "total": 5,
+            "accepted": 5,
+            "not_accepted": 0,
+            "cured": 0,
+            "accepted_pct": 100.0,
+            "not_accepted_pct": 0.0,
+            "cured_pct": 0.0
+          }
+        ]
       }
     ],
     "demographics": {
