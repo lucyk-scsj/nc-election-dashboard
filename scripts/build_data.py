@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+  #!/usr/bin/env python3
 """
 NC Election Dashboard — data pipeline v2
 Downloads and aggregates three NCSBE files:
@@ -220,13 +220,15 @@ def fetch_absentee_df(cfg):
             "by_county": [{"county_desc": k, **v}
                           for k, v in m_county.items()
                           if k and k.upper() != "NAN"],
-            "demographics": {
-                "race_accepted": dict(m_race_acc),
-                "race_not_accepted": dict(m_race_rej),
-                "race_cured": dict(m_race_cur),
-                "gender": dict(m_gender_c),
-                "party": dict(m_party_c),
-            },
+           "demographics": {
+              "race_accepted": dict(m_race_acc),
+              "race_not_accepted": dict(m_race_rej),
+              "race_cured": dict(m_race_cur),
+              "gender": dict(m_gender_c),
+              "party": dict(m_party_c),
+              "age": dict(m_age_c),
+              "ethnicity": dict(m_ethnicity_c),
+        },
             "raw_status_counts": dict(status_c),
         },
         "early_voting": {
@@ -242,10 +244,12 @@ def fetch_absentee_df(cfg):
                           for k, v in ev_county.items()
                           if k and k.upper() != "NAN"],
             "demographics": {
-                "race": dict(ev_race),
-                "gender": dict(ev_gender),
-                "party": dict(ev_party),
-            },
+              "race": dict(ev_race),
+              "gender": dict(ev_gender),
+              "party": dict(ev_party),
+              "age": dict(ev_age),
+              "ethnicity": dict(ev_ethnicity),
+        },
         },
     }
 
