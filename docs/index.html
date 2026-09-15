@@ -7,164 +7,135 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="vendor/chart.umd.js"></script>
 <style>
-  :root{
-    --bg:#F2F0EE;
-    --surface:#FFFFFF;
-    --ink:#1C1B19;
-    --ink-2:#5A5854;
-    --gold:#F5CF51;
-    --gold-text:#7A5C00;
-    --teal:#2F6C3F;
-    --teal-fill:#72AE82;
-    --brick:#872921;
-    --brick-fill:#D05744;
-    --indigo:#4F27D3;
-    --indigo-fill:#7168D9;
-    --line:#D6D1CD;
-    --tab-active:#1C1B19;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-  a{color:var(--gold-text);}
+:root{
+  --bg:#F2F0EE; --surface:#FFFFFF; --ink:#1C1B19; --ink-2:#5A5854;
+  --gold:#F5CF51; --gold-text:#7A5C00;
+  --teal:#2F6C3F; --teal-fill:#72AE82;
+  --brick:#872921; --brick-fill:#D05744;
+  --indigo:#4F27D3; --indigo-fill:#7168D9;
+  --line:#D6D1CD;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:var(--gold-text);}
 
-  /* ── Masthead ── */
-  header{
-    background:var(--surface);
-    border-bottom:2px solid var(--line);
-    color:var(--ink);
-    padding:24px 32px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:16px;
-  }
-  .brand-logo{height:22px;width:auto;display:block;margin-bottom:10px;}
-  .masthead-title{
-    font-family:'Anton',sans-serif;
-    text-transform:uppercase;
-    font-size:clamp(22px,3.5vw,36px);
-    letter-spacing:0.01em;
-    color:var(--ink);
-    margin:0;
-  }
-  .masthead-title .accent{color:var(--gold-text);}
-  .masthead-sub{
-    margin:6px 0 0;
-    color:var(--ink-2);
-    font-family:'Source Serif 4',serif;
-    font-size:14px;
-    max-width:520px;
-    line-height:1.55;
-  }
-  .masthead-meta{
-    text-align:right;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    color:var(--ink-2);
-  }
-  .status-pill{
-    display:inline-flex;align-items:center;gap:6px;
-    padding:4px 10px;border:1px solid var(--line);border-radius:100px;
-    font-family:'IBM Plex Mono',monospace;font-size:11px;
-    letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;
-    color:var(--ink);
-  }
-  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--teal-fill);}
-  .status-pill.waiting .status-dot{background:var(--gold);}
+header{
+  background:var(--surface);border-bottom:2px solid var(--line);
+  padding:24px 32px 20px;display:flex;justify-content:space-between;
+  align-items:flex-end;flex-wrap:wrap;gap:16px;
+}
+.brand-logo{height:22px;width:auto;display:block;margin-bottom:10px;}
+.masthead-title{font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:clamp(22px,3.5vw,36px);letter-spacing:.01em;color:var(--ink);margin:0;}
+.masthead-title .accent{color:var(--gold-text);}
+.masthead-sub{margin:6px 0 0;color:var(--ink-2);font-family:'Source Serif 4',serif;
+  font-size:14px;max-width:520px;line-height:1.55;}
+.masthead-meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);}
+.status-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;
+  border:1px solid var(--line);border-radius:100px;font-family:'IBM Plex Mono',monospace;
+  font-size:11px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;color:var(--ink);}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--teal-fill);}
+.status-pill.waiting .status-dot{background:var(--gold);}
 
-  /* ── Tabs ── */
-  .tab-bar{
-    background:var(--surface);
-    border-bottom:2px solid var(--line);
-    display:flex;
-    padding:0 32px;
-    gap:0;
-  }
-  .tab-btn{
-    background:none;border:none;cursor:pointer;
-    padding:16px 24px 14px;
-    font-family:'Inter',sans-serif;font-size:14px;font-weight:600;
-    color:var(--ink-2);
-    border-bottom:3px solid transparent;
-    margin-bottom:-2px;
-    transition:color .15s, border-color .15s;
-    white-space:nowrap;
-  }
-  .tab-btn:hover{color:var(--ink);}
-  .tab-btn.active{color:var(--ink);border-bottom-color:var(--ink);}
-  .tab-panel{display:none;}
-  .tab-panel.active{display:block;}
+/* tabs */
+.tab-bar{background:var(--surface);border-bottom:2px solid var(--line);
+  display:flex;padding:0 32px;}
+.tab-btn{background:none;border:none;cursor:pointer;padding:16px 24px 14px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:var(--ink-2);
+  border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:color .15s,border-color .15s;white-space:nowrap;}
+.tab-btn:hover{color:var(--ink);}
+.tab-btn.active{color:var(--ink);border-bottom-color:var(--ink);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
 
-  main{max-width:1200px;margin:0 auto;padding:28px 32px 48px;}
+/* county filter */
+.filter-bar{
+  background:var(--surface);border-bottom:1px solid var(--line);
+  padding:12px 32px;display:flex;align-items:center;gap:12px;
+}
+.filter-bar label{font-size:12px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-2);}
+.county-select{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;
+  border:1px solid var(--line);border-radius:2px;
+  padding:6px 10px;background:var(--surface);color:var(--ink);
+  cursor:pointer;min-width:200px;
+}
+.county-select:focus{outline:2px solid var(--indigo-fill);}
 
-  /* ── KPI strip ── */
-  .kpi-strip{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:1px;background:var(--line);border:1px solid var(--line);
-    margin-bottom:32px;
-  }
-  .kpi{background:var(--surface);padding:18px 16px;}
-  .kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:8px;}
-  .kpi-value{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:30px;line-height:1;color:var(--ink);}
-  .kpi-value.gold{color:var(--gold-text);}
-  .kpi-value.teal{color:var(--teal);}
-  .kpi-value.brick{color:var(--brick);}
-  .kpi-value.indigo{color:var(--indigo);}
-  .kpi-sub{margin-top:6px;font-size:11px;color:var(--ink-2);}
+main{max-width:1200px;margin:0 auto;padding:28px 32px 48px;}
 
-  /* ── Section headings ── */
-  .section{margin-bottom:40px;}
-  .section-head{
-    display:flex;align-items:baseline;gap:10px;
-    margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:6px;
-  }
-  .section-head h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:16px;letter-spacing:.02em;}
-  .section-note{font-size:12px;color:var(--ink-2);}
+/* KPIs */
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:32px;}
+.kpi{background:var(--surface);padding:18px 16px;}
+.kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--ink-2);margin-bottom:8px;}
+.kpi-value{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:30px;
+  line-height:1;color:var(--ink);}
+.kpi-value.gold{color:var(--gold-text);}
+.kpi-value.teal{color:var(--teal);}
+.kpi-value.brick{color:var(--brick);}
+.kpi-value.indigo{color:var(--indigo);}
+.kpi-sub{margin-top:6px;font-size:11px;color:var(--ink-2);}
 
-  /* ── Panels and grids ── */
-  .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  @media(max-width:840px){.grid-2,.grid-3{grid-template-columns:1fr;}}
-  .panel{border:1px solid var(--line);background:var(--surface);padding:16px 18px 10px;border-radius:2px;}
-  .panel h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px;}
-  .chart-wrap{position:relative;height:240px;}
-  .chart-wrap.tall{height:320px;}
-  .chart-wrap.short{height:180px;}
+/* sections */
+.section{margin-bottom:40px;}
+.section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;
+  border-bottom:1px solid var(--line);padding-bottom:6px;}
+.section-head h2{font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:16px;letter-spacing:.02em;}
+.section-note{font-size:12px;color:var(--ink-2);}
 
-  /* ── Empty state ── */
-  .empty-state{
-    border:1px dashed var(--line);border-radius:4px;
-    padding:48px 32px;text-align:center;max-width:580px;margin:40px auto;
-  }
-  .empty-state h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:20px;margin-bottom:12px;}
-  .empty-state p{color:var(--ink-2);font-family:'Source Serif 4',serif;line-height:1.6;font-size:14px;}
+.grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:840px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+.panel{border:1px solid var(--line);background:var(--surface);
+  padding:16px 18px 10px;border-radius:2px;}
+.panel h3{font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px;}
+.chart-wrap{position:relative;height:240px;}
+.chart-wrap.tall{height:320px;}
+.chart-wrap.short{height:180px;}
 
-  /* ── Tables ── */
-  .table-wrap{overflow-x:auto;}
-  table.data-table{width:100%;border-collapse:collapse;font-size:12px;font-family:'IBM Plex Mono',monospace;}
-  table.data-table th,table.data-table td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);}
-  table.data-table th{color:var(--ink-2);font-weight:500;text-transform:uppercase;font-size:10px;letter-spacing:.05em;}
-  table.data-table tr:hover td{background:#F8F7F5;}
+.empty-state{border:1px dashed var(--line);border-radius:4px;padding:48px 32px;
+  text-align:center;max-width:580px;margin:40px auto;}
+.empty-state h2{font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:20px;margin-bottom:12px;}
+.empty-state p{color:var(--ink-2);font-family:'Source Serif 4',serif;
+  line-height:1.6;font-size:14px;}
 
-  /* ── Download button ── */
-  .download-btn{
-    display:inline-flex;align-items:center;gap:6px;
-    margin-top:12px;padding:7px 14px;
-    background:var(--ink);color:var(--bg);border:none;border-radius:2px;
-    font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
-    cursor:pointer;letter-spacing:.02em;
-  }
-  .download-btn:hover{background:#3A3835;}
+/* tables */
+.table-wrap{overflow-x:auto;}
+table.data-table{width:100%;border-collapse:collapse;font-size:12px;
+  font-family:'IBM Plex Mono',monospace;}
+table.data-table th,table.data-table td{text-align:left;padding:7px 6px;
+  border-bottom:1px solid var(--line);}
+table.data-table th{color:var(--ink-2);font-weight:500;text-transform:uppercase;
+  font-size:10px;letter-spacing:.05em;cursor:pointer;user-select:none;}
+table.data-table th:hover{color:var(--ink);}
+table.data-table th.sorted-asc::after{content:" ▲";}
+table.data-table th.sorted-desc::after{content:" ▼";}
+table.data-table tr:hover td{background:#F8F7F5;}
 
-  /* ── Footer ── */
-  footer{
-    border-top:1px solid var(--line);padding:20px 32px 36px;
-    color:var(--ink-2);font-family:'Source Serif 4',serif;
-    font-size:12px;line-height:1.7;max-width:1200px;margin:0 auto;
-  }
-  footer a{text-decoration:underline;}
+/* pct table */
+table.pct-table{width:100%;border-collapse:collapse;font-size:12px;
+  font-family:'IBM Plex Mono',monospace;}
+table.pct-table th,table.pct-table td{padding:6px 8px;border-bottom:1px solid var(--line);}
+table.pct-table th{color:var(--ink-2);font-size:10px;text-transform:uppercase;letter-spacing:.04em;}
+.pct-bar{height:6px;border-radius:2px;background:var(--teal-fill);display:inline-block;min-width:1px;}
+.pct-bar.not-acc{background:var(--brick-fill);}
+
+.download-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;
+  padding:7px 14px;background:var(--ink);color:var(--bg);border:none;border-radius:2px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
+.download-btn:hover{background:#3A3835;}
+
+footer{border-top:1px solid var(--line);padding:20px 32px 36px;color:var(--ink-2);
+  font-family:'Source Serif 4',serif;font-size:12px;line-height:1.7;
+  max-width:1200px;margin:0 auto;}
+footer a{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -188,296 +159,615 @@
   <button class="tab-btn" data-tab="provisional">Provisional</button>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     TAB 1 — ABSENTEE BY MAIL
-═══════════════════════════════════════════════════ -->
+<!-- ── MAIL ──────────────────────────────────────────────────── -->
 <div id="tab-mail" class="tab-panel active">
-<main>
-  <div id="mail-empty" class="empty-state" style="display:none">
-    <h2>No mail ballot data yet</h2>
-    <p id="mail-empty-note">NCSBE has not yet published absentee files for this election.</p>
+  <div class="filter-bar">
+    <label>Filter:</label>
+    <select class="county-select" id="mail-county-filter"><option value="">Statewide</option></select>
   </div>
-  <div id="mail-content">
+  <main>
+    <div id="mail-empty" class="empty-state" style="display:none">
+      <h2>No mail ballot data yet</h2>
+      <p>NCSBE has not yet published absentee files for this election.</p>
+    </div>
+    <div id="mail-content">
+      <div class="kpi-strip" id="mail-kpis"></div>
 
-    <div class="kpi-strip" id="mail-kpis"></div>
+      <section class="section">
+        <div class="section-head"><h2>Curable ballots over time</h2><span class="section-note">daily snapshots, mail ballots</span></div>
+        <div class="panel"><div class="chart-wrap tall"><canvas id="chart-mail-trend"></canvas></div></div>
+      </section>
 
-    <section class="section">
-      <div class="section-head"><h2>Curable ballots over time</h2><span class="section-note">daily snapshots, mail ballots</span></div>
-      <div class="panel"><div class="chart-wrap tall"><canvas id="chart-mail-trend"></canvas></div></div>
-    </section>
+      <section class="section grid-2">
+        <div class="panel"><h3>Ballot status breakdown</h3><div class="chart-wrap"><canvas id="chart-mail-status"></canvas></div></div>
+        <div class="panel"><h3>Requested vs. returned vs. accepted</h3><div class="chart-wrap"><canvas id="chart-mail-funnel"></canvas></div></div>
+      </section>
 
-    <section class="section grid-2">
-      <div class="panel">
-        <h3>Ballot status breakdown</h3>
-        <div class="chart-wrap"><canvas id="chart-mail-status"></canvas></div>
-      </div>
-      <div class="panel">
-        <h3>Requested vs. returned vs. accepted</h3>
-        <div class="chart-wrap"><canvas id="chart-mail-funnel"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>Requested ballot demographics</h2><span class="section-note">from NCSBE demo stats file — statewide</span></div>
-      <div class="grid-2">
-        <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-req-race"></canvas></div></div>
-        <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-req-gender"></canvas></div></div>
-        <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-req-party"></canvas></div></div>
-        <div class="panel"><h3>By age</h3><div class="chart-wrap"><canvas id="chart-req-age"></canvas></div></div>
-        <div class="panel"><h3>By ethnicity</h3><div class="chart-wrap"><canvas id="chart-req-ethnicity"></canvas></div></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>Demographics of returned ballots</h2><span class="section-note">accepted vs. not accepted</span></div>
-      <div class="grid-2">
+      <section class="section" id="mail-curable-section">
+        <div class="section-head"><h2>Outstanding curable ballot categories</h2><span class="section-note">by reason</span></div>
         <div class="panel">
-          <h3>Race — accepted</h3>
-          <div class="chart-wrap"><canvas id="chart-race-accepted"></canvas></div>
+          <div class="table-wrap"><table class="data-table" id="mail-curable-table">
+            <thead><tr><th>Category</th><th>Count</th></tr></thead><tbody></tbody>
+          </table></div>
         </div>
+      </section>
+
+      <section class="section" id="mail-req-demo-section">
+        <div class="section-head"><h2>Requested ballot demographics</h2><span class="section-note">statewide — from NCSBE demo stats file</span></div>
+        <div class="grid-3">
+          <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-req-race"></canvas></div></div>
+          <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-req-gender"></canvas></div></div>
+          <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-req-party"></canvas></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>Demographics of returned ballots</h2><span class="section-note">% accepted vs. not accepted within each group</span></div>
+        <div class="grid-2">
+          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="mail-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="mail-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+        </div>
+      </section>
+
+      <section class="section" id="mail-county-section">
+        <div class="section-head"><h2>By county</h2><span class="section-note">all 100 counties — click column headers to sort</span></div>
         <div class="panel">
-          <h3>Race — not accepted / pending</h3>
-          <div class="chart-wrap"><canvas id="chart-race-not-accepted"></canvas></div>
+          <div class="table-wrap">
+            <table class="data-table" id="mail-county-table">
+              <thead><tr>
+                <th data-col="county_desc">County</th>
+                <th data-col="requested">Requested</th>
+                <th data-col="returned">Returned</th>
+                <th data-col="accepted">Accepted</th>
+                <th data-col="curable">Curable</th>
+                <th data-col="cured">Cured</th>
+                <th data-col="rejected">Rejected</th>
+              </tr></thead><tbody></tbody>
+            </table>
+          </div>
+          <button class="download-btn" id="mail-csv-btn">↓ Download CSV</button>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>By county</h2><span class="section-note">all 100 counties — mail ballots</span></div>
-      <div class="panel">
-        <div class="table-wrap">
-          <table class="data-table" id="mail-county-table">
-            <thead><tr><th>County</th><th>Returned</th><th>Accepted</th><th>Curable</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <button class="download-btn" id="mail-csv-btn">↓ Download CSV</button>
-      </div>
-    </section>
-
-  </div>
-</main>
+      </section>
+    </div>
+  </main>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     TAB 2 — IN-PERSON EARLY VOTING
-═══════════════════════════════════════════════════ -->
+<!-- ── EARLY VOTING ──────────────────────────────────────────── -->
 <div id="tab-ev" class="tab-panel">
-<main>
-  <div id="ev-empty" class="empty-state" style="display:none">
-    <h2>Early voting hasn't started yet</h2>
-    <p>Early voting starts Thursday, Oct. 15, 2026. This tab will populate automatically once NCSBE publishes early-voting data.</p>
+  <div class="filter-bar">
+    <label>Filter:</label>
+    <select class="county-select" id="ev-county-filter"><option value="">Statewide</option></select>
   </div>
-  <div id="ev-content">
+  <main>
+    <div id="ev-empty" class="empty-state" style="display:none">
+      <h2>Early voting starts Thursday, Oct. 15, 2026</h2>
+      <p>This tab will populate automatically once NCSBE publishes early-voting data.</p>
+    </div>
+    <div id="ev-content">
+      <div class="kpi-strip" id="ev-kpis"></div>
 
-    <div class="kpi-strip" id="ev-kpis"></div>
+      <section class="section">
+        <div class="section-head"><h2>SDR over time</h2><span class="section-note">same-day registration — daily snapshots</span></div>
+        <div class="panel"><div class="chart-wrap tall"><canvas id="chart-ev-trend"></canvas></div></div>
+      </section>
 
-    <section class="section">
-      <div class="section-head"><h2>SDR over time</h2><span class="section-note">same-day registration — daily snapshots</span></div>
-      <div class="panel"><div class="chart-wrap tall"><canvas id="chart-ev-trend"></canvas></div></div>
-    </section>
+      <section class="section grid-2">
+        <div class="panel"><h3>Early voting ballot status</h3><div class="chart-wrap"><canvas id="chart-ev-status"></canvas></div></div>
+        <div class="panel"><h3>Same-day registration funnel</h3><div class="chart-wrap"><canvas id="chart-sdr-funnel"></canvas></div></div>
+      </section>
 
-    <section class="section grid-2">
-      <div class="panel">
-        <h3>Early voting ballot status</h3>
-        <div class="chart-wrap"><canvas id="chart-ev-status"></canvas></div>
-      </div>
-      <div class="panel">
-        <h3>Same-day registration funnel</h3>
-        <div class="chart-wrap"><canvas id="chart-sdr-funnel"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>SDR demographics</h2><span class="section-note">same-day registrants</span></div>
-      <div class="grid-3">
-        <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-sdr-race"></canvas></div></div>
-        <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-sdr-gender"></canvas></div></div>
-        <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-sdr-party"></canvas></div></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>By county</h2><span class="section-note">all 100 counties — early voting</span></div>
-      <div class="panel">
-        <div class="table-wrap">
-          <table class="data-table" id="ev-county-table">
-            <thead><tr><th>County</th><th>Returned</th><th>Accepted</th><th>Curable</th></tr></thead>
-            <tbody></tbody>
-          </table>
+      <section class="section" id="ev-sites-section" style="display:none">
+        <div class="section-head"><h2>Early voting sites</h2><span class="section-note" id="ev-sites-note"></span></div>
+        <div class="panel">
+          <div class="table-wrap"><table class="data-table" id="ev-sites-table">
+            <thead><tr><th>Site</th><th>Voters</th></tr></thead><tbody></tbody>
+          </table></div>
         </div>
-        <button class="download-btn" id="ev-csv-btn">↓ Download CSV</button>
-      </div>
-    </section>
+      </section>
 
-  </div>
-</main>
+      <section class="section">
+        <div class="section-head"><h2>Demographics of early voting ballots</h2><span class="section-note">% accepted vs. not accepted within each group</span></div>
+        <div class="grid-2">
+          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="ev-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="ev-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+        </div>
+      </section>
+
+      <section class="section" id="ev-county-section">
+        <div class="section-head"><h2>By county</h2><span class="section-note">all 100 counties — click column headers to sort</span></div>
+        <div class="panel">
+          <div class="table-wrap">
+            <table class="data-table" id="ev-county-table">
+              <thead><tr>
+                <th data-col="county_desc">County</th>
+                <th data-col="returned">Returned</th>
+                <th data-col="accepted">Accepted</th>
+                <th data-col="curable">Curable</th>
+                <th data-col="cured">Cured</th>
+                <th data-col="rejected">Rejected</th>
+              </tr></thead><tbody></tbody>
+            </table>
+          </div>
+          <button class="download-btn" id="ev-csv-btn">↓ Download CSV</button>
+        </div>
+      </section>
+    </div>
+  </main>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     TAB 3 — PROVISIONAL
-═══════════════════════════════════════════════════ -->
+<!-- ── PROVISIONAL ───────────────────────────────────────────── -->
 <div id="tab-provisional" class="tab-panel">
-<main>
-  <div id="prov-empty" class="empty-state" style="display:none">
-    <h2>Provisional data not yet published</h2>
-    <p>NCSBE typically publishes provisional ballot data after Election Day. This tab will populate automatically once the file is available.</p>
+  <div class="filter-bar">
+    <label>Filter:</label>
+    <select class="county-select" id="prov-county-filter"><option value="">Statewide</option></select>
   </div>
-  <div id="prov-content">
+  <main>
+    <div id="prov-empty" class="empty-state" style="display:none">
+      <h2>Provisional data not yet published</h2>
+      <p>NCSBE typically publishes provisional ballot data after Election Day. This tab will populate automatically once the file is available.</p>
+    </div>
+    <div id="prov-content">
+      <div class="kpi-strip" id="prov-kpis"></div>
 
-    <div class="kpi-strip" id="prov-kpis"></div>
+      <section class="section">
+        <div class="section-head"><h2>Provisional outcomes over time</h2><span class="section-note">daily snapshots</span></div>
+        <div class="panel"><div class="chart-wrap tall"><canvas id="chart-prov-trend"></canvas></div></div>
+      </section>
 
-    <section class="section">
-      <div class="section-head"><h2>Provisional outcomes over time</h2><span class="section-note">daily snapshots</span></div>
-      <div class="panel"><div class="chart-wrap tall"><canvas id="chart-prov-trend"></canvas></div></div>
-    </section>
+      <section class="section grid-2">
+        <div class="panel"><h3>Ballot outcomes</h3><div class="chart-wrap"><canvas id="chart-prov-outcomes"></canvas></div></div>
+        <div class="panel"><h3>Top reasons not counted</h3><div class="chart-wrap tall"><canvas id="chart-prov-reasons"></canvas></div></div>
+      </section>
 
-    <section class="section grid-2">
-      <div class="panel">
-        <h3>Ballot outcomes</h3>
-        <div class="chart-wrap"><canvas id="chart-prov-outcomes"></canvas></div>
-      </div>
-      <div class="panel">
-        <h3>Top reasons not counted</h3>
-        <div class="chart-wrap tall"><canvas id="chart-prov-reasons"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>Demographics</h2><span class="section-note">provisional ballot voters</span></div>
-      <div class="grid-3">
-        <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-prov-race"></canvas></div></div>
-        <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-prov-gender"></canvas></div></div>
-        <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-prov-party"></canvas></div></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>By county</h2><span class="section-note">provisional ballots cast</span></div>
-      <div class="panel">
-        <div class="table-wrap">
-          <table class="data-table" id="prov-county-table">
-            <thead><tr><th>County</th><th>Cast</th></tr></thead>
-            <tbody></tbody>
-          </table>
+      <section class="section">
+        <div class="section-head"><h2>Demographics</h2><span class="section-note">provisional ballot voters</span></div>
+        <div class="grid-3">
+          <div class="panel"><h3>By race</h3><div class="chart-wrap"><canvas id="chart-prov-race"></canvas></div></div>
+          <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-prov-gender"></canvas></div></div>
+          <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-prov-party"></canvas></div></div>
         </div>
-        <button class="download-btn" id="prov-csv-btn">↓ Download CSV</button>
-      </div>
-    </section>
+      </section>
 
-  </div>
-</main>
+      <section class="section" id="prov-county-section">
+        <div class="section-head"><h2>By county</h2><span class="section-note">provisional ballots cast</span></div>
+        <div class="panel">
+          <div class="table-wrap">
+            <table class="data-table" id="prov-county-table">
+              <thead><tr>
+                <th data-col="county_name">County</th>
+                <th data-col="count">Cast</th>
+              </tr></thead><tbody></tbody>
+            </table>
+          </div>
+          <button class="download-btn" id="prov-csv-btn">↓ Download CSV</button>
+        </div>
+      </section>
+    </div>
+  </main>
 </div>
 
 <footer>
   Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data" target="_blank" rel="noopener">NC State Board of Elections — Absentee &amp; Provisional Data</a>.
   Figures are aggregate counts only; no individual voter records are stored or displayed on this page.
-  &ldquo;Curable&rdquo; ballots are returned ballots currently pending a fixable issue rather than accepted, cured, or rejected.
   <div id="generated-note" style="margin-top:6px;"></div>
 </footer>
 
 <script>
-// ── palette ──────────────────────────────────────────────────────────────────
-const P = {
-  ink:'#1C1B19', inkDim:'#8A8781',
-  gold:'#F5CF51', goldText:'#7A5C00',
-  teal:'#72AE82', tealDark:'#2F6C3F',
-  brick:'#D05744', brickDark:'#872921',
-  indigo:'#7168D9', indigoDark:'#4F27D3',
+const P={
+  ink:'#1C1B19',inkDim:'#8A8781',
+  gold:'#F5CF51',goldText:'#7A5C00',
+  teal:'#72AE82',tealDark:'#2F6C3F',
+  brick:'#D05744',brickDark:'#872921',
+  indigo:'#7168D9',indigoDark:'#4F27D3',
   line:'rgba(28,27,25,0.10)'
 };
-const CHART_OK = typeof Chart !== 'undefined';
+const CHART_OK=typeof Chart!=='undefined';
 if(CHART_OK){
-  Chart.defaults.color = P.inkDim;
-  Chart.defaults.font.family = "'IBM Plex Mono', monospace";
-  Chart.defaults.font.size = 11;
-  Chart.defaults.borderColor = P.line;
+  Chart.defaults.color=P.inkDim;
+  Chart.defaults.font.family="'IBM Plex Mono',monospace";
+  Chart.defaults.font.size=11;
+  Chart.defaults.borderColor=P.line;
 }
 
-// ── helpers ──────────────────────────────────────────────────────────────────
-const fmt = n => (n===null||n===undefined||isNaN(n)) ? '—' : Number(n).toLocaleString('en-US');
-const pf  = n => (n===null||n===undefined) ? '—' : n.toFixed(1)+'%';
-const topN = (obj,n=8) => Object.entries(obj||{})
+const fmt=n=>(n===null||n===undefined||isNaN(Number(n)))?'—':Number(n).toLocaleString('en-US');
+const pf=n=>(n===null||n===undefined)?'—':Number(n).toFixed(1)+'%';
+const topN=(obj,n=8)=>Object.entries(obj||{})
   .filter(([k])=>k&&k!=='NAN'&&k.trim()!=='')
   .sort((a,b)=>b[1]-a[1]).slice(0,n);
 
-function bar(ctx,labels,data,color){
-  if(!CHART_OK||!ctx) return;
-  return new Chart(ctx,{
-    type:'bar',
+// ── charts ────────────────────────────────────────────────────────────────────
+const activeCharts={};
+function destroyChart(id){if(activeCharts[id]){activeCharts[id].destroy();delete activeCharts[id];}}
+
+function bar(id,labels,data,color){
+  destroyChart(id);
+  const ctx=document.getElementById(id);
+  if(!CHART_OK||!ctx)return;
+  activeCharts[id]=new Chart(ctx,{type:'bar',
     data:{labels,datasets:[{data,backgroundColor:color,borderRadius:2,maxBarThickness:36}]},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false}},
       scales:{
-        x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:55,minRotation:0,font:{size:10}}},
+        x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:55,font:{size:10}}},
         y:{grid:{color:P.line},beginAtZero:true}
       }}
   });
 }
-function hbar(ctx,labels,data,color){
-  if(!CHART_OK||!ctx) return;
-  return new Chart(ctx,{
-    type:'bar',
+function hbar(id,labels,data,color){
+  destroyChart(id);
+  const ctx=document.getElementById(id);
+  if(!CHART_OK||!ctx)return;
+  activeCharts[id]=new Chart(ctx,{type:'bar',
     data:{labels,datasets:[{data,backgroundColor:color,borderRadius:2}]},
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false}},
       scales:{x:{grid:{color:P.line},beginAtZero:true},y:{grid:{display:false}}}}
   });
 }
-function donut(ctx,labels,data,colors){
-  if(!CHART_OK||!ctx) return;
-  return new Chart(ctx,{
-    type:'doughnut',
+function donut(id,labels,data,colors){
+  destroyChart(id);
+  const ctx=document.getElementById(id);
+  if(!CHART_OK||!ctx)return;
+  activeCharts[id]=new Chart(ctx,{type:'doughnut',
     data:{labels,datasets:[{data,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
       plugins:{legend:{position:'bottom',labels:{boxWidth:10,boxHeight:10}}}}
   });
 }
-function line(ctx,labels,series){
-  if(!CHART_OK||!ctx) return;
-  return new Chart(ctx,{
-    type:'line',
+function lineChart(id,labels,series){
+  destroyChart(id);
+  const ctx=document.getElementById(id);
+  if(!CHART_OK||!ctx)return;
+  activeCharts[id]=new Chart(ctx,{type:'line',
     data:{labels,datasets:series},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{position:'bottom',labels:{boxWidth:10,boxHeight:10}}},
       scales:{x:{grid:{display:false}},y:{grid:{color:P.line},beginAtZero:true}}}
   });
 }
-const noChart = el => {
-  if(el) el.parentElement.innerHTML =
-    '<p style="color:var(--ink-2);font-size:12px;padding:60px 0;text-align:center">No data yet</p>';
-};
+const noChart=id=>{const el=document.getElementById(id);
+  if(el)el.parentElement.innerHTML='<p style="color:var(--ink-2);font-size:12px;padding:60px 0;text-align:center">No data yet — check back as the election approaches.</p>';};
 
-function csvDownload(rows, filenameBase){
-  if(!rows||!rows.length) return;
-  const today = new Date().toISOString().slice(0,10);
-  const keys = Object.keys(rows[0]);
-  const csv  = [keys.join(','),
+// ── sortable tables ───────────────────────────────────────────────────────────
+const sortState={};
+function makeSortable(tableId){
+  const table=document.getElementById(tableId);
+  if(!table)return;
+  table.querySelectorAll('th[data-col]').forEach(th=>{
+    th.addEventListener('click',()=>{
+      const col=th.dataset.col;
+      const asc=sortState[tableId]===col+'_asc';
+      sortState[tableId]=asc?col+'_desc':col+'_asc';
+      table.querySelectorAll('th').forEach(h=>h.classList.remove('sorted-asc','sorted-desc'));
+      th.classList.add(asc?'sorted-desc':'sorted-asc');
+      const tbody=table.querySelector('tbody');
+      const rows=[...tbody.querySelectorAll('tr')];
+      rows.sort((a,b)=>{
+        const ai=th.cellIndex,av=a.cells[ai]?.textContent.replace(/,/g,'')||'';
+        const bv=b.cells[ai]?.textContent.replace(/,/g,'')||'';
+        const an=parseFloat(av),bn=parseFloat(bv);
+        const cmp=isNaN(an)||isNaN(bn)?av.localeCompare(bv):an-bn;
+        return asc?cmp:-cmp;
+      });
+      rows.forEach(r=>tbody.appendChild(r));
+    });
+  });
+}
+
+// ── pct table ─────────────────────────────────────────────────────────────────
+function renderPctTable(tbodySel,rows,labelKey){
+  const tbody=document.querySelector(tbodySel+' tbody');
+  if(!tbody)return;
+  tbody.innerHTML=(rows||[]).map(r=>{
+    const ap=r.accepted_pct||0,np=r.not_accepted_pct||0;
+    return`<tr>
+      <td>${r[labelKey]||'—'}</td>
+      <td>${fmt(r.total)}</td>
+      <td>
+        <span class="pct-bar" style="width:${Math.min(ap,100)}px"></span>
+        ${pf(r.accepted_pct)}
+      </td>
+      <td>
+        <span class="pct-bar not-acc" style="width:${Math.min(np,100)}px"></span>
+        ${pf(r.not_accepted_pct)}
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+// ── county table ──────────────────────────────────────────────────────────────
+function countyTable(tableId,rows,cols,reqMap){
+  const tbody=document.querySelector('#'+tableId+' tbody');
+  if(!tbody)return;
+  const clean=(rows||[]).filter(r=>r[cols[0]]&&r[cols[0]].toString().toUpperCase()!=='NAN');
+  tbody.innerHTML=clean.sort((a,b)=>(Number(b[cols[1]])||0)-(Number(a[cols[1]])||0))
+    .map(r=>'<tr>'+cols.map((c,i)=>{
+      if(i===0) return`<td>${r[c]||'—'}</td>`;
+      if(c==='requested'&&reqMap) return`<td>${fmt(reqMap[r[cols[0]]]||0)}</td>`;
+      return`<td>${fmt(r[c])}</td>`;
+    }).join('')+'</tr>').join('')||
+    '<tr><td colspan="'+cols.length+'">No county data yet.</td></tr>';
+  makeSortable(tableId);
+}
+
+// ── CSV download ──────────────────────────────────────────────────────────────
+function csvDownload(rows,filenameBase){
+  if(!rows||!rows.length)return;
+  const today=new Date().toISOString().slice(0,10);
+  const keys=Object.keys(rows[0]).filter(k=>typeof rows[0][k]!=='object');
+  const csv=[keys.join(','),
     ...rows.map(r=>keys.map(k=>JSON.stringify(r[k]??'')).join(','))
   ].join('\n');
-  const a = document.createElement('a');
-  a.href = 'data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
-  a.download = `${filenameBase}-downloaded-${today}.csv`;
+  const a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  a.download=`${filenameBase}-downloaded-${today}.csv`;
   a.click();
 }
 
-async function loadJSON(path){
-  const r = await fetch(path,{cache:'no-store'});
-  if(!r.ok) throw new Error('fetch failed: '+path);
-  return r.json();
+// ── county filter helpers ─────────────────────────────────────────────────────
+function populateCountyFilter(selectId,counties){
+  const sel=document.getElementById(selectId);
+  if(!sel)return;
+  [...sel.options].slice(1).forEach(o=>o.remove());
+  (counties||[]).sort().forEach(c=>{
+    const o=new Option(c,c);
+    sel.appendChild(o);
+  });
 }
 
-// ── tabs ─────────────────────────────────────────────────────────────────────
-document.querySelectorAll('.tab-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
-  });
-});
+function getCountyData(allCountyRows,county){
+  return (allCountyRows||[]).find(r=>
+    (r.county_desc||r.county_name||'').toUpperCase()===county.toUpperCase())||null;
+}
 
-// ── render helpers ───────────────────────────────────────────────────────────
+// ── MAIL TAB ──────────────────────────────────────────────────────────────────
+let MAIL_DATA=null,REQ_DATA=null,TREND_DATA=[];
+
+function renderMailTab(county){
+  const m=MAIL_DATA;
+  const req=REQ_DATA;
+  const trend=TREND_DATA;
+  if(!m){
+    document.getElementById('mail-empty').style.display='block';
+    document.getElementById('mail-content').style.display='none';
+    return;
+  }
+
+  const isCounty=!!county;
+  const cd=isCounty?getCountyData(m.by_county,county):null;
+
+  // KPIs
+  const returned=isCounty?(cd?.returned||0):m.total_returned;
+  const accepted=isCounty?(cd?.accepted||0):m.accepted;
+  const curable =isCounty?(cd?.curable ||0):m.curable;
+  const cured   =isCounty?(cd?.cured   ||0):m.cured;
+  const rejected=isCounty?(cd?.rejected||0):m.rejected_or_spoiled;
+  const reqTotal=isCounty?null:(req?.total_requested);
+  const pctCur  =returned?Math.round(100*curable/returned*10)/10:null;
+
+  document.getElementById('mail-kpis').innerHTML=kpiHTML([
+    {label:'Outstanding Curable Mail Ballots',value:pctCur!==null?pctCur.toFixed(1)+'%':'—',cls:'gold',
+     sub:`${fmt(curable)} of ${fmt(returned)} returned`},
+    {label:'Absentee Cured',value:fmt(cured),cls:'teal',sub:'accepted after cure'},
+    ...(reqTotal!==null?[{label:'Requested (statewide)',value:fmt(reqTotal),sub:'mail ballot requests'}]:[]),
+    {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
+    {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections'},
+  ]);
+
+  // trend (statewide only)
+  if(!isCounty&&trend.length>1){
+    lineChart('chart-mail-trend',trend.map(t=>t.date),[
+      {label:'Curable',data:trend.map(t=>t.mail_curable),borderColor:P.gold,backgroundColor:P.gold,tension:.25},
+      {label:'Cured',  data:trend.map(t=>t.mail_cured),  borderColor:P.teal,backgroundColor:P.teal,tension:.25},
+    ]);
+  } else if(!isCounty) noChart('chart-mail-trend');
+
+  // status donut
+  donut('chart-mail-status',['Accepted','Curable','Cured','Rejected'],
+    [accepted,curable,cured,rejected],[P.teal,P.gold,'#6FB6A3',P.brick]);
+
+  // funnel (statewide only)
+  if(!isCounty){
+    bar('chart-mail-funnel',['Requested','Returned','Accepted'],
+      [req?.total_requested||0,m.total_returned||0,m.accepted||0],
+      [P.indigoDark,P.inkDim,P.tealDark]);
+    document.getElementById('mail-req-demo-section').style.display='';
+    const rr=topN(req?.by_race,8);
+    bar('chart-req-race',rr.map(r=>r[0]),rr.map(r=>r[1]),P.gold);
+    const rg=topN(req?.by_gender,6);
+    bar('chart-req-gender',rg.map(r=>r[0]),rg.map(r=>r[1]),P.teal);
+    const rp=topN(req?.by_party,6);
+    bar('chart-req-party',rp.map(r=>r[0]),rp.map(r=>r[1]),P.indigo);
+  } else {
+    document.getElementById('mail-req-demo-section').style.display='none';
+  }
+
+  // curable categories
+  const cats=m.curable_categories||{};
+  const catTbody=document.querySelector('#mail-curable-table tbody');
+  if(catTbody){
+    catTbody.innerHTML=Object.entries(cats)
+      .sort((a,b)=>b[1]-a[1])
+      .map(([k,v])=>`<tr><td>${k}</td><td>${fmt(v)}</td></tr>`).join('')||
+      '<tr><td colspan="2">No curable ballots yet.</td></tr>';
+  }
+
+  // demographics pct tables
+  const demo=isCounty?(cd||{}):{};
+  const racePct=isCounty?(cd?.race_pct||[]):m.demographics?.race_pct||[];
+  const agePct =isCounty?(cd?.age_pct ||[]):m.demographics?.age_pct ||[];
+  renderPctTable('#mail-race-pct-table',racePct,'race');
+  renderPctTable('#mail-age-pct-table', agePct, 'age_group');
+
+  // county table (statewide only)
+  const reqMap={};
+  (req?.by_county||[]).forEach(r=>reqMap[r.county_name]=r.requested);
+  if(!isCounty){
+    document.getElementById('mail-county-section').style.display='';
+    countyTable('mail-county-table',m.by_county,
+      ['county_desc','requested','returned','accepted','curable','cured','rejected'],reqMap);
+    document.getElementById('mail-csv-btn').onclick=()=>{
+      const rows=(m.by_county||[]).map(r=>({
+        county:r.county_desc,
+        requested:reqMap[r.county_desc]||0,
+        returned:r.returned,accepted:r.accepted,
+        curable:r.curable,cured:r.cured,rejected:r.rejected,
+      }));
+      csvDownload(rows,'2026-nc-absentee-mail');
+    };
+  } else {
+    document.getElementById('mail-county-section').style.display='none';
+  }
+}
+
+// ── EARLY VOTING TAB ──────────────────────────────────────────────────────────
+let EV_DATA=null;
+
+function renderEVTab(county){
+  const ev=EV_DATA;
+  if(!ev||ev.total_returned===0){
+    document.getElementById('ev-empty').style.display='block';
+    document.getElementById('ev-content').style.display='none';
+    return;
+  }
+  document.getElementById('ev-empty').style.display='none';
+  document.getElementById('ev-content').style.display='';
+
+  const isCounty=!!county;
+  const cd=isCounty?getCountyData(ev.by_county,county):null;
+  const sdr=ev.sdr||{};
+
+  const returned=isCounty?(cd?.returned||0):ev.total_returned;
+  const accepted=isCounty?(cd?.accepted||0):ev.accepted;
+  const curable =isCounty?(cd?.curable ||0):ev.curable;
+  const cured   =isCounty?(cd?.cured   ||0):ev.cured;
+  const rejected=isCounty?(cd?.rejected||0):ev.rejected_or_spoiled;
+
+  document.getElementById('ev-kpis').innerHTML=kpiHTML([
+    {label:'Total early votes returned',value:fmt(returned)},
+    {label:'SDR failed verification',value:fmt(sdr.failed_verification),cls:'brick',
+     sub:`${pf(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.`},
+    {label:'SDR cured',value:fmt(sdr.cured),cls:'teal'},
+    {label:'Outstanding curable EV',value:fmt(curable),cls:'gold'},
+    {label:'EV accepted',value:fmt(accepted),cls:'teal'},
+  ]);
+
+  // trend
+  if(!isCounty&&TREND_DATA.filter(t=>t.ev_curable!=null).length>1){
+    lineChart('chart-ev-trend',TREND_DATA.map(t=>t.date),[
+      {label:'SDR failed',data:TREND_DATA.map(t=>t.ev_sdr_failed),borderColor:P.brick,backgroundColor:P.brick,tension:.25},
+      {label:'Curable',   data:TREND_DATA.map(t=>t.ev_curable),   borderColor:P.gold, backgroundColor:P.gold, tension:.25},
+    ]);
+  } else if(!isCounty) noChart('chart-ev-trend');
+
+  donut('chart-ev-status',['Accepted','Curable','Cured','Rejected'],
+    [accepted,curable,cured,rejected],[P.teal,P.gold,'#6FB6A3',P.brick]);
+  bar('chart-sdr-funnel',['Total SDR','Failed','Cured'],
+    [sdr.total_sdr_ballots||0,sdr.failed_verification||0,sdr.cured||0],
+    [P.inkDim,P.brick,P.teal]);
+
+  // site usage
+  const siteSec=document.getElementById('ev-sites-section');
+  const siteTbody=document.querySelector('#ev-sites-table tbody');
+  if(isCounty&&county){
+    const sites=(ev.sites_by_county||{})[county]||[];
+    siteSec.style.display=sites.length?'':'none';
+    document.getElementById('ev-sites-note').textContent=county;
+    if(siteTbody){
+      siteTbody.innerHTML=sites.map(s=>
+        `<tr><td>${s.site}</td><td>${fmt(s.returned)}</td></tr>`
+      ).join('')||'<tr><td colspan="2">No site data yet.</td></tr>';
+    }
+  } else {
+    siteSec.style.display='none';
+  }
+
+  // demographics
+  const racePct=isCounty?(cd?.race_pct||[]):ev.demographics?.race_pct||[];
+  const agePct =isCounty?(cd?.age_pct ||[]):ev.demographics?.age_pct ||[];
+  renderPctTable('#ev-race-pct-table',racePct,'race');
+  renderPctTable('#ev-age-pct-table', agePct, 'age_group');
+
+  // county table
+  if(!isCounty){
+    document.getElementById('ev-county-section').style.display='';
+    countyTable('ev-county-table',ev.by_county,
+      ['county_desc','returned','accepted','curable','cured','rejected'],null);
+    document.getElementById('ev-csv-btn').onclick=()=>{
+      csvDownload((ev.by_county||[]).map(r=>({
+        county:r.county_desc,returned:r.returned,accepted:r.accepted,
+        curable:r.curable,cured:r.cured,rejected:r.rejected,
+      })),'2026-nc-early-voting');
+    };
+  } else {
+    document.getElementById('ev-county-section').style.display='none';
+  }
+}
+
+// ── PROVISIONAL TAB ───────────────────────────────────────────────────────────
+let PROV_DATA=null;
+
+function renderProvTab(county){
+  const p=PROV_DATA;
+  if(!p){
+    document.getElementById('prov-empty').style.display='block';
+    document.getElementById('prov-content').style.display='none';
+    return;
+  }
+  document.getElementById('prov-empty').style.display='none';
+  document.getElementById('prov-content').style.display='';
+
+  const isCounty=!!county;
+  let total=p.total,approved=p.approved,notCounted=p.not_counted,partial=p.partial;
+  if(isCounty){
+    const cr=(p.by_county||[]).find(r=>
+      (r.county_name||'').toUpperCase()===county.toUpperCase());
+    total=cr?.count||0; approved=0; notCounted=0; partial=0;
+  }
+
+  document.getElementById('prov-kpis').innerHTML=kpiHTML([
+    {label:'Provisionals approved',value:pf(total?100*approved/total:null),cls:'teal',
+     sub:`${fmt(approved)} of ${fmt(total)} cast`},
+    {label:'Not counted',value:fmt(notCounted),cls:'brick'},
+    {label:'Partial',value:fmt(partial),cls:'gold'},
+    {label:'Total cast',value:fmt(total)},
+  ]);
+
+  if(!isCounty){
+    if(TREND_DATA.filter(t=>t.prov_total!=null).length>1){
+      lineChart('chart-prov-trend',TREND_DATA.map(t=>t.date),[
+        {label:'Approved',  data:TREND_DATA.map(t=>t.prov_approved),borderColor:P.teal,backgroundColor:P.teal,tension:.25},
+        {label:'Total cast',data:TREND_DATA.map(t=>t.prov_total),   borderColor:P.inkDim,backgroundColor:P.inkDim,tension:.25},
+      ]);
+    } else noChart('chart-prov-trend');
+  }
+
+  bar('chart-prov-outcomes',['Approved','Not counted','Partial'],
+    [approved,notCounted,partial],[P.teal,P.brick,P.gold]);
+
+  const reasons=topN(p.not_counted_reasons,8);
+  hbar('chart-prov-reasons',reasons.map(r=>r[0]),reasons.map(r=>r[1]),P.brick);
+
+  const demo=p.demographics||{};
+  const pr=topN(demo.race,8);
+  bar('chart-prov-race',pr.map(r=>r[0]),pr.map(r=>r[1]),P.gold);
+  const pg=topN(demo.gender,6);
+  bar('chart-prov-gender',pg.map(r=>r[0]),pg.map(r=>r[1]),P.teal);
+  const pp=topN(demo.party,6);
+  bar('chart-prov-party',pp.map(r=>r[0]),pp.map(r=>r[1]),P.indigo);
+
+  if(!isCounty){
+    document.getElementById('prov-county-section').style.display='';
+    countyTable('prov-county-table',p.by_county,['county_name','count'],null);
+    document.getElementById('prov-csv-btn').onclick=()=>{
+      csvDownload(p.by_county||[],'2026-nc-provisional');
+    };
+  } else {
+    document.getElementById('prov-county-section').style.display='none';
+  }
+}
+
+// ── shared helpers ────────────────────────────────────────────────────────────
 function kpiHTML(items){
   return items.map(({label,value,cls,sub})=>`
     <div class="kpi">
@@ -487,228 +777,52 @@ function kpiHTML(items){
     </div>`).join('');
 }
 
-function countyTable(tbodyId, rows, cols){
-  const tbody = document.querySelector('#'+tbodyId+' tbody');
-  if(!tbody) return;
-  tbody.innerHTML = (rows||[])
-    .filter(r => r[cols[0]] && r[cols[0]].toString().toUpperCase() !== 'NAN')
-    .sort((a,b)=>(Number(b[cols[1]])||0)-(Number(a[cols[1]])||0))
-    .map(r=>'<tr>'+cols.map((c,i)=>
-      `<td>${i===0 ? (r[c]||'—') : fmt(r[c])}</td>`
-    ).join('')+'</tr>')
-    .join('') || '<tr><td colspan="'+cols.length+'">No county data yet.</td></tr>';
+async function loadJSON(path){
+  const r=await fetch(path,{cache:'no-store'});
+  if(!r.ok)throw new Error('fetch failed: '+path);
+  return r.json();
 }
 
-// ── mail tab ─────────────────────────────────────────────────────────────────
-function renderMail(d, req, trend){
-  const m = d || {};
-  const sdr = m.sdr || {};
+// ── tabs ──────────────────────────────────────────────────────────────────────
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
 
-  if(!d){
-    document.getElementById('mail-empty').style.display='block';
-    document.getElementById('mail-content').style.display='none';
-    return;
-  }
+// ── county filters ────────────────────────────────────────────────────────────
+document.getElementById('mail-county-filter').addEventListener('change',function(){
+  renderMailTab(this.value);
+});
+document.getElementById('ev-county-filter').addEventListener('change',function(){
+  renderEVTab(this.value);
+});
+document.getElementById('prov-county-filter').addEventListener('change',function(){
+  renderProvTab(this.value);
+});
 
-  document.getElementById('mail-kpis').innerHTML = kpiHTML([
-    {label:'Curable mail ballots', value:pf(m.pct_curable_of_returned), cls:'gold',
-     sub:`${fmt(m.curable)} of ${fmt(m.total_returned)} returned`},
-    {label:'Absentee cured', value:fmt(m.cured), cls:'teal', sub:'across all return types'},
-    {label:'Requested (statewide)', value:fmt(req?.total_requested), sub:'mail ballot requests'},
-    {label:'Accepted', value:fmt(m.accepted), cls:'teal', sub:`of ${fmt(m.total_returned)} returned`},
-    {label:'Rejected / Spoiled', value:fmt(m.rejected_or_spoiled), cls:'brick', sub:'final rejections'},
-  ]);
-
-  // trend
-  const tDates = trend.map(t=>t.date);
-  if(trend.length>0){
-    line(document.getElementById('chart-mail-trend'), tDates, [
-      {label:'Curable', data:trend.map(t=>t.mail_curable), borderColor:P.gold, backgroundColor:P.gold, tension:.25},
-      {label:'Cured',   data:trend.map(t=>t.mail_cured),   borderColor:P.teal, backgroundColor:P.teal, tension:.25},
-    ]);
-  } else noChart(document.getElementById('chart-mail-trend'));
-
-  // status donut
-  donut(document.getElementById('chart-mail-status'),
-    ['Accepted','Curable','Cured','Rejected'],
-    [m.accepted||0, m.curable||0, m.cured||0, m.rejected_or_spoiled||0],
-    [P.teal, P.gold, '#6FB6A3', P.brick]);
-
-  // requested vs returned vs accepted funnel
-  const reqTotal = req?.total_requested || 0;
-  bar(document.getElementById('chart-mail-funnel'),
-    ['Requested','Returned','Accepted'],
-    [reqTotal, m.total_returned||0, m.accepted||0],
-    [P.indigoDark, P.inkDim, P.tealDark]);
-
-  // requested demographics
-  const reqRace = topN(req?.by_race,8);
-  bar(document.getElementById('chart-req-race'), reqRace.map(r=>r[0]), reqRace.map(r=>r[1]), P.gold);
-  const reqGender = topN(req?.by_gender,6);
-  bar(document.getElementById('chart-req-gender'), reqGender.map(r=>r[0]), reqGender.map(r=>r[1]), P.teal);
-  const reqParty = topN(req?.by_party,6);
-  bar(document.getElementById('chart-req-party'), reqParty.map(r=>r[0]), reqParty.map(r=>r[1]), P.indigo);
-  const reqAge = topN(req?.by_age,4);
-  bar(document.getElementById('chart-req-age'), reqAge.map(r=>r[0]), reqAge.map(r=>r[1]), P.gold);
-  const reqEthnicity = topN(req?.by_ethnicity,6);
-  bar(document.getElementById('chart-req-ethnicity'), reqEthnicity.map(r=>r[0]), reqEthnicity.map(r=>r[1]), P.indigo);
-
-  // returned demographics — accepted vs not
-  const demo = m.demographics || {};
-  const raceAcc = topN(demo.race_accepted,8);
-  bar(document.getElementById('chart-race-accepted'), raceAcc.map(r=>r[0]), raceAcc.map(r=>r[1]), P.teal);
-  const raceNot = topN(demo.race_not_accepted,8);
-  bar(document.getElementById('chart-race-not-accepted'), raceNot.map(r=>r[0]), raceNot.map(r=>r[1]), P.brick);
-
-  // county table — all 100
-  countyTable('mail-county-table', m.by_county,
-    ['county_desc','returned','accepted','curable']);
-
-  // CSV download — merge requested by county
-  document.getElementById('mail-csv-btn').onclick = ()=>{
-    const reqMap = {};
-    (req?.by_county||[]).forEach(r=>reqMap[r.county_name]=r.requested);
-    const rows = (m.by_county||[]).map(r=>({
-      county: r.county_desc,
-      requested: reqMap[r.county_desc]||'',
-      returned: r.returned, accepted: r.accepted, curable: r.curable,
-    }));
-    csvDownload(rows, '2026-nc-absentee-mail');
-  };
-}
-
-// ── early voting tab ──────────────────────────────────────────────────────────
-function renderEV(d, trend){
-  const ev = d || {};
-  const sdr = ev.sdr || {};
-
-  if(!d || ev.total_returned===0){
-    document.getElementById('ev-empty').style.display='block';
-    document.getElementById('ev-content').style.display='none';
-    return;
-  }
-
-  document.getElementById('ev-kpis').innerHTML = kpiHTML([
-    {label:'Total early votes returned', value:fmt(ev.total_returned)},
-    {label:'SDR failed verification', value:fmt(sdr.failed_verification), cls:'brick',
-     sub:`${pf(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.`},
-    {label:'SDR cured', value:fmt(sdr.cured), cls:'teal',
-     sub:`of ${fmt(sdr.total_sdr_ballots)} same-day registrations`},
-    {label:'Curable EV ballots', value:fmt(ev.curable), cls:'gold'},
-    {label:'EV accepted', value:fmt(ev.accepted), cls:'teal'},
-  ]);
-
-  // trend
-  if(trend.filter(t=>t.ev_curable!=null).length>1){
-    line(document.getElementById('chart-ev-trend'), trend.map(t=>t.date), [
-      {label:'SDR failed', data:trend.map(t=>t.ev_sdr_failed), borderColor:P.brick, backgroundColor:P.brick, tension:.25},
-      {label:'Curable',   data:trend.map(t=>t.ev_curable),    borderColor:P.gold,  backgroundColor:P.gold,  tension:.25},
-      {label:'Cured',     data:trend.map(t=>t.ev_cured),      borderColor:P.teal,  backgroundColor:P.teal,  tension:.25},
-    ]);
-  } else noChart(document.getElementById('chart-ev-trend'));
-
-  // status donut
-  donut(document.getElementById('chart-ev-status'),
-    ['Accepted','Curable','Cured','Rejected'],
-    [ev.accepted||0,ev.curable||0,ev.cured||0,ev.rejected_or_spoiled||0],
-    [P.teal, P.gold, '#6FB6A3', P.brick]);
-
-  // SDR funnel
-  bar(document.getElementById('chart-sdr-funnel'),
-    ['Total SDR','Failed verification','Cured'],
-    [sdr.total_sdr_ballots||0, sdr.failed_verification||0, sdr.cured||0],
-    [P.inkDim, P.brick, P.teal]);
-
-  // SDR demographics
-  const demo = ev.demographics || {};
-  const evRace = topN(demo.race,8);
-  bar(document.getElementById('chart-sdr-race'), evRace.map(r=>r[0]), evRace.map(r=>r[1]), P.gold);
-  const evGender = topN(demo.gender,6);
-  bar(document.getElementById('chart-sdr-gender'), evGender.map(r=>r[0]), evGender.map(r=>r[1]), P.teal);
-  const evParty = topN(demo.party,6);
-  bar(document.getElementById('chart-sdr-party'), evParty.map(r=>r[0]), evParty.map(r=>r[1]), P.indigo);
-
-  countyTable('ev-county-table', ev.by_county, ['county_desc','returned','accepted','curable']);
-
-  document.getElementById('ev-csv-btn').onclick = ()=>{
-    const rows = (ev.by_county||[]).map(r=>({
-      county:r.county_desc, returned:r.returned, accepted:r.accepted, curable:r.curable
-    }));
-    csvDownload(rows, '2026-nc-early-voting');
-  };
-}
-
-// ── provisional tab ───────────────────────────────────────────────────────────
-function renderProvisional(d, trend){
-  const p = d || {};
-
-  if(!d){
-    document.getElementById('prov-empty').style.display='block';
-    document.getElementById('prov-content').style.display='none';
-    return;
-  }
-
-  document.getElementById('prov-kpis').innerHTML = kpiHTML([
-    {label:'Provisionals approved', value:pf(p.pct_approved), cls:'teal',
-     sub:`${fmt(p.approved)} of ${fmt(p.total)} cast`},
-    {label:'Not counted', value:fmt(p.not_counted), cls:'brick',
-     sub:`${p.total?pf(100*p.not_counted/p.total):'—'} of total`},
-    {label:'Partial', value:fmt(p.partial), cls:'gold'},
-    {label:'Total cast', value:fmt(p.total)},
-  ]);
-
-  // trend
-  if(trend.filter(t=>t.prov_total!=null).length>1){
-    line(document.getElementById('chart-prov-trend'), trend.map(t=>t.date), [
-      {label:'Approved',    data:trend.map(t=>t.prov_approved), borderColor:P.teal, backgroundColor:P.teal, tension:.25},
-      {label:'Total cast',  data:trend.map(t=>t.prov_total),    borderColor:P.inkDim,backgroundColor:P.inkDim, tension:.25},
-    ]);
-  } else noChart(document.getElementById('chart-prov-trend'));
-
-  // outcomes bar
-  bar(document.getElementById('chart-prov-outcomes'),
-    ['Approved','Not counted','Partial'],
-    [p.approved||0, p.not_counted||0, p.partial||0],
-    [P.teal, P.brick, P.gold]);
-
-  // reasons
-  const reasons = topN(p.not_counted_reasons,8);
-  hbar(document.getElementById('chart-prov-reasons'),
-    reasons.map(r=>r[0]), reasons.map(r=>r[1]), P.brick);
-
-  // demographics
-  const demo = p.demographics || {};
-  const pRace = topN(demo.race,8);
-  bar(document.getElementById('chart-prov-race'), pRace.map(r=>r[0]), pRace.map(r=>r[1]), P.gold);
-  const pGender = topN(demo.gender,6);
-  bar(document.getElementById('chart-prov-gender'), pGender.map(r=>r[0]), pGender.map(r=>r[1]), P.teal);
-  const pParty = topN(demo.party,6);
-  bar(document.getElementById('chart-prov-party'), pParty.map(r=>r[0]), pParty.map(r=>r[1]), P.indigo);
-
-  countyTable('prov-county-table', p.by_county, ['county_name','count']);
-
-  document.getElementById('prov-csv-btn').onclick = ()=>{
-    csvDownload(p.by_county||[], '2026-nc-provisional');
-  };
-}
-
-// ── main init ─────────────────────────────────────────────────────────────────
+// ── init ──────────────────────────────────────────────────────────────────────
 (async function init(){
   try{
-    const latest = await loadJSON('data/latest.json');
-    const pill   = document.getElementById('status-pill');
-    document.getElementById('election-label').textContent  = latest.election_label||'';
-    document.getElementById('last-updated').textContent    =
+    const latest=await loadJSON('data/latest.json');
+    const pill=document.getElementById('status-pill');
+    document.getElementById('election-label').textContent=latest.election_label||'';
+    document.getElementById('last-updated').textContent=
       'Updated '+new Date(latest.generated_at).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
-    document.getElementById('generated-note').textContent  =
+    document.getElementById('generated-note').textContent=
       'Last pipeline run: '+latest.generated_at;
 
     if(latest.status==='no_data_yet'){
       pill.classList.add('waiting');
       pill.innerHTML='<span class="status-dot"></span>AWAITING DATA';
       ['mail','ev','prov'].forEach(t=>{
-        document.getElementById(t===`prov`?'prov-empty':t+'-empty').style.display='block';
-        document.getElementById(t===`prov`?'prov-content':t+'-content').style.display='none';
+        const empty=document.getElementById(t==='prov'?'prov-empty':t+'-empty');
+        const content=document.getElementById(t==='prov'?'prov-content':t+'-content');
+        if(empty)empty.style.display='block';
+        if(content)content.style.display='none';
       });
       return;
     }
@@ -716,12 +830,24 @@ function renderProvisional(d, trend){
     pill.classList.remove('waiting');
     pill.innerHTML='<span class="status-dot"></span>'+(latest.status==='partial'?'PARTIAL':'LIVE');
 
-    let trend=[];
-    try{trend=await loadJSON('data/trend.json');}catch(e){}
+    MAIL_DATA=latest.absentee_mail||null;
+    EV_DATA  =latest.absentee_early_voting||null;
+    PROV_DATA=latest.provisional||null;
+    REQ_DATA =latest.requested_ballots||null;
+    try{TREND_DATA=await loadJSON('data/trend.json');}catch(e){TREND_DATA=[];}
 
-    renderMail(latest.absentee_mail, latest.requested_ballots, trend);
-    renderEV(latest.absentee_early_voting, trend);
-    renderProvisional(latest.provisional, trend);
+    // populate county dropdowns
+    const mailCounties=(MAIL_DATA?.by_county||[])
+      .map(r=>r.county_desc).filter(Boolean).sort();
+    populateCountyFilter('mail-county-filter',mailCounties);
+    populateCountyFilter('ev-county-filter',
+      (EV_DATA?.by_county||[]).map(r=>r.county_desc).filter(Boolean).sort());
+    populateCountyFilter('prov-county-filter',
+      (PROV_DATA?.by_county||[]).map(r=>r.county_name).filter(Boolean).sort());
+
+    renderMailTab('');
+    renderEVTab('');
+    renderProvTab('');
 
   }catch(err){
     document.querySelector('.tab-panel.active').innerHTML=

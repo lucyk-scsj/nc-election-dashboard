@@ -1,4 +1,4 @@
-  #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 NC Election Dashboard — data pipeline v2
 Downloads and aggregates three NCSBE files:
@@ -11,13 +11,12 @@ No individual voter names, addresses, or registration numbers
 are ever stored in this repo or written to any output file.
 """
 import argparse
-import io
 import json
 import shutil
 import sys
 import tempfile
 import zipfile
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -31,7 +30,6 @@ DATA_DIR   = ROOT / "docs" / "data"
 HIST_DIR   = DATA_DIR / "history"
 USER_AGENT = "Mozilla/5.0 (compatible; nc-election-dashboard/2.0)"
 
-# ── status-code sets (confirmed against real 2024 data) ─────────────────────
 ACCEPTED   = ["ACCEPTED", "ACCEPTED - CURED", "ACCEPTED - EXCEPTION"]
 CURABLE    = ["PENDING", "PENDING CURE", "WITNESS INFO INCOMPLETE",
               "SIGNATURE MISSING", "AFFIDAVIT INCOMPLETE",
@@ -40,12 +38,18 @@ CURED      = ["ACCEPTED - CURED", "CURED"]
 REJECTED   = ["SPOILED", "SPOILED-EV", "RETURNED UNDELIVERABLE", "REJECTED"]
 SDR_FAILED = ["SDR-FAILED VERIFICATION"]
 
-# columns we actually use — everything else (PII) is dropped at read time
+AGE_BUCKETS = [
+    ("18-25",  18, 25),
+    ("26-40",  26, 40),
+    ("41-65",  41, 65),
+    ("66+",    66, 999),
+]
+
 ABSENTEE_COLS = [
     "county_desc", "race", "ethnicity", "gender", "age",
     "voter_party_code", "ballot_req_type", "ballot_req_dt",
     "ballot_send_dt", "ballot_rtn_dt", "ballot_rtn_status",
-    "sdr", "mail_veri_status",
+    "sdr", "mail_veri_status", "site_name",
 ]
 DEMO_STATS_COLS = [
     "county_name", "party_desc", "race_desc", "ethncity_desc",
@@ -78,7 +82,64 @@ def pct(n, d):
     return round(100 * n / d, 2) if d else None
 
 
-# ── absentee (chunked to handle general-election file sizes) ─────────────────
+def age_bucket(age_series):
+    """Return a Counter of age bucket labels from a numeric age Series."""
+    c = Counter()
+    for label, lo, hi in AGE_BUCKETS:
+        c[label] = int(((age_series >= lo) & (age_series <= hi)).sum())
+    return c
+
+
+def race_pct_table(race_acc, race_rej, race_cur):
+    """
+    Build per-race percentage breakdown:
+    accepted_pct + not_accepted_pct = 100% of that race's total returned.
+    """
+    all_races = set(race_acc) | set(race_rej) | set(race_cur)
+    rows = []
+    for race in sorted(all_races):
+        if not race or race.upper() == "NAN":
+            continue
+        acc  = race_acc.get(race, 0)
+        rej  = race_rej.get(race, 0)
+        cur  = race_cur.get(race, 0)
+        total = acc + rej + cur
+        rows.append({
+            "race": race,
+            "total": total,
+            "accepted": acc,
+            "not_accepted": rej,
+            "cured": cur,
+            "accepted_pct": pct(acc, total),
+            "not_accepted_pct": pct(rej, total),
+            "cured_pct": pct(cur, total),
+        })
+    rows.sort(key=lambda r: -r["total"])
+    return rows
+
+
+def age_pct_table(age_acc, age_rej, age_cur):
+    """Same structure as race_pct_table but for age buckets."""
+    all_buckets = [b[0] for b in AGE_BUCKETS]
+    rows = []
+    for label in all_buckets:
+        acc  = age_acc.get(label, 0)
+        rej  = age_rej.get(label, 0)
+        cur  = age_cur.get(label, 0)
+        total = acc + rej + cur
+        rows.append({
+            "age_group": label,
+            "total": total,
+            "accepted": acc,
+            "not_accepted": rej,
+            "cured": cur,
+            "accepted_pct": pct(acc, total),
+            "not_accepted_pct": pct(rej, total),
+            "cured_pct": pct(cur, total),
+        })
+    return rows
+
+
 def fetch_absentee_df(cfg):
     us, compact = election_date_parts(cfg)
     url = (f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us}"
@@ -94,174 +155,246 @@ def fetch_absentee_df(cfg):
             with zf.open(member) as src, open(cp, "wb") as dst:
                 shutil.copyfileobj(src, dst, length=1024 * 1024)
 
-        hdr = pd.read_csv(cp, nrows=0, encoding="utf-8",
-                          encoding_errors="replace")
+        hdr = pd.read_csv(cp, nrows=0, encoding="utf-8", encoding_errors="replace")
         hdr.columns = [c.strip().lower() for c in hdr.columns]
         cols = [c for c in ABSENTEE_COLS if c in hdr.columns]
         print(f"[build] absentee columns matched: {cols}", file=sys.stderr)
 
-        # aggregate in chunks to keep memory low
-        total = 0
-        status_c    = Counter()
-        # mail accumulators
-        m_accepted = m_curable = m_cured = m_rejected = 0
-        m_sdr_total = m_sdr_failed = m_sdr_cured = 0
-        m_county    = {}   # county -> {returned, accepted, curable}
-        m_race_acc  = Counter(); m_race_rej = Counter()
-        m_race_cur  = Counter(); m_gender_c = Counter()
-        m_party_c   = Counter()
-        m_age_c     = Counter(); m_ethnicity_c = Counter()
+        # ── statewide accumulators ────────────────────────────────────────
+        status_c = Counter()
 
-        # early-voting accumulators
-        ev_total = ev_accepted = ev_curable = ev_cured = ev_rejected = 0
-        ev_sdr_total = ev_sdr_failed = ev_sdr_cured = 0
-        ev_county = {}
-        ev_race   = Counter(); ev_gender = Counter(); ev_party = Counter()
-        ev_age    = Counter(); ev_ethnicity = Counter()
+        # mail
+        m_county  = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        m_race_acc = Counter(); m_race_rej = Counter(); m_race_cur = Counter()
+        m_age_acc  = Counter(); m_age_rej  = Counter(); m_age_cur  = Counter()
+        m_gender   = Counter(); m_party    = Counter(); m_ethnicity = Counter()
+        m_curable_cats = Counter()
+
+        # per-county mail demographics (for dropdown)
+        mc_race_acc = defaultdict(Counter); mc_race_rej = defaultdict(Counter)
+        mc_age_acc  = defaultdict(Counter); mc_age_rej  = defaultdict(Counter)
+
+        # early voting
+        ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        ev_race_acc = Counter(); ev_race_rej = Counter(); ev_race_cur = Counter()
+        ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
+        ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
+
+        # site usage: county -> site -> {returned, race Counter, age Counter}
+        ev_sites = defaultdict(lambda: defaultdict(
+            lambda: {"returned": 0, "race": Counter(), "age": Counter()}))
+
+        # per-county ev demographics
+        ec_race_acc = defaultdict(Counter); ec_race_rej = defaultdict(Counter)
+        ec_age_acc  = defaultdict(Counter); ec_age_rej  = defaultdict(Counter)
 
         reader = pd.read_csv(cp, dtype=str, low_memory=False,
                              usecols=cols, encoding="utf-8",
-                             encoding_errors="replace",
-                             chunksize=CHUNK)
+                             encoding_errors="replace", chunksize=CHUNK)
+
         for chunk in reader:
             chunk.columns = [c.strip().lower() for c in chunk.columns]
             for c in chunk.columns:
                 chunk[c] = chunk[c].astype(str).str.strip().str.upper()
 
-            total += len(chunk)
             status_c.update(chunk["ballot_rtn_status"].value_counts().to_dict())
 
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
-            
-            def _agg(df, acc_a, acc_cu, acc_cu2, acc_r,
-                     sdr_t, sdr_f, sdr_cu, county_d,
-                     race_acc, race_rej, race_cur, gender_c, party_c,
-                     age_c, ethnicity_c):
-        
-                n = len(df)
-                a  = int(df["ballot_rtn_status"].isin(ACCEPTED).sum())
-                cu = int(df["ballot_rtn_status"].isin(CURABLE).sum())
-                cu2= int(df["ballot_rtn_status"].isin(CURED).sum())
-                r  = int(df["ballot_rtn_status"].isin(REJECTED).sum())
-                sm = df["sdr"].eq("Y") if "sdr" in df else pd.Series([False]*n)
-                sf = int((sm & df["ballot_rtn_status"].isin(SDR_FAILED)).sum())
-                sc = int((sm & df["ballot_rtn_status"].isin(CURED)).sum())
 
-                if "county_desc" in df:
-                    g = df.groupby("county_desc").agg(
-                        returned=("ballot_rtn_status","count"),
-                        accepted=("ballot_rtn_status",
-                                  lambda s: s.isin(ACCEPTED).sum()),
-                        curable =("ballot_rtn_status",
-                                  lambda s: s.isin(CURABLE).sum()),
-                    )
-                    for county, row in g.iterrows():
-                        acc = county_d.setdefault(county,
-                              {"returned":0,"accepted":0,"curable":0})
-                        acc["returned"] += int(row["returned"])
-                        acc["accepted"] += int(row["accepted"])
-                        acc["curable"]  += int(row["curable"])
+            # curable category breakdown from status codes
+            for status, cnt in mail["ballot_rtn_status"].value_counts().items():
+                if status in CURABLE:
+                    m_curable_cats[status] += int(cnt)
 
-                if "race" in df:
-                    accepted_mask = df["ballot_rtn_status"].isin(ACCEPTED)
-                    cured_mask    = df["ballot_rtn_status"].isin(CURED)
-                    race_acc.update(df.loc[accepted_mask, "race"]
-                                    .value_counts().to_dict())
-                    race_rej.update(df.loc[~accepted_mask & ~cured_mask,
-                                           "race"].value_counts().to_dict())
-                    race_cur.update(df.loc[cured_mask, "race"]
-                                    .value_counts().to_dict())
-                if "gender" in df:
-                    gender_c.update(df["gender"].value_counts().to_dict())
-                if "voter_party_code" in df:
-                    party_c.update(df["voter_party_code"]
-                                   .value_counts().to_dict())
-                if "age" in df:
-                    age = pd.to_numeric(df["age"], errors="coerce")
+            for df_chunk, county_d, race_a, race_r, race_c, age_a, age_r, age_c, \
+                    gend, prty, ethn, cr_race_a, cr_race_r, cr_age_a, cr_age_r, \
+                    site_d in [
+                (mail, m_county, m_race_acc, m_race_rej, m_race_cur,
+                 m_age_acc, m_age_rej, m_age_cur,
+                 m_gender, m_party, m_ethnicity,
+                 mc_race_acc, mc_race_rej, mc_age_acc, mc_age_rej, None),
+                (ev,   ev_county, ev_race_acc, ev_race_rej, ev_race_cur,
+                 ev_age_acc, ev_age_rej, ev_age_cur,
+                 ev_gender, ev_party, ev_ethnicity,
+                 ec_race_acc, ec_race_rej, ec_age_acc, ec_age_rej, ev_sites),
+            ]:
+                if df_chunk.empty:
+                    continue
 
-                    age_c.update({
-                        "Age 18 - 25": int(((age >= 18) & (age <= 25)).sum()),
-                        "Age 26 - 40": int(((age >= 26) & (age <= 40)).sum()),
-                        "Age 41 - 65": int(((age >= 41) & (age <= 65)).sum()),
-                        "Age Over 65": int((age > 65).sum()),
-                    })
-                if "ethnicity" in df:
-                    ethnicity_c.update(df["ethnicity"].value_counts().to_dict())
+                acc_mask  = df_chunk["ballot_rtn_status"].isin(ACCEPTED)
+                cur_mask  = df_chunk["ballot_rtn_status"].isin(CURED)
+                cbl_mask  = df_chunk["ballot_rtn_status"].isin(CURABLE)
+                rej_mask  = df_chunk["ballot_rtn_status"].isin(REJECTED)
+                sdr_mask  = df_chunk["sdr"].eq("Y") if "sdr" in df_chunk else \
+                            pd.Series([False]*len(df_chunk))
 
-                return n, a, cu, cu2, r, int(sm.sum()), sf, sc
+                # county aggregation
+                if "county_desc" in df_chunk:
+                    for county, grp in df_chunk.groupby("county_desc"):
+                        if not county or county == "NAN":
+                            continue
+                        d = county_d[county]
+                        d["returned"]  += len(grp)
+                        d["accepted"]  += int(grp["ballot_rtn_status"].isin(ACCEPTED).sum())
+                        d["curable"]   += int(grp["ballot_rtn_status"].isin(CURABLE).sum())
+                        d["cured"]     += int(grp["ballot_rtn_status"].isin(CURED).sum())
+                        d["rejected"]  += int(grp["ballot_rtn_status"].isin(REJECTED).sum())
 
-            # mail
-            mn, ma, mcu, mcu2, mr, mst, msf, msc = _agg(
-                mail, m_accepted, m_curable, m_cured, m_rejected,
-                m_sdr_total, m_sdr_failed, m_sdr_cured, m_county,
-                m_race_acc, m_race_rej, m_race_cur, m_gender_c, m_party_c,
-                m_age_c, m_ethnicity_c)
-            m_accepted  += ma;  m_curable  += mcu; m_cured    += mcu2
-            m_rejected  += mr;  m_sdr_total+= mst; m_sdr_failed+=msf
-            m_sdr_cured += msc
+                # statewide race
+                if "race" in df_chunk:
+                    race_a.update(df_chunk.loc[acc_mask,  "race"].value_counts().to_dict())
+                    race_r.update(df_chunk.loc[~acc_mask & ~cur_mask, "race"].value_counts().to_dict())
+                    race_c.update(df_chunk.loc[cur_mask,  "race"].value_counts().to_dict())
 
-            # early voting
-            en, ea, ecu, ecu2, er, est, esf, esc = _agg(
-                ev, ev_accepted, ev_curable, ev_cured, ev_rejected,
-                ev_sdr_total, ev_sdr_failed, ev_sdr_cured, ev_county,
-                ev_race, Counter(), Counter(), ev_gender, ev_party,
-                ev_age, ev_ethnicity)
-            ev_total    += en;  ev_accepted += ea;  ev_curable += ecu
-            ev_cured    += ecu2;ev_rejected += er;  ev_sdr_total+=est
-            ev_sdr_failed+=esf; ev_sdr_cured+=esc
+                # per-county race (for dropdown)
+                if "county_desc" in df_chunk and "race" in df_chunk:
+                    for county, grp in df_chunk.groupby("county_desc"):
+                        if not county or county == "NAN":
+                            continue
+                        am = grp["ballot_rtn_status"].isin(ACCEPTED)
+                        cm = grp["ballot_rtn_status"].isin(CURED)
+                        cr_race_a[county].update(grp.loc[am, "race"].value_counts().to_dict())
+                        cr_race_r[county].update(grp.loc[~am & ~cm, "race"].value_counts().to_dict())
 
-    mail_returned = sum(v["returned"] for k, v in m_county.items() if k and k.upper() != "NAN")
-    ev_returned   = sum(v["returned"] for k, v in ev_county.items() if k and k.upper() != "NAN")
+                # statewide age
+                if "age" in df_chunk:
+                    age_num = pd.to_numeric(df_chunk["age"], errors="coerce")
+                    age_a.update(age_bucket(age_num[acc_mask.values]))
+                    age_r.update(age_bucket(age_num[(~acc_mask & ~cur_mask).values]))
+                    age_c.update(age_bucket(age_num[cur_mask.values]))
+
+                # per-county age
+                if "county_desc" in df_chunk and "age" in df_chunk:
+                    age_num = pd.to_numeric(df_chunk["age"], errors="coerce")
+                    for county, grp in df_chunk.groupby("county_desc"):
+                        if not county or county == "NAN":
+                            continue
+                        gam = grp["ballot_rtn_status"].isin(ACCEPTED)
+                        gcm = grp["ballot_rtn_status"].isin(CURED)
+                        gidx = grp.index
+                        cr_age_a[county].update(
+                            age_bucket(age_num[gidx][gam.values]))
+                        cr_age_r[county].update(
+                            age_bucket(age_num[gidx][(~gam & ~gcm).values]))
+
+                if "gender" in df_chunk:
+                    gend.update(df_chunk["gender"].value_counts().to_dict())
+                if "voter_party_code" in df_chunk:
+                    prty.update(df_chunk["voter_party_code"].value_counts().to_dict())
+                if "ethnicity" in df_chunk:
+                    ethn.update(df_chunk["ethnicity"].value_counts().to_dict())
+
+                # site usage (early voting only)
+                if site_d is not None and "site_name" in df_chunk and "county_desc" in df_chunk:
+                    for (county, site), grp in df_chunk.groupby(["county_desc", "site_name"]):
+                        if (not county or county == "NAN" or
+                                not site or site.strip() in ("", "NAN", "NONE")):
+                            continue
+                        s = site_d[county][site]
+                        s["returned"] += len(grp)
+                        if "race" in grp:
+                            s["race"].update(grp["race"].value_counts().to_dict())
+                        if "age" in grp:
+                            age_num = pd.to_numeric(grp["age"], errors="coerce")
+                            s["age"].update(age_bucket(age_num))
+
+    # ── build county rows ─────────────────────────────────────────────────────
+    def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r):
+        rows = []
+        for k, v in county_d.items():
+            if not k or k.upper() == "NAN":
+                continue
+            rows.append({
+                "county_desc": k,
+                **v,
+                "race_pct": race_pct_table(
+                    dict(cr_race_a.get(k, {})),
+                    dict(cr_race_r.get(k, {})),
+                    {}),
+                "age_pct": age_pct_table(
+                    dict(cr_age_a.get(k, {})),
+                    dict(cr_age_r.get(k, {})),
+                    {}),
+            })
+        return rows
+
+    mail_rows = county_rows(m_county, mc_race_acc, mc_race_rej,
+                            mc_age_acc, mc_age_rej)
+    ev_rows   = county_rows(ev_county, ec_race_acc, ec_race_rej,
+                            ec_age_acc, ec_age_rej)
+
+    # ── site usage serialization ──────────────────────────────────────────────
+    def serialize_sites(site_d):
+        out = {}
+        for county, sites in site_d.items():
+            out[county] = [
+                {"site": site,
+                 "returned": data["returned"],
+                 "race": dict(data["race"]),
+                 "age": dict(data["age"])}
+                for site, data in sorted(
+                    sites.items(), key=lambda x: -x[1]["returned"])
+                if data["returned"] > 0
+            ]
+        return out
+
+    mail_returned = sum(v["returned"] for v in m_county.values())
+    ev_returned   = sum(v["returned"] for v in ev_county.values())
 
     return {
         "mail": {
-            "total_returned": mail_returned,
-            "accepted": m_accepted, "curable": m_curable,
-            "cured": m_cured, "rejected_or_spoiled": m_rejected,
-            "pct_curable_of_returned": pct(m_curable, mail_returned),
-            "sdr": {"total_sdr_ballots": m_sdr_total,
-                    "failed_verification": m_sdr_failed,
-                    "cured": m_sdr_cured,
-                    "pct_failed_of_sdr": pct(m_sdr_failed, m_sdr_total)},
-            "by_county": [{"county_desc": k, **v}
-                          for k, v in m_county.items()
-                          if k and k.upper() != "NAN"],
-           "demographics": {
-              "race_accepted": dict(m_race_acc),
-              "race_not_accepted": dict(m_race_rej),
-              "race_cured": dict(m_race_cur),
-              "gender": dict(m_gender_c),
-              "party": dict(m_party_c),
-              "age": dict(m_age_c),
-              "ethnicity": dict(m_ethnicity_c),
-        },
+            "total_returned":        mail_returned,
+            "accepted":              sum(v["accepted"]  for v in m_county.values()),
+            "curable":               sum(v["curable"]   for v in m_county.values()),
+            "cured":                 sum(v["cured"]     for v in m_county.values()),
+            "rejected_or_spoiled":   sum(v["rejected"]  for v in m_county.values()),
+            "pct_curable_of_returned": pct(
+                sum(v["curable"] for v in m_county.values()), mail_returned),
+            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
+                    "cured": 0, "pct_failed_of_sdr": None},
+            "curable_categories":    dict(m_curable_cats),
+            "by_county":             mail_rows,
+            "demographics": {
+                "race_pct":   race_pct_table(dict(m_race_acc),
+                                             dict(m_race_rej),
+                                             dict(m_race_cur)),
+                "age_pct":    age_pct_table(dict(m_age_acc),
+                                            dict(m_age_rej),
+                                            dict(m_age_cur)),
+                "gender":     dict(m_gender),
+                "party":      dict(m_party),
+                "ethnicity":  dict(m_ethnicity),
+            },
             "raw_status_counts": dict(status_c),
         },
         "early_voting": {
-            "total_returned": ev_returned,
-            "accepted": ev_accepted, "curable": ev_curable,
-            "cured": ev_cured, "rejected_or_spoiled": ev_rejected,
-            "pct_curable_of_returned": pct(ev_curable, ev_returned),
-            "sdr": {"total_sdr_ballots": ev_sdr_total,
-                    "failed_verification": ev_sdr_failed,
-                    "cured": ev_sdr_cured,
-                    "pct_failed_of_sdr": pct(ev_sdr_failed, ev_sdr_total)},
-            "by_county": [{"county_desc": k, **v}
-                          for k, v in ev_county.items()
-                          if k and k.upper() != "NAN"],
+            "total_returned":        ev_returned,
+            "accepted":              sum(v["accepted"]  for v in ev_county.values()),
+            "curable":               sum(v["curable"]   for v in ev_county.values()),
+            "cured":                 sum(v["cured"]     for v in ev_county.values()),
+            "rejected_or_spoiled":   sum(v["rejected"]  for v in ev_county.values()),
+            "pct_curable_of_returned": pct(
+                sum(v["curable"] for v in ev_county.values()), ev_returned),
+            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
+                    "cured": 0, "pct_failed_of_sdr": None},
+            "by_county":    ev_rows,
+            "sites_by_county": serialize_sites(ev_sites),
             "demographics": {
-              "race": dict(ev_race),
-              "gender": dict(ev_gender),
-              "party": dict(ev_party),
-              "age": dict(ev_age),
-              "ethnicity": dict(ev_ethnicity),
-        },
+                "race_pct":   race_pct_table(dict(ev_race_acc),
+                                             dict(ev_race_rej),
+                                             dict(ev_race_cur)),
+                "age_pct":    age_pct_table(dict(ev_age_acc),
+                                            dict(ev_age_rej),
+                                            dict(ev_age_cur)),
+                "gender":     dict(ev_gender),
+                "party":      dict(ev_party),
+                "ethnicity":  dict(ev_ethnicity),
+            },
         },
     }
 
 
-# ── demo stats (requested ballots) ───────────────────────────────────────────
 def fetch_demo_stats(cfg):
     us, compact = election_date_parts(cfg)
     url = (f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us}"
@@ -272,68 +405,33 @@ def fetch_demo_stats(cfg):
         df = pd.read_csv(fp, dtype=str, low_memory=False,
                          encoding="utf-8", encoding_errors="replace")
     df.columns = [c.strip().lower() for c in df.columns]
-    # strip null bytes that appear in primary_ballot_party
     for c in df.columns:
         df[c] = df[c].astype(str).str.replace("\x00", "", regex=False).str.strip()
     df["group_count"] = pd.to_numeric(df["group_count"], errors="coerce").fillna(0)
 
-    total_requested = int(df["group_count"].sum())
+    def agg(col):
+        d = df.groupby(col)["group_count"].sum().sort_values(ascending=False).to_dict()
+        return {k: int(v) for k, v in d.items() if k and k.upper() != "NAN"}
 
-    # statewide by race
-    by_race = (df.groupby("race_desc")["group_count"].sum()
-               .sort_values(ascending=False).to_dict())
-    by_race = {k: int(v) for k, v in by_race.items()
-               if k and k.upper() != "NAN"}
-
-    # statewide by gender
-    by_gender = (df.groupby("gender_desc")["group_count"].sum()
-                 .sort_values(ascending=False).to_dict())
-    by_gender = {k: int(v) for k, v in by_gender.items()
-                 if k and k.upper() != "NAN"}
-
-    # statewide by party
-    by_party = (df.groupby("party_desc")["group_count"].sum()
-                .sort_values(ascending=False).to_dict())
-    by_party = {k: int(v) for k, v in by_party.items()
-                if k and k.upper() != "NAN"}
-
-    # statewide by age range
-    by_age = (df.groupby("age_range")["group_count"].sum()
-              .to_dict())
-    by_age = {k: int(v) for k, v in by_age.items()
-              if k and k.upper() != "NAN"}
-
-    # statewide by ethnicity
-    by_ethnicity = (df.groupby("ethncity_desc")["group_count"].sum()
-              .to_dict())
-    by_ethnicity = {k: int(v) for k, v in by_ethnicity.items()
-              if k and k.upper() != "NAN"}
-
-    # weekly trend (statewide)
-    by_week = (df.groupby("request_week_num")["group_count"].sum()
-               .sort_index().to_dict())
-    by_week = {str(k): int(v) for k, v in by_week.items()}
-
-    # county totals (for CSV download)
-    by_county = (df.groupby("county_name")["group_count"].sum()
-                 .sort_values(ascending=False).to_dict())
+    by_county_raw = df.groupby("county_name")["group_count"].sum().to_dict()
     by_county = [{"county_name": k, "requested": int(v)}
-                 for k, v in by_county.items()
+                 for k, v in by_county_raw.items()
                  if k and k.upper() != "NAN"]
 
     return {
-        "total_requested": total_requested,
-        "by_race": by_race,
-        "by_gender": by_gender,
-        "by_party": by_party,
-        "by_age": by_age,
-        "by_ethnicity": by_ethnicity,
-        "by_week": by_week,
-        "by_county": by_county,
+        "total_requested": int(df["group_count"].sum()),
+        "by_race":         agg("race_desc"),
+        "by_gender":       agg("gender_desc"),
+        "by_party":        agg("party_desc"),
+        "by_age":          agg("age_range"),
+        "by_ethnicity":    agg("ethncity_desc"),
+        "by_week":         {str(k): int(v) for k, v in
+                            df.groupby("request_week_num")["group_count"]
+                            .sum().sort_index().items()},
+        "by_county":       by_county,
     }
 
 
-# ── provisional ──────────────────────────────────────────────────────────────
 def detect_encoding(path, keywords, sep="\t"):
     for enc in ["utf-8-sig", "utf-16", "utf-16-le", "utf-16-be", "cp1252"]:
         try:
@@ -355,14 +453,10 @@ def fetch_provisional_df(cfg):
     with tempfile.TemporaryDirectory() as tmp:
         fp = Path(tmp) / "provisional.txt"
         download_to_file(url, fp)
-        enc, cols = detect_encoding(
-            fp, ["county", "pv_status", "pv_party", "status"])
-        print(f"[build] provisional encoding={enc} cols={cols}",
-              file=sys.stderr)
+        enc, cols = detect_encoding(fp, ["county", "pv_status", "pv_party", "status"])
+        print(f"[build] provisional encoding={enc}", file=sys.stderr)
         cols_present = [c for c in PROVISIONAL_COLS if c in cols]
         if not cols_present:
-            print("[build] WARNING: no provisional columns matched — "
-                  "reading all columns", file=sys.stderr)
             df = pd.read_csv(fp, sep="\t", dtype=str, low_memory=False,
                              encoding=enc, encoding_errors="replace")
         else:
@@ -370,8 +464,7 @@ def fetch_provisional_df(cfg):
                              usecols=cols_present, encoding=enc,
                              encoding_errors="replace")
     df.columns = [c.strip().lower() for c in df.columns]
-    pii = ["full_name", "res_addr_street", "res_addr_csz", "phone_num",
-           "voter_reg_num"]
+    pii = ["full_name", "res_addr_street", "res_addr_csz", "phone_num", "voter_reg_num"]
     df = df.drop(columns=[c for c in pii if c in df.columns], errors="ignore")
     for c in df.columns:
         df[c] = df[c].astype(str).str.strip().str.upper()
@@ -381,14 +474,14 @@ def fetch_provisional_df(cfg):
 def summarize_provisional(df):
     total = len(df)
     sc    = df["pv_status"].value_counts().to_dict() if "pv_status" in df else {}
-    approved   = int(sc.get("APPROVED", 0))
-    not_counted= int(sc.get("NOT COUNTED", 0))
-    partial    = int(sc.get("PARTIAL", 0))
-    by_county  = (df.groupby("county_name").size()
-                  .reset_index(name="count").to_dict(orient="records")
-                  if "county_name" in df else [])
-    reasons    = (df["not_counted_reason"].value_counts().to_dict()
-                  if "not_counted_reason" in df else {})
+    approved    = int(sc.get("APPROVED", 0))
+    not_counted = int(sc.get("NOT COUNTED", 0))
+    partial     = int(sc.get("PARTIAL", 0))
+    by_county   = (df.groupby("county_name").size()
+                   .reset_index(name="count").to_dict(orient="records")
+                   if "county_name" in df else [])
+    reasons = (df["not_counted_reason"].value_counts().to_dict()
+               if "not_counted_reason" in df else {})
     demo = {
         "race":   df["pv_race"].value_counts().to_dict()   if "pv_race"   in df else {},
         "gender": df["pv_gender"].value_counts().to_dict() if "pv_gender" in df else {},
@@ -405,7 +498,6 @@ def summarize_provisional(df):
     }
 
 
-# ── trend rebuild ─────────────────────────────────────────────────────────────
 def rebuild_trend():
     trend = []
     for p in sorted(HIST_DIR.glob("retrieved_*.json")):
@@ -415,40 +507,33 @@ def rebuild_trend():
             continue
         if snap.get("status") == "no_data_yet":
             continue
-        mail = (snap.get("absentee_mail") or
-                snap.get("absentee") or {})    # back-compat with v1 snapshots
+        mail = snap.get("absentee_mail") or snap.get("absentee") or {}
         ev   = snap.get("absentee_early_voting") or {}
         prov = snap.get("provisional") or {}
         trend.append({
-            "date": p.stem.replace("retrieved_", "", 1),
-            # mail
-            "mail_curable":      mail.get("curable"),
-            "mail_cured":        mail.get("cured"),
-            "mail_pct_curable":  mail.get("pct_curable_of_returned"),
-            "mail_sdr_failed":   (mail.get("sdr") or {}).get("failed_verification"),
-            # early voting
-            "ev_curable":        ev.get("curable"),
-            "ev_cured":          ev.get("cured"),
-            "ev_sdr_failed":     (ev.get("sdr") or {}).get("failed_verification"),
-            # provisional
-            "prov_total":        prov.get("total"),
-            "prov_approved":     prov.get("approved"),
+            "date":             p.stem.replace("retrieved_", "", 1),
+            "mail_curable":     mail.get("curable"),
+            "mail_cured":       mail.get("cured"),
+            "mail_pct_curable": mail.get("pct_curable_of_returned"),
+            "ev_curable":       ev.get("curable"),
+            "ev_cured":         ev.get("cured"),
+            "ev_sdr_failed":    (ev.get("sdr") or {}).get("failed_verification"),
+            "prov_total":       prov.get("total"),
+            "prov_approved":    prov.get("approved"),
         })
     (DATA_DIR / "trend.json").write_text(json.dumps(trend, indent=2))
     return trend
 
 
-# ── placeholder ───────────────────────────────────────────────────────────────
 def placeholder(cfg, note):
     return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "election_date": cfg["election_date"],
+        "generated_at":  datetime.now(timezone.utc).isoformat(),
+        "election_date":  cfg["election_date"],
         "election_label": cfg["election_label"],
         "status": "no_data_yet", "note": note,
     }
 
 
-# ── main ──────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--inspect", action="store_true")
@@ -459,23 +544,21 @@ def main():
     HIST_DIR.mkdir(parents=True, exist_ok=True)
 
     result = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "election_date": cfg["election_date"],
+        "generated_at":  datetime.now(timezone.utc).isoformat(),
+        "election_date":  cfg["election_date"],
         "election_label": cfg["election_label"],
         "status": "ok",
     }
 
-    # absentee (mail + early voting split)
     try:
         ab = fetch_absentee_df(cfg)
-        result["absentee_mail"]          = ab["mail"]
-        result["absentee_early_voting"]  = ab["early_voting"]
+        result["absentee_mail"]         = ab["mail"]
+        result["absentee_early_voting"] = ab["early_voting"]
     except (HTTPError, URLError, StopIteration) as e:
         print(f"[build] absentee not available: {e}", file=sys.stderr)
         result["absentee_mail"] = result["absentee_early_voting"] = None
         result["status"] = "partial"
 
-    # demo stats (requested ballots)
     try:
         result["requested_ballots"] = fetch_demo_stats(cfg)
     except (HTTPError, URLError) as e:
@@ -483,7 +566,6 @@ def main():
         result["requested_ballots"] = None
         result["status"] = "partial"
 
-    # provisional
     try:
         prov_df = fetch_provisional_df(cfg)
         result["provisional"] = summarize_provisional(prov_df)
@@ -494,16 +576,14 @@ def main():
             result["status"] = "partial"
 
     if all(result.get(k) is None
-           for k in ["absentee_mail","absentee_early_voting","provisional"]):
+           for k in ["absentee_mail", "absentee_early_voting", "provisional"]):
         result = placeholder(cfg,
             "NCSBE has not yet published files for this election date.")
 
     (DATA_DIR / "latest.json").write_text(json.dumps(result, indent=2))
 
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    (HIST_DIR / f"retrieved_{run_date}.json").write_text(
-      json.dumps(result, indent=2))
+    (HIST_DIR / f"retrieved_{run_date}.json").write_text(json.dumps(result, indent=2))
 
     rebuild_trend()
 
