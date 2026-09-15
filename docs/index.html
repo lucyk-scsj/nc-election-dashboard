@@ -519,7 +519,7 @@ function renderMail(d, req, trend){
 
   // trend
   const tDates = trend.map(t=>t.date);
-  if(trend.length>1){
+  if(trend.length>0){
     line(document.getElementById('chart-mail-trend'), tDates, [
       {label:'Curable', data:trend.map(t=>t.mail_curable), borderColor:P.gold, backgroundColor:P.gold, tension:.25},
       {label:'Cured',   data:trend.map(t=>t.mail_cured),   borderColor:P.teal, backgroundColor:P.teal, tension:.25},
