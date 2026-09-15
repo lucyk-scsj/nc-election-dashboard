@@ -213,7 +213,7 @@ footer a{text-decoration:underline;}
         </div>
         <div class="panel" style="margin-top:20px">
           <h3>By ethnicity</h3>
-          <div class="chart-wrap short"><canvas id="chart-mail-ethnicity"></canvas></div>
+          <div class="table-wrap"><table class="pct-table" id="mail-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -281,7 +281,7 @@ footer a{text-decoration:underline;}
         </div>
         <div class="panel" style="margin-top:20px">
           <h3>By ethnicity</h3>
-          <div class="chart-wrap short"><canvas id="chart-ev-ethnicity"></canvas></div>
+          <div class="table-wrap"><table class="pct-table" id="ev-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -626,11 +626,9 @@ function renderMailTab(county){
   renderPctTable('#mail-race-pct-table',racePct,'race');
   renderPctTable('#mail-age-pct-table', agePct, 'age_group');
 
-  // ethnicity bar
-  const ethnData=isCounty?(cd?.ethnicity||{}):(m.demographics?.ethnicity||{});
-  const et=topN(ethnData,6);
-  if(document.getElementById('chart-mail-ethnicity'))
-    bar('chart-mail-ethnicity',et.map(r=>r[0]),et.map(r=>r[1]),P.teal);
+  // ethnicity pct table
+  const ethnPct=isCounty?(cd?.ethnicity_pct||[]):(m.demographics?.ethnicity_pct||[]);
+  renderPctTable('#mail-ethn-pct-table',ethnPct,'race');  // 'race' key used by race_pct_table for the label field
 
   // county table (statewide only)
   const reqMap={};
@@ -721,11 +719,9 @@ function renderEVTab(county){
   renderPctTable('#ev-race-pct-table',racePct,'race');
   renderPctTable('#ev-age-pct-table', agePct, 'age_group');
 
-  // ethnicity
-  const evEthn=isCounty?(cd?.ethnicity||{}):(ev.demographics?.ethnicity||{});
-  const evEt=topN(evEthn,6);
-  if(document.getElementById('chart-ev-ethnicity'))
-    bar('chart-ev-ethnicity',evEt.map(r=>r[0]),evEt.map(r=>r[1]),P.teal);
+  // ethnicity pct table
+  const evEthnPct=isCounty?(cd?.ethnicity_pct||[]):(ev.demographics?.ethnicity_pct||[]);
+  renderPctTable('#ev-ethn-pct-table',evEthnPct,'race');
 
   // county table
   if(!isCounty){

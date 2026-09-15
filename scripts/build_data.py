@@ -168,6 +168,7 @@ def fetch_absentee_df(cfg):
         m_race_acc = Counter(); m_race_rej = Counter(); m_race_cur = Counter()
         m_age_acc  = Counter(); m_age_rej  = Counter(); m_age_cur  = Counter()
         m_gender   = Counter(); m_party    = Counter(); m_ethnicity = Counter()
+        m_ethn_acc = Counter(); m_ethn_rej = Counter(); m_ethn_cur = Counter()
         m_curable_cats = Counter()
         m_county_curable_cats = defaultdict(Counter)  # county -> {status: count}
 
@@ -181,6 +182,7 @@ def fetch_absentee_df(cfg):
         ev_race_acc = Counter(); ev_race_rej = Counter(); ev_race_cur = Counter()
         ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
         ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
+        ev_ethn_acc = Counter(); ev_ethn_rej = Counter(); ev_ethn_cur = Counter()
 
         # site usage: county -> site -> {returned, race Counter, age Counter}
         ev_sites = defaultdict(lambda: defaultdict(
@@ -294,13 +296,24 @@ def fetch_absentee_df(cfg):
                     prty.update(df_chunk["voter_party_code"].value_counts().to_dict())
                 if "ethnicity" in df_chunk:
                     ethn.update(df_chunk["ethnicity"].value_counts().to_dict())
-                    # per-county ethnicity (mail only, tracked via mc_ethnicity)
-                    if cr_race_a is mc_race_acc and "county_desc" in df_chunk:
-                        for county, grp in df_chunk.groupby("county_desc"):
-                            if not county or county == "NAN":
-                                continue
-                            mc_ethnicity[county].update(
-                                grp["ethnicity"].value_counts().to_dict())
+                    ethn_acc = Counter()
+                    ethn_rej = Counter()
+                    ethn_cur = Counter()
+                    ethn_acc.update(df_chunk.loc[acc_mask, "ethnicity"].value_counts().to_dict())
+                    ethn_rej.update(df_chunk.loc[~acc_mask & ~cur_mask, "ethnicity"].value_counts().to_dict())
+                    ethn_cur.update(df_chunk.loc[cur_mask, "ethnicity"].value_counts().to_dict())
+                    # route to the right accumulator based on which df_chunk we're in
+                    if cr_race_a is mc_race_acc:  # mail
+                        m_ethn_acc.update(ethn_acc); m_ethn_rej.update(ethn_rej); m_ethn_cur.update(ethn_cur)
+                        # per-county ethnicity
+                        if "county_desc" in df_chunk:
+                            for county, grp in df_chunk.groupby("county_desc"):
+                                if not county or county == "NAN":
+                                    continue
+                                mc_ethnicity[county].update(
+                                    grp["ethnicity"].value_counts().to_dict())
+                    else:  # early voting
+                        ev_ethn_acc.update(ethn_acc); ev_ethn_rej.update(ethn_rej); ev_ethn_cur.update(ethn_cur)
 
                 # site usage (early voting only)
                 if site_d is not None and "site_name" in df_chunk and "county_desc" in df_chunk:
@@ -386,6 +399,9 @@ def fetch_absentee_df(cfg):
                                             dict(m_age_cur)),
                 "gender":     dict(m_gender),
                 "party":      dict(m_party),
+                "ethnicity_pct": race_pct_table(dict(m_ethn_acc),
+                                               dict(m_ethn_rej),
+                                               dict(m_ethn_cur)),
                 "ethnicity":  dict(m_ethnicity),
             },
             "raw_status_counts": dict(status_c),
@@ -411,6 +427,9 @@ def fetch_absentee_df(cfg):
                                             dict(ev_age_cur)),
                 "gender":     dict(ev_gender),
                 "party":      dict(ev_party),
+                "ethnicity_pct": race_pct_table(dict(ev_ethn_acc),
+                                               dict(ev_ethn_rej),
+                                               dict(ev_ethn_cur)),
                 "ethnicity":  dict(ev_ethnicity),
             },
         },
