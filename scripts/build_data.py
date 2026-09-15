@@ -195,11 +195,11 @@ def fetch_absentee_df(cfg):
             m_sdr_cured += msc
 
             # early voting
-           en, ea, ecu, ecu2, er, est, esf, esc = _agg(
-              ev, ev_accepted, ev_curable, ev_cured, ev_rejected,
-              ev_sdr_total, ev_sdr_failed, ev_sdr_cured, ev_county,
-              ev_race, Counter(), Counter(), ev_gender, ev_party,
-              ev_age, ev_ethnicity)
+            en, ea, ecu, ecu2, er, est, esf, esc = _agg(
+                ev, ev_accepted, ev_curable, ev_cured, ev_rejected,
+                ev_sdr_total, ev_sdr_failed, ev_sdr_cured, ev_county,
+                ev_race, Counter(), Counter(), ev_gender, ev_party,
+                ev_age, ev_ethnicity)
             ev_total    += en;  ev_accepted += ea;  ev_curable += ecu
             ev_cured    += ecu2;ev_rejected += er;  ev_sdr_total+=est
             ev_sdr_failed+=esf; ev_sdr_cured+=esc
