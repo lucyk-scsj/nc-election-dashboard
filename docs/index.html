@@ -575,15 +575,19 @@ function renderMailTab(county){
   ]);
 
   // trend (statewide only)
+  // always find the chart-wrap by walking up from a stable anchor in the DOM
+  const mailTrendWrap=document.querySelector('#tab-mail .chart-wrap.tall');
   if(!isCounty&&trend.length>0){
+    // restore canvas if it was replaced by a county snapshot div
+    if(!mailTrendWrap.querySelector('canvas'))
+      mailTrendWrap.innerHTML='<canvas id="chart-mail-trend"></canvas>';
     lineChart('chart-mail-trend',trend.map(t=>t.date),[
       {label:'Curable',data:trend.map(t=>t.mail_curable),borderColor:P.gold,backgroundColor:P.gold,tension:.25},
       {label:'Cured',  data:trend.map(t=>t.mail_cured),  borderColor:P.teal,backgroundColor:P.teal,tension:.25},
     ]);
   } else if(isCounty){
-    // single-point snapshot for this county; trend is statewide only
-    const ctx=document.getElementById('chart-mail-trend');
-    if(ctx) ctx.parentElement.innerHTML=
+    destroyChart('chart-mail-trend');
+    mailTrendWrap.innerHTML=
       `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;padding:20px">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
         <div style="display:flex;gap:32px">
@@ -598,7 +602,11 @@ function renderMailTab(county){
         </div>
         <div style="font-size:11px;color:var(--ink-2);font-style:italic">Trend data is statewide only — select Statewide to see the full trend line</div>
       </div>`;
-  } else noChart('chart-mail-trend');
+  } else {
+    if(!mailTrendWrap.querySelector('canvas'))
+      mailTrendWrap.innerHTML='<canvas id="chart-mail-trend"></canvas>';
+    noChart('chart-mail-trend');
+  }
 
   // status donut
   donut('chart-mail-status',['Accepted','Curable','Cured','Rejected'],
@@ -702,14 +710,17 @@ function renderEVTab(county){
   ]);
 
   // trend
+  const evTrendWrap=document.querySelector('#tab-ev .chart-wrap.tall');
   if(!isCounty&&TREND_DATA.filter(t=>t.ev_curable!=null).length>0){
+    if(evTrendWrap&&!evTrendWrap.querySelector('canvas'))
+      evTrendWrap.innerHTML='<canvas id="chart-ev-trend"></canvas>';
     lineChart('chart-ev-trend',TREND_DATA.map(t=>t.date),[
       {label:'SDR failed',data:TREND_DATA.map(t=>t.ev_sdr_failed),borderColor:P.brick,backgroundColor:P.brick,tension:.25},
       {label:'Curable',   data:TREND_DATA.map(t=>t.ev_curable),   borderColor:P.gold, backgroundColor:P.gold, tension:.25},
     ]);
   } else if(isCounty){
-    const ctx=document.getElementById('chart-ev-trend');
-    if(ctx) ctx.parentElement.innerHTML=
+    destroyChart('chart-ev-trend');
+    if(evTrendWrap) evTrendWrap.innerHTML=
       `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;padding:20px">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
         <div style="display:flex;gap:32px">
@@ -724,7 +735,11 @@ function renderEVTab(county){
         </div>
         <div style="font-size:11px;color:var(--ink-2);font-style:italic">Trend data is statewide only — select Statewide to see the full trend line</div>
       </div>`;
-  } else noChart('chart-ev-trend');
+  } else {
+    if(evTrendWrap&&!evTrendWrap.querySelector('canvas'))
+      evTrendWrap.innerHTML='<canvas id="chart-ev-trend"></canvas>';
+    noChart('chart-ev-trend');
+  }
 
   donut('chart-ev-status',['Accepted','Curable','Cured','Rejected'],
     [accepted,curable,cured,rejected],[P.teal,P.gold,'#6FB6A3',P.brick]);
@@ -803,7 +818,10 @@ function renderProvTab(county){
     {label:'Total cast',value:fmt(total)},
   ]);
 
+  const provTrendWrap=document.querySelector('#tab-provisional .chart-wrap.tall');
   if(!isCounty){
+    if(provTrendWrap&&!provTrendWrap.querySelector('canvas'))
+      provTrendWrap.innerHTML='<canvas id="chart-prov-trend"></canvas>';
     if(TREND_DATA.filter(t=>t.prov_total!=null).length>0){
       lineChart('chart-prov-trend',TREND_DATA.map(t=>t.date),[
         {label:'Approved',  data:TREND_DATA.map(t=>t.prov_approved),borderColor:P.teal,backgroundColor:P.teal,tension:.25},
@@ -811,8 +829,8 @@ function renderProvTab(county){
       ]);
     } else noChart('chart-prov-trend');
   } else {
-    const ctx=document.getElementById('chart-prov-trend');
-    if(ctx) ctx.parentElement.innerHTML=
+    destroyChart('chart-prov-trend');
+    if(provTrendWrap) provTrendWrap.innerHTML=
       `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px;padding:20px">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--ink)">${fmt(total)}</div>
