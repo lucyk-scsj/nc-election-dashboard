@@ -379,7 +379,7 @@ def summarize_provisional(df):
 # ── trend rebuild ─────────────────────────────────────────────────────────────
 def rebuild_trend():
     trend = []
-    for p in sorted(HIST_DIR.glob("*.json")):
+    for p in sorted(HIST_DIR.glob("retrieved_*.json")):
         try:
             snap = json.loads(p.read_text())
         except json.JSONDecodeError:
@@ -391,7 +391,7 @@ def rebuild_trend():
         ev   = snap.get("absentee_early_voting") or {}
         prov = snap.get("provisional") or {}
         trend.append({
-            "date": p.stem,
+            "date": p.stem.replace("retrieved_", "", 1),
             # mail
             "mail_curable":      mail.get("curable"),
             "mail_cured":        mail.get("cured"),
@@ -472,8 +472,9 @@ def main():
     (DATA_DIR / "latest.json").write_text(json.dumps(result, indent=2))
 
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    (HIST_DIR / f"{cfg['election_date']}.json").write_text(
-        json.dumps(result, indent=2))
+
+    (HIST_DIR / f"retrieved_{run_date}.json").write_text(
+      json.dumps(result, indent=2))
 
     rebuild_trend()
 
