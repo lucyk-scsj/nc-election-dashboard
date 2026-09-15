@@ -110,11 +110,14 @@ def fetch_absentee_df(cfg):
         m_race_acc  = Counter(); m_race_rej = Counter()
         m_race_cur  = Counter(); m_gender_c = Counter()
         m_party_c   = Counter()
+        m_age_c     = Counter(); m_ethnicity_c = Counter()
+
         # early-voting accumulators
         ev_total = ev_accepted = ev_curable = ev_cured = ev_rejected = 0
         ev_sdr_total = ev_sdr_failed = ev_sdr_cured = 0
         ev_county = {}
         ev_race   = Counter(); ev_gender = Counter(); ev_party = Counter()
+        ev_age    = Counter(); ev_ethnicity = Counter()
 
         reader = pd.read_csv(cp, dtype=str, low_memory=False,
                              usecols=cols, encoding="utf-8",
@@ -130,10 +133,12 @@ def fetch_absentee_df(cfg):
 
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
-
+            
             def _agg(df, acc_a, acc_cu, acc_cu2, acc_r,
                      sdr_t, sdr_f, sdr_cu, county_d,
-                     race_acc, race_rej, race_cur, gender_c, party_c):
+                     race_acc, race_rej, race_cur, gender_c, party_c,
+                     age_c, ethnicity_c):
+        
                 n = len(df)
                 a  = int(df["ballot_rtn_status"].isin(ACCEPTED).sum())
                 cu = int(df["ballot_rtn_status"].isin(CURABLE).sum())
@@ -172,6 +177,10 @@ def fetch_absentee_df(cfg):
                 if "voter_party_code" in df:
                     party_c.update(df["voter_party_code"]
                                    .value_counts().to_dict())
+                if "age" in df:
+                    age_c.update(df["age"].value_counts().to_dict())
+                if "ethnicity" in df:
+                    ethnicity_c.update(df["ethnicity"].value_counts().to_dict())
 
                 return n, a, cu, cu2, r, int(sm.sum()), sf, sc
 
@@ -179,16 +188,18 @@ def fetch_absentee_df(cfg):
             mn, ma, mcu, mcu2, mr, mst, msf, msc = _agg(
                 mail, m_accepted, m_curable, m_cured, m_rejected,
                 m_sdr_total, m_sdr_failed, m_sdr_cured, m_county,
-                m_race_acc, m_race_rej, m_race_cur, m_gender_c, m_party_c)
+                m_race_acc, m_race_rej, m_race_cur, m_gender_c, m_party_c,
+                m_age_c, m_ethnicity_c)
             m_accepted  += ma;  m_curable  += mcu; m_cured    += mcu2
             m_rejected  += mr;  m_sdr_total+= mst; m_sdr_failed+=msf
             m_sdr_cured += msc
 
             # early voting
-            en, ea, ecu, ecu2, er, est, esf, esc = _agg(
-                ev, ev_accepted, ev_curable, ev_cured, ev_rejected,
-                ev_sdr_total, ev_sdr_failed, ev_sdr_cured, ev_county,
-                ev_race, Counter(), Counter(), ev_gender, ev_party)
+           en, ea, ecu, ecu2, er, est, esf, esc = _agg(
+              ev, ev_accepted, ev_curable, ev_cured, ev_rejected,
+              ev_sdr_total, ev_sdr_failed, ev_sdr_cured, ev_county,
+              ev_race, Counter(), Counter(), ev_gender, ev_party,
+              ev_age, ev_ethnicity)
             ev_total    += en;  ev_accepted += ea;  ev_curable += ecu
             ev_cured    += ecu2;ev_rejected += er;  ev_sdr_total+=est
             ev_sdr_failed+=esf; ev_sdr_cured+=esc
