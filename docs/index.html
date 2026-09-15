@@ -580,7 +580,25 @@ function renderMailTab(county){
       {label:'Curable',data:trend.map(t=>t.mail_curable),borderColor:P.gold,backgroundColor:P.gold,tension:.25},
       {label:'Cured',  data:trend.map(t=>t.mail_cured),  borderColor:P.teal,backgroundColor:P.teal,tension:.25},
     ]);
-  } else if(!isCounty) noChart('chart-mail-trend');
+  } else if(isCounty){
+    // single-point snapshot for this county; trend is statewide only
+    const ctx=document.getElementById('chart-mail-trend');
+    if(ctx) ctx.parentElement.innerHTML=
+      `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;padding:20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
+        <div style="display:flex;gap:32px">
+          <div style="text-align:center">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--gold-text)">${fmt(curable)}</div>
+            <div style="font-size:11px;color:var(--ink-2);margin-top:4px">Curable</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--teal)">${fmt(cured)}</div>
+            <div style="font-size:11px;color:var(--ink-2);margin-top:4px">Cured</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--ink-2);font-style:italic">Trend data is statewide only — select Statewide to see the full trend line</div>
+      </div>`;
+  } else noChart('chart-mail-trend');
 
   // status donut
   donut('chart-mail-status',['Accepted','Curable','Cured','Rejected'],
@@ -684,12 +702,29 @@ function renderEVTab(county){
   ]);
 
   // trend
-  if(!isCounty&&TREND_DATA.filter(t=>t.ev_curable!=null).length>1){
+  if(!isCounty&&TREND_DATA.filter(t=>t.ev_curable!=null).length>0){
     lineChart('chart-ev-trend',TREND_DATA.map(t=>t.date),[
       {label:'SDR failed',data:TREND_DATA.map(t=>t.ev_sdr_failed),borderColor:P.brick,backgroundColor:P.brick,tension:.25},
       {label:'Curable',   data:TREND_DATA.map(t=>t.ev_curable),   borderColor:P.gold, backgroundColor:P.gold, tension:.25},
     ]);
-  } else if(!isCounty) noChart('chart-ev-trend');
+  } else if(isCounty){
+    const ctx=document.getElementById('chart-ev-trend');
+    if(ctx) ctx.parentElement.innerHTML=
+      `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;padding:20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
+        <div style="display:flex;gap:32px">
+          <div style="text-align:center">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--gold-text)">${fmt(curable)}</div>
+            <div style="font-size:11px;color:var(--ink-2);margin-top:4px">Curable</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--brick)">${fmt(sdr.failed_verification)}</div>
+            <div style="font-size:11px;color:var(--ink-2);margin-top:4px">SDR Failed</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--ink-2);font-style:italic">Trend data is statewide only — select Statewide to see the full trend line</div>
+      </div>`;
+  } else noChart('chart-ev-trend');
 
   donut('chart-ev-status',['Accepted','Curable','Cured','Rejected'],
     [accepted,curable,cured,rejected],[P.teal,P.gold,'#6FB6A3',P.brick]);
@@ -769,12 +804,21 @@ function renderProvTab(county){
   ]);
 
   if(!isCounty){
-    if(TREND_DATA.filter(t=>t.prov_total!=null).length>1){
+    if(TREND_DATA.filter(t=>t.prov_total!=null).length>0){
       lineChart('chart-prov-trend',TREND_DATA.map(t=>t.date),[
         {label:'Approved',  data:TREND_DATA.map(t=>t.prov_approved),borderColor:P.teal,backgroundColor:P.teal,tension:.25},
         {label:'Total cast',data:TREND_DATA.map(t=>t.prov_total),   borderColor:P.inkDim,backgroundColor:P.inkDim,tension:.25},
       ]);
     } else noChart('chart-prov-trend');
+  } else {
+    const ctx=document.getElementById('chart-prov-trend');
+    if(ctx) ctx.parentElement.innerHTML=
+      `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px;padding:20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em">Current snapshot — ${county}</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:var(--ink)">${fmt(total)}</div>
+        <div style="font-size:11px;color:var(--ink-2)">Provisional ballots cast</div>
+        <div style="font-size:11px;color:var(--ink-2);font-style:italic;margin-top:4px">Trend data is statewide only — select Statewide to see the full trend line</div>
+      </div>`;
   }
 
   bar('chart-prov-outcomes',['Approved','Not counted','Partial'],
