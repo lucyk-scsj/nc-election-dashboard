@@ -177,7 +177,7 @@ def fetch_absentee_df(cfg):
                 if "voter_party_code" in df:
                     party_c.update(df["voter_party_code"]
                                    .value_counts().to_dict())
-               if "age" in df:
+                if "age" in df:
                     age = pd.to_numeric(df["age"], errors="coerce")
 
                     age_c.update({
