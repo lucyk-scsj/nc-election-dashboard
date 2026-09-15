@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T17:52:30.369873+00:00",
+  "generated_at": "2026-09-15T17:58:31.506558+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
@@ -573,6 +573,11 @@
       "Age 26 - 40": 7883,
       "Age 41 - 65": 17847,
       "Age Over 65": 33562
+    },
+    "by_ethnicity": {
+      "HISPANIC or LATINO": 1451,
+      "NOT HISPANIC or NOT LATINO": 42082,
+      "UNDESIGNATED": 21256
     },
     "by_week": {
       "1": 38,
