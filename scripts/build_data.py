@@ -169,10 +169,12 @@ def fetch_absentee_df(cfg):
         m_age_acc  = Counter(); m_age_rej  = Counter(); m_age_cur  = Counter()
         m_gender   = Counter(); m_party    = Counter(); m_ethnicity = Counter()
         m_curable_cats = Counter()
+        m_county_curable_cats = defaultdict(Counter)  # county -> {status: count}
 
         # per-county mail demographics (for dropdown)
         mc_race_acc = defaultdict(Counter); mc_race_rej = defaultdict(Counter)
         mc_age_acc  = defaultdict(Counter); mc_age_rej  = defaultdict(Counter)
+        mc_ethnicity = defaultdict(Counter)
 
         # early voting
         ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
@@ -202,10 +204,18 @@ def fetch_absentee_df(cfg):
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
 
-            # curable category breakdown from status codes
-            for status, cnt in mail["ballot_rtn_status"].value_counts().items():
-                if status in CURABLE:
-                    m_curable_cats[status] += int(cnt)
+            # curable category breakdown — statewide and per county
+            if "county_desc" in mail.columns:
+                for _, row in mail[mail["ballot_rtn_status"].isin(CURABLE)].iterrows():
+                    status = row["ballot_rtn_status"]
+                    county = row.get("county_desc", "")
+                    m_curable_cats[status] += 1
+                    if county and county != "NAN":
+                        m_county_curable_cats[county][status] += 1
+            else:
+                for status, cnt in mail["ballot_rtn_status"].value_counts().items():
+                    if status in CURABLE:
+                        m_curable_cats[status] += int(cnt)
 
             for df_chunk, county_d, race_a, race_r, race_c, age_a, age_r, age_c, \
                     gend, prty, ethn, cr_race_a, cr_race_r, cr_age_a, cr_age_r, \
@@ -284,6 +294,13 @@ def fetch_absentee_df(cfg):
                     prty.update(df_chunk["voter_party_code"].value_counts().to_dict())
                 if "ethnicity" in df_chunk:
                     ethn.update(df_chunk["ethnicity"].value_counts().to_dict())
+                    # per-county ethnicity (mail only, tracked via mc_ethnicity)
+                    if cr_race_a is mc_race_acc and "county_desc" in df_chunk:
+                        for county, grp in df_chunk.groupby("county_desc"):
+                            if not county or county == "NAN":
+                                continue
+                            mc_ethnicity[county].update(
+                                grp["ethnicity"].value_counts().to_dict())
 
                 # site usage (early voting only)
                 if site_d is not None and "site_name" in df_chunk and "county_desc" in df_chunk:
@@ -300,12 +317,12 @@ def fetch_absentee_df(cfg):
                             s["age"].update(age_bucket(age_num))
 
     # ── build county rows ─────────────────────────────────────────────────────
-    def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r):
+    def county_rows(county_d, cr_race_a, cr_race_r, cr_age_a, cr_age_r, county_curable=None, county_ethn=None):
         rows = []
         for k, v in county_d.items():
             if not k or k.upper() == "NAN":
                 continue
-            rows.append({
+            row = {
                 "county_desc": k,
                 **v,
                 "race_pct": race_pct_table(
@@ -316,11 +333,16 @@ def fetch_absentee_df(cfg):
                     dict(cr_age_a.get(k, {})),
                     dict(cr_age_r.get(k, {})),
                     {}),
-            })
+            }
+            if county_curable is not None:
+                row["curable_categories"] = dict(county_curable.get(k, {}))
+            if county_ethn is not None:
+                row["ethnicity"] = dict(county_ethn.get(k, {}))
+            rows.append(row)
         return rows
 
     mail_rows = county_rows(m_county, mc_race_acc, mc_race_rej,
-                            mc_age_acc, mc_age_rej)
+                            mc_age_acc, mc_age_rej, m_county_curable_cats, mc_ethnicity)
     ev_rows   = county_rows(ev_county, ec_race_acc, ec_race_rej,
                             ec_age_acc, ec_age_rej)
 

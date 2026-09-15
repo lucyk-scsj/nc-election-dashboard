@@ -199,6 +199,10 @@ footer a{text-decoration:underline;}
           <div class="panel"><h3>By gender</h3><div class="chart-wrap short"><canvas id="chart-req-gender"></canvas></div></div>
           <div class="panel"><h3>By party</h3><div class="chart-wrap"><canvas id="chart-req-party"></canvas></div></div>
         </div>
+        <div class="grid-2" style="margin-top:20px">
+          <div class="panel"><h3>By age group</h3><div class="chart-wrap"><canvas id="chart-req-age"></canvas></div></div>
+          <div class="panel"><h3>By ethnicity</h3><div class="chart-wrap short"><canvas id="chart-req-ethnicity"></canvas></div></div>
+        </div>
       </section>
 
       <section class="section">
@@ -206,6 +210,10 @@ footer a{text-decoration:underline;}
         <div class="grid-2">
           <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="mail-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
           <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="mail-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+        </div>
+        <div class="panel" style="margin-top:20px">
+          <h3>By ethnicity</h3>
+          <div class="chart-wrap short"><canvas id="chart-mail-ethnicity"></canvas></div>
         </div>
       </section>
 
@@ -270,6 +278,10 @@ footer a{text-decoration:underline;}
         <div class="grid-2">
           <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="ev-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
           <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="ev-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+        </div>
+        <div class="panel" style="margin-top:20px">
+          <h3>By ethnicity</h3>
+          <div class="chart-wrap short"><canvas id="chart-ev-ethnicity"></canvas></div>
         </div>
       </section>
 
@@ -436,18 +448,23 @@ function makeSortable(tableId){
   table.querySelectorAll('th[data-col]').forEach(th=>{
     th.addEventListener('click',()=>{
       const col=th.dataset.col;
-      const asc=sortState[tableId]===col+'_asc';
-      sortState[tableId]=asc?col+'_desc':col+'_asc';
+      const cur=sortState[tableId];
+      const asc=cur===col+'_asc';
+      const desc=cur===col+'_desc';
+      // first click = desc (biggest first), second click = asc, third = desc again
+      const newDir=asc?'desc':'asc';
+      sortState[tableId]=col+'_'+newDir;
       table.querySelectorAll('th').forEach(h=>h.classList.remove('sorted-asc','sorted-desc'));
-      th.classList.add(asc?'sorted-desc':'sorted-asc');
+      th.classList.add(newDir==='asc'?'sorted-asc':'sorted-desc');
       const tbody=table.querySelector('tbody');
       const rows=[...tbody.querySelectorAll('tr')];
       rows.sort((a,b)=>{
-        const ai=th.cellIndex,av=a.cells[ai]?.textContent.replace(/,/g,'')||'';
-        const bv=b.cells[ai]?.textContent.replace(/,/g,'')||'';
+        const ai=th.cellIndex;
+        const av=(a.cells[ai]?.textContent||'').replace(/,/g,'').trim();
+        const bv=(b.cells[ai]?.textContent||'').replace(/,/g,'').trim();
         const an=parseFloat(av),bn=parseFloat(bv);
         const cmp=isNaN(an)||isNaN(bn)?av.localeCompare(bv):an-bn;
-        return asc?cmp:-cmp;
+        return newDir==='asc'?cmp:-cmp;
       });
       rows.forEach(r=>tbody.appendChild(r));
     });
@@ -542,20 +559,23 @@ function renderMailTab(county){
   const curable =isCounty?(cd?.curable ||0):m.curable;
   const cured   =isCounty?(cd?.cured   ||0):m.cured;
   const rejected=isCounty?(cd?.rejected||0):m.rejected_or_spoiled;
-  const reqTotal=isCounty?null:(req?.total_requested);
+  const reqTotal=isCounty
+    ?(req?.by_county||[]).find(r=>r.county_name===county)?.requested||0
+    :(req?.total_requested);
   const pctCur  =returned?Math.round(100*curable/returned*10)/10:null;
 
   document.getElementById('mail-kpis').innerHTML=kpiHTML([
     {label:'Outstanding Curable Mail Ballots',value:pctCur!==null?pctCur.toFixed(1)+'%':'—',cls:'gold',
      sub:`${fmt(curable)} of ${fmt(returned)} returned`},
     {label:'Absentee Cured',value:fmt(cured),cls:'teal',sub:'accepted after cure'},
-    ...(reqTotal!==null?[{label:'Requested (statewide)',value:fmt(reqTotal),sub:'mail ballot requests'}]:[]),
+    {label:isCounty?`Requested (${county})`:'Requested (statewide)',
+     value:fmt(reqTotal),sub:'mail ballot requests'},
     {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
     {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections'},
   ]);
 
   // trend (statewide only)
-  if(!isCounty&&trend.length>1){
+  if(!isCounty&&trend.length>0){
     lineChart('chart-mail-trend',trend.map(t=>t.date),[
       {label:'Curable',data:trend.map(t=>t.mail_curable),borderColor:P.gold,backgroundColor:P.gold,tension:.25},
       {label:'Cured',  data:trend.map(t=>t.mail_cured),  borderColor:P.teal,backgroundColor:P.teal,tension:.25},
@@ -566,11 +586,13 @@ function renderMailTab(county){
   donut('chart-mail-status',['Accepted','Curable','Cured','Rejected'],
     [accepted,curable,cured,rejected],[P.teal,P.gold,'#6FB6A3',P.brick]);
 
-  // funnel (statewide only)
+  // funnel — county-aware
+  bar('chart-mail-funnel',['Requested','Returned','Accepted'],
+    [reqTotal||0,returned,accepted],
+    [P.indigoDark,P.inkDim,P.tealDark]);
+
+  // requested demographics (statewide only — demo stats file is not county-level)
   if(!isCounty){
-    bar('chart-mail-funnel',['Requested','Returned','Accepted'],
-      [req?.total_requested||0,m.total_returned||0,m.accepted||0],
-      [P.indigoDark,P.inkDim,P.tealDark]);
     document.getElementById('mail-req-demo-section').style.display='';
     const rr=topN(req?.by_race,8);
     bar('chart-req-race',rr.map(r=>r[0]),rr.map(r=>r[1]),P.gold);
@@ -578,12 +600,18 @@ function renderMailTab(county){
     bar('chart-req-gender',rg.map(r=>r[0]),rg.map(r=>r[1]),P.teal);
     const rp=topN(req?.by_party,6);
     bar('chart-req-party',rp.map(r=>r[0]),rp.map(r=>r[1]),P.indigo);
+    const ra=topN(req?.by_age,8);
+    if(document.getElementById('chart-req-age'))
+      bar('chart-req-age',ra.map(r=>r[0]),ra.map(r=>r[1]),P.brickDark);
+    const re=topN(req?.by_ethnicity,6);
+    if(document.getElementById('chart-req-ethnicity'))
+      bar('chart-req-ethnicity',re.map(r=>r[0]),re.map(r=>r[1]),P.teal);
   } else {
     document.getElementById('mail-req-demo-section').style.display='none';
   }
 
-  // curable categories
-  const cats=m.curable_categories||{};
+  // curable categories — county-aware
+  const cats=isCounty?(cd?.curable_categories||{}):(m.curable_categories||{});
   const catTbody=document.querySelector('#mail-curable-table tbody');
   if(catTbody){
     catTbody.innerHTML=Object.entries(cats)
@@ -592,12 +620,17 @@ function renderMailTab(county){
       '<tr><td colspan="2">No curable ballots yet.</td></tr>';
   }
 
-  // demographics pct tables
-  const demo=isCounty?(cd||{}):{};
+  // demographics pct tables — county-aware
   const racePct=isCounty?(cd?.race_pct||[]):m.demographics?.race_pct||[];
   const agePct =isCounty?(cd?.age_pct ||[]):m.demographics?.age_pct ||[];
   renderPctTable('#mail-race-pct-table',racePct,'race');
   renderPctTable('#mail-age-pct-table', agePct, 'age_group');
+
+  // ethnicity bar
+  const ethnData=isCounty?(cd?.ethnicity||{}):(m.demographics?.ethnicity||{});
+  const et=topN(ethnData,6);
+  if(document.getElementById('chart-mail-ethnicity'))
+    bar('chart-mail-ethnicity',et.map(r=>r[0]),et.map(r=>r[1]),P.teal);
 
   // county table (statewide only)
   const reqMap={};
@@ -687,6 +720,12 @@ function renderEVTab(county){
   const agePct =isCounty?(cd?.age_pct ||[]):ev.demographics?.age_pct ||[];
   renderPctTable('#ev-race-pct-table',racePct,'race');
   renderPctTable('#ev-age-pct-table', agePct, 'age_group');
+
+  // ethnicity
+  const evEthn=isCounty?(cd?.ethnicity||{}):(ev.demographics?.ethnicity||{});
+  const evEt=topN(evEthn,6);
+  if(document.getElementById('chart-ev-ethnicity'))
+    bar('chart-ev-ethnicity',evEt.map(r=>r[0]),evEt.map(r=>r[1]),P.teal);
 
   // county table
   if(!isCounty){
