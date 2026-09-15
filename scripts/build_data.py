@@ -303,6 +303,12 @@ def fetch_demo_stats(cfg):
     by_age = {k: int(v) for k, v in by_age.items()
               if k and k.upper() != "NAN"}
 
+    # statewide by ethnicity
+    by_ethnicity = (df.groupby("ethncity_desc")["group_count"].sum()
+              .to_dict())
+    by_ethnicity = {k: int(v) for k, v in by_ethnicity.items()
+              if k and k.upper() != "NAN"}
+
     # weekly trend (statewide)
     by_week = (df.groupby("request_week_num")["group_count"].sum()
                .sort_index().to_dict())
@@ -321,6 +327,7 @@ def fetch_demo_stats(cfg):
         "by_gender": by_gender,
         "by_party": by_party,
         "by_age": by_age,
+        "by_ethnicity": by_ethnicity,
         "by_week": by_week,
         "by_county": by_county,
     }
