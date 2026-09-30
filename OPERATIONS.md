@@ -16,16 +16,30 @@ It was built to answer "what's still fixable?" rather than just show final count
 ## How it works (high level)
 
 - `scripts/build_data.py` — downloads and aggregates NCSBE files, writes to `docs/data/*.json`
-- `.github/workflows/...` — runs the script daily, commits the data, deploys `docs/` to Pages
+- `.github/workflows/...` — runs the script on schedule, commits the data, deploys `docs/` to Pages
 - `docs/index.html` — the dashboard itself, reads `docs/data/latest.json` and `trend.json`
 
-1. A scheduled job (GitHub Actions) runs once a day automatically.
-2. It downloads two files directly from NCSBE's public server (dl.ncsbe.gov): the statewide absentee/early-voting file, and the statewide provisional ballot file.
-3. It aggregates them into summary statistics (curable %, SDR status, provisional outcomes, demographics, county breakdowns) — only aggregate counts are kept; no individual voter names/addresses are ever stored.
-4. It writes the results as JSON files into `docs/data/`.
+1. Scheduled jobs (GitHub Actions) run automatically — see schedule below.
+2. They download files directly from NCSBE's public server (dl.ncsbe.gov): the statewide absentee/early-voting file, the demo stats file, and the statewide provisional ballot file.
+3. They aggregate them into summary statistics (curable %, SDR status, provisional outcomes, demographics, county breakdowns) — only aggregate counts are kept; no individual voter names/addresses are ever stored.
+4. Results are written as JSON files into `docs/data/`.
 5. The dashboard (`docs/index.html`) reads those JSON files and renders the charts/tables. It's redeployed to the live site automatically after every data update.
 
 Nothing about this requires anyone to log in, run a script by hand, or manually update anything — as long as `config.json` is pointed at the correct, real election date (see cheat sheet below).
+
+---
+
+## Automated schedule
+
+The workflow runs three times a day during election season:
+
+| Time (EDT) | UTC | What it does |
+|---|---|---|
+| 7:00 AM | 11:00 | **Full run** — downloads absentee, demo stats, and provisional files |
+| 1:00 PM | 17:00 | **Provisional only** — refreshes just the provisional tab (NCSBE updates this file 3× daily) |
+| 7:00 PM | 23:00 | **Provisional only** — same as above |
+
+> ⚠️ **Daylight saving note:** When clocks fall back on **November 2, 2026**, all three times shift one hour earlier (6 AM, 12 PM, 6 PM EST). To keep them at 7/1/7 ET after the time change, update the crons in `.github/workflows/update-data.yml` to `0 12`, `0 18`, and `0 0`.
 
 ---
 
@@ -50,9 +64,11 @@ Don't wait for the daily schedule — do this any time you want fresh data immed
 
 1. Go to the **Actions** tab on GitHub
 2. Click **"Update election data"** in the left sidebar
-3. Click **"Run workflow"** → confirm
-4. Wait ~30-90 seconds (longer for big files, like a full general election)
-5. Refresh the live site once it shows a green checkmark
+3. Click **"Run workflow"**
+4. You'll see a dropdown: **"Run provisional-only refresh"** — leave it set to **false** for a full run (downloads everything). Set it to **true** only if you want to refresh just the provisional tab mid-day without re-downloading the absentee file.
+5. Click the green **Run workflow** button
+6. Wait ~30–90 seconds (longer for big files, like a full general election)
+7. Refresh the live site once it shows a green checkmark
 
 ### Check if something's wrong
 
@@ -106,7 +122,6 @@ Actions tab → most recent run → "Run data pipeline" → found two log lines:
 [build_data] provisional file header columns: ['ЁЁc', 'unnamed: 1', 'unnamed: 2'...]
 [build_data] provisional columns matched: []
 ```
-
 
 The column names were garbled — clearly something was wrong with how the file was being read.
 
@@ -166,7 +181,7 @@ Along the way we found and fixed several real bugs, all now resolved in the code
 |---|---|
 | `config.json` | Election date + status-code calibration |
 | `scripts/build_data.py` | The data pipeline (fetches/processes NCSBE files) |
-| `.github/workflows/update-data.yml` | The daily automation (schedule + steps) |
+| `.github/workflows/update-data.yml` | The automation schedule and steps |
 | `docs/index.html` | The dashboard itself (all HTML/CSS/JS) |
 | `docs/assets/` | Logo files |
 | `docs/data/latest.json` | Most recent data snapshot (what the dashboard reads) |

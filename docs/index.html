@@ -1338,26 +1338,31 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
   function loadMapData(data){
     countyDataMap={};
-    // build from county rows in latest.json
-    if(data&&data.mail){
-      const rows=data.mail.county_rows||[];
-      rows.forEach(r=>{
-        const n=(r.county||'').toUpperCase();
-        if(!countyDataMap[n])countyDataMap[n]={};
-        countyDataMap[n].total_returned=(r.total_returned||0);
-        countyDataMap[n].curable=(r.curable||0);
-        countyDataMap[n].sdr_failed=(r.sdr_failed||0);
-      });
-    }
-    if(data&&data.provisional){
-      const rows=data.provisional.county_rows||[];
-      rows.forEach(r=>{
-        const n=(r.county||'').toUpperCase();
-        if(!countyDataMap[n])countyDataMap[n]={};
-        countyDataMap[n].prov_total=(r.total||0);
-        countyDataMap[n].prov_not_counted=(r.not_counted||0);
-      });
-    }
+    // absentee mail — key is absentee_mail, rows are in by_county, county field is county_desc
+    const mailRows=(data&&data.absentee_mail&&data.absentee_mail.by_county)||[];
+    mailRows.forEach(r=>{
+      const n=(r.county_desc||'').toUpperCase();
+      if(!n)return;
+      if(!countyDataMap[n])countyDataMap[n]={};
+      countyDataMap[n].total_returned=(r.returned||0);
+      countyDataMap[n].curable=(r.curable||0);
+    });
+    // early voting — SDR failed lives here
+    const evRows=(data&&data.absentee_early_voting&&data.absentee_early_voting.by_county)||[];
+    evRows.forEach(r=>{
+      const n=(r.county_desc||'').toUpperCase();
+      if(!n)return;
+      if(!countyDataMap[n])countyDataMap[n]={};
+      countyDataMap[n].sdr_failed=(r.sdr_failed||0);
+    });
+    // provisional — key is provisional, rows in by_county, county field is county_name
+    const provRows=(data&&data.provisional&&data.provisional.by_county)||[];
+    provRows.forEach(r=>{
+      const n=(r.county_name||'').toUpperCase();
+      if(!n)return;
+      if(!countyDataMap[n])countyDataMap[n]={};
+      countyDataMap[n].prov_total=(r.count||0);
+    });
     renderSVGMap();
   }
 

@@ -45,7 +45,6 @@ jobs:
       - name: Determine run mode
         id: mode
         run: |
-          # Provisional-only at 1pm and 7pm UTC triggers; full run at 7am
           HOUR=$(date -u +'%H')
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.provisional_only }}" == "true" ]]; then
             echo "provisional_only=true" >> $GITHUB_OUTPUT
@@ -81,8 +80,8 @@ jobs:
       - uses: actions/checkout@v5
         with:
           ref: main
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: docs
       - id: deployment
