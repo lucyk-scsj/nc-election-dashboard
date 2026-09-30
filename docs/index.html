@@ -6,9 +6,7 @@
 <title>2026 NC General Election Data Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="vendor/chart.umd.js"></script>
-<!-- MAP TAB dependencies — safe to remove with the map tab -->
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<!-- MAP TAB: uses embedded SVG — no external CDN needed -->
 <style>
 :root{
   --bg:#F2F0EE; --surface:#FFFFFF; --ink:#1C1B19; --ink-2:#5A5854;
@@ -127,8 +125,9 @@ table.pct-table{width:100%;border-collapse:collapse;font-size:12px;
   font-family:'IBM Plex Mono',monospace;}
 table.pct-table th,table.pct-table td{padding:6px 8px;border-bottom:1px solid var(--line);}
 table.pct-table th{color:var(--ink-2);font-size:10px;text-transform:uppercase;letter-spacing:.04em;}
-.pct-bar{height:6px;border-radius:2px;background:var(--teal-fill);display:inline-block;min-width:1px;}
+.pct-bar{height:6px;border-radius:2px;background:var(--teal-fill);display:inline-block;min-width:1px;margin-right:4px;vertical-align:middle;}
 .pct-bar.not-acc{background:var(--brick-fill);}
+.pct-bar.cured{background:#D2931F;}
 
 .download-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;
   padding:7px 14px;background:var(--ink);color:var(--bg);border:none;border-radius:2px;
@@ -214,12 +213,12 @@ footer a{text-decoration:underline;}
       <section class="section">
         <div class="section-head"><h2>Demographics of returned ballots</h2><span class="section-note">% accepted vs. not accepted within each group — click column headers to sort</span></div>
         <div class="grid-2">
-          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="mail-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
-          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="mail-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="mail-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="mail-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div></div>
         </div>
         <div class="panel" style="margin-top:20px">
           <h3>By ethnicity</h3>
-          <div class="table-wrap"><table class="pct-table" id="mail-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div>
+          <div class="table-wrap"><table class="pct-table" id="mail-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div>
         </div>
         <button class="download-btn" id="mail-demo-csv-btn" style="margin-top:12px">↓ Download demographics CSV</button>
       </section>
@@ -283,12 +282,12 @@ footer a{text-decoration:underline;}
       <section class="section">
         <div class="section-head"><h2>Demographics of early voting ballots</h2><span class="section-note">% accepted vs. not accepted within each group</span></div>
         <div class="grid-2">
-          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="ev-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
-          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="ev-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By race</h3><div class="table-wrap"><table class="pct-table" id="ev-race-pct-table"><thead><tr><th>Race</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="panel"><h3>By age group</h3><div class="table-wrap"><table class="pct-table" id="ev-age-pct-table"><thead><tr><th>Age</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div></div>
         </div>
         <div class="panel" style="margin-top:20px">
           <h3>By ethnicity</h3>
-          <div class="table-wrap"><table class="pct-table" id="ev-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th></tr></thead><tbody></tbody></table></div>
+          <div class="table-wrap"><table class="pct-table" id="ev-ethn-pct-table"><thead><tr><th>Ethnicity</th><th>Total</th><th>Accepted %</th><th>Not Accepted %</th><th>Cured %</th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -421,6 +420,8 @@ const P={
   teal:'#72AE82',tealDark:'#2F6C3F',tealMid:'#A8D4B8',
   brick:'#D05744',brickDark:'#872921',
   indigo:'#7168D9',indigoDark:'#4F27D3',
+  amber:'#D2931F',    // age group — warm amber, distinct from all others
+  slate:'#5B7FA6',    // ethnicity — slate blue, distinct from teal and indigo
   line:'rgba(28,27,25,0.10)'
 };
 const CHART_OK=typeof Chart!=='undefined';
@@ -556,12 +557,13 @@ function renderPctTable(tbodySel,rows,labelKey){
   const tbody=table.querySelector('tbody');
   if(!tbody)return;
   tbody.innerHTML=(rows||[]).map(r=>{
-    const ap=r.accepted_pct||0,np=r.not_accepted_pct||0;
+    const ap=r.accepted_pct||0,np=r.not_accepted_pct||0,cp=r.cured_pct||0;
     return`<tr>
       <td>${r[labelKey]||'—'}</td>
       <td>${fmt(r.total)}</td>
-      <td><span class="pct-bar" style="width:${Math.min(ap,100)}px"></span>${pf(r.accepted_pct)}</td>
-      <td><span class="pct-bar not-acc" style="width:${Math.min(np,100)}px"></span>${pf(r.not_accepted_pct)}</td>
+      <td><span class="pct-bar" style="width:${Math.min(ap,100)}px"></span>${pf(ap)}</td>
+      <td><span class="pct-bar not-acc" style="width:${Math.min(np,100)}px"></span>${pf(np)}</td>
+      <td><span class="pct-bar cured" style="width:${Math.min(cp,100)}px"></span>${pf(cp)}</td>
     </tr>`;
   }).join('');
 }
@@ -702,10 +704,10 @@ function renderMailTab(county){
     bar('chart-req-party',rp.map(r=>r[0]),rp.map(r=>r[1]),P.indigo);
     const ra=topN(req?.by_age,8);
     if(document.getElementById('chart-req-age'))
-      bar('chart-req-age',ra.map(r=>r[0]),ra.map(r=>r[1]),P.indigoDark);
+      bar('chart-req-age',ra.map(r=>r[0]),ra.map(r=>r[1]),P.amber);
     const re=topN(req?.by_ethnicity,6);
     if(document.getElementById('chart-req-ethnicity'))
-      bar('chart-req-ethnicity',re.map(r=>r[0]),re.map(r=>r[1]),P.indigo);
+      bar('chart-req-ethnicity',re.map(r=>r[0]),re.map(r=>r[1]),P.slate);
   } else {
     document.getElementById('mail-req-demo-section').style.display='none';
   }
@@ -1042,6 +1044,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     EV_DATA  =latest.absentee_early_voting||null;
     PROV_DATA=latest.provisional||null;
     REQ_DATA =latest.requested_ballots||null;
+    window.latestData=latest; // expose for map tab
     try{TREND_DATA=await loadJSON('data/trend.json');}catch(e){TREND_DATA=[];}
 
     // populate county dropdowns
@@ -1075,239 +1078,311 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     console.error(err);
   }
 })();
-
-// ── MAP TAB — SELF-CONTAINED ──────────────────────────────────────────────────
-// To remove: delete the tab button, the #tab-map div, the CDN scripts,
-// and this entire block down to "END MAP TAB JS"
+// ── MAP TAB — SELF-CONTAINED (no external CDN) ─────────────────────────────
+// To remove: delete the tab button, the #tab-map div, and this block.
 (function(){
-  const NC_FIPS={
-    "ALAMANCE":"37001","ALEXANDER":"37003","ALLEGHANY":"37005","ANSON":"37007",
-    "ASHE":"37009","AVERY":"37011","BEAUFORT":"37013","BERTIE":"37015",
-    "BLADEN":"37017","BRUNSWICK":"37019","BUNCOMBE":"37021","BURKE":"37023",
-    "CABARRUS":"37025","CALDWELL":"37027","CAMDEN":"37029","CARTERET":"37031",
-    "CASWELL":"37033","CATAWBA":"37035","CHATHAM":"37037","CHEROKEE":"37039",
-    "CHOWAN":"37041","CLAY":"37043","CLEVELAND":"37045","COLUMBUS":"37047",
-    "CRAVEN":"37049","CUMBERLAND":"37051","CURRITUCK":"37053","DARE":"37055",
-    "DAVIDSON":"37057","DAVIE":"37059","DUPLIN":"37061","DURHAM":"37063",
-    "EDGECOMBE":"37065","FORSYTH":"37067","FRANKLIN":"37069","GASTON":"37071",
-    "GATES":"37073","GRAHAM":"37075","GRANVILLE":"37077","GREENE":"37079",
-    "GUILFORD":"37081","HALIFAX":"37083","HARNETT":"37085","HAYWOOD":"37087",
-    "HENDERSON":"37089","HERTFORD":"37091","HOKE":"37093","HYDE":"37095",
-    "IREDELL":"37097","JACKSON":"37099","JOHNSTON":"37101","JONES":"37103",
-    "LEE":"37105","LENOIR":"37107","LINCOLN":"37109","MACON":"37113",
-    "MADISON":"37115","MARTIN":"37117","MCDOWELL":"37111","MECKLENBURG":"37119",
-    "MITCHELL":"37121","MONTGOMERY":"37123","MOORE":"37125","NASH":"37127",
-    "NEW HANOVER":"37129","NORTHAMPTON":"37131","ONSLOW":"37133","ORANGE":"37135",
-    "PAMLICO":"37137","PASQUOTANK":"37139","PENDER":"37141","PERQUIMANS":"37143",
-    "PERSON":"37145","PITT":"37147","POLK":"37149","RANDOLPH":"37151",
-    "RICHMOND":"37153","ROBESON":"37155","ROCKINGHAM":"37157","ROWAN":"37159",
-    "RUTHERFORD":"37161","SAMPSON":"37163","SCOTLAND":"37165","STANLY":"37167",
-    "STOKES":"37169","SURRY":"37171","SWAIN":"37173","TRANSYLVANIA":"37175",
-    "TYRRELL":"37177","UNION":"37179","VANCE":"37181","WAKE":"37183",
-    "WARREN":"37185","WASHINGTON":"37187","WATAUGA":"37189","WAYNE":"37191",
-    "WILKES":"37193","WILSON":"37195","YADKIN":"37197","YANCEY":"37199",
+  // Geographic centroids → SVG tile coordinates (900×360 canvas)
+  const NC_SVG_RECTS = {
+    "ALAMANCE":[466.9,69.7,54.6,38.2],
+    "ALEXANDER":[288.1,83.9,54.6,38.2],
+    "ALLEGHANY":[293.1,16.4,54.6,38.2],
+    "ANSON":[397.6,190.5,54.6,38.2],
+    "ASHE":[255.9,22.3,54.6,38.2],
+    "AVERY":[213.7,65.0,54.6,38.2],
+    "BEAUFORT":[710.0,137.2,54.6,38.2],
+    "BERTIE":[710.0,83.9,54.6,38.2],
+    "BLADEN":[551.2,239.0,54.6,38.2],
+    "BRUNSWICK":[582.4,305.3,54.6,38.2],
+    "BUNCOMBE":[150.5,123.0,54.6,38.2],
+    "BURKE":[235.8,104.0,54.6,38.2],
+    "CABARRUS":[348.3,146.7,54.6,38.2],
+    "CALDWELL":[253.9,80.3,54.6,38.2],
+    "CAMDEN":[791.3,34.2,54.6,38.2],
+    "CARTERET":[736.1,224.8,54.6,38.2],
+    "CASWELL":[473.9,28.2,54.6,38.2],
+    "CATAWBA":[284.1,114.7,54.6,38.2],
+    "CHATHAM":[481.9,107.6,54.6,38.2],
+    "CHEROKEE":[2.8,175.1,54.6,38.2],
+    "CHOWAN":[747.1,65.0,54.6,38.2],
+    "CLAY":[29.9,185.7,54.6,38.2],
+    "CLEVELAND":[248.9,153.8,54.6,38.2],
+    "COLUMBUS":[538.2,279.3,54.6,38.2],
+    "CRAVEN":[697.9,178.6,54.6,38.2],
+    "CUMBERLAND":[519.1,186.9,54.6,38.2],
+    "CURRITUCK":[806.4,23.5,54.6,38.2],
+    "DARE":[842.5,99.3,54.6,38.2],
+    "DAVIDSON":[384.5,98.1,54.6,38.2],
+    "DAVIE":[349.4,82.7,54.6,38.2],
+    "DUPLIN":[614.5,201.1,54.6,38.2],
+    "DURHAM":[517.1,74.4,54.6,38.2],
+    "EDGECOMBE":[648.7,88.6,54.6,38.2],
+    "FORSYTH":[382.5,62.6,54.6,38.2],
+    "FRANKLIN":[580.4,65.0,54.6,38.2],
+    "GASTON":[287.1,160.9,54.6,38.2],
+    "GATES":[738.1,22.3,54.6,38.2],
+    "GRAHAM":[22.9,151.4,54.6,38.2],
+    "GRANVILLE":[543.2,38.9,54.6,38.2],
+    "GREENE":[640.6,137.2,54.6,38.2],
+    "GUILFORD":[426.7,65.0,54.6,38.2],
+    "HALIFAX":[642.7,35.3,54.6,38.2],
+    "HARNETT":[520.1,149.0,54.6,38.2],
+    "HAYWOOD":[107.3,127.7,54.6,38.2],
+    "HENDERSON":[158.5,153.8,54.6,38.2],
+    "HERTFORD":[709.0,31.8,54.6,38.2],
+    "HOKE":[485.0,191.7,54.6,38.2],
+    "HYDE":[794.3,145.5,54.6,38.2],
+    "IREDELL":[318.2,99.3,54.6,38.2],
+    "JACKSON":[92.2,157.3,54.6,38.2],
+    "JOHNSTON":[570.3,132.5,54.6,38.2],
+    "JONES":[674.8,201.1,54.6,38.2],
+    "LEE":[490.0,137.2,54.6,38.2],
+    "LENOIR":[649.7,163.2,54.6,38.2],
+    "LINCOLN":[283.1,137.2,54.6,38.2],
+    "MACON":[62.1,175.1,54.6,38.2],
+    "MADISON":[133.4,92.2,54.6,38.2],
+    "MARTIN":[696.9,93.4,54.6,38.2],
+    "MCDOWELL":[208.7,112.3,54.6,38.2],
+    "MECKLENBURG":[322.2,162.1,54.6,38.2],
+    "MITCHELL":[190.6,74.4,54.6,38.2],
+    "MONTGOMERY":[415.6,153.8,54.6,38.2],
+    "MOORE":[457.8,158.5,54.6,38.2],
+    "NASH":[609.5,78.0,54.6,38.2],
+    "NEW HANOVER":[619.6,287.6,54.6,38.2],
+    "NORTHAMPTON":[666.8,25.9,54.6,38.2],
+    "ONSLOW":[674.8,222.5,54.6,38.2],
+    "ORANGE":[495.0,67.3,54.6,38.2],
+    "PAMLICO":[741.1,176.3,54.6,38.2],
+    "PASQUOTANK":[784.3,41.3,54.6,38.2],
+    "PENDER":[620.6,249.7,54.6,38.2],
+    "PERQUIMANS":[764.2,53.1,54.6,38.2],
+    "PERSON":[510.1,28.2,54.6,38.2],
+    "PITT":[670.8,121.8,54.6,38.2],
+    "POLK":[187.6,158.5,54.6,38.2],
+    "RANDOLPH":[426.7,107.6,54.6,38.2],
+    "RICHMOND":[431.7,198.8,54.6,38.2],
+    "ROBESON":[497.0,235.5,54.6,38.2],
+    "ROCKINGHAM":[429.7,28.2,54.6,38.2],
+    "ROWAN":[353.4,118.2,54.6,38.2],
+    "RUTHERFORD":[212.7,145.5,54.6,38.2],
+    "SAMPSON":[570.3,194.0,54.6,38.2],
+    "SCOTLAND":[457.8,211.8,54.6,38.2],
+    "STANLY":[382.5,157.3,54.6,38.2],
+    "STOKES":[382.5,27.1,54.6,38.2],
+    "SURRY":[337.3,25.9,54.6,38.2],
+    "SWAIN":[56.0,134.8,54.6,38.2],
+    "TRANSYLVANIA":[127.4,169.2,54.6,38.2],
+    "TYRRELL":[805.4,92.2,54.6,38.2],
+    "UNION":[354.4,194.0,54.6,38.2],
+    "VANCE":[566.3,31.8,54.6,38.2],
+    "WAKE":[543.2,99.3,54.6,38.2],
+    "WARREN":[596.5,28.2,54.6,38.2],
+    "WASHINGTON":[753.1,93.4,54.6,38.2],
+    "WATAUGA":[236.9,47.2,54.6,38.2],
+    "WAYNE":[607.5,150.2,54.6,38.2],
+    "WILKES":[290.1,56.7,54.6,38.2],
+    "WILSON":[615.5,106.4,54.6,38.2],
+    "YADKIN":[340.3,55.5,54.6,38.2],
+    "YANCEY":[175.6,86.3,54.6,38.2],
   };
-  const FIPS_TO_NAME=Object.fromEntries(Object.entries(NC_FIPS).map(([n,f])=>[f,n]));
-
-  let currentMetric='curable_pct';
-  let geoFeatures=null;
-  let countyDataMap={};
 
   const METRIC_CONFIG={
     curable_pct:{
       label:'Outstanding Curable Mail Ballots (%)',
-      getValue:c=>{
-        const d=c?.pct_curable_of_returned;
-        return d!=null?d:null;
-      },
-      colors:['#FEF0E7','#F5C4A1','#E89260','#D05744','#872921'],
-      bad:true,
+      fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
     },
     sdr_failed:{
-      label:'SDR Failed Verification (count)',
-      getValue:()=>{
-        const sdr=(window.MAIL_DATA||{}).sdr||{};
-        return sdr.failed_verification||0;
-      },
-      statewide:true,
-      colors:['#FEF0E7','#F5C4A1','#E89260','#D05744','#872921'],
-      bad:true,
+      label:'SDR Failed Verification',
+      fmt:v=>v==null?'no data':fmt(v),
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
     },
     prov_not_counted_pct:{
       label:'Provisionals Not Counted (%)',
-      getValue:c=>{
-        const p=window.PROV_DATA;
-        if(!p)return null;
-        const cr=(p.by_county||[]).find(r=>r.county_name===c?.county_desc);
-        return null;
-      },
-      provMode:true,
-      colors:['#FEF0E7','#F5C4A1','#E89260','#D05744','#872921'],
-      bad:true,
+      fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
     },
     total_returned:{
-      label:'Total Ballots Returned',
-      getValue:c=>c?.returned||null,
-      colors:['#E1F5EE','#9FE1CB','#3B9E78','#1D6E56','#0A4035'],
-      bad:false,
+      label:'Total Returned',
+      fmt:v=>v==null?'no data':fmt(v),
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
     },
   };
 
-  function buildCountyDataMap(){
-    countyDataMap={};
-    const mail=window.MAIL_DATA;
-    const prov=window.PROV_DATA;
-    if(mail){
-      (mail.by_county||[]).forEach(c=>{
-        countyDataMap[c.county_desc]=c;
-      });
-    }
-    if(prov){
-      (prov.by_county||[]).forEach(r=>{
-        if(!countyDataMap[r.county_name])
-          countyDataMap[r.county_name]={county_desc:r.county_name};
-        countyDataMap[r.county_name]._prov=r;
-      });
-    }
+  function interpColor(lo,hi,t){
+    t=Math.max(0,Math.min(1,t));
+    const r=Math.round(lo[0]+(hi[0]-lo[0])*t);
+    const g=Math.round(lo[1]+(hi[1]-lo[1])*t);
+    const b=Math.round(lo[2]+(hi[2]-lo[2])*t);
+    return`rgb(${r},${g},${b})`;
   }
 
-  function getMetricValue(countyName,metric){
-    const cfg=METRIC_CONFIG[metric];
-    if(cfg.statewide) return cfg.getValue();
-    if(cfg.provMode){
-      const prov=window.PROV_DATA;
-      if(!prov)return null;
-      const cr=(prov.by_county||[]).find(r=>r.county_name===countyName);
-      const total=prov.total||0;
-      return cr&&total?Math.round(100*(total-prov.approved)/total*10)/10:null;
-    }
-    return cfg.getValue(countyDataMap[countyName]);
+  let currentMetric='curable_pct';
+  let countyDataMap={};
+
+  function getCountyValue(countyName){
+    const d=countyDataMap[countyName];
+    if(!d)return null;
+    if(currentMetric==='curable_pct')return d.total_returned>0?d.curable/d.total_returned:null;
+    if(currentMetric==='sdr_failed')return d.sdr_failed||null;
+    if(currentMetric==='prov_not_counted_pct')return (d.prov_total||0)>0?(d.prov_not_counted/d.prov_total):null;
+    if(currentMetric==='total_returned')return d.total_returned||null;
+    return null;
   }
 
-  function colorScale(values,colors){
-    const valid=values.filter(v=>v!=null);
-    if(!valid.length)return()=>colors[0];
-    const mn=Math.min(...valid),mx=Math.max(...valid);
-    return v=>{
-      if(v==null)return'#D6D1CD';
-      const t=mx===mn?0.5:(v-mn)/(mx-mn);
-      const i=Math.min(colors.length-2,Math.floor(t*(colors.length-1)));
-      const f=t*(colors.length-1)-i;
-      return interpolateHex(colors[i],colors[i+1],f);
-    };
-  }
-
-  function interpolateHex(a,b,t){
-    const r=(c,i)=>parseInt(c.slice(1+i*2,3+i*2),16);
-    return'#'+[0,1,2].map(i=>{
-      const v=Math.round(r(a,i)*(1-t)+r(b,i)*t);
-      return v.toString(16).padStart(2,'0');
-    }).join('');
-  }
-
-  function renderMap(){
-    if(!geoFeatures||!document.getElementById('nc-map'))return;
-    const svg=d3.select('#nc-map');
-    svg.selectAll('*').remove();
-
-    const W=svg.node().parentElement.clientWidth-16||680;
-    const H=Math.round(W*0.45);
-    svg.attr('viewBox',`0 0 ${W} ${H}`).attr('width',W).attr('height',H);
-
-    const proj=d3.geoMercator().fitSize([W,H],{type:'FeatureCollection',features:geoFeatures});
-    const path=d3.geoPath().projection(proj);
-
-    const values=geoFeatures.map(f=>{
-      const name=FIPS_TO_NAME[f.id?.toString().padStart(5,'0')];
-      return name?getMetricValue(name,currentMetric):null;
-    });
+  function renderSVGMap(){
+    const svg=document.getElementById('nc-map');
+    if(!svg)return;
     const cfg=METRIC_CONFIG[currentMetric];
-    const scale=colorScale(values,cfg.colors);
 
-    // legend
-    const valid=values.filter(v=>v!=null);
-    const mn=Math.min(...valid),mx=Math.max(...valid);
-    if(valid.length){
-      const legend=document.getElementById('map-legend');
-      const fmtV=v=>v>=1000?Math.round(v/100)/10+'k':v%1===0?v:v.toFixed(1)+(cfg.label.includes('%')?'%':'');
-      legend.innerHTML=`<span>${fmtV(mn)}</span>`+
-        cfg.colors.map(c=>`<span style="width:18px;height:10px;background:${c};display:inline-block;border-radius:1px"></span>`).join('')+
-        `<span>${fmtV(mx)}</span>`;
-    }
+    // compute max for color scale
+    let vals=Object.keys(NC_SVG_RECTS).map(n=>getCountyValue(n)).filter(v=>v!=null);
+    const maxVal=vals.length?Math.max(...vals):1;
 
-    const tip=document.getElementById('map-tooltip');
-    svg.selectAll('path')
-      .data(geoFeatures)
-      .join('path')
-      .attr('d',path)
-      .attr('fill',(_,i)=>scale(values[i]))
-      .attr('stroke','#fff')
-      .attr('stroke-width',0.5)
-      .style('cursor','pointer')
-      .on('mousemove',(event,f)=>{
-        const name=FIPS_TO_NAME[f.id?.toString().padStart(5,'0')];
-        const val=name?getMetricValue(name,currentMetric):null;
-        const fmtV=v=>v==null?'no data':v>=1000?v.toLocaleString():cfg.label.includes('%')?v.toFixed(1)+'%':v.toString();
-        tip.style.display='block';
-        tip.style.left=(event.offsetX+12)+'px';
-        tip.style.top=(event.offsetY-8)+'px';
-        tip.innerHTML=`<strong>${name||f.properties?.name||'—'}</strong><br>${cfg.label}: ${fmtV(val)}`;
-      })
-      .on('mouseleave',()=>{ tip.style.display='none'; })
-      .on('click',(_,f)=>{
-        const name=FIPS_TO_NAME[f.id?.toString().padStart(5,'0')];
-        if(!name)return;
-        // switch to mail tab and set county filter
-        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-        const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
-        if(mailBtn)mailBtn.classList.add('active');
-        document.getElementById('tab-mail').classList.add('active');
-        const sel=document.getElementById('mail-county-filter');
-        if(sel){
-          sel.value=name;
-          sel.dispatchEvent(new Event('change'));
+    // set viewBox
+    svg.setAttribute('viewBox','0 0 910 370');
+    svg.innerHTML='';
+
+    const ns='http://www.w3.org/2000/svg';
+
+    // background
+    const bg=document.createElementNS(ns,'rect');
+    bg.setAttribute('x',0);bg.setAttribute('y',0);
+    bg.setAttribute('width',910);bg.setAttribute('height',370);
+    bg.setAttribute('fill','#F2F0EE');
+    svg.appendChild(bg);
+
+    // state label
+    const stLbl=document.createElementNS(ns,'text');
+    stLbl.setAttribute('x',5);stLbl.setAttribute('y',358);
+    stLbl.setAttribute('font-size','9');stLbl.setAttribute('fill','#8A8781');
+    stLbl.setAttribute('font-family','IBM Plex Mono,monospace');
+    stLbl.textContent='NC — tile map (each cell = 1 county, placed by geographic centroid)';
+    svg.appendChild(stLbl);
+
+    Object.entries(NC_SVG_RECTS).forEach(([name,[x,y,w,h]])=>{
+      const val=getCountyValue(name);
+      const fillColor=cfg.color(val,maxVal)||'#DEDAD7';
+      const isDark=val!=null&&(val/maxVal)>0.5;
+      const textColor=isDark?'#FFFFFF':'#1C1B19';
+
+      const g=document.createElementNS(ns,'g');
+      g.setAttribute('style','cursor:pointer');
+      g.dataset.county=name;
+
+      const rect=document.createElementNS(ns,'rect');
+      rect.setAttribute('x',x+1);rect.setAttribute('y',y+1);
+      rect.setAttribute('width',w-2);rect.setAttribute('height',h-2);
+      rect.setAttribute('fill',fillColor);
+      rect.setAttribute('stroke','#FFFFFF');
+      rect.setAttribute('stroke-width','1.5');
+      rect.setAttribute('rx','1');
+      g.appendChild(rect);
+
+      // county abbreviation label (first 4 chars)
+      const abbr=name==='NEW HANOVER'?'N.HAN':name==='MCDOWELL'?'MCDWL':name.slice(0,4);
+      const lbl=document.createElementNS(ns,'text');
+      lbl.setAttribute('x',x+w/2);lbl.setAttribute('y',y+h/2+3);
+      lbl.setAttribute('text-anchor','middle');
+      lbl.setAttribute('font-size','7');
+      lbl.setAttribute('font-family','IBM Plex Mono,monospace');
+      lbl.setAttribute('fill',textColor);
+      lbl.setAttribute('pointer-events','none');
+      lbl.textContent=abbr;
+      g.appendChild(lbl);
+
+      // hover + click
+      g.addEventListener('mouseenter',e=>{
+        rect.setAttribute('stroke','#1C1B19');
+        rect.setAttribute('stroke-width','2');
+        const tt=document.getElementById('map-tooltip');
+        if(tt){
+          tt.style.display='block';
+          tt.innerHTML=`<strong>${name}</strong><br>${cfg.label}: ${cfg.fmt(val)}`;
+          const svgRect=svg.parentElement.getBoundingClientRect();
+          const ex=e.clientX-svgRect.left+12;
+          const ey=e.clientY-svgRect.top-30;
+          tt.style.left=ex+'px';tt.style.top=ey+'px';
         }
       });
+      g.addEventListener('mouseleave',()=>{
+        rect.setAttribute('stroke','#FFFFFF');
+        rect.setAttribute('stroke-width','1.5');
+        const tt=document.getElementById('map-tooltip');
+        if(tt)tt.style.display='none';
+      });
+      g.addEventListener('click',()=>{
+        // filter other tabs to this county
+        const sel=document.getElementById('county-select');
+        if(sel){
+          const opt=[...sel.options].find(o=>o.value===name||o.textContent.toUpperCase()===name);
+          if(opt){sel.value=opt.value;sel.dispatchEvent(new Event('change'));}
+        }
+      });
+
+      svg.appendChild(g);
+    });
+
+    // legend
+    renderLegend(maxVal,cfg);
   }
 
-  // toggle buttons
+  function renderLegend(maxVal,cfg){
+    const el=document.getElementById('map-legend');
+    if(!el)return;
+    if(currentMetric==='sdr_failed'||currentMetric==='total_returned'){
+      el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,${currentMetric==='total_returned'?'#468F7A':'#D05744'});display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;0 → ${cfg.fmt(maxVal)}`;
+    } else {
+      el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,#D05744);display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;0% → ${cfg.fmt(maxVal)}`;
+    }
+  }
+
+  function loadMapData(data){
+    countyDataMap={};
+    // build from county rows in latest.json
+    if(data&&data.mail){
+      const rows=data.mail.county_rows||[];
+      rows.forEach(r=>{
+        const n=(r.county||'').toUpperCase();
+        if(!countyDataMap[n])countyDataMap[n]={};
+        countyDataMap[n].total_returned=(r.total_returned||0);
+        countyDataMap[n].curable=(r.curable||0);
+        countyDataMap[n].sdr_failed=(r.sdr_failed||0);
+      });
+    }
+    if(data&&data.provisional){
+      const rows=data.provisional.county_rows||[];
+      rows.forEach(r=>{
+        const n=(r.county||'').toUpperCase();
+        if(!countyDataMap[n])countyDataMap[n]={};
+        countyDataMap[n].prov_total=(r.total||0);
+        countyDataMap[n].prov_not_counted=(r.not_counted||0);
+      });
+    }
+    renderSVGMap();
+  }
+
+  // hook into tab activation
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      if(btn.dataset.tab==='map'){
+        // data already loaded in window.latestData by main script
+        loadMapData(window.latestData||null);
+      }
+    });
+  });
+
+  // metric toggle
   document.querySelectorAll('.map-toggle').forEach(btn=>{
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.map-toggle').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
       currentMetric=btn.dataset.metric;
-      renderMap();
+      renderSVGMap();
     });
   });
 
-  // load geo data and render when map tab is first shown
-  let geoLoaded=false;
-  function maybeLoadMap(){
-    if(geoLoaded)return;
-    geoLoaded=true;
-    d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-albers-10m.json')
-      .then(us=>{
-        const all=topojson.feature(us,us.objects.counties).features;
-        geoFeatures=all.filter(f=>{
-          const id=f.id?.toString().padStart(5,'0');
-          return id&&id.startsWith('37');
-        });
-        buildCountyDataMap();
-        renderMap();
-      })
-      .catch(e=>{ console.error('Map data load failed:',e); });
-  }
-
-  // hook into the tab click
-  const origTabListener=document.querySelector('.tab-btn[data-tab="map"]');
-  if(origTabListener){
-    origTabListener.addEventListener('click',()=>setTimeout(()=>{
-      buildCountyDataMap();
-      maybeLoadMap();
-    },50));
-  }
-  window.addEventListener('resize',()=>{ if(!document.getElementById('tab-map').classList.contains('active'))return; renderMap(); });
+  // expose for external data load
+  window._mapLoadData=loadMapData;
 })();
 // END MAP TAB JS
 </script>
