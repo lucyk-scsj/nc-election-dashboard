@@ -2,8 +2,22 @@ name: Update election data
 
 on:
   schedule:
-    - cron: "0 11 * * *" 
-  workflow_dispatch: {}
+    # Full run — 7 AM EDT (11:00 UTC) / 7 AM EST (12:00 UTC after Nov 2)
+    # Adjust to "0 12 * * *" after daylight saving ends on Nov 2, 2026
+    - cron: "0 11 * * *"
+    # Provisional-only refresh — 1 PM EDT (17:00 UTC) and 7 PM EDT (23:00 UTC)
+    - cron: "0 17 * * *"
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+    inputs:
+      provisional_only:
+        description: "Run provisional-only refresh (skip absentee download)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
 
 permissions:
   contents: write
@@ -19,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: actions/setup-python@v5
         with:
@@ -28,15 +42,33 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Run data pipeline
+      - name: Determine run mode
+        id: mode
+        run: |
+          # Provisional-only at 1pm and 7pm UTC triggers; full run at 7am
+          HOUR=$(date -u +'%H')
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.provisional_only }}" == "true" ]]; then
+            echo "provisional_only=true" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event_name }}" == "schedule" && ("$HOUR" == "17" || "$HOUR" == "23") ]]; then
+            echo "provisional_only=true" >> $GITHUB_OUTPUT
+          else
+            echo "provisional_only=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run data pipeline (full)
+        if: steps.mode.outputs.provisional_only == 'false'
         run: python scripts/build_data.py
+
+      - name: Run data pipeline (provisional only)
+        if: steps.mode.outputs.provisional_only == 'true'
+        run: python scripts/build_data.py --provisional-only
 
       - name: Commit updated data
         run: |
           git config user.name "election-data-bot"
           git config user.email "actions@users.noreply.github.com"
           git add docs/data
-          git diff --cached --quiet || git commit -m "Update election data $(date -u +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "Update election data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 
   deploy-pages:
@@ -46,7 +78,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
       - uses: actions/configure-pages@v5

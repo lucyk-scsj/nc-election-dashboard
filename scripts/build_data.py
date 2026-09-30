@@ -611,12 +611,48 @@ def placeholder(cfg, note):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--inspect", action="store_true")
+    parser.add_argument(
+        "--provisional-only", action="store_true",
+        help="Skip absentee/demo downloads; only refresh provisional data "
+             "and merge into existing latest.json. Used for mid-day updates.",
+    )
     args = parser.parse_args()
 
     cfg = load_config()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     HIST_DIR.mkdir(parents=True, exist_ok=True)
 
+    # ── provisional-only mode ─────────────────────────────────────────────────
+    if args.provisional_only:
+        latest_path = DATA_DIR / "latest.json"
+        if latest_path.exists():
+            try:
+                result = json.loads(latest_path.read_text())
+            except json.JSONDecodeError:
+                result = {}
+        else:
+            result = {}
+
+        result["generated_at"] = datetime.now(timezone.utc).isoformat()
+
+        try:
+            prov_df = fetch_provisional_df(cfg)
+            result["provisional"] = summarize_provisional(prov_df)
+            print("[build] provisional-only: updated provisional data", file=sys.stderr)
+        except (HTTPError, URLError, StopIteration) as e:
+            print(f"[build] provisional not available: {e}", file=sys.stderr)
+
+        latest_path.write_text(json.dumps(result, indent=2))
+
+        # overwrite today's history snapshot with the freshest provisional numbers
+        run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        (HIST_DIR / f"retrieved_{run_date}.json").write_text(json.dumps(result, indent=2))
+
+        rebuild_trend()
+        print(f"[build] provisional-only done — status={result.get('status','ok')}")
+        return
+
+    # ── full run ──────────────────────────────────────────────────────────────
     result = {
         "generated_at":  datetime.now(timezone.utc).isoformat(),
         "election_date":  cfg["election_date"],
