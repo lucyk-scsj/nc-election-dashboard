@@ -1485,18 +1485,21 @@ document.getElementById('prov-county-filter').addEventListener('change',function
   document.getElementById('map-county-goto')?.addEventListener('click',()=>{
     const countyName=document.getElementById('map-county-name')?.textContent||'';
     const bare=countyName.replace(/ County$/i,'').toUpperCase();
-    // set all three county filters to this county
+    // set all three county filters to this county value
     ['mail-county-filter','ev-county-filter','prov-county-filter'].forEach(id=>{
       const sel=document.getElementById(id);
       if(!sel)return;
-      const opt=[...sel.options].find(o=>o.value.toUpperCase()===bare||o.textContent.toUpperCase()===bare);
+      const opt=[...sel.options].find(o=>o.value.toUpperCase()===bare);
       if(opt)sel.value=opt.value;
     });
-    // fire change on mail filter to trigger render, then switch to mail tab
-    const mailSel=document.getElementById('mail-county-filter');
-    if(mailSel)mailSel.dispatchEvent(new Event('change'));
+    // switch to mail tab first (activates it), then trigger the render
     const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
     if(mailBtn)mailBtn.click();
+    // dispatch after tab switch so renderMailTab runs with the new value
+    setTimeout(()=>{
+      const mailSel=document.getElementById('mail-county-filter');
+      if(mailSel)mailSel.dispatchEvent(new Event('change'));
+    },50);
   });
 
   function loadMapData(data){
