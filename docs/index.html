@@ -1485,24 +1485,27 @@ document.getElementById('prov-county-filter').addEventListener('change',function
   document.getElementById('map-county-goto')?.addEventListener('click',()=>{
     const countyName=document.getElementById('map-county-name')?.textContent||'';
     const bare=countyName.replace(/ County$/i,'').toUpperCase();
-    console.log('[goto] county panel name:',countyName,'→ bare:',bare);
-    // set all three county filters to this county value
+    // set all three county filters
     ['mail-county-filter','ev-county-filter','prov-county-filter'].forEach(id=>{
       const sel=document.getElementById(id);
       if(!sel)return;
       const opt=[...sel.options].find(o=>o.value.toUpperCase()===bare);
       if(opt)sel.value=opt.value;
     });
-    // switch to mail tab first (activates it), then trigger the render
+    // activate the mail tab (show/hide panels)
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
     const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
-    console.log('[goto] mailBtn found:',!!mailBtn);
-    if(mailBtn)mailBtn.click();
-    // dispatch after tab switch so renderMailTab runs with the new value
-    setTimeout(()=>{
-      const mailSel=document.getElementById('mail-county-filter');
-      console.log('[goto] mailSel value after set:',mailSel?.value);
-      if(mailSel)mailSel.dispatchEvent(new Event('change'));
-    },50);
+    if(mailBtn)mailBtn.classList.add('active');
+    const mailPanel=document.getElementById('tab-mail');
+    if(mailPanel)mailPanel.classList.add('active');
+    // call renderMailTab directly — no event indirection
+    renderMailTab(bare);
+    // also re-render EV and provisional so their filters are live
+    renderEVTab(bare);
+    renderProvTab(bare);
+    // scroll to top of page so user sees the mail tab
+    window.scrollTo({top:0,behavior:'smooth'});
   });
 
   function loadMapData(data){
