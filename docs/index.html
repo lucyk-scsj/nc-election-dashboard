@@ -1329,8 +1329,6 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
       // hover + click
       g.addEventListener('mouseenter',e=>{
-        // bring to front so border isn't clipped by neighbors
-        svg.appendChild(g);
         rect.setAttribute('stroke','#1C1B19');
         rect.setAttribute('stroke-width','2');
         const tt=document.getElementById('map-tooltip');
@@ -1465,10 +1463,12 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     });
     const svgEl=document.getElementById('nc-map');
     document.querySelectorAll('#nc-map g').forEach(g=>{
+      const r=g.querySelector('rect');
+      if(!r)return;
       if(g.getAttribute('data-county')===name){
-        svgEl.appendChild(g); // bring to front
-        const r=g.querySelector('rect');
-        if(r){r.setAttribute('stroke','#1C1B19');r.setAttribute('stroke-width','2.5');}
+        r.setAttribute('stroke','#1C1B19');r.setAttribute('stroke-width','2.5');
+      } else {
+        r.setAttribute('stroke','#FFFFFF');r.setAttribute('stroke-width','1.5');
       }
     });
   }
