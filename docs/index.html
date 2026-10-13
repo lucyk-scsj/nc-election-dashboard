@@ -1485,6 +1485,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
   document.getElementById('map-county-goto')?.addEventListener('click',()=>{
     const countyName=document.getElementById('map-county-name')?.textContent||'';
     const bare=countyName.replace(/ County$/i,'').toUpperCase();
+    console.log('[goto] county panel name:',countyName,'→ bare:',bare);
     // set all three county filters to this county value
     ['mail-county-filter','ev-county-filter','prov-county-filter'].forEach(id=>{
       const sel=document.getElementById(id);
@@ -1494,10 +1495,12 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     });
     // switch to mail tab first (activates it), then trigger the render
     const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
+    console.log('[goto] mailBtn found:',!!mailBtn);
     if(mailBtn)mailBtn.click();
     // dispatch after tab switch so renderMailTab runs with the new value
     setTimeout(()=>{
       const mailSel=document.getElementById('mail-county-filter');
+      console.log('[goto] mailSel value after set:',mailSel?.value);
       if(mailSel)mailSel.dispatchEvent(new Event('change'));
     },50);
   });
