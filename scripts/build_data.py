@@ -267,9 +267,11 @@ def fetch_absentee_df(cfg):
                         d = county_d[county]
                         d["returned"]  += len(grp)
                         d["accepted"]  += int(grp["ballot_rtn_status"].isin(ACCEPTED).sum())
-                        d["curable"]   += int(grp["ballot_rtn_status"].isin(CURABLE).sum())
-                        d["cured"]     += int(grp["ballot_rtn_status"].isin(CURED).sum())
                         d["rejected"]  += int(grp["ballot_rtn_status"].isin(REJECTED).sum())
+                        d["cured"]     += int(grp["ballot_rtn_status"].isin(CURED).sum())
+                        # curable = not accepted and not rejected
+                        d["curable"]   += int((~grp["ballot_rtn_status"].isin(ACCEPTED) &
+                                               ~grp["ballot_rtn_status"].isin(REJECTED)).sum())
 
                 # statewide race
                 if "race" in df_chunk:
