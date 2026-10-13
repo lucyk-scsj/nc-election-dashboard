@@ -31,9 +31,10 @@ HIST_DIR   = DATA_DIR / "history"
 USER_AGENT = "Mozilla/5.0 (compatible; nc-election-dashboard/2.0)"
 
 ACCEPTED   = ["ACCEPTED", "ACCEPTED - CURED", "ACCEPTED - EXCEPTION"]
-CURABLE    = ["PENDING", "PENDING CURE", "WITNESS INFO INCOMPLETE",
-              "SIGNATURE MISSING", "AFFIDAVIT INCOMPLETE",
-              "ASSISTANT INFO INCOMPLETE", "PHOTO ID CURABLE"]
+# Anything not in ACCEPTED and not REJECTED is treated as outstanding/curable.
+# We do NOT whitelist specific curable statuses — new statuses will be captured
+# automatically. CURABLE list is kept only for backwards-compat references.
+CURABLE    = []   # unused — curable is now computed as NOT ACCEPTED and NOT REJECTED
 CURED      = ["ACCEPTED - CURED", "CURED"]
 REJECTED   = ["SPOILED", "SPOILED-EV", "RETURNED UNDELIVERABLE", "REJECTED"]
 SDR_FAILED = ["SDR-FAILED VERIFICATION"]
@@ -225,17 +226,15 @@ def fetch_absentee_df(cfg):
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
 
             # curable category breakdown — statewide and per county
+            # curable = not accepted, not rejected/spoiled
+            mail_cbl = mail[~mail["ballot_rtn_status"].isin(ACCEPTED) &
+                            ~mail["ballot_rtn_status"].isin(REJECTED)]
+            for status, cnt in mail_cbl["ballot_rtn_status"].value_counts().items():
+                m_curable_cats[status] += int(cnt)
             if "county_desc" in mail.columns:
-                for _, row in mail[mail["ballot_rtn_status"].isin(CURABLE)].iterrows():
-                    status = row["ballot_rtn_status"]
-                    county = row.get("county_desc", "")
-                    m_curable_cats[status] += 1
+                for (county, status), grp in mail_cbl.groupby(["county_desc", "ballot_rtn_status"]):
                     if county and county != "NAN":
-                        m_county_curable_cats[county][status] += 1
-            else:
-                for status, cnt in mail["ballot_rtn_status"].value_counts().items():
-                    if status in CURABLE:
-                        m_curable_cats[status] += int(cnt)
+                        m_county_curable_cats[county][status] += len(grp)
 
             for df_chunk, county_d, race_a, race_r, race_c, age_a, age_r, age_c, \
                     gend, prty, ethn, cr_race_a, cr_race_r, cr_age_a, cr_age_r, \
@@ -254,8 +253,9 @@ def fetch_absentee_df(cfg):
 
                 acc_mask  = df_chunk["ballot_rtn_status"].isin(ACCEPTED)
                 cur_mask  = df_chunk["ballot_rtn_status"].isin(CURED)
-                cbl_mask  = df_chunk["ballot_rtn_status"].isin(CURABLE)
                 rej_mask  = df_chunk["ballot_rtn_status"].isin(REJECTED)
+                # curable = anything not yet accepted and not rejected/spoiled
+                cbl_mask  = ~acc_mask & ~rej_mask
                 sdr_mask  = df_chunk["sdr"].eq("Y") if "sdr" in df_chunk else \
                             pd.Series([False]*len(df_chunk))
 
@@ -438,6 +438,12 @@ def fetch_absentee_df(cfg):
                 "ethnicity":  dict(m_ethnicity),
             },
             "raw_status_counts": dict(status_c),
+            # full breakdown of every ballot_rtn_status value and count,
+            # sorted by count descending — surfaces unexpected statuses immediately
+            "status_breakdown": sorted(
+                [{"status": k, "count": v} for k, v in status_c.items()],
+                key=lambda x: -x["count"]
+            ),
         },
         "early_voting": {
             "total_returned":        ev_returned,
