@@ -1344,11 +1344,10 @@ document.getElementById('prov-county-filter').addEventListener('change',function
         const tt=document.getElementById('map-tooltip');
         if(tt)tt.style.display='none';
       });
-      g.addEventListener('click',e=>{
+      g.onclick=function(e){
         e.stopPropagation();
-        try{ showCountyPanel(name); }
-        catch(err){ console.error('[map click]',err); }
-      });
+        showCountyPanel(name);
+      };
 
       svg.appendChild(g);
     });
