@@ -80,6 +80,8 @@ main{max-width:1200px;margin:0 auto;padding:28px 32px 48px;}
 .kpi-value.brick{color:var(--brick);}
 .kpi-value.indigo{color:var(--indigo);}
 .kpi-sub{margin-top:6px;font-size:11px;color:var(--ink-2);}
+.kpi-note{margin-top:8px;font-size:10px;color:var(--ink-2);line-height:1.45;border-top:1px solid var(--line);padding-top:6px;}
+.kpi-note a{color:var(--ink-2);text-decoration:underline;}
 
 /* sections */
 .section{margin-bottom:40px;}
@@ -693,7 +695,8 @@ function renderMailTab(county){
     {label:isCounty?`Requested (${county})`:'Requested (statewide)',
      value:fmt(reqTotal),sub:'mail ballot requests'},
     {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
-    {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections'},
+    {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections',
+     note:'Spoiled ballots are not captured in the state absentee file. Once available, spoilage data will be pulled from <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE\'s Outstanding Ballots report</a>.'},
   ]);
 
   // trend (statewide only)
@@ -1038,11 +1041,12 @@ function renderProvTab(county){
 
 // ── shared helpers ────────────────────────────────────────────────────────────
 function kpiHTML(items){
-  return items.map(({label,value,cls,sub})=>`
+  return items.map(({label,value,cls,sub,note})=>`
     <div class="kpi">
       <div class="kpi-label">${label}</div>
       <div class="kpi-value ${cls||''}">${value}</div>
       ${sub?`<div class="kpi-sub">${sub}</div>`:''}
+      ${note?`<div class="kpi-note">${note}</div>`:''}
     </div>`).join('');
 }
 
