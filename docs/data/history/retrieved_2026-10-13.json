@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-13T17:52:52.644371+00:00",
+  "generated_at": "2026-10-13T17:58:35.636734+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "partial",
   "absentee_mail": {
     "total_returned": 29745,
     "accepted": 29469,
-    "curable": 0,
+    "curable": 276,
     "cured": 361,
     "rejected_or_spoiled": 0,
-    "pct_curable_of_returned": 0.0,
+    "pct_curable_of_returned": 0.93,
     "sdr": {
       "total_sdr_ballots": 0,
       "failed_verification": 0,
@@ -28,7 +28,7 @@
         "county_desc": "ALAMANCE",
         "returned": 454,
         "accepted": 447,
-        "curable": 0,
+        "curable": 7,
         "cured": 5,
         "rejected": 0,
         "race_pct": [
@@ -190,7 +190,7 @@
         "county_desc": "ALEXANDER",
         "returned": 48,
         "accepted": 46,
-        "curable": 0,
+        "curable": 2,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -770,7 +770,7 @@
         "county_desc": "BEAUFORT",
         "returned": 69,
         "accepted": 68,
-        "curable": 0,
+        "curable": 1,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -1078,7 +1078,7 @@
         "county_desc": "BRUNSWICK",
         "returned": 809,
         "accepted": 789,
-        "curable": 0,
+        "curable": 20,
         "cured": 17,
         "rejected": 0,
         "race_pct": [
@@ -1240,7 +1240,7 @@
         "county_desc": "BUNCOMBE",
         "returned": 1517,
         "accepted": 1511,
-        "curable": 0,
+        "curable": 6,
         "cured": 19,
         "rejected": 0,
         "race_pct": [
@@ -1542,7 +1542,7 @@
         "county_desc": "CABARRUS",
         "returned": 690,
         "accepted": 687,
-        "curable": 0,
+        "curable": 3,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -1704,7 +1704,7 @@
         "county_desc": "CALDWELL",
         "returned": 132,
         "accepted": 127,
-        "curable": 0,
+        "curable": 5,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -2183,7 +2183,7 @@
         "county_desc": "CATAWBA",
         "returned": 490,
         "accepted": 489,
-        "curable": 0,
+        "curable": 1,
         "cured": 14,
         "rejected": 0,
         "race_pct": [
@@ -2335,7 +2335,7 @@
         "county_desc": "CHATHAM",
         "returned": 592,
         "accepted": 591,
-        "curable": 0,
+        "curable": 1,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -2784,7 +2784,7 @@
         "county_desc": "CLEVELAND",
         "returned": 122,
         "accepted": 121,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -3076,7 +3076,7 @@
         "county_desc": "CRAVEN",
         "returned": 270,
         "accepted": 269,
-        "curable": 0,
+        "curable": 1,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -3218,7 +3218,7 @@
         "county_desc": "CUMBERLAND",
         "returned": 484,
         "accepted": 479,
-        "curable": 0,
+        "curable": 5,
         "cured": 16,
         "rejected": 0,
         "race_pct": [
@@ -3479,7 +3479,7 @@
         "county_desc": "DARE",
         "returned": 110,
         "accepted": 108,
-        "curable": 0,
+        "curable": 2,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -3781,7 +3781,7 @@
         "county_desc": "DAVIE",
         "returned": 93,
         "accepted": 92,
-        "curable": 0,
+        "curable": 1,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -3913,7 +3913,7 @@
         "county_desc": "DUPLIN",
         "returned": 50,
         "accepted": 47,
-        "curable": 0,
+        "curable": 3,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -4055,7 +4055,7 @@
         "county_desc": "DURHAM",
         "returned": 1291,
         "accepted": 1284,
-        "curable": 0,
+        "curable": 7,
         "cured": 14,
         "rejected": 0,
         "race_pct": [
@@ -4326,7 +4326,7 @@
         "county_desc": "FORSYTH",
         "returned": 1228,
         "accepted": 1216,
-        "curable": 0,
+        "curable": 12,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -4618,7 +4618,7 @@
         "county_desc": "GASTON",
         "returned": 556,
         "accepted": 552,
-        "curable": 0,
+        "curable": 4,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -5030,7 +5030,7 @@
         "county_desc": "GRANVILLE",
         "returned": 116,
         "accepted": 113,
-        "curable": 0,
+        "curable": 3,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -5291,7 +5291,7 @@
         "county_desc": "GUILFORD",
         "returned": 1130,
         "accepted": 1112,
-        "curable": 0,
+        "curable": 18,
         "cured": 20,
         "rejected": 0,
         "race_pct": [
@@ -5453,7 +5453,7 @@
         "county_desc": "HALIFAX",
         "returned": 54,
         "accepted": 53,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -5594,7 +5594,7 @@
         "county_desc": "HARNETT",
         "returned": 325,
         "accepted": 323,
-        "curable": 0,
+        "curable": 2,
         "cured": 3,
         "rejected": 0,
         "race_pct": [
@@ -5756,7 +5756,7 @@
         "county_desc": "HAYWOOD",
         "returned": 234,
         "accepted": 220,
-        "curable": 0,
+        "curable": 14,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -5897,7 +5897,7 @@
         "county_desc": "HENDERSON",
         "returned": 604,
         "accepted": 598,
-        "curable": 0,
+        "curable": 6,
         "cured": 6,
         "rejected": 0,
         "race_pct": [
@@ -6386,7 +6386,7 @@
         "county_desc": "IREDELL",
         "returned": 399,
         "accepted": 397,
-        "curable": 0,
+        "curable": 2,
         "cured": 4,
         "rejected": 0,
         "race_pct": [
@@ -6538,7 +6538,7 @@
         "county_desc": "JACKSON",
         "returned": 140,
         "accepted": 138,
-        "curable": 0,
+        "curable": 2,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -6690,7 +6690,7 @@
         "county_desc": "JOHNSTON",
         "returned": 534,
         "accepted": 529,
-        "curable": 0,
+        "curable": 5,
         "cured": 5,
         "rejected": 0,
         "race_pct": [
@@ -7101,7 +7101,7 @@
         "county_desc": "LENOIR",
         "returned": 87,
         "accepted": 83,
-        "curable": 0,
+        "curable": 4,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -7222,7 +7222,7 @@
         "county_desc": "LINCOLN",
         "returned": 176,
         "accepted": 175,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -7374,7 +7374,7 @@
         "county_desc": "MACON",
         "returned": 132,
         "accepted": 131,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -7496,7 +7496,7 @@
         "county_desc": "MADISON",
         "returned": 44,
         "accepted": 43,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -7597,7 +7597,7 @@
         "county_desc": "MARTIN",
         "returned": 21,
         "accepted": 20,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -7698,7 +7698,7 @@
         "county_desc": "MCDOWELL",
         "returned": 66,
         "accepted": 65,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -7819,7 +7819,7 @@
         "county_desc": "MECKLENBURG",
         "returned": 3288,
         "accepted": 3259,
-        "curable": 0,
+        "curable": 29,
         "cured": 47,
         "rejected": 0,
         "race_pct": [
@@ -8199,7 +8199,7 @@
         "county_desc": "MOORE",
         "returned": 500,
         "accepted": 495,
-        "curable": 0,
+        "curable": 5,
         "cured": 6,
         "rejected": 0,
         "race_pct": [
@@ -8361,7 +8361,7 @@
         "county_desc": "NASH",
         "returned": 125,
         "accepted": 124,
-        "curable": 0,
+        "curable": 1,
         "cured": 4,
         "rejected": 0,
         "race_pct": [
@@ -8513,7 +8513,7 @@
         "county_desc": "NEW HANOVER",
         "returned": 724,
         "accepted": 710,
-        "curable": 0,
+        "curable": 14,
         "cured": 9,
         "rejected": 0,
         "race_pct": [
@@ -8675,7 +8675,7 @@
         "county_desc": "NORTHAMPTON",
         "returned": 16,
         "accepted": 15,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -8786,7 +8786,7 @@
         "county_desc": "ONSLOW",
         "returned": 290,
         "accepted": 286,
-        "curable": 0,
+        "curable": 4,
         "cured": 10,
         "rejected": 0,
         "race_pct": [
@@ -8938,7 +8938,7 @@
         "county_desc": "ORANGE",
         "returned": 986,
         "accepted": 984,
-        "curable": 0,
+        "curable": 2,
         "cured": 7,
         "rejected": 0,
         "race_pct": [
@@ -9370,7 +9370,7 @@
         "county_desc": "PENDER",
         "returned": 130,
         "accepted": 129,
-        "curable": 0,
+        "curable": 1,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -9631,7 +9631,7 @@
         "county_desc": "PERSON",
         "returned": 96,
         "accepted": 95,
-        "curable": 0,
+        "curable": 1,
         "cured": 2,
         "rejected": 0,
         "race_pct": [
@@ -9783,7 +9783,7 @@
         "county_desc": "PITT",
         "returned": 210,
         "accepted": 206,
-        "curable": 0,
+        "curable": 4,
         "cured": 5,
         "rejected": 0,
         "race_pct": [
@@ -10844,7 +10844,7 @@
         "county_desc": "SAMPSON",
         "returned": 42,
         "accepted": 32,
-        "curable": 0,
+        "curable": 10,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -11106,7 +11106,7 @@
         "county_desc": "STANLY",
         "returned": 86,
         "accepted": 83,
-        "curable": 0,
+        "curable": 3,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -11238,7 +11238,7 @@
         "county_desc": "STOKES",
         "returned": 101,
         "accepted": 100,
-        "curable": 0,
+        "curable": 1,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -11489,7 +11489,7 @@
         "county_desc": "SWAIN",
         "returned": 23,
         "accepted": 21,
-        "curable": 0,
+        "curable": 2,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -11804,7 +11804,7 @@
         "county_desc": "UNION",
         "returned": 611,
         "accepted": 610,
-        "curable": 0,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -11956,7 +11956,7 @@
         "county_desc": "VANCE",
         "returned": 67,
         "accepted": 66,
-        "curable": 0,
+        "curable": 1,
         "cured": 1,
         "rejected": 0,
         "race_pct": [
@@ -12088,7 +12088,7 @@
         "county_desc": "WAKE",
         "returned": 5400,
         "accepted": 5354,
-        "curable": 0,
+        "curable": 46,
         "cured": 89,
         "rejected": 0,
         "race_pct": [
@@ -12649,7 +12649,7 @@
         "county_desc": "WAYNE",
         "returned": 146,
         "accepted": 144,
-        "curable": 0,
+        "curable": 2,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -12801,7 +12801,7 @@
         "county_desc": "WILKES",
         "returned": 160,
         "accepted": 158,
-        "curable": 0,
+        "curable": 2,
         "cured": 0,
         "rejected": 0,
         "race_pct": [
@@ -12933,7 +12933,7 @@
         "county_desc": "WILSON",
         "returned": 100,
         "accepted": 98,
-        "curable": 0,
+        "curable": 2,
         "cured": 3,
         "rejected": 0,
         "race_pct": [
