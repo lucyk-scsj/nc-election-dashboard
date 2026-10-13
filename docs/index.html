@@ -1304,7 +1304,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
       const g=document.createElementNS(ns,'g');
       g.setAttribute('style','cursor:pointer');
-      g.dataset.county=name;
+      g.setAttribute('data-county',name);
 
       const rect=document.createElementNS(ns,'rect');
       rect.setAttribute('x',x+1);rect.setAttribute('y',y+1);
@@ -1347,8 +1347,10 @@ document.getElementById('prov-county-filter').addEventListener('change',function
         const tt=document.getElementById('map-tooltip');
         if(tt)tt.style.display='none';
       });
-      g.addEventListener('click',()=>{
-        showCountyPanel(name);
+      g.addEventListener('click',e=>{
+        e.stopPropagation();
+        try{ showCountyPanel(name); }
+        catch(err){ console.error('[map click]',err); }
       });
 
       svg.appendChild(g);
@@ -1460,7 +1462,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       r.setAttribute('stroke','#FFFFFF');r.setAttribute('stroke-width','1.5');
     });
     document.querySelectorAll('#nc-map g').forEach(g=>{
-      if(g.dataset.county===name){
+      if(g.getAttribute('data-county')===name){
         const r=g.querySelector('rect');
         if(r){r.setAttribute('stroke','#1C1B19');r.setAttribute('stroke-width','2.5');}
       }
@@ -1527,8 +1529,12 @@ document.getElementById('prov-county-filter').addEventListener('change',function
   document.querySelectorAll('.tab-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
       if(btn.dataset.tab==='map'){
-        // data already loaded in window.latestData by main script
-        loadMapData(window.latestData||null);
+        try{
+          loadMapData(window.latestData||null);
+          console.log('[map] loadMapData ok, countyDataMap keys:',Object.keys(countyDataMap).length);
+        }catch(err){
+          console.error('[map] loadMapData error:',err);
+        }
       }
     });
   });
