@@ -1286,6 +1286,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     bg.setAttribute('x',0);bg.setAttribute('y',0);
     bg.setAttribute('width',910);bg.setAttribute('height',370);
     bg.setAttribute('fill','#F2F0EE');
+    bg.setAttribute('pointer-events','none');
     svg.appendChild(bg);
 
     // state label
@@ -1329,8 +1330,6 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
       // hover + click
       g.addEventListener('mouseenter',e=>{
-        rect.setAttribute('stroke','#1C1B19');
-        rect.setAttribute('stroke-width','2');
         const tt=document.getElementById('map-tooltip');
         if(tt){
           tt.style.display='block';
@@ -1342,8 +1341,6 @@ document.getElementById('prov-county-filter').addEventListener('change',function
         }
       });
       g.addEventListener('mouseleave',()=>{
-        rect.setAttribute('stroke','#FFFFFF');
-        rect.setAttribute('stroke-width','1.5');
         const tt=document.getElementById('map-tooltip');
         if(tt)tt.style.display='none';
       });
