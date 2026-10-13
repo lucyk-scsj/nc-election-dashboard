@@ -392,9 +392,46 @@ footer a{text-decoration:underline;}
     </div>
 
     <p style="font-size:11px;color:var(--ink-2);margin-top:10px;font-style:italic">
-      Click a county to filter the other tabs to that county's data.
-      Darker shades indicate higher values. Gray = no data yet for this county.
+      Click a county to see its data below. Darker shades indicate higher values. Gray = no data yet.
     </p>
+
+    <!-- county detail panel -->
+    <div id="map-county-panel" style="display:none;margin-top:18px;border:1px solid var(--line);border-radius:2px;background:var(--surface);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--ink);color:var(--surface)">
+        <span id="map-county-name" style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.05em"></span>
+        <div style="display:flex;align-items:center;gap:12px">
+          <button id="map-county-goto" style="font-size:11px;font-family:'IBM Plex Mono',monospace;background:transparent;border:1px solid rgba(255,255,255,.4);color:var(--surface);padding:4px 10px;border-radius:2px;cursor:pointer">View in tabs →</button>
+          <button id="map-county-close" style="background:transparent;border:none;color:var(--surface);font-size:18px;line-height:1;cursor:pointer;padding:0 4px">&times;</button>
+        </div>
+      </div>
+      <div style="padding:20px">
+
+        <!-- mail section -->
+        <div style="margin-bottom:20px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px">Mail-in Absentee</div>
+          <div id="map-mail-kpis" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px"></div>
+        </div>
+
+        <!-- curable categories -->
+        <div id="map-curable-section" style="display:none;margin-bottom:20px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px">Curable ballot deficiencies</div>
+          <div id="map-curable-cats" style="font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--ink-2)"></div>
+        </div>
+
+        <!-- sdr + provisional row -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px">Same-Day Registration</div>
+            <div id="map-sdr-kpis" style="display:grid;grid-template-columns:1fr;gap:8px"></div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px">Provisional Ballots</div>
+            <div id="map-prov-kpis" style="display:grid;grid-template-columns:1fr;gap:8px"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </main>
 </div>
@@ -1311,12 +1348,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
         if(tt)tt.style.display='none';
       });
       g.addEventListener('click',()=>{
-        // filter other tabs to this county
-        const sel=document.getElementById('county-select');
-        if(sel){
-          const opt=[...sel.options].find(o=>o.value===name||o.textContent.toUpperCase()===name);
-          if(opt){sel.value=opt.value;sel.dispatchEvent(new Event('change'));}
-        }
+        showCountyPanel(name);
       });
 
       svg.appendChild(g);
@@ -1335,6 +1367,131 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,#D05744);display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;0% → ${cfg.fmt(maxVal)}`;
     }
   }
+
+  // ── county detail panel ────────────────────────────────────────────────────
+  function miniKpi(label,value,cls,sub){
+    const clsStyle={
+      gold:`color:var(--gold-text)`,
+      teal:`color:var(--teal)`,
+      brick:`color:var(--brick)`,
+      '':`color:var(--ink)`,
+    }[cls||''];
+    return`<div style="background:var(--surface-2,#F7F6F4);border:1px solid var(--line);border-radius:2px;padding:10px 14px">
+      <div style="font-size:11px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em">${label}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:700;${clsStyle}">${value}</div>
+      ${sub?`<div style="font-size:10px;color:var(--ink-2);margin-top:2px">${sub}</div>`:''}
+    </div>`;
+  }
+
+  function showCountyPanel(name){
+    const data=window.latestData;
+    const panel=document.getElementById('map-county-panel');
+    if(!panel)return;
+
+    // title
+    document.getElementById('map-county-name').textContent=
+      name.charAt(0)+name.slice(1).toLowerCase()+' County';
+
+    // ── mail ──
+    const mailRows=(data&&data.absentee_mail&&data.absentee_mail.by_county)||[];
+    const mr=mailRows.find(r=>(r.county_desc||'').toUpperCase()===name)||null;
+    const returned=mr?.returned||0;
+    const accepted=mr?.accepted||0;
+    const curable=mr?.curable||0;
+    const cured=mr?.cured||0;
+    const rejected=mr?.rejected||0;
+    const curPct=returned?((curable/returned)*100).toFixed(1)+'%':'—';
+
+    const reqRows=(data&&data.absentee_mail_requests&&data.absentee_mail_requests.by_county)||
+                  (data&&data.absentee_requests&&data.absentee_requests.by_county)||[];
+    const rr=reqRows.find(r=>(r.county_name||r.county_desc||'').toUpperCase()===name)||null;
+    const requested=rr?.requested||0;
+
+    document.getElementById('map-mail-kpis').innerHTML=[
+      miniKpi('Outstanding Curable',curPct,'gold',`${fmt(curable)} of ${fmt(returned)} returned`),
+      miniKpi('Accepted',fmt(accepted),'teal',`of ${fmt(returned)} returned`),
+      miniKpi('Cured',fmt(cured),'teal','accepted after cure'),
+      miniKpi('Rejected / Spoiled',fmt(rejected),'brick',''),
+      ...(requested?[miniKpi('Requested',fmt(requested),'','mail ballot requests')]:[]),
+    ].join('');
+
+    // ── curable categories ──
+    const cats=mr?.curable_categories||{};
+    const catEntries=Object.entries(cats).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+    const catSec=document.getElementById('map-curable-section');
+    if(catEntries.length){
+      document.getElementById('map-curable-cats').innerHTML=
+        catEntries.map(([k,v])=>`<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line)"><span>${k}</span><span style="font-weight:600">${fmt(v)}</span></div>`).join('');
+      catSec.style.display='';
+    } else {
+      catSec.style.display='none';
+    }
+
+    // ── SDR (EV) ──
+    const evRows=(data&&data.absentee_early_voting&&data.absentee_early_voting.by_county)||[];
+    const evr=evRows.find(r=>(r.county_desc||'').toUpperCase()===name)||null;
+    const sdrFailed=evr?.sdr_failed||0;
+    const sdrTotal=evr?.sdr||evr?.sdr_total||0;
+    document.getElementById('map-sdr-kpis').innerHTML=[
+      miniKpi('SDR Failed Verification',fmt(sdrFailed),'brick',''),
+      ...(sdrTotal?[miniKpi('Total SDR',fmt(sdrTotal),'','same-day registrations')]:[]),
+    ].join('');
+
+    // ── provisional ──
+    const provRows=(data&&data.provisional&&data.provisional.by_county)||[];
+    const pr=provRows.find(r=>(r.county_name||'').toUpperCase()===name)||null;
+    const provCount=pr?.count||0;
+    const provApproved=pr?.approved||0;
+    const provDenied=pr?.denied||0;
+    document.getElementById('map-prov-kpis').innerHTML=[
+      miniKpi('Total Cast',fmt(provCount),'','provisional ballots'),
+      ...(provApproved||provDenied?[
+        miniKpi('Approved',fmt(provApproved),'teal',''),
+        miniKpi('Denied',fmt(provDenied),'brick',''),
+      ]:[]),
+    ].join('');
+
+    // show panel
+    panel.style.display='block';
+    panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+
+    // highlight selected county on map
+    document.querySelectorAll('#nc-map rect').forEach(r=>{
+      r.setAttribute('stroke','#FFFFFF');r.setAttribute('stroke-width','1.5');
+    });
+    document.querySelectorAll('#nc-map g').forEach(g=>{
+      if(g.dataset.county===name){
+        const r=g.querySelector('rect');
+        if(r){r.setAttribute('stroke','#1C1B19');r.setAttribute('stroke-width','2.5');}
+      }
+    });
+  }
+
+  // close button
+  document.getElementById('map-county-close')?.addEventListener('click',()=>{
+    document.getElementById('map-county-panel').style.display='none';
+    document.querySelectorAll('#nc-map rect').forEach(r=>{
+      r.setAttribute('stroke','#FFFFFF');r.setAttribute('stroke-width','1.5');
+    });
+  });
+
+  // "view in tabs" button
+  document.getElementById('map-county-goto')?.addEventListener('click',()=>{
+    const countyName=document.getElementById('map-county-name')?.textContent||'';
+    // strip " County" suffix and uppercase for the select
+    const bare=countyName.replace(/ County$/i,'').toUpperCase();
+    const sel=document.getElementById('county-select');
+    if(sel){
+      const opt=[...sel.options].find(o=>o.value.toUpperCase()===bare||o.textContent.toUpperCase()===bare);
+      if(opt){
+        sel.value=opt.value;
+        sel.dispatchEvent(new Event('change'));
+        // switch to mail tab
+        const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
+        if(mailBtn)mailBtn.click();
+      }
+    }
+  });
 
   function loadMapData(data){
     countyDataMap={};
