@@ -1329,6 +1329,8 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
       // hover + click
       g.addEventListener('mouseenter',e=>{
+        // bring to front so border isn't clipped by neighbors
+        svg.appendChild(g);
         rect.setAttribute('stroke','#1C1B19');
         rect.setAttribute('stroke-width','2');
         const tt=document.getElementById('map-tooltip');
@@ -1461,8 +1463,10 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     document.querySelectorAll('#nc-map rect').forEach(r=>{
       r.setAttribute('stroke','#FFFFFF');r.setAttribute('stroke-width','1.5');
     });
+    const svgEl=document.getElementById('nc-map');
     document.querySelectorAll('#nc-map g').forEach(g=>{
       if(g.getAttribute('data-county')===name){
+        svgEl.appendChild(g); // bring to front
         const r=g.querySelector('rect');
         if(r){r.setAttribute('stroke','#1C1B19');r.setAttribute('stroke-width','2.5');}
       }
@@ -1480,19 +1484,19 @@ document.getElementById('prov-county-filter').addEventListener('change',function
   // "view in tabs" button
   document.getElementById('map-county-goto')?.addEventListener('click',()=>{
     const countyName=document.getElementById('map-county-name')?.textContent||'';
-    // strip " County" suffix and uppercase for the select
     const bare=countyName.replace(/ County$/i,'').toUpperCase();
-    const sel=document.getElementById('county-select');
-    if(sel){
+    // set all three county filters to this county
+    ['mail-county-filter','ev-county-filter','prov-county-filter'].forEach(id=>{
+      const sel=document.getElementById(id);
+      if(!sel)return;
       const opt=[...sel.options].find(o=>o.value.toUpperCase()===bare||o.textContent.toUpperCase()===bare);
-      if(opt){
-        sel.value=opt.value;
-        sel.dispatchEvent(new Event('change'));
-        // switch to mail tab
-        const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
-        if(mailBtn)mailBtn.click();
-      }
-    }
+      if(opt)sel.value=opt.value;
+    });
+    // fire change on mail filter to trigger render, then switch to mail tab
+    const mailSel=document.getElementById('mail-county-filter');
+    if(mailSel)mailSel.dispatchEvent(new Event('change'));
+    const mailBtn=document.querySelector('.tab-btn[data-tab="mail"]');
+    if(mailBtn)mailBtn.click();
   });
 
   function loadMapData(data){
