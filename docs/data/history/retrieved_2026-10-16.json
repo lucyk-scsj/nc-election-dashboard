@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T14:30:50.566441+00:00",
+  "generated_at": "2026-10-16T14:51:56.316571+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -31,6 +31,9 @@
         "curable": 5,
         "cured": 8,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -193,6 +196,9 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -335,6 +341,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -437,6 +446,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -536,6 +548,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -676,6 +691,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -775,6 +793,9 @@
         "curable": 2,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -896,6 +917,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -995,6 +1019,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1104,6 +1131,9 @@
         "curable": 21,
         "cured": 24,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1266,6 +1296,9 @@
         "curable": 5,
         "cured": 20,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1428,6 +1461,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1568,6 +1604,9 @@
         "curable": 1,
         "cured": 4,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1730,6 +1769,9 @@
         "curable": 5,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1872,6 +1914,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1981,6 +2026,9 @@
         "curable": 1,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2123,6 +2171,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2232,6 +2283,9 @@
         "curable": 2,
         "cured": 14,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2384,6 +2438,9 @@
         "curable": 0,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2544,6 +2601,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2674,6 +2734,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2783,6 +2846,9 @@
         "curable": 1,
         "cured": 5,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2884,6 +2950,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3036,6 +3105,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3176,6 +3248,9 @@
         "curable": 4,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3329,6 +3404,9 @@
         "curable": 8,
         "cured": 16,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3481,6 +3559,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3601,6 +3682,9 @@
         "curable": 0,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3741,6 +3825,9 @@
         "curable": 0,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3901,6 +3988,9 @@
         "curable": 2,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4034,6 +4124,9 @@
         "curable": 2,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4176,6 +4269,9 @@
         "curable": 8,
         "cured": 14,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4338,6 +4434,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -4447,6 +4546,9 @@
         "curable": 13,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4609,6 +4711,9 @@
         "curable": 3,
         "cured": 9,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4751,6 +4856,9 @@
         "curable": 3,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4903,6 +5011,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -5033,6 +5144,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5163,6 +5277,9 @@
         "curable": 3,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5315,6 +5432,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -5424,6 +5544,9 @@
         "curable": 22,
         "cured": 26,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5586,6 +5709,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5727,6 +5853,9 @@
         "curable": 3,
         "cured": 4,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5889,6 +6018,9 @@
         "curable": 9,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6031,6 +6163,9 @@
         "curable": 6,
         "cured": 7,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6183,6 +6318,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6304,6 +6442,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6423,6 +6564,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6532,6 +6676,9 @@
         "curable": 2,
         "cured": 5,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6694,6 +6841,9 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6846,6 +6996,9 @@
         "curable": 6,
         "cured": 5,
         "rejected": 1,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7008,6 +7161,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7107,6 +7263,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7257,6 +7416,9 @@
         "curable": 2,
         "cured": 4,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7378,6 +7540,9 @@
         "curable": 5,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7530,6 +7695,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7652,6 +7820,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7753,6 +7924,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7873,6 +8047,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7994,6 +8171,9 @@
         "curable": 34,
         "cured": 56,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8156,6 +8336,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8255,6 +8438,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8374,6 +8560,9 @@
         "curable": 9,
         "cured": 7,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8536,6 +8725,9 @@
         "curable": 1,
         "cured": 5,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8688,6 +8880,9 @@
         "curable": 17,
         "cured": 10,
         "rejected": 1,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8850,6 +9045,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -8961,6 +9159,9 @@
         "curable": 7,
         "cured": 12,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9113,6 +9314,9 @@
         "curable": 6,
         "cured": 7,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9275,6 +9479,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9425,6 +9632,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9555,6 +9765,9 @@
         "curable": 1,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9707,6 +9920,9 @@
         "curable": 2,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9838,6 +10054,9 @@
         "curable": 1,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9990,6 +10209,9 @@
         "curable": 4,
         "cured": 5,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10133,6 +10355,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10253,6 +10478,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10403,6 +10631,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10512,6 +10743,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 1,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10662,6 +10896,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10812,6 +11049,9 @@
         "curable": 0,
         "cured": 6,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10962,6 +11202,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11071,6 +11314,9 @@
         "curable": 10,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11214,6 +11460,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11333,6 +11582,9 @@
         "curable": 2,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11465,6 +11717,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11584,6 +11839,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11724,6 +11982,9 @@
         "curable": 1,
         "cured": 2,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11845,6 +12106,9 @@
         "curable": 1,
         "cured": 4,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11987,6 +12251,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [],
         "age_pct": [
           {
@@ -12041,6 +12308,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12191,6 +12461,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12321,6 +12594,9 @@
         "curable": 56,
         "cured": 106,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12493,6 +12769,9 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12633,6 +12912,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12732,6 +13014,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12882,6 +13167,9 @@
         "curable": 8,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13035,6 +13323,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13177,6 +13468,9 @@
         "curable": 2,
         "cured": 3,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13298,6 +13592,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13407,6 +13704,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13738,10 +14038,10 @@
     "rejected_or_spoiled": 0,
     "pct_curable_of_returned": 0.46,
     "sdr": {
-      "total_sdr_ballots": 0,
+      "total_sdr_ballots": 404,
       "failed_verification": 0,
       "cured": 0,
-      "pct_failed_of_sdr": null
+      "pct_failed_of_sdr": 0.0
     },
     "by_county": [
       {
@@ -13751,6 +14051,9 @@
         "curable": 19,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13883,6 +14186,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13985,6 +14291,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14097,6 +14406,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 4,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -14199,6 +14511,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14301,6 +14616,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14393,6 +14711,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 3,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14505,6 +14826,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -14627,6 +14951,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -14749,6 +15076,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14871,6 +15201,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14993,6 +15326,9 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15115,6 +15451,9 @@
         "curable": 26,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 11,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15237,6 +15576,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15359,6 +15701,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15451,6 +15796,9 @@
         "curable": 6,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15583,6 +15931,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15665,6 +16016,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15787,6 +16141,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15919,6 +16276,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16031,6 +16391,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 3,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16123,6 +16486,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16215,6 +16581,9 @@
         "curable": 17,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 14,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16337,6 +16706,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16459,6 +16831,9 @@
         "curable": 8,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16581,6 +16956,9 @@
         "curable": 5,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 43,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -16713,6 +17091,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16825,6 +17206,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 6,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16937,6 +17321,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 11,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17059,6 +17446,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17171,6 +17561,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17293,6 +17686,9 @@
         "curable": 11,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17415,6 +17811,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -17537,6 +17936,9 @@
         "curable": 50,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17659,6 +18061,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17781,6 +18186,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17903,6 +18311,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18005,6 +18416,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18087,6 +18501,9 @@
         "curable": 7,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18209,6 +18626,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -18311,6 +18731,9 @@
         "curable": 48,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18433,6 +18856,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -18555,6 +18981,9 @@
         "curable": 9,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 10,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18677,6 +19106,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18799,6 +19231,9 @@
         "curable": 8,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18921,6 +19356,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 5,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -19043,6 +19481,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 13,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -19165,6 +19606,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19247,6 +19691,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 4,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19369,6 +19816,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19491,6 +19941,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19623,6 +20076,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19715,6 +20171,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19837,6 +20296,9 @@
         "curable": 23,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 7,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -19949,6 +20411,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20071,6 +20536,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20193,6 +20661,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 5,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20295,6 +20766,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -20407,6 +20881,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 3,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20519,6 +20996,9 @@
         "curable": 535,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 78,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20641,6 +21121,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20743,6 +21226,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20835,6 +21321,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 4,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20957,6 +21446,9 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -21079,6 +21571,9 @@
         "curable": 7,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21201,6 +21696,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -21313,6 +21811,9 @@
         "curable": 4,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21445,6 +21946,9 @@
         "curable": 37,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21567,6 +22071,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21679,6 +22186,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -21791,6 +22301,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21903,6 +22416,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21995,6 +22511,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 7,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22097,6 +22616,9 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22219,6 +22741,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22341,6 +22866,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22463,6 +22991,9 @@
         "curable": 10,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22575,6 +23106,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -22697,6 +23231,9 @@
         "curable": 7,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22819,6 +23356,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 7,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22941,6 +23481,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23063,6 +23606,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -23175,6 +23721,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 5,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -23287,6 +23836,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23409,6 +23961,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23531,6 +24086,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23643,6 +24201,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23745,6 +24306,9 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23857,6 +24421,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23939,6 +24506,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24061,6 +24631,9 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24193,6 +24766,9 @@
         "curable": 30,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 123,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24325,6 +24901,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 3,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24447,6 +25026,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24549,6 +25131,9 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 10,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24671,6 +25256,9 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24793,6 +25381,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24905,6 +25496,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 1,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -25017,6 +25611,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 2,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25129,6 +25726,9 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
+        "sdr_total": 0,
+        "sdr_failed": 0,
+        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
