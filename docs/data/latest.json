@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T14:05:29.483376+00:00",
+  "generated_at": "2026-10-17T18:59:57.440421+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -33911,7 +33911,7 @@
     ]
   },
   "provisional": {
-    "total": 339,
+    "total": 349,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -33947,7 +33947,7 @@
       },
       {
         "county_name": "BRUNSWICK",
-        "count": 3
+        "count": 4
       },
       {
         "county_name": "BUNCOMBE",
@@ -33968,6 +33968,10 @@
       {
         "county_name": "CHATHAM",
         "count": 3
+      },
+      {
+        "county_name": "CHOWAN",
+        "count": 1
       },
       {
         "county_name": "CLEVELAND",
@@ -34003,7 +34007,7 @@
       },
       {
         "county_name": "DURHAM",
-        "count": 24
+        "count": 25
       },
       {
         "county_name": "EDGECOMBE",
@@ -34039,7 +34043,7 @@
       },
       {
         "county_name": "HARNETT",
-        "count": 8
+        "count": 9
       },
       {
         "county_name": "HENDERSON",
@@ -34091,7 +34095,7 @@
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 27
+        "count": 29
       },
       {
         "county_name": "MITCHELL",
@@ -34103,7 +34107,7 @@
       },
       {
         "county_name": "NASH",
-        "count": 11
+        "count": 12
       },
       {
         "county_name": "NEW HANOVER",
@@ -34115,7 +34119,7 @@
       },
       {
         "county_name": "ORANGE",
-        "count": 7
+        "count": 8
       },
       {
         "county_name": "PAMLICO",
@@ -34183,7 +34187,7 @@
       },
       {
         "county_name": "UNION",
-        "count": 8
+        "count": 9
       },
       {
         "county_name": "VANCE",
@@ -34203,17 +34207,17 @@
       },
       {
         "county_name": "WILSON",
-        "count": 2
+        "count": 3
       }
     ],
     "not_counted_reasons": {
-      "": 339
+      "": 349
     },
     "demographics": {
       "race": {
-        "W": 102,
-        "B": 93,
-        "U": 85,
+        "W": 105,
+        "B": 95,
+        "U": 89,
         "O": 8,
         "I": 6,
         "M": 4,
@@ -34221,19 +34225,19 @@
         "P": 1
       },
       "gender": {
-        "F": 143,
-        "M": 100,
-        "U": 66
+        "F": 145,
+        "M": 105,
+        "U": 68
       },
       "party": {
-        "DEM": 158,
-        "UNA": 120,
-        "REP": 60,
+        "DEM": 165,
+        "UNA": 122,
+        "REP": 61,
         "LIB": 1
       }
     },
     "raw_status_counts": {
-      "PENDING": 339
+      "PENDING": 349
     }
   }
 }
