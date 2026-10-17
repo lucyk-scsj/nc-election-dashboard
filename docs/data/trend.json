@@ -353,13 +353,13 @@
   },
   {
     "date": "2026-10-17",
-    "mail_curable": 321,
-    "mail_cured": 433,
+    "mail_curable": 348,
+    "mail_cured": 469,
     "mail_pct_curable": 0.89,
-    "ev_curable": 928,
+    "ev_curable": 1233,
     "ev_cured": 0,
     "ev_sdr_failed": 0,
-    "prov_total": 190,
+    "prov_total": 339,
     "prov_approved": 0
   }
 ]
