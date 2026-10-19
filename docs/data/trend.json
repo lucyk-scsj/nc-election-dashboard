@@ -372,5 +372,16 @@
     "ev_sdr_failed": 0,
     "prov_total": 385,
     "prov_approved": 0
+  },
+  {
+    "date": "2026-10-19",
+    "mail_curable": 386,
+    "mail_cured": 482,
+    "mail_pct_curable": 0.95,
+    "ev_curable": 1352,
+    "ev_cured": 0,
+    "ev_sdr_failed": 0,
+    "prov_total": 385,
+    "prov_approved": 0
   }
 ]
