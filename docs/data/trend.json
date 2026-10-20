@@ -386,13 +386,13 @@
   },
   {
     "date": "2026-10-20",
-    "mail_curable": 386,
-    "mail_cured": 488,
-    "mail_pct_curable": 0.95,
-    "ev_curable": 1456,
+    "mail_curable": 402,
+    "mail_cured": 544,
+    "mail_pct_curable": 0.9,
+    "ev_curable": 1830,
     "ev_cured": 0,
     "ev_sdr_failed": 0,
-    "prov_total": 454,
+    "prov_total": 656,
     "prov_approved": 0
   }
 ]
