@@ -38,6 +38,9 @@ CURABLE    = []   # unused — curable is now computed as NOT ACCEPTED and NOT R
 CURED      = ["ACCEPTED - CURED", "CURED"]
 REJECTED   = ["SPOILED", "SPOILED-EV", "RETURNED UNDELIVERABLE", "REJECTED"]
 SDR_FAILED = ["SDR-FAILED VERIFICATION"]
+# Values in the "sdr" column that mean "this was a same-day registration".
+# NCSBE uses "Y"; the others are accepted defensively in case wording changes.
+SDR_YES    = ["Y", "YES", "TRUE", "1"]
 
 NC_COUNTIES = [
     "ALAMANCE","ALEXANDER","ALLEGHANY","ANSON","ASHE","AVERY","BEAUFORT","BERTIE",
@@ -77,6 +80,10 @@ PROVISIONAL_COLS = [
     "pv_ethnicity", "pv_race", "not_counted_reason",
 ]
 CHUNK = 250_000
+
+# starting values for each county's row (mail and early voting)
+EMPTY_COUNTY = {"returned": 0, "accepted": 0, "curable": 0, "cured": 0, "rejected": 0,
+                "sdr_total": 0, "sdr_failed": 0, "sdr_cured": 0}
 
 
 def load_config():
@@ -179,9 +186,11 @@ def fetch_absentee_df(cfg):
 
         # ── statewide accumulators ────────────────────────────────────────
         status_c = Counter()
+        sdr_flag_values = Counter()   # distinct values seen in the "sdr" column (for the log)
+        sdr_stats = {"mail": Counter(), "ev": Counter()}  # total / failed / cured
 
         # mail
-        m_county  = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        m_county  = defaultdict(lambda: dict(EMPTY_COUNTY))
         m_race_acc = Counter(); m_race_rej = Counter(); m_race_cur = Counter()
         m_age_acc  = Counter(); m_age_rej  = Counter(); m_age_cur  = Counter()
         m_gender   = Counter(); m_party    = Counter(); m_ethnicity = Counter()
@@ -197,7 +206,7 @@ def fetch_absentee_df(cfg):
         mc_ethn_rej  = defaultdict(Counter)
 
         # early voting
-        ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        ev_county = defaultdict(lambda: dict(EMPTY_COUNTY))
         ev_race_acc = Counter(); ev_race_rej = Counter(); ev_race_cur = Counter()
         ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
         ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
@@ -224,6 +233,18 @@ def fetch_absentee_df(cfg):
 
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
+
+            # same-day registration — statewide totals
+            if "sdr" in chunk.columns:
+                sdr_flag_values.update(chunk["sdr"].value_counts().to_dict())
+                for label, dfx in (("mail", mail), ("ev", ev)):
+                    if dfx.empty:
+                        continue
+                    sm = dfx["sdr"].isin(SDR_YES)
+                    st = dfx["ballot_rtn_status"]
+                    sdr_stats[label]["total"]  += int(sm.sum())
+                    sdr_stats[label]["failed"] += int((sm & st.isin(SDR_FAILED)).sum())
+                    sdr_stats[label]["cured"]  += int((sm & st.isin(CURED)).sum())
 
             # curable category breakdown — statewide and per county
             # curable = not accepted, not rejected/spoiled
@@ -256,8 +277,6 @@ def fetch_absentee_df(cfg):
                 rej_mask  = df_chunk["ballot_rtn_status"].isin(REJECTED)
                 # curable = anything not yet accepted and not rejected/spoiled
                 cbl_mask  = ~acc_mask & ~rej_mask
-                sdr_mask  = df_chunk["sdr"].eq("Y") if "sdr" in df_chunk else \
-                            pd.Series([False]*len(df_chunk))
 
                 # county aggregation
                 if "county_desc" in df_chunk:
@@ -272,6 +291,12 @@ def fetch_absentee_df(cfg):
                         # curable = not accepted and not rejected
                         d["curable"]   += int((~grp["ballot_rtn_status"].isin(ACCEPTED) &
                                                ~grp["ballot_rtn_status"].isin(REJECTED)).sum())
+                        # same-day registration — per county (used by the county map)
+                        if "sdr" in grp:
+                            gs = grp["sdr"].isin(SDR_YES)
+                            d["sdr_total"]  += int(gs.sum())
+                            d["sdr_failed"] += int((gs & grp["ballot_rtn_status"].isin(SDR_FAILED)).sum())
+                            d["sdr_cured"]  += int((gs & grp["ballot_rtn_status"].isin(CURED)).sum())
 
                 # statewide race
                 if "race" in df_chunk:
@@ -361,7 +386,7 @@ def fetch_absentee_df(cfg):
                     county_ethn_acc=None, county_ethn_rej=None):
         rows = []
         # ensure all 100 NC counties appear, filling missing ones with zeros
-        all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        all_counties = {c: county_d.get(c, dict(EMPTY_COUNTY))
                         for c in NC_COUNTIES}
         for k, v in all_counties.items():
             row = {
@@ -412,6 +437,16 @@ def fetch_absentee_df(cfg):
     mail_returned = sum(v["returned"] for v in m_county.values())
     ev_returned   = sum(v["returned"] for v in ev_county.values())
 
+    print(f"[build] sdr column values: {dict(sdr_flag_values)}", file=sys.stderr)
+    print(f"[build] sdr early voting: {dict(sdr_stats['ev'])}  mail: {dict(sdr_stats['mail'])}",
+          file=sys.stderr)
+
+    def sdr_block(s):
+        return {"total_sdr_ballots":   s["total"],
+                "failed_verification": s["failed"],
+                "cured":               s["cured"],
+                "pct_failed_of_sdr":   pct(s["failed"], s["total"])}
+
     return {
         "mail": {
             "total_returned":        mail_returned,
@@ -421,8 +456,7 @@ def fetch_absentee_df(cfg):
             "rejected_or_spoiled":   sum(v["rejected"]  for v in m_county.values()),
             "pct_curable_of_returned": pct(
                 sum(v["curable"] for v in m_county.values()), mail_returned),
-            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
-                    "cured": 0, "pct_failed_of_sdr": None},
+            "sdr": sdr_block(sdr_stats["mail"]),
             "curable_categories":    dict(m_curable_cats),
             "by_county":             mail_rows,
             "demographics": {
@@ -455,8 +489,7 @@ def fetch_absentee_df(cfg):
             "rejected_or_spoiled":   sum(v["rejected"]  for v in ev_county.values()),
             "pct_curable_of_returned": pct(
                 sum(v["curable"] for v in ev_county.values()), ev_returned),
-            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
-                    "cured": 0, "pct_failed_of_sdr": None},
+            "sdr": sdr_block(sdr_stats["ev"]),
             "by_county":    ev_rows,
             "sites_by_county": serialize_sites(ev_sites),
             "demographics": {
