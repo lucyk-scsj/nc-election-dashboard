@@ -397,13 +397,13 @@
   },
   {
     "date": "2026-10-21",
-    "mail_curable": 402,
-    "mail_cured": 544,
-    "mail_pct_curable": 0.9,
-    "ev_curable": 1830,
+    "mail_curable": 419,
+    "mail_cured": 576,
+    "mail_pct_curable": 0.88,
+    "ev_curable": 2104,
     "ev_cured": 0,
     "ev_sdr_failed": 0,
-    "prov_total": 688,
+    "prov_total": 877,
     "prov_approved": 0
   }
 ]
