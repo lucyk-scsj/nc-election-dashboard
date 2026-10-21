@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T17:57:38.463612+00:00",
+  "generated_at": "2026-10-21T18:37:02.668807+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -14019,10 +14019,10 @@
     "rejected_or_spoiled": 0,
     "pct_curable_of_returned": 0.0,
     "sdr": {
-      "total_sdr_ballots": 0,
+      "total_sdr_ballots": 5554,
       "failed_verification": 0,
       "cured": 0,
-      "pct_failed_of_sdr": null
+      "pct_failed_of_sdr": 0.0
     },
     "by_county": [
       {
