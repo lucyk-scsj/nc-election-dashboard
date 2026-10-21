@@ -352,13 +352,9 @@ footer a{text-decoration:underline;}
         </div>
       </section>
 
-      <section class="section" id="prov-reasons-table-section">
-        <div class="section-head"><h2>Why provisional ballots were not counted</h2><span class="section-note">statewide — all reasons</span></div>
-        <div class="panel">
-          <div class="table-wrap"><table class="data-table" id="prov-reasons-table">
-            <thead><tr><th>Reason</th><th>Count</th><th>% of not counted</th></tr></thead><tbody></tbody>
-          </table></div>
-        </div>
+      <section class="section" id="prov-voted-reasons-section">
+        <div class="section-head"><h2>Why ballots were cast provisionally</h2><span class="section-note">statewide — top reasons</span></div>
+        <div class="panel"><div class="chart-wrap"><canvas id="chart-prov-voted-reasons"></canvas></div></div>
       </section>
 
       <section class="section">
@@ -884,8 +880,8 @@ function renderEVTab(county){
     {label:'EV accepted',value:fmt(accepted),cls:'teal'},
   ]);
 
-  // trend — only show data from Oct 14 (first day of early voting)
-  const EV_START='2026-10-14';
+  // trend — only show data from Oct 15 (first day of early voting)
+  const EV_START='2026-10-15';
   const evTrend=TREND_DATA.filter(t=>t.date>=EV_START);
   const evTrendWrap=document.querySelector('#tab-ev .chart-wrap.tall');
   if(!isCounty&&evTrend.filter(t=>t.ev_sdr_failed!=null).length>0){
@@ -995,13 +991,15 @@ function renderProvTab(county){
   ]);
 
   const provTrendWrap=document.querySelector('#tab-provisional .chart-wrap.tall');
+  const PROV_START='2026-10-15';
+  const provTrend=TREND_DATA.filter(t=>t.date>=PROV_START);
   if(!isCounty){
     if(provTrendWrap&&!provTrendWrap.querySelector('canvas'))
       provTrendWrap.innerHTML='<canvas id="chart-prov-trend"></canvas>';
-    if(TREND_DATA.filter(t=>t.prov_total!=null).length>0){
-      lineChart('chart-prov-trend',TREND_DATA.map(t=>t.date),[
-        {label:'Approved',  data:TREND_DATA.map(t=>t.prov_approved),borderColor:P.teal,backgroundColor:P.teal,tension:.25},
-        {label:'Total cast',data:TREND_DATA.map(t=>t.prov_total),   borderColor:P.inkDim,backgroundColor:P.inkDim,tension:.25},
+    if(provTrend.filter(t=>t.prov_total!=null).length>0){
+      lineChart('chart-prov-trend',provTrend.map(t=>t.date),[
+        {label:'Approved',  data:provTrend.map(t=>t.prov_approved),borderColor:P.teal,backgroundColor:P.teal,tension:.25},
+        {label:'Total cast',data:provTrend.map(t=>t.prov_total),   borderColor:P.inkDim,backgroundColor:P.inkDim,tension:.25},
       ]);
     } else noChart('chart-prov-trend');
   } else {
@@ -1031,18 +1029,14 @@ function renderProvTab(county){
     };
   }
 
-  // reasons table
-  const reasonsTbody=document.querySelector('#prov-reasons-table tbody');
-  const reasonsSection=document.getElementById('prov-reasons-table-section');
-  if(reasonsTbody&&!isCounty){
-    if(reasonsSection) reasonsSection.style.display='';
-    const allReasons=Object.entries(p.not_counted_reasons||{})
-      .sort((a,b)=>b[1]-a[1]);
-    reasonsTbody.innerHTML=allReasons.map(([reason,count])=>
-      `<tr><td>${reason}</td><td>${fmt(count)}</td><td>${notCounted?((count/notCounted*100).toFixed(1))+'%':'—'}</td></tr>`
-    ).join('')||'<tr><td colspan="3">No data yet.</td></tr>';
-  } else if(reasonsSection){
-    reasonsSection.style.display='none';
+  // voted reasons chart (why ballots were cast provisionally)
+  const votedReasonsSection=document.getElementById('prov-voted-reasons-section');
+  const votedReasons=topN(p.voted_reasons,8);
+  if(!isCounty&&votedReasons.length>0){
+    if(votedReasonsSection) votedReasonsSection.style.display='';
+    hbar('chart-prov-voted-reasons',votedReasons.map(r=>r[0]),votedReasons.map(r=>r[1]),P.gold);
+  } else if(votedReasonsSection){
+    votedReasonsSection.style.display='none';
   }
 
   const demo=p.demographics||{};

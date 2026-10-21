@@ -31,16 +31,12 @@ HIST_DIR   = DATA_DIR / "history"
 USER_AGENT = "Mozilla/5.0 (compatible; nc-election-dashboard/2.0)"
 
 ACCEPTED   = ["ACCEPTED", "ACCEPTED - CURED", "ACCEPTED - EXCEPTION"]
-# Anything not in ACCEPTED and not REJECTED is treated as outstanding/curable.
-# We do NOT whitelist specific curable statuses — new statuses will be captured
-# automatically. CURABLE list is kept only for backwards-compat references.
-CURABLE    = []   # unused — curable is now computed as NOT ACCEPTED and NOT REJECTED
+CURABLE    = ["PENDING", "PENDING CURE", "WITNESS INFO INCOMPLETE",
+              "SIGNATURE MISSING", "AFFIDAVIT INCOMPLETE",
+              "ASSISTANT INFO INCOMPLETE", "PHOTO ID CURABLE"]
 CURED      = ["ACCEPTED - CURED", "CURED"]
 REJECTED   = ["SPOILED", "SPOILED-EV", "RETURNED UNDELIVERABLE", "REJECTED"]
 SDR_FAILED = ["SDR-FAILED VERIFICATION"]
-# Values in the "sdr" column that mean "this was a same-day registration".
-# NCSBE uses "Y"; the others are accepted defensively in case wording changes.
-SDR_YES    = ["Y", "YES", "TRUE", "1"]
 
 NC_COUNTIES = [
     "ALAMANCE","ALEXANDER","ALLEGHANY","ANSON","ASHE","AVERY","BEAUFORT","BERTIE",
@@ -77,13 +73,9 @@ DEMO_STATS_COLS = [
 ]
 PROVISIONAL_COLS = [
     "county_name", "pv_status", "pv_party", "pv_gender",
-    "pv_ethnicity", "pv_race", "not_counted_reason",
+    "pv_ethnicity", "pv_race", "not_counted_reason", "pv_voted_reason",
 ]
 CHUNK = 250_000
-
-# starting values for each county's row (mail and early voting)
-EMPTY_COUNTY = {"returned": 0, "accepted": 0, "curable": 0, "cured": 0, "rejected": 0,
-                "sdr_total": 0, "sdr_failed": 0, "sdr_cured": 0}
 
 
 def load_config():
@@ -186,11 +178,9 @@ def fetch_absentee_df(cfg):
 
         # ── statewide accumulators ────────────────────────────────────────
         status_c = Counter()
-        sdr_flag_values = Counter()   # distinct values seen in the "sdr" column (for the log)
-        sdr_stats = {"mail": Counter(), "ev": Counter()}  # total / failed / cured
 
         # mail
-        m_county  = defaultdict(lambda: dict(EMPTY_COUNTY))
+        m_county  = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
         m_race_acc = Counter(); m_race_rej = Counter(); m_race_cur = Counter()
         m_age_acc  = Counter(); m_age_rej  = Counter(); m_age_cur  = Counter()
         m_gender   = Counter(); m_party    = Counter(); m_ethnicity = Counter()
@@ -206,7 +196,7 @@ def fetch_absentee_df(cfg):
         mc_ethn_rej  = defaultdict(Counter)
 
         # early voting
-        ev_county = defaultdict(lambda: dict(EMPTY_COUNTY))
+        ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
         ev_race_acc = Counter(); ev_race_rej = Counter(); ev_race_cur = Counter()
         ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
         ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
@@ -234,28 +224,18 @@ def fetch_absentee_df(cfg):
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
 
-            # same-day registration — statewide totals
-            if "sdr" in chunk.columns:
-                sdr_flag_values.update(chunk["sdr"].value_counts().to_dict())
-                for label, dfx in (("mail", mail), ("ev", ev)):
-                    if dfx.empty:
-                        continue
-                    sm = dfx["sdr"].isin(SDR_YES)
-                    st = dfx["ballot_rtn_status"]
-                    sdr_stats[label]["total"]  += int(sm.sum())
-                    sdr_stats[label]["failed"] += int((sm & st.isin(SDR_FAILED)).sum())
-                    sdr_stats[label]["cured"]  += int((sm & st.isin(CURED)).sum())
-
             # curable category breakdown — statewide and per county
-            # curable = not accepted, not rejected/spoiled
-            mail_cbl = mail[~mail["ballot_rtn_status"].isin(ACCEPTED) &
-                            ~mail["ballot_rtn_status"].isin(REJECTED)]
-            for status, cnt in mail_cbl["ballot_rtn_status"].value_counts().items():
-                m_curable_cats[status] += int(cnt)
             if "county_desc" in mail.columns:
-                for (county, status), grp in mail_cbl.groupby(["county_desc", "ballot_rtn_status"]):
+                for _, row in mail[mail["ballot_rtn_status"].isin(CURABLE)].iterrows():
+                    status = row["ballot_rtn_status"]
+                    county = row.get("county_desc", "")
+                    m_curable_cats[status] += 1
                     if county and county != "NAN":
-                        m_county_curable_cats[county][status] += len(grp)
+                        m_county_curable_cats[county][status] += 1
+            else:
+                for status, cnt in mail["ballot_rtn_status"].value_counts().items():
+                    if status in CURABLE:
+                        m_curable_cats[status] += int(cnt)
 
             for df_chunk, county_d, race_a, race_r, race_c, age_a, age_r, age_c, \
                     gend, prty, ethn, cr_race_a, cr_race_r, cr_age_a, cr_age_r, \
@@ -274,9 +254,10 @@ def fetch_absentee_df(cfg):
 
                 acc_mask  = df_chunk["ballot_rtn_status"].isin(ACCEPTED)
                 cur_mask  = df_chunk["ballot_rtn_status"].isin(CURED)
+                cbl_mask  = df_chunk["ballot_rtn_status"].isin(CURABLE)
                 rej_mask  = df_chunk["ballot_rtn_status"].isin(REJECTED)
-                # curable = anything not yet accepted and not rejected/spoiled
-                cbl_mask  = ~acc_mask & ~rej_mask
+                sdr_mask  = df_chunk["sdr"].eq("Y") if "sdr" in df_chunk else \
+                            pd.Series([False]*len(df_chunk))
 
                 # county aggregation
                 if "county_desc" in df_chunk:
@@ -286,17 +267,9 @@ def fetch_absentee_df(cfg):
                         d = county_d[county]
                         d["returned"]  += len(grp)
                         d["accepted"]  += int(grp["ballot_rtn_status"].isin(ACCEPTED).sum())
-                        d["rejected"]  += int(grp["ballot_rtn_status"].isin(REJECTED).sum())
+                        d["curable"]   += int(grp["ballot_rtn_status"].isin(CURABLE).sum())
                         d["cured"]     += int(grp["ballot_rtn_status"].isin(CURED).sum())
-                        # curable = not accepted and not rejected
-                        d["curable"]   += int((~grp["ballot_rtn_status"].isin(ACCEPTED) &
-                                               ~grp["ballot_rtn_status"].isin(REJECTED)).sum())
-                        # same-day registration — per county (used by the county map)
-                        if "sdr" in grp:
-                            gs = grp["sdr"].isin(SDR_YES)
-                            d["sdr_total"]  += int(gs.sum())
-                            d["sdr_failed"] += int((gs & grp["ballot_rtn_status"].isin(SDR_FAILED)).sum())
-                            d["sdr_cured"]  += int((gs & grp["ballot_rtn_status"].isin(CURED)).sum())
+                        d["rejected"]  += int(grp["ballot_rtn_status"].isin(REJECTED).sum())
 
                 # statewide race
                 if "race" in df_chunk:
@@ -386,7 +359,7 @@ def fetch_absentee_df(cfg):
                     county_ethn_acc=None, county_ethn_rej=None):
         rows = []
         # ensure all 100 NC counties appear, filling missing ones with zeros
-        all_counties = {c: county_d.get(c, dict(EMPTY_COUNTY))
+        all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
                         for c in NC_COUNTIES}
         for k, v in all_counties.items():
             row = {
@@ -437,16 +410,6 @@ def fetch_absentee_df(cfg):
     mail_returned = sum(v["returned"] for v in m_county.values())
     ev_returned   = sum(v["returned"] for v in ev_county.values())
 
-    print(f"[build] sdr column values: {dict(sdr_flag_values)}", file=sys.stderr)
-    print(f"[build] sdr early voting: {dict(sdr_stats['ev'])}  mail: {dict(sdr_stats['mail'])}",
-          file=sys.stderr)
-
-    def sdr_block(s):
-        return {"total_sdr_ballots":   s["total"],
-                "failed_verification": s["failed"],
-                "cured":               s["cured"],
-                "pct_failed_of_sdr":   pct(s["failed"], s["total"])}
-
     return {
         "mail": {
             "total_returned":        mail_returned,
@@ -456,7 +419,8 @@ def fetch_absentee_df(cfg):
             "rejected_or_spoiled":   sum(v["rejected"]  for v in m_county.values()),
             "pct_curable_of_returned": pct(
                 sum(v["curable"] for v in m_county.values()), mail_returned),
-            "sdr": sdr_block(sdr_stats["mail"]),
+            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
+                    "cured": 0, "pct_failed_of_sdr": None},
             "curable_categories":    dict(m_curable_cats),
             "by_county":             mail_rows,
             "demographics": {
@@ -474,12 +438,6 @@ def fetch_absentee_df(cfg):
                 "ethnicity":  dict(m_ethnicity),
             },
             "raw_status_counts": dict(status_c),
-            # full breakdown of every ballot_rtn_status value and count,
-            # sorted by count descending — surfaces unexpected statuses immediately
-            "status_breakdown": sorted(
-                [{"status": k, "count": v} for k, v in status_c.items()],
-                key=lambda x: -x["count"]
-            ),
         },
         "early_voting": {
             "total_returned":        ev_returned,
@@ -489,7 +447,8 @@ def fetch_absentee_df(cfg):
             "rejected_or_spoiled":   sum(v["rejected"]  for v in ev_county.values()),
             "pct_curable_of_returned": pct(
                 sum(v["curable"] for v in ev_county.values()), ev_returned),
-            "sdr": sdr_block(sdr_stats["ev"]),
+            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
+                    "cured": 0, "pct_failed_of_sdr": None},
             "by_county":    ev_rows,
             "sites_by_county": serialize_sites(ev_sites),
             "demographics": {
@@ -597,6 +556,8 @@ def summarize_provisional(df):
                    if "county_name" in df else [])
     reasons = (df["not_counted_reason"].value_counts().to_dict()
                if "not_counted_reason" in df else {})
+    voted_reasons = (df["pv_voted_reason"].value_counts().to_dict()
+                     if "pv_voted_reason" in df else {})
     demo = {
         "race":   df["pv_race"].value_counts().to_dict()   if "pv_race"   in df else {},
         "gender": df["pv_gender"].value_counts().to_dict() if "pv_gender" in df else {},
@@ -608,6 +569,7 @@ def summarize_provisional(df):
         "pct_approved": pct(approved, total),
         "by_county": by_county,
         "not_counted_reasons": reasons,
+        "voted_reasons": voted_reasons,
         "demographics": demo,
         "raw_status_counts": sc,
     }
@@ -652,48 +614,12 @@ def placeholder(cfg, note):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--inspect", action="store_true")
-    parser.add_argument(
-        "--provisional-only", action="store_true",
-        help="Skip absentee/demo downloads; only refresh provisional data "
-             "and merge into existing latest.json. Used for mid-day updates.",
-    )
     args = parser.parse_args()
 
     cfg = load_config()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     HIST_DIR.mkdir(parents=True, exist_ok=True)
 
-    # ── provisional-only mode ─────────────────────────────────────────────────
-    if args.provisional_only:
-        latest_path = DATA_DIR / "latest.json"
-        if latest_path.exists():
-            try:
-                result = json.loads(latest_path.read_text())
-            except json.JSONDecodeError:
-                result = {}
-        else:
-            result = {}
-
-        result["generated_at"] = datetime.now(timezone.utc).isoformat()
-
-        try:
-            prov_df = fetch_provisional_df(cfg)
-            result["provisional"] = summarize_provisional(prov_df)
-            print("[build] provisional-only: updated provisional data", file=sys.stderr)
-        except (HTTPError, URLError, StopIteration) as e:
-            print(f"[build] provisional not available: {e}", file=sys.stderr)
-
-        latest_path.write_text(json.dumps(result, indent=2))
-
-        # overwrite today's history snapshot with the freshest provisional numbers
-        run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        (HIST_DIR / f"retrieved_{run_date}.json").write_text(json.dumps(result, indent=2))
-
-        rebuild_trend()
-        print(f"[build] provisional-only done — status={result.get('status','ok')}")
-        return
-
-    # ── full run ──────────────────────────────────────────────────────────────
     result = {
         "generated_at":  datetime.now(timezone.utc).isoformat(),
         "election_date":  cfg["election_date"],
