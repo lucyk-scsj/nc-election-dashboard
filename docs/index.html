@@ -879,11 +879,12 @@ function renderEVTab(county){
   const EV_START='2026-10-15';
   const evTrend=TREND_DATA.filter(t=>t.date>=EV_START);
   const evTrendWrap=document.querySelector('#tab-ev .chart-wrap.tall');
-  if(!isCounty&&evTrend.filter(t=>t.ev_sdr_failed!=null).length>0){
+  if(!isCounty&&evTrend.filter(t=>t.ev_sdr_total!=null||t.ev_sdr_failed!=null).length>0){
     if(evTrendWrap&&!evTrendWrap.querySelector('canvas'))
       evTrendWrap.innerHTML='<canvas id="chart-ev-trend"></canvas>';
     lineChart('chart-ev-trend',evTrend.map(t=>t.date),[
-      {label:'SDR failed',data:evTrend.map(t=>t.ev_sdr_failed),borderColor:P.brick,backgroundColor:P.brick,tension:.25},
+      {label:'Total SDR',  data:evTrend.map(t=>t.ev_sdr_total),  borderColor:P.inkDim,backgroundColor:P.inkDim,tension:.25},
+      {label:'SDR failed', data:evTrend.map(t=>t.ev_sdr_failed), borderColor:P.brick, backgroundColor:P.brick, tension:.25},
     ]);
   } else if(isCounty){
     destroyChart('chart-ev-trend');

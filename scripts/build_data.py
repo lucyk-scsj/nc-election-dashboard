@@ -221,10 +221,10 @@ def fetch_absentee_df(cfg):
             for c in chunk.columns:
                 chunk[c] = chunk[c].astype(str).str.strip().str.upper()
 
-            status_c.update(chunk["ballot_rtn_status"].value_counts().to_dict())
-
             mail = chunk[chunk["ballot_req_type"] == "MAIL"]
             ev   = chunk[chunk["ballot_req_type"] == "EARLY VOTING"]
+
+            status_c.update(mail["ballot_rtn_status"].value_counts().to_dict())
 
             # curable category breakdown — statewide and per county
             if "county_desc" in mail.columns:
@@ -606,6 +606,7 @@ def rebuild_trend():
             "mail_pct_curable": mail.get("pct_curable_of_returned"),
             "ev_curable":       ev.get("curable"),
             "ev_cured":         ev.get("cured"),
+            "ev_sdr_total":     (ev.get("sdr") or {}).get("total_sdr_ballots"),
             "ev_sdr_failed":    (ev.get("sdr") or {}).get("failed_verification"),
             "prov_total":       prov.get("total"),
             "prov_approved":    prov.get("approved"),
