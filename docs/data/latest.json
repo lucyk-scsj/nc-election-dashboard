@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-21T17:17:28.535359+00:00",
+  "generated_at": "2026-10-21T17:57:38.463612+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
   "absentee_mail": {
     "total_returned": 47627,
     "accepted": 47183,
-    "curable": 419,
+    "curable": 384,
     "cured": 576,
     "rejected_or_spoiled": 25,
-    "pct_curable_of_returned": 0.88,
+    "pct_curable_of_returned": 0.81,
     "sdr": {
       "total_sdr_ballots": 0,
       "failed_verification": 0,
@@ -18,9 +18,7 @@
     },
     "curable_categories": {
       "PENDING CURE": 380,
-      "AFFIDAVIT REVIEW PENDING": 29,
-      "PHOTO ID CURABLE": 4,
-      "CONFLICT": 6
+      "PHOTO ID CURABLE": 4
     },
     "by_county": [
       {
@@ -30,9 +28,6 @@
         "curable": 11,
         "cured": 11,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -195,9 +190,6 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -340,9 +332,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -445,9 +434,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -547,9 +533,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -690,9 +673,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -792,9 +772,6 @@
         "curable": 1,
         "cured": 2,
         "rejected": 2,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -926,9 +903,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -1025,12 +999,9 @@
         "county_desc": "BLADEN",
         "returned": 75,
         "accepted": 45,
-        "curable": 30,
+        "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1126,7 +1097,6 @@
           }
         ],
         "curable_categories": {
-          "AFFIDAVIT REVIEW PENDING": 29,
           "PENDING CURE": 1
         },
         "ethnicity": {
@@ -1174,9 +1144,6 @@
         "curable": 22,
         "cured": 34,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1339,9 +1306,6 @@
         "curable": 11,
         "cured": 23,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1504,9 +1468,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1657,9 +1618,6 @@
         "curable": 3,
         "cured": 4,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1822,9 +1780,6 @@
         "curable": 5,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -1977,9 +1932,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 2,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2096,12 +2048,9 @@
         "county_desc": "CARTERET",
         "returned": 299,
         "accepted": 298,
-        "curable": 1,
+        "curable": 0,
         "cured": 4,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2196,9 +2145,7 @@
             "cured_pct": 0.0
           }
         ],
-        "curable_categories": {
-          "CONFLICT": 1
-        },
+        "curable_categories": {},
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 166,
           "UNDESIGNATED": 126,
@@ -2244,9 +2191,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2356,9 +2300,6 @@
         "curable": 5,
         "cured": 16,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2511,9 +2452,6 @@
         "curable": 1,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2676,9 +2614,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2819,9 +2754,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -2931,9 +2863,6 @@
         "curable": 1,
         "cured": 5,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3035,9 +2964,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3188,9 +3114,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3331,9 +3254,6 @@
         "curable": 5,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3486,9 +3406,6 @@
         "curable": 5,
         "cured": 23,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3651,9 +3568,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3784,9 +3698,6 @@
         "curable": 1,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -3929,9 +3840,6 @@
         "curable": 2,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4094,9 +4002,6 @@
         "curable": 3,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4240,9 +4145,6 @@
         "curable": 3,
         "cured": 4,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4396,9 +4298,6 @@
         "curable": 12,
         "cured": 14,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4561,9 +4460,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -4673,9 +4569,6 @@
         "curable": 19,
         "cured": 0,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4838,9 +4731,6 @@
         "curable": 3,
         "cured": 11,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -4983,9 +4873,6 @@
         "curable": 7,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5138,9 +5025,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -5271,9 +5155,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5404,9 +5285,6 @@
         "curable": 3,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5559,9 +5437,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -5671,9 +5546,6 @@
         "curable": 22,
         "cured": 37,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5836,9 +5708,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6001,9 +5870,6 @@
         "curable": 2,
         "cured": 5,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6166,9 +6032,6 @@
         "curable": 2,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6310,9 +6173,6 @@
         "curable": 8,
         "cured": 7,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6465,9 +6325,6 @@
         "curable": 6,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -6589,9 +6446,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6731,9 +6585,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6845,9 +6696,6 @@
         "curable": 1,
         "cured": 6,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7010,9 +6858,6 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7165,9 +7010,6 @@
         "curable": 5,
         "cured": 8,
         "rejected": 2,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7330,9 +7172,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7434,9 +7273,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7599,9 +7435,6 @@
         "curable": 3,
         "cured": 7,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7734,9 +7567,6 @@
         "curable": 11,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -7889,9 +7719,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8024,9 +7851,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8126,9 +7950,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 2,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8249,9 +8070,6 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8370,12 +8188,9 @@
         "county_desc": "MECKLENBURG",
         "returned": 5613,
         "accepted": 5560,
-        "curable": 50,
+        "curable": 49,
         "cured": 75,
         "rejected": 3,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8491,7 +8306,6 @@
           }
         ],
         "curable_categories": {
-          "CONFLICT": 1,
           "PENDING CURE": 49
         },
         "ethnicity": {
@@ -8539,9 +8353,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8641,9 +8452,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8763,9 +8571,6 @@
         "curable": 5,
         "cured": 10,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -8928,9 +8733,6 @@
         "curable": 0,
         "cured": 5,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9081,9 +8883,6 @@
         "curable": 22,
         "cured": 10,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9246,9 +9045,6 @@
         "curable": 2,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9360,9 +9156,6 @@
         "curable": 4,
         "cured": 15,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9515,9 +9308,6 @@
         "curable": 11,
         "cured": 12,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9680,9 +9470,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9833,9 +9620,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9976,9 +9760,6 @@
         "curable": 5,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10131,9 +9912,6 @@
         "curable": 2,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10265,9 +10043,6 @@
         "curable": 3,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10420,9 +10195,6 @@
         "curable": 2,
         "cured": 7,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10566,9 +10338,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10689,9 +10458,6 @@
         "curable": 1,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10844,9 +10610,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -10956,9 +10719,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 2,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11109,9 +10869,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11272,9 +11029,6 @@
         "curable": 3,
         "cured": 7,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11427,9 +11181,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11548,12 +11299,9 @@
         "county_desc": "SAMPSON",
         "returned": 69,
         "accepted": 60,
-        "curable": 9,
+        "curable": 5,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11649,7 +11397,6 @@
           }
         ],
         "curable_categories": {
-          "CONFLICT": 4,
           "PENDING CURE": 5
         },
         "ethnicity": {
@@ -11697,9 +11444,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11840,9 +11584,6 @@
         "curable": 5,
         "cured": 3,
         "rejected": 1,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -11985,9 +11726,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12107,9 +11845,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12260,9 +11995,6 @@
         "curable": 0,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12382,9 +12114,6 @@
         "curable": 1,
         "cured": 6,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12527,9 +12256,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [],
         "age_pct": [
           {
@@ -12584,9 +12310,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12747,9 +12470,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -12880,9 +12600,6 @@
         "curable": 61,
         "cured": 149,
         "rejected": 3,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13055,9 +12772,6 @@
         "curable": 0,
         "cured": 1,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13198,9 +12912,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13300,9 +13011,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13453,9 +13161,6 @@
         "curable": 0,
         "cured": 2,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13606,9 +13311,6 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13751,9 +13453,6 @@
         "curable": 2,
         "cured": 3,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13886,9 +13585,6 @@
         "curable": 3,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14021,9 +13717,6 @@
         "curable": 1,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14316,74 +14009,29 @@
       "SPOILED-EV": 25,
       "PHOTO ID CURABLE": 4,
       "DUPLICATE": 4
-    },
-    "status_breakdown": [
-      {
-        "status": "ACCEPTED",
-        "count": 919325
-      },
-      {
-        "status": "ACCEPTED - EXCEPTION",
-        "count": 4259
-      },
-      {
-        "status": "CANCELLED",
-        "count": 1935
-      },
-      {
-        "status": "ACCEPTED - CURED",
-        "count": 576
-      },
-      {
-        "status": "PENDING CURE",
-        "count": 380
-      },
-      {
-        "status": "CONFLICT",
-        "count": 171
-      },
-      {
-        "status": "AFFIDAVIT REVIEW PENDING",
-        "count": 29
-      },
-      {
-        "status": "SPOILED-EV",
-        "count": 25
-      },
-      {
-        "status": "PHOTO ID CURABLE",
-        "count": 4
-      },
-      {
-        "status": "DUPLICATE",
-        "count": 4
-      }
-    ]
+    }
   },
   "absentee_early_voting": {
     "total_returned": 879081,
     "accepted": 876977,
-    "curable": 2104,
+    "curable": 0,
     "cured": 0,
     "rejected_or_spoiled": 0,
-    "pct_curable_of_returned": 0.24,
+    "pct_curable_of_returned": 0.0,
     "sdr": {
-      "total_sdr_ballots": 5554,
+      "total_sdr_ballots": 0,
       "failed_verification": 0,
       "cured": 0,
-      "pct_failed_of_sdr": 0.0
+      "pct_failed_of_sdr": null
     },
     "by_county": [
       {
         "county_desc": "ALAMANCE",
         "returned": 13530,
         "accepted": 13512,
-        "curable": 18,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 91,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14513,12 +14161,9 @@
         "county_desc": "ALEXANDER",
         "returned": 2434,
         "accepted": 2432,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 15,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14641,9 +14286,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 7,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14753,12 +14395,9 @@
         "county_desc": "ANSON",
         "returned": 1447,
         "accepted": 1444,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 9,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -14881,9 +14520,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14993,12 +14629,9 @@
         "county_desc": "AVERY",
         "returned": 968,
         "accepted": 963,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15108,12 +14741,9 @@
         "county_desc": "BEAUFORT",
         "returned": 3849,
         "accepted": 3847,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 20,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15236,9 +14866,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 3,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -15358,12 +14985,9 @@
         "county_desc": "BLADEN",
         "returned": 2341,
         "accepted": 2339,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 10,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15483,12 +15107,9 @@
         "county_desc": "BRUNSWICK",
         "returned": 20167,
         "accepted": 20159,
-        "curable": 8,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 60,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15618,12 +15239,9 @@
         "county_desc": "BUNCOMBE",
         "returned": 33355,
         "accepted": 33340,
-        "curable": 15,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 168,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15753,12 +15371,9 @@
         "county_desc": "BURKE",
         "returned": 6430,
         "accepted": 6425,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 26,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -15878,12 +15493,9 @@
         "county_desc": "CABARRUS",
         "returned": 15243,
         "accepted": 15160,
-        "curable": 83,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 117,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16013,12 +15625,9 @@
         "county_desc": "CALDWELL",
         "returned": 5670,
         "accepted": 5666,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 18,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16138,12 +15747,9 @@
         "county_desc": "CAMDEN",
         "returned": 773,
         "accepted": 770,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 2,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16263,12 +15869,9 @@
         "county_desc": "CARTERET",
         "returned": 7986,
         "accepted": 7984,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 35,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16401,9 +16004,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 12,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16523,12 +16123,9 @@
         "county_desc": "CATAWBA",
         "returned": 12634,
         "accepted": 12625,
-        "curable": 9,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 64,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16648,12 +16245,9 @@
         "county_desc": "CHATHAM",
         "returned": 11844,
         "accepted": 11842,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 60,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16786,9 +16380,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 3,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -16901,9 +16492,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17006,9 +16594,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17108,12 +16693,9 @@
         "county_desc": "CLEVELAND",
         "returned": 6783,
         "accepted": 6762,
-        "curable": 21,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 55,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17233,12 +16815,9 @@
         "county_desc": "COLUMBUS",
         "returned": 2738,
         "accepted": 2733,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 18,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17368,12 +16947,9 @@
         "county_desc": "CRAVEN",
         "returned": 8420,
         "accepted": 8383,
-        "curable": 37,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 22,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17493,12 +17069,9 @@
         "county_desc": "CUMBERLAND",
         "returned": 20492,
         "accepted": 20479,
-        "curable": 13,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 192,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -17631,9 +17204,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17756,9 +17326,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 15,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -17878,12 +17445,9 @@
         "county_desc": "DAVIDSON",
         "returned": 10783,
         "accepted": 10782,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 84,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18003,12 +17567,9 @@
         "county_desc": "DAVIE",
         "returned": 3459,
         "accepted": 3457,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 14,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18128,12 +17689,9 @@
         "county_desc": "DUPLIN",
         "returned": 2751,
         "accepted": 2748,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 25,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18253,12 +17811,9 @@
         "county_desc": "DURHAM",
         "returned": 40249,
         "accepted": 40214,
-        "curable": 35,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 379,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18388,12 +17943,9 @@
         "county_desc": "EDGECOMBE",
         "returned": 4388,
         "accepted": 4381,
-        "curable": 7,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 19,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -18513,12 +18065,9 @@
         "county_desc": "FORSYTH",
         "returned": 32138,
         "accepted": 32060,
-        "curable": 78,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 176,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18648,12 +18197,9 @@
         "county_desc": "FRANKLIN",
         "returned": 7486,
         "accepted": 7482,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 53,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18783,12 +18329,9 @@
         "county_desc": "GASTON",
         "returned": 16922,
         "accepted": 16895,
-        "curable": 27,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 73,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -18921,9 +18464,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19036,9 +18576,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 1,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19148,12 +18685,9 @@
         "county_desc": "GRANVILLE",
         "returned": 6401,
         "accepted": 6390,
-        "curable": 11,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 11,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19276,9 +18810,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 8,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -19378,12 +18909,9 @@
         "county_desc": "GUILFORD",
         "returned": 42460,
         "accepted": 42361,
-        "curable": 99,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 287,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19513,12 +19041,9 @@
         "county_desc": "HALIFAX",
         "returned": 3685,
         "accepted": 3680,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 27,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -19648,12 +19173,9 @@
         "county_desc": "HARNETT",
         "returned": 9122,
         "accepted": 9088,
-        "curable": 34,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 97,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19783,12 +19305,9 @@
         "county_desc": "HAYWOOD",
         "returned": 6274,
         "accepted": 6273,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 22,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -19908,12 +19427,9 @@
         "county_desc": "HENDERSON",
         "returned": 14739,
         "accepted": 14720,
-        "curable": 19,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 52,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20033,12 +19549,9 @@
         "county_desc": "HERTFORD",
         "returned": 1524,
         "accepted": 1522,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 9,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -20158,12 +19671,9 @@
         "county_desc": "HOKE",
         "returned": 3913,
         "accepted": 3912,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 62,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -20286,9 +19796,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20378,12 +19885,9 @@
         "county_desc": "IREDELL",
         "returned": 13188,
         "accepted": 13183,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 61,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20513,12 +20017,9 @@
         "county_desc": "JACKSON",
         "returned": 3592,
         "accepted": 3588,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 30,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20648,12 +20149,9 @@
         "county_desc": "JOHNSTON",
         "returned": 15117,
         "accepted": 15115,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 88,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20786,9 +20284,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -20898,12 +20393,9 @@
         "county_desc": "LEE",
         "returned": 4767,
         "accepted": 4765,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 26,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21023,12 +20515,9 @@
         "county_desc": "LENOIR",
         "returned": 4635,
         "accepted": 4579,
-        "curable": 56,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 33,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -21158,12 +20647,9 @@
         "county_desc": "LINCOLN",
         "returned": 7770,
         "accepted": 7766,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 30,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21283,12 +20769,9 @@
         "county_desc": "MACON",
         "returned": 3520,
         "accepted": 3518,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 8,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21408,12 +20891,9 @@
         "county_desc": "MADISON",
         "returned": 2254,
         "accepted": 2252,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 26,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21536,9 +21016,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 9,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -21658,12 +21135,9 @@
         "county_desc": "MCDOWELL",
         "returned": 3489,
         "accepted": 3485,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 21,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21783,12 +21257,9 @@
         "county_desc": "MECKLENBURG",
         "returned": 90528,
         "accepted": 89426,
-        "curable": 1102,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 713,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -21921,9 +21392,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 3,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22046,9 +21514,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22168,12 +21633,9 @@
         "county_desc": "MOORE",
         "returned": 8735,
         "accepted": 8734,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 33,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22293,12 +21755,9 @@
         "county_desc": "NASH",
         "returned": 10236,
         "accepted": 10224,
-        "curable": 12,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 51,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -22428,12 +21887,9 @@
         "county_desc": "NEW HANOVER",
         "returned": 20732,
         "accepted": 20720,
-        "curable": 12,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 78,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22563,12 +22019,9 @@
         "county_desc": "NORTHAMPTON",
         "returned": 1418,
         "accepted": 1414,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -22688,12 +22141,9 @@
         "county_desc": "ONSLOW",
         "returned": 10054,
         "accepted": 10050,
-        "curable": 4,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 41,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22823,12 +22273,9 @@
         "county_desc": "ORANGE",
         "returned": 20507,
         "accepted": 20441,
-        "curable": 66,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 156,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -22951,9 +22398,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23073,12 +22517,9 @@
         "county_desc": "PASQUOTANK",
         "returned": 3255,
         "accepted": 3253,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 11,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23198,12 +22639,9 @@
         "county_desc": "PENDER",
         "returned": 4919,
         "accepted": 4917,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 24,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23323,12 +22761,9 @@
         "county_desc": "PERQUIMANS",
         "returned": 1109,
         "accepted": 1106,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23441,9 +22876,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 29,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23563,12 +22995,9 @@
         "county_desc": "PITT",
         "returned": 13925,
         "accepted": 13902,
-        "curable": 23,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 162,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23688,12 +23117,9 @@
         "county_desc": "POLK",
         "returned": 2759,
         "accepted": 2757,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 10,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23816,9 +23242,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 22,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -23938,12 +23361,9 @@
         "county_desc": "RICHMOND",
         "returned": 2825,
         "accepted": 2803,
-        "curable": 22,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 26,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24063,12 +23483,9 @@
         "county_desc": "ROBESON",
         "returned": 5432,
         "accepted": 5429,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 75,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24198,12 +23615,9 @@
         "county_desc": "ROCKINGHAM",
         "returned": 7410,
         "accepted": 7397,
-        "curable": 13,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 23,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24323,12 +23737,9 @@
         "county_desc": "ROWAN",
         "returned": 7706,
         "accepted": 7703,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 47,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24458,12 +23869,9 @@
         "county_desc": "RUTHERFORD",
         "returned": 4029,
         "accepted": 4026,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 21,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24583,12 +23991,9 @@
         "county_desc": "SAMPSON",
         "returned": 2898,
         "accepted": 2895,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 13,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24708,12 +24113,9 @@
         "county_desc": "SCOTLAND",
         "returned": 2641,
         "accepted": 2640,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 24,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -24846,9 +24248,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 17,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -24981,9 +24380,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 19,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25103,12 +24499,9 @@
         "county_desc": "SURRY",
         "returned": 4897,
         "accepted": 4896,
-        "curable": 1,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 15,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25238,12 +24631,9 @@
         "county_desc": "SWAIN",
         "returned": 1036,
         "accepted": 1031,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 11,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25353,12 +24743,9 @@
         "county_desc": "TRANSYLVANIA",
         "returned": 4114,
         "accepted": 4112,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 13,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25491,9 +24878,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 3,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25583,12 +24967,9 @@
         "county_desc": "UNION",
         "returned": 19108,
         "accepted": 19103,
-        "curable": 5,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 127,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25718,12 +25099,9 @@
         "county_desc": "VANCE",
         "returned": 3782,
         "accepted": 3776,
-        "curable": 6,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 27,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -25853,12 +25231,9 @@
         "county_desc": "WAKE",
         "returned": 108351,
         "accepted": 108212,
-        "curable": 139,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 728,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -25991,9 +25366,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 16,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -26116,9 +25488,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 4,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -26228,12 +25597,9 @@
         "county_desc": "WATAUGA",
         "returned": 5118,
         "accepted": 5116,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 98,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -26353,12 +25719,9 @@
         "county_desc": "WAYNE",
         "returned": 8712,
         "accepted": 8705,
-        "curable": 7,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 51,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -26488,12 +25851,9 @@
         "county_desc": "WILKES",
         "returned": 3220,
         "accepted": 3218,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 0,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -26613,12 +25973,9 @@
         "county_desc": "WILSON",
         "returned": 6398,
         "accepted": 6395,
-        "curable": 3,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 42,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
@@ -26738,12 +26095,9 @@
         "county_desc": "YADKIN",
         "returned": 2014,
         "accepted": 2012,
-        "curable": 2,
+        "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 12,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -26866,9 +26220,6 @@
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 12,
-        "sdr_failed": 0,
-        "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
@@ -35046,6 +34397,21 @@
     ],
     "not_counted_reasons": {
       "": 904
+    },
+    "voted_reasons": {
+      "DL/SSN PROVISIONAL": 476,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 94,
+      "NO RECORD OF REGISTRATION": 83,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 66,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 55,
+      "PREVIOUSLY REMOVED": 41,
+      "VOTER ALREADY VOTED": 27,
+      "JURISDICTION DISPUTE": 22,
+      "HAVA ID NOT PROVIDED": 20,
+      "UNREPORTED MOVE": 11,
+      "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 4,
+      "INCORRECT PARTY": 3,
+      "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 2
     },
     "demographics": {
       "race": {
