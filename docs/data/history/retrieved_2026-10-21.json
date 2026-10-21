@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T11:19:47.876705+00:00",
+  "generated_at": "2026-10-21T15:51:19.497819+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -34701,7 +34701,7 @@
     ]
   },
   "provisional": {
-    "total": 877,
+    "total": 904,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -34709,7 +34709,7 @@
     "by_county": [
       {
         "county_name": "ALAMANCE",
-        "count": 22
+        "count": 23
       },
       {
         "county_name": "ANSON",
@@ -34741,11 +34741,11 @@
       },
       {
         "county_name": "BUNCOMBE",
-        "count": 29
+        "count": 30
       },
       {
         "county_name": "CABARRUS",
-        "count": 15
+        "count": 17
       },
       {
         "county_name": "CALDWELL",
@@ -34761,7 +34761,7 @@
       },
       {
         "county_name": "CHATHAM",
-        "count": 7
+        "count": 8
       },
       {
         "county_name": "CHEROKEE",
@@ -34785,7 +34785,7 @@
       },
       {
         "county_name": "CUMBERLAND",
-        "count": 24
+        "count": 25
       },
       {
         "county_name": "CURRITUCK",
@@ -34817,15 +34817,15 @@
       },
       {
         "county_name": "FORSYTH",
-        "count": 44
+        "count": 45
       },
       {
         "county_name": "FRANKLIN",
-        "count": 4
+        "count": 5
       },
       {
         "county_name": "GASTON",
-        "count": 13
+        "count": 15
       },
       {
         "county_name": "GATES",
@@ -34841,7 +34841,7 @@
       },
       {
         "county_name": "GUILFORD",
-        "count": 49
+        "count": 50
       },
       {
         "county_name": "HALIFAX",
@@ -34849,7 +34849,7 @@
       },
       {
         "county_name": "HARNETT",
-        "count": 24
+        "count": 25
       },
       {
         "county_name": "HENDERSON",
@@ -34861,7 +34861,7 @@
       },
       {
         "county_name": "IREDELL",
-        "count": 6
+        "count": 7
       },
       {
         "county_name": "JACKSON",
@@ -34901,7 +34901,7 @@
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 76
+        "count": 80
       },
       {
         "county_name": "MITCHELL",
@@ -34917,11 +34917,11 @@
       },
       {
         "county_name": "NASH",
-        "count": 23
+        "count": 24
       },
       {
         "county_name": "NEW HANOVER",
-        "count": 25
+        "count": 27
       },
       {
         "county_name": "ONSLOW",
@@ -34929,7 +34929,7 @@
       },
       {
         "county_name": "ORANGE",
-        "count": 21
+        "count": 22
       },
       {
         "county_name": "PAMLICO",
@@ -34965,15 +34965,15 @@
       },
       {
         "county_name": "ROBESON",
-        "count": 26
+        "count": 28
       },
       {
         "county_name": "ROCKINGHAM",
-        "count": 6
+        "count": 7
       },
       {
         "county_name": "ROWAN",
-        "count": 5
+        "count": 6
       },
       {
         "county_name": "RUTHERFORD",
@@ -34981,7 +34981,7 @@
       },
       {
         "county_name": "SAMPSON",
-        "count": 10
+        "count": 11
       },
       {
         "county_name": "STANLY",
@@ -35025,7 +35025,7 @@
       },
       {
         "county_name": "WAYNE",
-        "count": 6
+        "count": 7
       },
       {
         "county_name": "WILKES",
@@ -35045,33 +35045,33 @@
       }
     ],
     "not_counted_reasons": {
-      "": 877
+      "": 904
     },
     "demographics": {
       "race": {
-        "W": 240,
-        "B": 238,
-        "U": 213,
-        "O": 21,
+        "B": 246,
+        "W": 246,
+        "U": 221,
+        "O": 22,
         "I": 16,
-        "A": 14,
+        "A": 15,
         "M": 8,
         "P": 1
       },
       "gender": {
-        "F": 328,
-        "M": 270,
-        "U": 170
+        "F": 337,
+        "M": 281,
+        "U": 175
       },
       "party": {
-        "DEM": 409,
-        "UNA": 321,
-        "REP": 143,
+        "DEM": 425,
+        "UNA": 329,
+        "REP": 146,
         "LIB": 4
       }
     },
     "raw_status_counts": {
-      "PENDING": 877
+      "PENDING": 904
     }
   }
 }
