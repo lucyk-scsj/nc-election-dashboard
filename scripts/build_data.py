@@ -201,6 +201,8 @@ def fetch_absentee_df(cfg):
         ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
         ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
         ev_ethn_acc = Counter(); ev_ethn_rej = Counter(); ev_ethn_cur = Counter()
+        # SDR counters (EV file only)
+        ev_sdr_total = 0; ev_sdr_failed = 0; ev_sdr_cured = 0
 
         # site usage: county -> site -> {returned, race Counter, age Counter}
         ev_sites = defaultdict(lambda: defaultdict(
@@ -258,6 +260,14 @@ def fetch_absentee_df(cfg):
                 rej_mask  = df_chunk["ballot_rtn_status"].isin(REJECTED)
                 sdr_mask  = df_chunk["sdr"].eq("Y") if "sdr" in df_chunk else \
                             pd.Series([False]*len(df_chunk))
+
+                # SDR accumulation (EV file only — site_d is not None for EV)
+                if site_d is not None and sdr_mask.any():
+                    ev_sdr_total  += int(sdr_mask.sum())
+                    ev_sdr_failed += int(df_chunk.loc[sdr_mask, "ballot_rtn_status"]
+                                         .isin(SDR_FAILED).sum())
+                    ev_sdr_cured  += int(df_chunk.loc[sdr_mask, "ballot_rtn_status"]
+                                         .isin(CURED).sum())
 
                 # county aggregation
                 if "county_desc" in df_chunk:
@@ -447,8 +457,10 @@ def fetch_absentee_df(cfg):
             "rejected_or_spoiled":   sum(v["rejected"]  for v in ev_county.values()),
             "pct_curable_of_returned": pct(
                 sum(v["curable"] for v in ev_county.values()), ev_returned),
-            "sdr": {"total_sdr_ballots": 0, "failed_verification": 0,
-                    "cured": 0, "pct_failed_of_sdr": None},
+            "sdr": {"total_sdr_ballots": ev_sdr_total,
+                    "failed_verification": ev_sdr_failed,
+                    "cured": ev_sdr_cured,
+                    "pct_failed_of_sdr": pct(ev_sdr_failed, ev_sdr_total)},
             "by_county":    ev_rows,
             "sites_by_county": serialize_sites(ev_sites),
             "demographics": {

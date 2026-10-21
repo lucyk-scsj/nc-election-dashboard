@@ -203,7 +203,7 @@ footer a{text-decoration:underline;}
         <div class="section-head"><h2>All ballot return statuses</h2><span class="section-note" id="mail-status-breakdown-note">statewide — every distinct ballot_rtn_status value</span></div>
         <div class="panel">
           <div class="table-wrap"><table class="data-table" id="mail-status-breakdown-table">
-            <thead><tr><th>Status</th><th>Count</th><th>% of returned</th></tr></thead><tbody></tbody>
+            <thead><tr><th>Status</th><th>Count</th><th>% of all</th></tr></thead><tbody></tbody>
           </table></div>
         </div>
       </section>
@@ -343,13 +343,8 @@ footer a{text-decoration:underline;}
         <div class="panel"><div class="chart-wrap tall"><canvas id="chart-prov-trend"></canvas></div></div>
       </section>
 
-      <section class="section grid-2">
+      <section class="section">
         <div class="panel"><h3>Ballot outcomes</h3><div class="chart-wrap"><canvas id="chart-prov-outcomes"></canvas></div></div>
-        <div class="panel">
-          <h3>Top reasons not counted</h3>
-          <div class="chart-wrap tall"><canvas id="chart-prov-reasons"></canvas></div>
-          <button class="download-btn" id="prov-reasons-csv-btn" style="margin-top:8px">↓ Download reasons CSV</button>
-        </div>
       </section>
 
       <section class="section" id="prov-voted-reasons-section">
@@ -779,11 +774,11 @@ function renderMailTab(county){
   // status breakdown table — always statewide (raw_status_counts covers all rows)
   const statusBreakdown=m.status_breakdown||
     Object.entries(m.raw_status_counts||{}).sort((a,b)=>b[1]-a[1]).map(([s,c])=>({status:s,count:c}));
-  const totalRet=m.total_returned||1;
+  const totalStatusCount=statusBreakdown.reduce((s,r)=>s+(r.count||0),0)||1;
   const sbTbody=document.querySelector('#mail-status-breakdown-table tbody');
   if(sbTbody){
     sbTbody.innerHTML=statusBreakdown.map(({status,count})=>
-      `<tr><td>${status}</td><td>${fmt(count)}</td><td>${(count/totalRet*100).toFixed(1)}%</td></tr>`
+      `<tr><td>${status}</td><td>${fmt(count)}</td><td>${(count/totalStatusCount*100).toFixed(1)}%</td></tr>`
     ).join('')||'<tr><td colspan="3">No data yet.</td></tr>';
   }
   const sbNote=document.getElementById('mail-status-breakdown-note');
@@ -1015,19 +1010,6 @@ function renderProvTab(county){
 
   bar('chart-prov-outcomes',['Approved','Not counted','Partial'],
     [approved,notCounted,partial],[P.teal,P.brick,P.gold]);
-
-  const reasons=topN(p.not_counted_reasons,8);
-  hbar('chart-prov-reasons',reasons.map(r=>r[0]),reasons.map(r=>r[1]),P.brick);
-
-  const provReasonsBtn=document.getElementById('prov-reasons-csv-btn');
-  if(provReasonsBtn){
-    provReasonsBtn.onclick=()=>{
-      const rows=Object.entries(p.not_counted_reasons||{})
-        .sort((a,b)=>b[1]-a[1])
-        .map(([reason,count])=>({reason,count}));
-      csvDownload(rows,'2026-nc-provisional-not-counted-reasons');
-    };
-  }
 
   // voted reasons chart (why ballots were cast provisionally)
   const votedReasonsSection=document.getElementById('prov-voted-reasons-section');
