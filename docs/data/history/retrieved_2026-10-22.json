@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T13:07:33.328555+00:00",
+  "generated_at": "2026-10-22T15:48:25.616823+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -34137,7 +34137,7 @@
     ]
   },
   "provisional": {
-    "total": 1133,
+    "total": 1178,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -34145,7 +34145,7 @@
     "by_county": [
       {
         "county_name": "ALAMANCE",
-        "count": 28
+        "count": 29
       },
       {
         "county_name": "ANSON",
@@ -34177,7 +34177,7 @@
       },
       {
         "county_name": "BUNCOMBE",
-        "count": 38
+        "count": 41
       },
       {
         "county_name": "CABARRUS",
@@ -34193,7 +34193,7 @@
       },
       {
         "county_name": "CATAWBA",
-        "count": 12
+        "count": 13
       },
       {
         "county_name": "CHATHAM",
@@ -34221,7 +34221,7 @@
       },
       {
         "county_name": "CUMBERLAND",
-        "count": 30
+        "count": 33
       },
       {
         "county_name": "CURRITUCK",
@@ -34233,7 +34233,7 @@
       },
       {
         "county_name": "DAVIDSON",
-        "count": 10
+        "count": 12
       },
       {
         "county_name": "DAVIE",
@@ -34245,7 +34245,7 @@
       },
       {
         "county_name": "DURHAM",
-        "count": 69
+        "count": 77
       },
       {
         "county_name": "EDGECOMBE",
@@ -34269,7 +34269,7 @@
       },
       {
         "county_name": "GRANVILLE",
-        "count": 9
+        "count": 11
       },
       {
         "county_name": "GREENE",
@@ -34305,11 +34305,11 @@
       },
       {
         "county_name": "JACKSON",
-        "count": 3
+        "count": 4
       },
       {
         "county_name": "JOHNSTON",
-        "count": 20
+        "count": 21
       },
       {
         "county_name": "LEE",
@@ -34317,7 +34317,7 @@
       },
       {
         "county_name": "LENOIR",
-        "count": 14
+        "count": 15
       },
       {
         "county_name": "LINCOLN",
@@ -34341,7 +34341,7 @@
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 102
+        "count": 108
       },
       {
         "county_name": "MITCHELL",
@@ -34357,11 +34357,11 @@
       },
       {
         "county_name": "NASH",
-        "count": 30
+        "count": 31
       },
       {
         "county_name": "NEW HANOVER",
-        "count": 35
+        "count": 38
       },
       {
         "county_name": "ONSLOW",
@@ -34369,7 +34369,7 @@
       },
       {
         "county_name": "ORANGE",
-        "count": 24
+        "count": 25
       },
       {
         "county_name": "PAMLICO",
@@ -34397,7 +34397,7 @@
       },
       {
         "county_name": "RANDOLPH",
-        "count": 13
+        "count": 14
       },
       {
         "county_name": "RICHMOND",
@@ -34405,11 +34405,11 @@
       },
       {
         "county_name": "ROBESON",
-        "count": 36
+        "count": 37
       },
       {
         "county_name": "ROCKINGHAM",
-        "count": 13
+        "count": 17
       },
       {
         "county_name": "ROWAN",
@@ -34417,11 +34417,11 @@
       },
       {
         "county_name": "RUTHERFORD",
-        "count": 4
+        "count": 5
       },
       {
         "county_name": "SAMPSON",
-        "count": 11
+        "count": 12
       },
       {
         "county_name": "STANLY",
@@ -34445,11 +34445,11 @@
       },
       {
         "county_name": "UNION",
-        "count": 33
+        "count": 34
       },
       {
         "county_name": "VANCE",
-        "count": 12
+        "count": 13
       },
       {
         "county_name": "WAKE",
@@ -34465,7 +34465,7 @@
       },
       {
         "county_name": "WAYNE",
-        "count": 12
+        "count": 13
       },
       {
         "county_name": "WILKES",
@@ -34485,16 +34485,16 @@
       }
     ],
     "not_counted_reasons": {
-      "": 1133
+      "": 1178
     },
     "voted_reasons": {
-      "DL/SSN PROVISIONAL": 603,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 119,
-      "NO RECORD OF REGISTRATION": 100,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 86,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 68,
-      "PREVIOUSLY REMOVED": 53,
-      "VOTER ALREADY VOTED": 31,
+      "DL/SSN PROVISIONAL": 629,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 124,
+      "NO RECORD OF REGISTRATION": 104,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 89,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 69,
+      "PREVIOUSLY REMOVED": 56,
+      "VOTER ALREADY VOTED": 34,
       "HAVA ID NOT PROVIDED": 26,
       "JURISDICTION DISPUTE": 24,
       "UNREPORTED MOVE": 14,
@@ -34504,32 +34504,32 @@
     },
     "demographics": {
       "race": {
-        "W": 304,
-        "B": 301,
-        "U": 284,
-        "\u0000": 166,
-        "O": 30,
+        "W": 319,
+        "B": 310,
+        "U": 301,
+        "\u0000": 168,
+        "O": 31,
         "I": 21,
         "A": 16,
-        "M": 10,
+        "M": 11,
         "P": 1
       },
       "gender": {
-        "F": 416,
-        "M": 344,
-        "U": 228,
-        "\u0000": 145
+        "F": 433,
+        "M": 357,
+        "U": 241,
+        "\u0000": 147
       },
       "party": {
-        "DEM": 517,
-        "UNA": 423,
-        "REP": 186,
-        "LIB": 6,
+        "DEM": 538,
+        "UNA": 438,
+        "REP": 194,
+        "LIB": 7,
         "GRE": 1
       }
     },
     "raw_status_counts": {
-      "PENDING": 1133
+      "PENDING": 1178
     }
   }
 }
