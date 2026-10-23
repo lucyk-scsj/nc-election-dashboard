@@ -457,14 +457,14 @@
   },
   {
     "date": "2026-10-23",
-    "mail_curable": 445,
-    "mail_cured": 618,
-    "mail_pct_curable": 0.86,
+    "mail_curable": 442,
+    "mail_cured": 671,
+    "mail_pct_curable": 0.8,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 7292,
+    "ev_sdr_total": 9446,
     "ev_sdr_failed": 1,
-    "prov_total": 1178,
+    "prov_total": 1429,
     "prov_approved": 0
   }
 ]
