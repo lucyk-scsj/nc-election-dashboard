@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T14:18:35.738373+00:00",
+  "generated_at": "2026-10-24T19:13:21.108354+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -34503,7 +34503,7 @@
     ]
   },
   "provisional": {
-    "total": 1759,
+    "total": 1791,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -34511,7 +34511,7 @@
     "by_county": [
       {
         "county_name": "ALAMANCE",
-        "count": 42
+        "count": 43
       },
       {
         "county_name": "ALEXANDER",
@@ -34543,15 +34543,15 @@
       },
       {
         "county_name": "BRUNSWICK",
-        "count": 19
+        "count": 20
       },
       {
         "county_name": "BUNCOMBE",
-        "count": 72
+        "count": 73
       },
       {
         "county_name": "CABARRUS",
-        "count": 39
+        "count": 40
       },
       {
         "county_name": "CALDWELL",
@@ -34571,7 +34571,7 @@
       },
       {
         "county_name": "CHATHAM",
-        "count": 14
+        "count": 15
       },
       {
         "county_name": "CHEROKEE",
@@ -34595,7 +34595,7 @@
       },
       {
         "county_name": "CUMBERLAND",
-        "count": 49
+        "count": 52
       },
       {
         "county_name": "CURRITUCK",
@@ -34619,7 +34619,7 @@
       },
       {
         "county_name": "DURHAM",
-        "count": 114
+        "count": 120
       },
       {
         "county_name": "EDGECOMBE",
@@ -34627,7 +34627,7 @@
       },
       {
         "county_name": "FORSYTH",
-        "count": 89
+        "count": 90
       },
       {
         "county_name": "FRANKLIN",
@@ -34663,7 +34663,7 @@
       },
       {
         "county_name": "HARNETT",
-        "count": 48
+        "count": 51
       },
       {
         "county_name": "HENDERSON",
@@ -34687,11 +34687,11 @@
       },
       {
         "county_name": "JACKSON",
-        "count": 8
+        "count": 10
       },
       {
         "county_name": "JOHNSTON",
-        "count": 38
+        "count": 39
       },
       {
         "county_name": "LEE",
@@ -34723,7 +34723,7 @@
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 145
+        "count": 149
       },
       {
         "county_name": "MITCHELL",
@@ -34739,7 +34739,7 @@
       },
       {
         "county_name": "NASH",
-        "count": 35
+        "count": 37
       },
       {
         "county_name": "NEW HANOVER",
@@ -34751,7 +34751,7 @@
       },
       {
         "county_name": "ORANGE",
-        "count": 30
+        "count": 31
       },
       {
         "county_name": "PAMLICO",
@@ -34791,7 +34791,7 @@
       },
       {
         "county_name": "ROCKINGHAM",
-        "count": 21
+        "count": 22
       },
       {
         "county_name": "ROWAN",
@@ -34827,7 +34827,7 @@
       },
       {
         "county_name": "UNION",
-        "count": 44
+        "count": 47
       },
       {
         "county_name": "VANCE",
@@ -34871,51 +34871,51 @@
       }
     ],
     "not_counted_reasons": {
-      "": 1759
+      "": 1791
     },
     "voted_reasons": {
-      "DL/SSN PROVISIONAL": 929,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 202,
-      "NO RECORD OF REGISTRATION": 153,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 134,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 94,
-      "PREVIOUSLY REMOVED": 76,
+      "DL/SSN PROVISIONAL": 947,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 204,
+      "NO RECORD OF REGISTRATION": 156,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 138,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 96,
+      "PREVIOUSLY REMOVED": 79,
       "VOTER ALREADY VOTED": 54,
       "JURISDICTION DISPUTE": 48,
       "HAVA ID NOT PROVIDED": 38,
-      "UNREPORTED MOVE": 15,
-      "INCORRECT PARTY": 9,
+      "UNREPORTED MOVE": 16,
+      "INCORRECT PARTY": 8,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 4,
       "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 3
     },
     "demographics": {
       "race": {
-        "W": 512,
-        "B": 458,
-        "U": 437,
-        "\u0000": 232,
+        "W": 521,
+        "B": 468,
+        "U": 448,
+        "\u0000": 233,
         "O": 50,
-        "I": 30,
+        "I": 31,
         "A": 24,
         "M": 15,
         "P": 1
       },
       "gender": {
-        "F": 663,
-        "M": 546,
-        "U": 356,
-        "\u0000": 194
+        "F": 676,
+        "M": 555,
+        "U": 365,
+        "\u0000": 195
       },
       "party": {
-        "DEM": 779,
-        "UNA": 651,
-        "REP": 320,
+        "DEM": 790,
+        "UNA": 664,
+        "REP": 328,
         "LIB": 8,
         "GRE": 1
       }
     },
     "raw_status_counts": {
-      "PENDING": 1759
+      "PENDING": 1791
     }
   }
 }
