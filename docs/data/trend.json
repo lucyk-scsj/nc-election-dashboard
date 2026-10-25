@@ -481,14 +481,14 @@
   },
   {
     "date": "2026-10-25",
-    "mail_curable": 442,
-    "mail_cured": 721,
-    "mail_pct_curable": 0.75,
+    "mail_curable": 466,
+    "mail_cured": 742,
+    "mail_pct_curable": 0.77,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 11758,
-    "ev_sdr_failed": 2,
-    "prov_total": 1791,
+    "ev_sdr_total": 13977,
+    "ev_sdr_failed": 3,
+    "prov_total": 1920,
     "prov_approved": 0
   }
 ]
