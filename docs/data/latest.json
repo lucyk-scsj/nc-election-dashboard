@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:52:58.327097+00:00",
+  "generated_at": "2026-10-25T19:26:17.919276+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -34531,7 +34531,7 @@
     ]
   },
   "provisional": {
-    "total": 1920,
+    "total": 1924,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -34683,7 +34683,7 @@
       },
       {
         "county_name": "GUILFORD",
-        "count": 104
+        "count": 108
       },
       {
         "county_name": "HALIFAX",
@@ -34899,19 +34899,19 @@
       }
     ],
     "not_counted_reasons": {
-      "": 1920
+      "": 1924
     },
     "voted_reasons": {
       "DL/SSN PROVISIONAL": 1018,
       "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 217,
       "NO RECORD OF REGISTRATION": 165,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 149,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 152,
       "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 106,
       "PREVIOUSLY REMOVED": 85,
       "VOTER ALREADY VOTED": 57,
       "JURISDICTION DISPUTE": 51,
       "HAVA ID NOT PROVIDED": 40,
-      "UNREPORTED MOVE": 17,
+      "UNREPORTED MOVE": 18,
       "INCORRECT PARTY": 8,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 4,
       "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 3
@@ -34919,8 +34919,8 @@
     "demographics": {
       "race": {
         "W": 550,
-        "B": 506,
-        "U": 482,
+        "B": 509,
+        "U": 483,
         "\u0000": 245,
         "O": 56,
         "I": 32,
@@ -34929,13 +34929,13 @@
         "P": 1
       },
       "gender": {
-        "F": 733,
-        "M": 595,
+        "F": 736,
+        "M": 596,
         "U": 390,
         "\u0000": 202
       },
       "party": {
-        "DEM": 846,
+        "DEM": 850,
         "UNA": 717,
         "REP": 348,
         "LIB": 8,
@@ -34943,7 +34943,7 @@
       }
     },
     "raw_status_counts": {
-      "PENDING": 1920
+      "PENDING": 1924
     }
   }
 }
