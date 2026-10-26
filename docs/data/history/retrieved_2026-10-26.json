@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T18:32:54.885015+00:00",
+  "generated_at": "2026-10-26T18:41:19.039162+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -34533,7 +34533,816 @@
       }
     ]
   },
-  "outstanding_ballots": null,
+  "outstanding_ballots": {
+    "sent": 162147,
+    "accepted": 60046,
+    "spoiled_ev": 11000,
+    "received_not_counted": 2469,
+    "outstanding": 99632,
+    "pct_spoiled_ev": 6.78,
+    "by_county": [
+      {
+        "county": "ALAMANCE",
+        "sent": 2344,
+        "accepted": 1017,
+        "spoiled_ev": 138,
+        "received_not_counted": 36,
+        "outstanding": 1291
+      },
+      {
+        "county": "ALEXANDER",
+        "sent": 216,
+        "accepted": 78,
+        "spoiled_ev": 10,
+        "received_not_counted": 10,
+        "outstanding": 128
+      },
+      {
+        "county": "ALLEGHANY",
+        "sent": 130,
+        "accepted": 43,
+        "spoiled_ev": 4,
+        "received_not_counted": 3,
+        "outstanding": 84
+      },
+      {
+        "county": "ANSON",
+        "sent": 115,
+        "accepted": 10,
+        "spoiled_ev": 4,
+        "received_not_counted": 5,
+        "outstanding": 100
+      },
+      {
+        "county": "ASHE",
+        "sent": 326,
+        "accepted": 121,
+        "spoiled_ev": 24,
+        "received_not_counted": 8,
+        "outstanding": 197
+      },
+      {
+        "county": "AVERY",
+        "sent": 171,
+        "accepted": 40,
+        "spoiled_ev": 15,
+        "received_not_counted": 6,
+        "outstanding": 125
+      },
+      {
+        "county": "BEAUFORT",
+        "sent": 391,
+        "accepted": 135,
+        "spoiled_ev": 41,
+        "received_not_counted": 8,
+        "outstanding": 248
+      },
+      {
+        "county": "BERTIE",
+        "sent": 91,
+        "accepted": 6,
+        "spoiled_ev": 5,
+        "received_not_counted": 0,
+        "outstanding": 85
+      },
+      {
+        "county": "BLADEN",
+        "sent": 239,
+        "accepted": 91,
+        "spoiled_ev": 13,
+        "received_not_counted": 6,
+        "outstanding": 142
+      },
+      {
+        "county": "BRUNSWICK",
+        "sent": 4338,
+        "accepted": 1675,
+        "spoiled_ev": 387,
+        "received_not_counted": 113,
+        "outstanding": 2550
+      },
+      {
+        "county": "BUNCOMBE",
+        "sent": 6698,
+        "accepted": 2523,
+        "spoiled_ev": 603,
+        "received_not_counted": 50,
+        "outstanding": 4125
+      },
+      {
+        "county": "BURKE",
+        "sent": 812,
+        "accepted": 358,
+        "spoiled_ev": 41,
+        "received_not_counted": 0,
+        "outstanding": 454
+      },
+      {
+        "county": "CABARRUS",
+        "sent": 3657,
+        "accepted": 1288,
+        "spoiled_ev": 230,
+        "received_not_counted": 11,
+        "outstanding": 2358
+      },
+      {
+        "county": "CALDWELL",
+        "sent": 715,
+        "accepted": 254,
+        "spoiled_ev": 46,
+        "received_not_counted": 16,
+        "outstanding": 445
+      },
+      {
+        "county": "CAMDEN",
+        "sent": 96,
+        "accepted": 37,
+        "spoiled_ev": 2,
+        "received_not_counted": 3,
+        "outstanding": 56
+      },
+      {
+        "county": "CARTERET",
+        "sent": 981,
+        "accepted": 350,
+        "spoiled_ev": 52,
+        "received_not_counted": 16,
+        "outstanding": 615
+      },
+      {
+        "county": "CASWELL",
+        "sent": 181,
+        "accepted": 62,
+        "spoiled_ev": 3,
+        "received_not_counted": 2,
+        "outstanding": 117
+      },
+      {
+        "county": "CATAWBA",
+        "sent": 1878,
+        "accepted": 782,
+        "spoiled_ev": 108,
+        "received_not_counted": 62,
+        "outstanding": 1034
+      },
+      {
+        "county": "CHATHAM",
+        "sent": 2263,
+        "accepted": 1094,
+        "spoiled_ev": 185,
+        "received_not_counted": 14,
+        "outstanding": 1155
+      },
+      {
+        "county": "CHEROKEE",
+        "sent": 358,
+        "accepted": 141,
+        "spoiled_ev": 15,
+        "received_not_counted": 0,
+        "outstanding": 217
+      },
+      {
+        "county": "CHOWAN",
+        "sent": 139,
+        "accepted": 43,
+        "spoiled_ev": 11,
+        "received_not_counted": 0,
+        "outstanding": 96
+      },
+      {
+        "county": "CLAY",
+        "sent": 139,
+        "accepted": 55,
+        "spoiled_ev": 17,
+        "received_not_counted": 1,
+        "outstanding": 83
+      },
+      {
+        "county": "CLEVELAND",
+        "sent": 801,
+        "accepted": 248,
+        "spoiled_ev": 40,
+        "received_not_counted": 1,
+        "outstanding": 552
+      },
+      {
+        "county": "COLUMBUS",
+        "sent": 325,
+        "accepted": 128,
+        "spoiled_ev": 13,
+        "received_not_counted": 0,
+        "outstanding": 197
+      },
+      {
+        "county": "CRAVEN",
+        "sent": 1445,
+        "accepted": 580,
+        "spoiled_ev": 57,
+        "received_not_counted": 31,
+        "outstanding": 834
+      },
+      {
+        "county": "CUMBERLAND",
+        "sent": 3436,
+        "accepted": 1001,
+        "spoiled_ev": 146,
+        "received_not_counted": 41,
+        "outstanding": 2394
+      },
+      {
+        "county": "CURRITUCK",
+        "sent": 366,
+        "accepted": 148,
+        "spoiled_ev": 13,
+        "received_not_counted": 0,
+        "outstanding": 218
+      },
+      {
+        "county": "DARE",
+        "sent": 757,
+        "accepted": 244,
+        "spoiled_ev": 63,
+        "received_not_counted": 4,
+        "outstanding": 509
+      },
+      {
+        "county": "DAVIDSON",
+        "sent": 2078,
+        "accepted": 827,
+        "spoiled_ev": 113,
+        "received_not_counted": 17,
+        "outstanding": 1234
+      },
+      {
+        "county": "DAVIE",
+        "sent": 519,
+        "accepted": 208,
+        "spoiled_ev": 34,
+        "received_not_counted": 11,
+        "outstanding": 300
+      },
+      {
+        "county": "DUPLIN",
+        "sent": 375,
+        "accepted": 90,
+        "spoiled_ev": 20,
+        "received_not_counted": 4,
+        "outstanding": 281
+      },
+      {
+        "county": "DURHAM",
+        "sent": 6521,
+        "accepted": 2324,
+        "spoiled_ev": 519,
+        "received_not_counted": 98,
+        "outstanding": 4099
+      },
+      {
+        "county": "EDGECOMBE",
+        "sent": 255,
+        "accepted": 66,
+        "spoiled_ev": 25,
+        "received_not_counted": 5,
+        "outstanding": 184
+      },
+      {
+        "county": "FORSYTH",
+        "sent": 7188,
+        "accepted": 2688,
+        "spoiled_ev": 493,
+        "received_not_counted": 196,
+        "outstanding": 4304
+      },
+      {
+        "county": "FRANKLIN",
+        "sent": 1039,
+        "accepted": 440,
+        "spoiled_ev": 73,
+        "received_not_counted": 7,
+        "outstanding": 592
+      },
+      {
+        "county": "GASTON",
+        "sent": 2673,
+        "accepted": 978,
+        "spoiled_ev": 136,
+        "received_not_counted": 27,
+        "outstanding": 1668
+      },
+      {
+        "county": "GATES",
+        "sent": 97,
+        "accepted": 51,
+        "spoiled_ev": 4,
+        "received_not_counted": 2,
+        "outstanding": 44
+      },
+      {
+        "county": "GRAHAM",
+        "sent": 92,
+        "accepted": 48,
+        "spoiled_ev": 2,
+        "received_not_counted": 0,
+        "outstanding": 44
+      },
+      {
+        "county": "GRANVILLE",
+        "sent": 655,
+        "accepted": 199,
+        "spoiled_ev": 41,
+        "received_not_counted": 7,
+        "outstanding": 449
+      },
+      {
+        "county": "GREENE",
+        "sent": 166,
+        "accepted": 97,
+        "spoiled_ev": 23,
+        "received_not_counted": 0,
+        "outstanding": 69
+      },
+      {
+        "county": "GUILFORD",
+        "sent": 7090,
+        "accepted": 2445,
+        "spoiled_ev": 434,
+        "received_not_counted": 112,
+        "outstanding": 4533
+      },
+      {
+        "county": "HALIFAX",
+        "sent": 299,
+        "accepted": 113,
+        "spoiled_ev": 13,
+        "received_not_counted": 2,
+        "outstanding": 184
+      },
+      {
+        "county": "HARNETT",
+        "sent": 1762,
+        "accepted": 689,
+        "spoiled_ev": 96,
+        "received_not_counted": 8,
+        "outstanding": 1065
+      },
+      {
+        "county": "HAYWOOD",
+        "sent": 932,
+        "accepted": 424,
+        "spoiled_ev": 59,
+        "received_not_counted": 8,
+        "outstanding": 500
+      },
+      {
+        "county": "HENDERSON",
+        "sent": 2800,
+        "accepted": 1128,
+        "spoiled_ev": 257,
+        "received_not_counted": 26,
+        "outstanding": 1646
+      },
+      {
+        "county": "HERTFORD",
+        "sent": 136,
+        "accepted": 22,
+        "spoiled_ev": 3,
+        "received_not_counted": 0,
+        "outstanding": 114
+      },
+      {
+        "county": "HOKE",
+        "sent": 375,
+        "accepted": 69,
+        "spoiled_ev": 20,
+        "received_not_counted": 0,
+        "outstanding": 306
+      },
+      {
+        "county": "HYDE",
+        "sent": 53,
+        "accepted": 19,
+        "spoiled_ev": 0,
+        "received_not_counted": 1,
+        "outstanding": 33
+      },
+      {
+        "county": "IREDELL",
+        "sent": 2866,
+        "accepted": 1047,
+        "spoiled_ev": 178,
+        "received_not_counted": 10,
+        "outstanding": 1809
+      },
+      {
+        "county": "JACKSON",
+        "sent": 531,
+        "accepted": 212,
+        "spoiled_ev": 46,
+        "received_not_counted": 0,
+        "outstanding": 319
+      },
+      {
+        "county": "JOHNSTON",
+        "sent": 2944,
+        "accepted": 1046,
+        "spoiled_ev": 199,
+        "received_not_counted": 73,
+        "outstanding": 1825
+      },
+      {
+        "county": "JONES",
+        "sent": 73,
+        "accepted": 16,
+        "spoiled_ev": 2,
+        "received_not_counted": 2,
+        "outstanding": 55
+      },
+      {
+        "county": "LEE",
+        "sent": 697,
+        "accepted": 273,
+        "spoiled_ev": 31,
+        "received_not_counted": 12,
+        "outstanding": 412
+      },
+      {
+        "county": "LENOIR",
+        "sent": 445,
+        "accepted": 210,
+        "spoiled_ev": 14,
+        "received_not_counted": 15,
+        "outstanding": 220
+      },
+      {
+        "county": "LINCOLN",
+        "sent": 1050,
+        "accepted": 334,
+        "spoiled_ev": 83,
+        "received_not_counted": 22,
+        "outstanding": 694
+      },
+      {
+        "county": "MACON",
+        "sent": 647,
+        "accepted": 247,
+        "spoiled_ev": 55,
+        "received_not_counted": 3,
+        "outstanding": 397
+      },
+      {
+        "county": "MADISON",
+        "sent": 297,
+        "accepted": 91,
+        "spoiled_ev": 17,
+        "received_not_counted": 2,
+        "outstanding": 204
+      },
+      {
+        "county": "MARTIN",
+        "sent": 144,
+        "accepted": 44,
+        "spoiled_ev": 10,
+        "received_not_counted": 4,
+        "outstanding": 96
+      },
+      {
+        "county": "MCDOWELL",
+        "sent": 411,
+        "accepted": 128,
+        "spoiled_ev": 25,
+        "received_not_counted": 12,
+        "outstanding": 271
+      },
+      {
+        "county": "MECKLENBURG",
+        "sent": 21302,
+        "accepted": 7258,
+        "spoiled_ev": 1686,
+        "received_not_counted": 438,
+        "outstanding": 13606
+      },
+      {
+        "county": "MITCHELL",
+        "sent": 168,
+        "accepted": 48,
+        "spoiled_ev": 12,
+        "received_not_counted": 0,
+        "outstanding": 120
+      },
+      {
+        "county": "MONTGOMERY",
+        "sent": 196,
+        "accepted": 63,
+        "spoiled_ev": 5,
+        "received_not_counted": 1,
+        "outstanding": 132
+      },
+      {
+        "county": "MOORE",
+        "sent": 2189,
+        "accepted": 1012,
+        "spoiled_ev": 118,
+        "received_not_counted": 26,
+        "outstanding": 1151
+      },
+      {
+        "county": "NASH",
+        "sent": 817,
+        "accepted": 260,
+        "spoiled_ev": 43,
+        "received_not_counted": 28,
+        "outstanding": 529
+      },
+      {
+        "county": "NEW HANOVER",
+        "sent": 4815,
+        "accepted": 1684,
+        "spoiled_ev": 305,
+        "received_not_counted": 119,
+        "outstanding": 3012
+      },
+      {
+        "county": "NORTHAMPTON",
+        "sent": 119,
+        "accepted": 33,
+        "spoiled_ev": 6,
+        "received_not_counted": 6,
+        "outstanding": 80
+      },
+      {
+        "county": "ONSLOW",
+        "sent": 2005,
+        "accepted": 644,
+        "spoiled_ev": 88,
+        "received_not_counted": 32,
+        "outstanding": 1329
+      },
+      {
+        "county": "ORANGE",
+        "sent": 4205,
+        "accepted": 1839,
+        "spoiled_ev": 264,
+        "received_not_counted": 24,
+        "outstanding": 2342
+      },
+      {
+        "county": "PAMLICO",
+        "sent": 183,
+        "accepted": 80,
+        "spoiled_ev": 11,
+        "received_not_counted": 1,
+        "outstanding": 102
+      },
+      {
+        "county": "PASQUOTANK",
+        "sent": 449,
+        "accepted": 111,
+        "spoiled_ev": 31,
+        "received_not_counted": 13,
+        "outstanding": 325
+      },
+      {
+        "county": "PENDER",
+        "sent": 888,
+        "accepted": 281,
+        "spoiled_ev": 54,
+        "received_not_counted": 12,
+        "outstanding": 595
+      },
+      {
+        "county": "PERQUIMANS",
+        "sent": 134,
+        "accepted": 55,
+        "spoiled_ev": 10,
+        "received_not_counted": 0,
+        "outstanding": 79
+      },
+      {
+        "county": "PERSON",
+        "sent": 361,
+        "accepted": 156,
+        "spoiled_ev": 16,
+        "received_not_counted": 11,
+        "outstanding": 194
+      },
+      {
+        "county": "PITT",
+        "sent": 1370,
+        "accepted": 391,
+        "spoiled_ev": 83,
+        "received_not_counted": 15,
+        "outstanding": 964
+      },
+      {
+        "county": "POLK",
+        "sent": 346,
+        "accepted": 154,
+        "spoiled_ev": 24,
+        "received_not_counted": 1,
+        "outstanding": 191
+      },
+      {
+        "county": "RANDOLPH",
+        "sent": 1262,
+        "accepted": 541,
+        "spoiled_ev": 53,
+        "received_not_counted": 33,
+        "outstanding": 688
+      },
+      {
+        "county": "RICHMOND",
+        "sent": 190,
+        "accepted": 52,
+        "spoiled_ev": 11,
+        "received_not_counted": 0,
+        "outstanding": 138
+      },
+      {
+        "county": "ROBESON",
+        "sent": 444,
+        "accepted": 131,
+        "spoiled_ev": 27,
+        "received_not_counted": 19,
+        "outstanding": 294
+      },
+      {
+        "county": "ROCKINGHAM",
+        "sent": 677,
+        "accepted": 229,
+        "spoiled_ev": 46,
+        "received_not_counted": 13,
+        "outstanding": 435
+      },
+      {
+        "county": "ROWAN",
+        "sent": 1446,
+        "accepted": 596,
+        "spoiled_ev": 76,
+        "received_not_counted": 25,
+        "outstanding": 825
+      },
+      {
+        "county": "RUTHERFORD",
+        "sent": 613,
+        "accepted": 208,
+        "spoiled_ev": 34,
+        "received_not_counted": 9,
+        "outstanding": 396
+      },
+      {
+        "county": "SAMPSON",
+        "sent": 339,
+        "accepted": 82,
+        "spoiled_ev": 13,
+        "received_not_counted": 1,
+        "outstanding": 256
+      },
+      {
+        "county": "SCOTLAND",
+        "sent": 221,
+        "accepted": 70,
+        "spoiled_ev": 11,
+        "received_not_counted": 0,
+        "outstanding": 151
+      },
+      {
+        "county": "STANLY",
+        "sent": 589,
+        "accepted": 222,
+        "spoiled_ev": 25,
+        "received_not_counted": 16,
+        "outstanding": 351
+      },
+      {
+        "county": "STOKES",
+        "sent": 427,
+        "accepted": 154,
+        "spoiled_ev": 23,
+        "received_not_counted": 7,
+        "outstanding": 266
+      },
+      {
+        "county": "SURRY",
+        "sent": 821,
+        "accepted": 332,
+        "spoiled_ev": 48,
+        "received_not_counted": 11,
+        "outstanding": 478
+      },
+      {
+        "county": "SWAIN",
+        "sent": 127,
+        "accepted": 41,
+        "spoiled_ev": 10,
+        "received_not_counted": 4,
+        "outstanding": 82
+      },
+      {
+        "county": "TRANSYLVANIA",
+        "sent": 617,
+        "accepted": 271,
+        "spoiled_ev": 46,
+        "received_not_counted": 8,
+        "outstanding": 338
+      },
+      {
+        "county": "TYRRELL",
+        "sent": 8,
+        "accepted": 0,
+        "spoiled_ev": 1,
+        "received_not_counted": 0,
+        "outstanding": 8
+      },
+      {
+        "county": "UNION",
+        "sent": 3436,
+        "accepted": 1148,
+        "spoiled_ev": 244,
+        "received_not_counted": 1,
+        "outstanding": 2287
+      },
+      {
+        "county": "VANCE",
+        "sent": 335,
+        "accepted": 119,
+        "spoiled_ev": 12,
+        "received_not_counted": 11,
+        "outstanding": 205
+      },
+      {
+        "county": "WAKE",
+        "sent": 28439,
+        "accepted": 11201,
+        "spoiled_ev": 2039,
+        "received_not_counted": 394,
+        "outstanding": 16844
+      },
+      {
+        "county": "WARREN",
+        "sent": 179,
+        "accepted": 65,
+        "spoiled_ev": 8,
+        "received_not_counted": 4,
+        "outstanding": 110
+      },
+      {
+        "county": "WASHINGTON",
+        "sent": 59,
+        "accepted": 20,
+        "spoiled_ev": 2,
+        "received_not_counted": 0,
+        "outstanding": 39
+      },
+      {
+        "county": "WATAUGA",
+        "sent": 858,
+        "accepted": 337,
+        "spoiled_ev": 55,
+        "received_not_counted": 3,
+        "outstanding": 518
+      },
+      {
+        "county": "WAYNE",
+        "sent": 919,
+        "accepted": 303,
+        "spoiled_ev": 54,
+        "received_not_counted": 20,
+        "outstanding": 596
+      },
+      {
+        "county": "WILKES",
+        "sent": 640,
+        "accepted": 268,
+        "spoiled_ev": 34,
+        "received_not_counted": 5,
+        "outstanding": 367
+      },
+      {
+        "county": "WILSON",
+        "sent": 690,
+        "accepted": 240,
+        "spoiled_ev": 27,
+        "received_not_counted": 14,
+        "outstanding": 436
+      },
+      {
+        "county": "YADKIN",
+        "sent": 344,
+        "accepted": 119,
+        "spoiled_ev": 17,
+        "received_not_counted": 11,
+        "outstanding": 214
+      },
+      {
+        "county": "YANCEY",
+        "sent": 302,
+        "accepted": 103,
+        "spoiled_ev": 17,
+        "received_not_counted": 0,
+        "outstanding": 199
+      }
+    ]
+  },
   "provisional": {
     "total": 2023,
     "approved": 0,
