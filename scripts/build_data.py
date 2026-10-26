@@ -482,11 +482,12 @@ def fetch_absentee_df(cfg):
 
 
 def fetch_outstanding_df(cfg):
-    """Fetch NCSBE outstanding/spoiled ballots report (updates daily)."""
-    us, _ = election_date_parts(cfg)
-    today_compact = datetime.now().strftime("%Y%m%d")
+    """Fetch NCSBE outstanding/spoiled ballots report (updates daily).
+    The filename uses the election date compact (e.g. 20261103), not today's date.
+    """
+    us, election_compact = election_date_parts(cfg)
     url = (f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us}"
-           f"/absentee_spoiled_outstanding_{today_compact}.zip")
+           f"/absentee_spoiled_outstanding_{election_compact}.zip")
     with tempfile.TemporaryDirectory() as tmp:
         zp = Path(tmp) / "outstanding.zip"
         download_to_file(url, zp)
