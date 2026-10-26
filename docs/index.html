@@ -662,7 +662,7 @@ function getCountyData(allCountyRows,county){
 }
 
 // ── MAIL TAB ──────────────────────────────────────────────────────────────────
-let MAIL_DATA=null,REQ_DATA=null,TREND_DATA=[];
+let MAIL_DATA=null,REQ_DATA=null,OB_DATA=null,TREND_DATA=[];
 
 function renderMailTab(county){
   const m=MAIL_DATA;
@@ -696,7 +696,10 @@ function renderMailTab(county){
      value:fmt(reqTotal),sub:'mail ballot requests'},
     {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
     {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections',
-     note:'Spoiled ballots are not captured in the state absentee file. Once available, spoilage data will be pulled from <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE\'s Outstanding Ballots report</a>.'},
+     note:'Includes affidavit issues, duplicates, late returns, and other defects. Does not include ballots spoiled by voting in person. See <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE\'s Outstanding Ballots report</a> for full breakdown.'},
+    {label:'Spoiled — voted in person',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'',
+     sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
+     note:'Voter surrendered their mail ballot and voted in person during early voting — a participation outcome, not a rejection. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
   ]);
 
   // trend (statewide only)
@@ -873,6 +876,9 @@ function renderEVTab(county){
     {label:'Unresolved EV ballots',value:fmt(curable),cls:'gold',
      note:'Includes Conflict and Cancelled ballots, which may not be curable. Categorization under review.'},
     {label:'EV accepted',value:fmt(accepted),cls:'teal'},
+    {label:'Mail ballots spoiled at polls',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'teal',
+     sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
+     note:'Voters who requested a mail ballot chose to vote in person instead — a positive participation outcome. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
   ]);
 
   // trend — only show data from Oct 15 (first day of early voting)
@@ -1109,6 +1115,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     EV_DATA  =latest.absentee_early_voting||null;
     PROV_DATA=latest.provisional||null;
     REQ_DATA =latest.requested_ballots||null;
+    OB_DATA  =latest.outstanding_ballots||null;
     window.latestData=latest; // expose for map tab
     try{TREND_DATA=await loadJSON('data/trend.json');}catch(e){TREND_DATA=[];}
 

@@ -481,6 +481,50 @@ def fetch_absentee_df(cfg):
     }
 
 
+def fetch_outstanding_df(cfg):
+    """Fetch NCSBE outstanding/spoiled ballots report (updates daily)."""
+    us, _ = election_date_parts(cfg)
+    today_compact = datetime.now().strftime("%Y%m%d")
+    url = (f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us}"
+           f"/absentee_spoiled_outstanding_{today_compact}.zip")
+    with tempfile.TemporaryDirectory() as tmp:
+        zp = Path(tmp) / "outstanding.zip"
+        download_to_file(url, zp)
+        with zipfile.ZipFile(zp) as zf:
+            member = next(n for n in zf.namelist()
+                          if n.lower().endswith(".csv")
+                          and "__macosx" not in n.lower())
+            cp = Path(tmp) / "outstanding.csv"
+            with zf.open(member) as src, open(cp, "wb") as dst:
+                shutil.copyfileobj(src, dst, length=1024 * 1024)
+        df = pd.read_csv(cp, dtype=str, low_memory=False,
+                         encoding="utf-8", encoding_errors="replace")
+    df.columns = [c.strip().lower() for c in df.columns]
+    for c in ["abs_sent", "abs_accepted", "abs_spoiled_ev",
+              "abs_received_not_counted", "abs_outstanding"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0).astype(int)
+    statewide = {
+        "sent":            int(df["abs_sent"].sum()),
+        "accepted":        int(df["abs_accepted"].sum()),
+        "spoiled_ev":      int(df["abs_spoiled_ev"].sum()),
+        "received_not_counted": int(df["abs_received_not_counted"].sum()),
+        "outstanding":     int(df["abs_outstanding"].sum()),
+        "pct_spoiled_ev":  pct(int(df["abs_spoiled_ev"].sum()),
+                               int(df["abs_sent"].sum())),
+        "by_county": df.rename(columns={
+            "county_name": "county",
+            "abs_sent": "sent",
+            "abs_accepted": "accepted",
+            "abs_spoiled_ev": "spoiled_ev",
+            "abs_received_not_counted": "received_not_counted",
+            "abs_outstanding": "outstanding",
+        })[["county","sent","accepted","spoiled_ev",
+            "received_not_counted","outstanding"]].to_dict(orient="records"),
+    }
+    return statewide
+
+
 def fetch_demo_stats(cfg):
     us, compact = election_date_parts(cfg)
     url = (f"https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/{us}"
@@ -655,6 +699,12 @@ def main():
         print(f"[build] demo_stats not available: {e}", file=sys.stderr)
         result["requested_ballots"] = None
         result["status"] = "partial"
+
+    try:
+        result["outstanding_ballots"] = fetch_outstanding_df(cfg)
+    except (HTTPError, URLError, StopIteration) as e:
+        print(f"[build] outstanding ballots not available: {e}", file=sys.stderr)
+        result["outstanding_ballots"] = None
 
     try:
         prov_df = fetch_provisional_df(cfg)
