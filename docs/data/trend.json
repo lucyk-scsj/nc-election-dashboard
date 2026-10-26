@@ -6,6 +6,7 @@
     "mail_pct_curable": 0.84,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -17,6 +18,7 @@
     "mail_pct_curable": 1.02,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -28,6 +30,7 @@
     "mail_pct_curable": 1.23,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -39,6 +42,7 @@
     "mail_pct_curable": 1.14,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -50,6 +54,7 @@
     "mail_pct_curable": 1.19,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -61,6 +66,7 @@
     "mail_pct_curable": 1.16,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -72,6 +78,7 @@
     "mail_pct_curable": 1.16,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -83,6 +90,7 @@
     "mail_pct_curable": 1.21,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -94,6 +102,7 @@
     "mail_pct_curable": 1.22,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -105,6 +114,7 @@
     "mail_pct_curable": 1.31,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -116,6 +126,7 @@
     "mail_pct_curable": 1.27,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -127,6 +138,7 @@
     "mail_pct_curable": 1.21,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -138,6 +150,7 @@
     "mail_pct_curable": 1.22,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -149,6 +162,7 @@
     "mail_pct_curable": 1.22,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -160,6 +174,7 @@
     "mail_pct_curable": 1.25,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -171,6 +186,7 @@
     "mail_pct_curable": 1.22,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -182,6 +198,7 @@
     "mail_pct_curable": 1.23,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -193,6 +210,7 @@
     "mail_pct_curable": 1.18,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -204,6 +222,7 @@
     "mail_pct_curable": 1.15,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -215,6 +234,7 @@
     "mail_pct_curable": 1.15,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -226,6 +246,7 @@
     "mail_pct_curable": 1.15,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -237,6 +258,7 @@
     "mail_pct_curable": 1.2,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -248,6 +270,7 @@
     "mail_pct_curable": 1.09,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -259,6 +282,7 @@
     "mail_pct_curable": 0.96,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -270,6 +294,7 @@
     "mail_pct_curable": 0.93,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -281,6 +306,7 @@
     "mail_pct_curable": 0.89,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -292,6 +318,7 @@
     "mail_pct_curable": 0.9,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -303,6 +330,7 @@
     "mail_pct_curable": 0.89,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -314,6 +342,7 @@
     "mail_pct_curable": 0.93,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -325,6 +354,7 @@
     "mail_pct_curable": 0.87,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -336,6 +366,7 @@
     "mail_pct_curable": 0.89,
     "ev_curable": 392,
     "ev_cured": 0,
+    "ev_sdr_total": 0,
     "ev_sdr_failed": 0,
     "prov_total": null,
     "prov_approved": null
@@ -347,6 +378,7 @@
     "mail_pct_curable": 0.89,
     "ev_curable": 928,
     "ev_cured": 0,
+    "ev_sdr_total": 404,
     "ev_sdr_failed": 0,
     "prov_total": 190,
     "prov_approved": 0
@@ -358,6 +390,7 @@
     "mail_pct_curable": 0.89,
     "ev_curable": 1233,
     "ev_cured": 0,
+    "ev_sdr_total": 1622,
     "ev_sdr_failed": 0,
     "prov_total": 349,
     "prov_approved": 0
@@ -369,6 +402,7 @@
     "mail_pct_curable": 0.95,
     "ev_curable": 1352,
     "ev_cured": 0,
+    "ev_sdr_total": 2344,
     "ev_sdr_failed": 0,
     "prov_total": 385,
     "prov_approved": 0
@@ -380,6 +414,7 @@
     "mail_pct_curable": 0.95,
     "ev_curable": 1456,
     "ev_cured": 0,
+    "ev_sdr_total": 2691,
     "ev_sdr_failed": 0,
     "prov_total": 454,
     "prov_approved": 0
@@ -391,6 +426,7 @@
     "mail_pct_curable": 0.9,
     "ev_curable": 1830,
     "ev_cured": 0,
+    "ev_sdr_total": 3818,
     "ev_sdr_failed": 0,
     "prov_total": 688,
     "prov_approved": 0
@@ -402,8 +438,69 @@
     "mail_pct_curable": 0.81,
     "ev_curable": 0,
     "ev_cured": 0,
+    "ev_sdr_total": 5554,
     "ev_sdr_failed": 0,
     "prov_total": 904,
+    "prov_approved": 0
+  },
+  {
+    "date": "2026-10-22",
+    "mail_curable": 445,
+    "mail_cured": 618,
+    "mail_pct_curable": 0.86,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_total": 7292,
+    "ev_sdr_failed": 1,
+    "prov_total": 1178,
+    "prov_approved": 0
+  },
+  {
+    "date": "2026-10-23",
+    "mail_curable": 442,
+    "mail_cured": 671,
+    "mail_pct_curable": 0.8,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_total": 9446,
+    "ev_sdr_failed": 1,
+    "prov_total": 1482,
+    "prov_approved": 0
+  },
+  {
+    "date": "2026-10-24",
+    "mail_curable": 442,
+    "mail_cured": 721,
+    "mail_pct_curable": 0.75,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_total": 11758,
+    "ev_sdr_failed": 2,
+    "prov_total": 1791,
+    "prov_approved": 0
+  },
+  {
+    "date": "2026-10-25",
+    "mail_curable": 466,
+    "mail_cured": 742,
+    "mail_pct_curable": 0.77,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_total": 13977,
+    "ev_sdr_failed": 3,
+    "prov_total": 1924,
+    "prov_approved": 0
+  },
+  {
+    "date": "2026-10-26",
+    "mail_curable": 460,
+    "mail_cured": 743,
+    "mail_pct_curable": 0.76,
+    "ev_curable": 0,
+    "ev_cured": 0,
+    "ev_sdr_total": 14700,
+    "ev_sdr_failed": 3,
+    "prov_total": 1983,
     "prov_approved": 0
   }
 ]
