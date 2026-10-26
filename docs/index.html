@@ -278,8 +278,8 @@ footer a{text-decoration:underline;}
           <div class="section-subhead" style="font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px">What these mean</div>
           <div style="font-size:12px;color:var(--ink-2);line-height:1.6;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px">
             <div><strong>Accepted</strong> — returned and counted (includes cured ballots)</div>
-            <div><strong>Spoiled — voted in person</strong> — voter cast a ballot at an early voting site instead</div>
-            <div><strong>Received, not counted</strong> — returned but rejected (affidavit issues, duplicates, late returns, etc.)</div>
+            <div><strong>Spoiled — voted in person</strong> — voter voted in person at an early voting site; their mail ballot was spoiled. Also included in "Received, not counted."</div>
+            <div><strong>Received, not counted</strong> — returned but will not be counted (includes spoiled-EV, affidavit issues, duplicates, late returns, etc.)</div>
             <div><strong>Outstanding</strong> — not yet returned, or returned with curable deficiencies still pending</div>
           </div>
         </div>
@@ -721,11 +721,9 @@ function renderMailTab(county){
     {label:isCounty?`Requested (${county})`:'Requested (statewide)',
      value:fmt(reqTotal),sub:'mail ballot requests'},
     {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
-    {label:'Rejected / Spoiled',value:fmt(rejected),cls:'brick',sub:'final rejections',
-     note:'Includes affidavit issues, duplicates, late returns, and other defects. Does not include ballots spoiled by voting in person. See <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE\'s Outstanding Ballots report</a> for full breakdown.'},
     {label:'Spoiled — voted in person',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'',
      sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
-     note:'Voter surrendered their mail ballot and voted in person at an early voting site. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
+     note:'Voter voted in person at an early voting site; their mail ballot was spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
   ]);
 
   // trend (statewide only)
@@ -899,12 +897,10 @@ function renderEVTab(county){
     {label:'SDR failed verification',value:fmt(sdr.failed_verification),cls:'brick',
      sub:`${pf(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.`},
     {label:'SDR cured',value:fmt(sdr.cured),cls:'teal'},
-    {label:'Unresolved EV ballots',value:fmt(curable),cls:'gold',
-     note:'Includes Conflict and Cancelled ballots, which may not be curable. Categorization under review.'},
     {label:'EV accepted',value:fmt(accepted),cls:'teal'},
     {label:'Mail ballots spoiled at polls',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'',
      sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
-     note:'Voter cast an in-person ballot at an early voting site instead of returning their mail ballot. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
+     note:'Voter voted in person at an early voting site; their mail ballot was spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
   ]);
 
   // outstanding ballots section (from NCSBE Outstanding Ballots report)
