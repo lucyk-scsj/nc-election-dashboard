@@ -916,7 +916,7 @@ function renderEVTab(county){
   if(obKpis){
     obKpis.innerHTML=kpiHTML([
       {label:'Sent',value:fmt(ob.sent)},
-      {label:'Accepted',value:fmt(ob.accepted),cls:'teal',sub:`${pf(pct(ob.accepted,ob.sent))} of sent`},
+      {label:'Accepted',value:fmt(ob.accepted),cls:'teal',sub:`${pf(ob.sent?ob.accepted/ob.sent*100:0)} of sent`},
       {label:'Spoiled — voted in person',value:fmt(ob.spoiled_ev),cls:'',sub:`${pf(ob.pct_spoiled_ev)} of sent`},
       {label:'Received, not counted',value:fmt(ob.received_not_counted),cls:'brick',sub:'rejected returns'},
       {label:'Outstanding',value:fmt(ob.outstanding),cls:'gold',sub:'not returned or pending cure'},
