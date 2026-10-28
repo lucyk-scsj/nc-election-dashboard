@@ -205,6 +205,33 @@ footer a{text-decoration:underline;}
           <div class="table-wrap"><table class="data-table" id="mail-status-breakdown-table">
             <thead><tr><th>Status</th><th>Count</th><th>% of all</th></tr></thead><tbody></tbody>
           </table></div>
+          <p style="font-size:12px;color:var(--ink-2);margin-top:10px">Note: the SPOILED-EV count here may lag behind the <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>, which is the authoritative source for ballots spoiled at the polls and is updated daily.</p>
+        </div>
+      </section>
+
+      <section class="section" id="ob-section">
+        <div class="section-head"><h2>Absentee ballot status</h2><span class="section-note">from <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank" style="color:inherit">NCSBE Outstanding Ballots report</a> — updated daily</span></div>
+        <div class="kpi-strip" id="ob-kpis"></div>
+        <div class="panel" style="margin-top:16px">
+          <div class="section-subhead" style="font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px">What these mean</div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.6;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px">
+            <div><strong>Accepted</strong> — returned and counted (includes cured ballots)</div>
+            <div><strong>Mail ballots spoiled at polls</strong> — because voter voted in person at an early voting site, their requested mail ballot was recorded as spoiled. Also included in "Received, not counted."</div>
+            <div><strong>Received, not counted</strong> — returned but will not be counted (includes spoiled-EV, affidavit issues, duplicates, late returns, etc.)</div>
+            <div><strong>Outstanding</strong> — not yet returned, or returned with curable deficiencies still pending</div>
+          </div>
+        </div>
+        <div class="panel" style="margin-top:16px" id="ob-county-panel">
+          <div class="table-wrap"><table class="data-table" id="ob-county-table">
+            <thead><tr>
+              <th data-col="county">County</th>
+              <th data-col="sent">Sent</th>
+              <th data-col="accepted">Accepted</th>
+              <th data-col="spoiled_ev">Mail Spoiled at Polls</th>
+              <th data-col="received_not_counted">Not Counted</th>
+              <th data-col="outstanding">Outstanding</th>
+            </tr></thead><tbody></tbody>
+          </table></div>
         </div>
       </section>
 
@@ -270,32 +297,6 @@ footer a{text-decoration:underline;}
     </div>
     <div id="ev-content">
       <div class="kpi-strip" id="ev-kpis"></div>
-
-      <section class="section" id="ob-section">
-        <div class="section-head"><h2>Absentee ballot status</h2><span class="section-note">from <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank" style="color:inherit">NCSBE Outstanding Ballots report</a> — updated daily</span></div>
-        <div class="kpi-strip" id="ob-kpis"></div>
-        <div class="panel" style="margin-top:16px">
-          <div class="section-subhead" style="font-size:11px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px">What these mean</div>
-          <div style="font-size:12px;color:var(--ink-2);line-height:1.6;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px">
-            <div><strong>Accepted</strong> — returned and counted (includes cured ballots)</div>
-            <div><strong>Spoiled — voted in person</strong> — voter voted in person at an early voting site; their mail ballot was spoiled. Also included in "Received, not counted."</div>
-            <div><strong>Received, not counted</strong> — returned but will not be counted (includes spoiled-EV, affidavit issues, duplicates, late returns, etc.)</div>
-            <div><strong>Outstanding</strong> — not yet returned, or returned with curable deficiencies still pending</div>
-          </div>
-        </div>
-        <div class="panel" style="margin-top:16px" id="ob-county-panel">
-          <div class="table-wrap"><table class="data-table" id="ob-county-table">
-            <thead><tr>
-              <th data-col="county">County</th>
-              <th data-col="sent">Sent</th>
-              <th data-col="accepted">Accepted</th>
-              <th data-col="spoiled_ev">Spoiled (in-person)</th>
-              <th data-col="received_not_counted">Not Counted</th>
-              <th data-col="outstanding">Outstanding</th>
-            </tr></thead><tbody></tbody>
-          </table></div>
-        </div>
-      </section>
 
       <section class="section">
         <div class="section-head"><h2>SDR over time</h2><span class="section-note">same-day registration — daily snapshots</span></div>
@@ -721,9 +722,17 @@ function renderMailTab(county){
     {label:isCounty?`Requested (${county})`:'Requested (statewide)',
      value:fmt(reqTotal),sub:'mail ballot requests'},
     {label:'Accepted',value:fmt(accepted),cls:'teal',sub:`of ${fmt(returned)} returned`},
-    {label:'Spoiled — voted in person',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'',
-     sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
-     note:'Voter voted in person at an early voting site; their mail ballot was spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
+    (()=>{
+      const ob=OB_DATA||{sent:162147,accepted:60046,spoiled_ev:11000,received_not_counted:2469,outstanding:99632,pct_spoiled_ev:6.79,by_county:[]};
+      const obCounty=isCounty?(ob.by_county||[]).find(r=>r.county===county):null;
+      const spoiledVal=isCounty?(obCounty?obCounty.spoiled_ev:0):ob.spoiled_ev;
+      const spoiledSub=isCounty
+        ?(obCounty?`in ${county}`:'no data for county')
+        :`${pf(ob.pct_spoiled_ev)} of ${fmt(ob.sent)} sent`;
+      return {label:'Mail ballots spoiled at polls',value:fmt(spoiledVal),cls:'',
+        sub:spoiledSub,
+        note:'Because voter voted in person at an early voting site, their requested mail ballot was recorded as spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'};
+    })(),
   ]);
 
   // trend (statewide only)
@@ -867,6 +876,29 @@ function renderMailTab(county){
       csvDownload([...racePctRows,...agePctRows,...ethnPctRows],'2026-nc-mail-demographics');
     };
   }
+
+  // outstanding ballots section (from NCSBE Outstanding Ballots report)
+  const obKpis=document.getElementById('ob-kpis');
+  const obTbody=document.querySelector('#ob-county-table tbody');
+  const ob=OB_DATA||{sent:162147,accepted:60046,spoiled_ev:11000,received_not_counted:2469,outstanding:99632,pct_spoiled_ev:6.79,by_county:[]};
+  if(obKpis){
+    obKpis.innerHTML=kpiHTML([
+      {label:'Sent',value:fmt(ob.sent)},
+      {label:'Accepted',value:fmt(ob.accepted),cls:'teal',sub:`${pf(ob.sent?ob.accepted/ob.sent*100:0)} of sent`},
+      {label:'Mail ballots spoiled at polls',value:fmt(ob.spoiled_ev),cls:'',sub:`${pf(ob.pct_spoiled_ev)} of sent`,
+       note:'Because voter voted in person at an early voting site, their requested mail ballot was recorded as spoiled. Also included in "Received, not counted."'},
+      {label:'Received, not counted',value:fmt(ob.received_not_counted),cls:'brick',sub:'rejected returns'},
+      {label:'Outstanding',value:fmt(ob.outstanding),cls:'gold',sub:'not returned or pending cure'},
+    ]);
+  }
+  if(obTbody){
+    const obRows=isCounty
+      ?(ob.by_county||[]).filter(r=>r.county===county)
+      :(ob.by_county||[]).sort((a,b)=>b.outstanding-a.outstanding);
+    obTbody.innerHTML=obRows.map(r=>
+      `<tr><td>${r.county}</td><td>${fmt(r.sent)}</td><td>${fmt(r.accepted)}</td><td>${fmt(r.spoiled_ev)}</td><td>${fmt(r.received_not_counted)}</td><td>${fmt(r.outstanding)}</td></tr>`
+    ).join('')||'<tr><td colspan="6">No data yet.</td></tr>';
+  }
 }
 
 // ── EARLY VOTING TAB ──────────────────────────────────────────────────────────
@@ -894,38 +926,25 @@ function renderEVTab(county){
 
   document.getElementById('ev-kpis').innerHTML=kpiHTML([
     {label:'Total early votes returned',value:fmt(returned)},
-    {label:'SDR failed verification',value:fmt(sdr.failed_verification),cls:'brick',
-     sub:`${pf(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.`},
-    {label:'SDR cured',value:fmt(sdr.cured),cls:'teal'},
+    {label:'SDR failed verification',value:fmt(isCounty?(cd?.sdr_failed||0):sdr.failed_verification),cls:'brick',
+     sub:isCounty
+       ?`in ${county}`
+       :`${pf(sdr.pct_failed_of_sdr)} of ${fmt(sdr.total_sdr_ballots)} same-day reg.`},
+    {label:'SDR cured',value:fmt(isCounty?(cd?.sdr_cured||0):sdr.cured),cls:'teal',
+     sub:isCounty?`in ${county}`:null},
     {label:'EV accepted',value:fmt(accepted),cls:'teal'},
-    {label:'Mail ballots spoiled at polls',value:OB_DATA?fmt(OB_DATA.spoiled_ev):'—',cls:'',
-     sub:OB_DATA?`${pf(OB_DATA.pct_spoiled_ev)} of ${fmt(OB_DATA.sent)} sent`:'from NCSBE Outstanding Ballots report',
-     note:'Voter voted in person at an early voting site; their mail ballot was spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'},
+    (()=>{
+      const ob=OB_DATA||{sent:162147,accepted:60046,spoiled_ev:11000,received_not_counted:2469,outstanding:99632,pct_spoiled_ev:6.79,by_county:[]};
+      const obCounty=isCounty?(ob.by_county||[]).find(r=>r.county===county):null;
+      const spoiledVal=isCounty?(obCounty?obCounty.spoiled_ev:0):ob.spoiled_ev;
+      const spoiledSub=isCounty
+        ?(obCounty?`in ${county}`:'no data for county')
+        :`${pf(ob.pct_spoiled_ev)} of ${fmt(ob.sent)} sent`;
+      return {label:'Mail ballots spoiled at polls',value:fmt(spoiledVal),cls:'',
+        sub:spoiledSub,
+        note:'Because voter voted in person at an early voting site, their requested mail ballot was recorded as spoiled. Also included in the "Received, not counted" total. Source: <a href="https://www.ncsbe.gov/results-data/absentee-and-provisional-data/outstanding-ballots-data-report-summary" target="_blank">NCSBE Outstanding Ballots report</a>.'};
+    })(),
   ]);
-
-  // outstanding ballots section (from NCSBE Outstanding Ballots report)
-  const obSection=document.getElementById('ob-section');
-  const obKpis=document.getElementById('ob-kpis');
-  const obTbody=document.querySelector('#ob-county-table tbody');
-  // use live data if available, otherwise fall back to hardcoded Nov 3 snapshot
-  const ob=OB_DATA||{sent:162147,accepted:60046,spoiled_ev:11000,received_not_counted:2469,outstanding:99632,pct_spoiled_ev:6.79,by_county:[]};
-  if(obKpis){
-    obKpis.innerHTML=kpiHTML([
-      {label:'Sent',value:fmt(ob.sent)},
-      {label:'Accepted',value:fmt(ob.accepted),cls:'teal',sub:`${pf(ob.sent?ob.accepted/ob.sent*100:0)} of sent`},
-      {label:'Spoiled — voted in person',value:fmt(ob.spoiled_ev),cls:'',sub:`${pf(ob.pct_spoiled_ev)} of sent`},
-      {label:'Received, not counted',value:fmt(ob.received_not_counted),cls:'brick',sub:'rejected returns'},
-      {label:'Outstanding',value:fmt(ob.outstanding),cls:'gold',sub:'not returned or pending cure'},
-    ]);
-  }
-  if(obTbody){
-    const obCounty=isCounty
-      ?(ob.by_county||[]).filter(r=>r.county===county)
-      :(ob.by_county||[]).sort((a,b)=>b.outstanding-a.outstanding);
-    obTbody.innerHTML=obCounty.map(r=>
-      `<tr><td>${r.county}</td><td>${fmt(r.sent)}</td><td>${fmt(r.accepted)}</td><td>${fmt(r.spoiled_ev)}</td><td>${fmt(r.received_not_counted)}</td><td>${fmt(r.outstanding)}</td></tr>`
-    ).join('')||'<tr><td colspan="6">No data yet.</td></tr>';
-  }
 
   // trend — only show data from Oct 15 (first day of early voting)
   const EV_START='2026-10-15';

@@ -196,7 +196,7 @@ def fetch_absentee_df(cfg):
         mc_ethn_rej  = defaultdict(Counter)
 
         # early voting
-        ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        ev_county = defaultdict(lambda: {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0,"sdr_total":0,"sdr_failed":0,"sdr_cured":0})
         ev_race_acc = Counter(); ev_race_rej = Counter(); ev_race_cur = Counter()
         ev_age_acc  = Counter(); ev_age_rej  = Counter(); ev_age_cur  = Counter()
         ev_gender   = Counter(); ev_party    = Counter(); ev_ethnicity = Counter()
@@ -280,6 +280,12 @@ def fetch_absentee_df(cfg):
                         d["curable"]   += int(grp["ballot_rtn_status"].isin(CURABLE).sum())
                         d["cured"]     += int(grp["ballot_rtn_status"].isin(CURED).sum())
                         d["rejected"]  += int(grp["ballot_rtn_status"].isin(REJECTED).sum())
+                        # SDR per county (EV only)
+                        if site_d is not None and "sdr" in grp:
+                            c_sdr = grp["sdr"].eq("Y")
+                            d["sdr_total"]  = d.get("sdr_total",  0) + int(c_sdr.sum())
+                            d["sdr_failed"] = d.get("sdr_failed", 0) + int(grp.loc[c_sdr, "ballot_rtn_status"].isin(SDR_FAILED).sum())
+                            d["sdr_cured"]  = d.get("sdr_cured",  0) + int(grp.loc[c_sdr, "ballot_rtn_status"].isin(CURED).sum())
 
                 # statewide race
                 if "race" in df_chunk:
@@ -369,7 +375,7 @@ def fetch_absentee_df(cfg):
                     county_ethn_acc=None, county_ethn_rej=None):
         rows = []
         # ensure all 100 NC counties appear, filling missing ones with zeros
-        all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0})
+        all_counties = {c: county_d.get(c, {"returned":0,"accepted":0,"curable":0,"cured":0,"rejected":0,"sdr_total":0,"sdr_failed":0,"sdr_cured":0})
                         for c in NC_COUNTIES}
         for k, v in all_counties.items():
             row = {
