@@ -517,14 +517,14 @@
   },
   {
     "date": "2026-10-28",
-    "mail_curable": 476,
-    "mail_cured": 820,
-    "mail_pct_curable": 0.72,
+    "mail_curable": 521,
+    "mail_cured": 893,
+    "mail_pct_curable": 0.73,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 17147,
-    "ev_sdr_failed": 10,
-    "prov_total": 2406,
+    "ev_sdr_total": 20596,
+    "ev_sdr_failed": 13,
+    "prov_total": 2747,
     "prov_approved": 0
   }
 ]
