@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T15:00:09.658370+00:00",
+  "generated_at": "2026-11-02T16:08:12.927963+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -36669,7 +36669,7 @@
       },
       {
         "county_name": "CABARRUS",
-        "count": 117
+        "count": 116
       },
       {
         "county_name": "CALDWELL",
@@ -36765,7 +36765,7 @@
       },
       {
         "county_name": "GRAHAM",
-        "count": 2
+        "count": 3
       },
       {
         "county_name": "GRANVILLE",
@@ -37016,18 +37016,18 @@
       "": 5871
     },
     "voted_reasons": {
-      "DL/SSN PROVISIONAL": 3114,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 851,
-      "NO RECORD OF REGISTRATION": 483,
+      "DL/SSN PROVISIONAL": 3119,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 859,
+      "NO RECORD OF REGISTRATION": 477,
       "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 416,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 365,
-      "PREVIOUSLY REMOVED": 180,
-      "HAVA ID NOT PROVIDED": 143,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 359,
+      "PREVIOUSLY REMOVED": 179,
+      "HAVA ID NOT PROVIDED": 145,
       "VOTER ALREADY VOTED": 131,
       "JURISDICTION DISPUTE": 103,
-      "UNREPORTED MOVE": 51,
+      "UNREPORTED MOVE": 50,
       "INCORRECT PARTY": 18,
-      "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 11,
+      "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 10,
       "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 5
     },
     "demographics": {
@@ -37043,15 +37043,15 @@
         "P": 2
       },
       "gender": {
-        "F": 2220,
-        "M": 1687,
+        "F": 2219,
+        "M": 1688,
         "U": 1140,
         "\u0000": 824
       },
       "party": {
         "DEM": 2564,
-        "UNA": 2278,
-        "REP": 1005,
+        "UNA": 2279,
+        "REP": 1004,
         "LIB": 19,
         "GRE": 5
       }
