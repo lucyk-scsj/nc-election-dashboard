@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T13:39:28.518164+00:00",
+  "generated_at": "2026-11-03T18:15:22.232584+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37329,7 +37329,7 @@
     ]
   },
   "provisional": {
-    "total": 5869,
+    "total": 5876,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -37341,7 +37341,7 @@
       },
       {
         "county_name": "ALEXANDER",
-        "count": 1
+        "count": 8
       },
       {
         "county_name": "ALLEGHANY",
@@ -37725,19 +37725,19 @@
       }
     ],
     "not_counted_reasons": {
-      "": 5869
+      "": 5876
     },
     "voted_reasons": {
-      "DL/SSN PROVISIONAL": 3120,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 858,
+      "DL/SSN PROVISIONAL": 3121,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 862,
       "NO RECORD OF REGISTRATION": 467,
       "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 417,
       "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 354,
       "PREVIOUSLY REMOVED": 180,
-      "HAVA ID NOT PROVIDED": 155,
+      "HAVA ID NOT PROVIDED": 156,
       "VOTER ALREADY VOTED": 131,
       "JURISDICTION DISPUTE": 105,
-      "UNREPORTED MOVE": 49,
+      "UNREPORTED MOVE": 50,
       "INCORRECT PARTY": 18,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 10,
       "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 5
@@ -37747,7 +37747,7 @@
         "W": 1546,
         "B": 1535,
         "U": 1438,
-        "\u0000": 949,
+        "\u0000": 956,
         "O": 194,
         "A": 69,
         "M": 68,
@@ -37758,18 +37758,18 @@
         "F": 2218,
         "M": 1688,
         "U": 1139,
-        "\u0000": 824
+        "\u0000": 831
       },
       "party": {
         "DEM": 2561,
-        "UNA": 2281,
-        "REP": 1003,
+        "UNA": 2285,
+        "REP": 1006,
         "LIB": 19,
         "GRE": 5
       }
     },
     "raw_status_counts": {
-      "PENDING": 5869
+      "PENDING": 5876
     }
   }
 }
