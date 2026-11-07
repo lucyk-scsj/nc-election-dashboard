@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-07T02:38:38.188494+00:00",
+  "generated_at": "2026-11-07T16:46:05.791190+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
   "absentee_mail": {
     "total_returned": 168720,
-    "accepted": 108376,
-    "curable": 2067,
-    "cured": 1620,
-    "rejected_or_spoiled": 24297,
-    "pct_curable_of_returned": 1.23,
+    "accepted": 108434,
+    "curable": 2027,
+    "cured": 1661,
+    "rejected_or_spoiled": 24313,
+    "pct_curable_of_returned": 1.2,
     "sdr": {
       "total_sdr_ballots": 0,
       "failed_verification": 0,
@@ -18,8 +18,8 @@
     },
     "curable_categories": {
       "WITNESS INFO INCOMPLETE": 1252,
-      "PENDING CURE": 710,
-      "PENDING": 68,
+      "PENDING CURE": 671,
+      "PENDING": 67,
       "PHOTO ID CURABLE": 10,
       "ASSISTANT INFO INCOMPLETE": 27
     },
@@ -27,9 +27,9 @@
       {
         "county_desc": "ALAMANCE",
         "returned": 2428,
-        "accepted": 1641,
-        "curable": 40,
-        "cured": 30,
+        "accepted": 1642,
+        "curable": 39,
+        "cured": 31,
         "rejected": 286,
         "race_pct": [
           {
@@ -65,11 +65,11 @@
           {
             "race": "OTHER",
             "total": 80,
-            "accepted": 42,
-            "not_accepted": 38,
+            "accepted": 43,
+            "not_accepted": 37,
             "cured": 0,
-            "accepted_pct": 52.5,
-            "not_accepted_pct": 47.5,
+            "accepted_pct": 53.75,
+            "not_accepted_pct": 46.25,
             "cured_pct": 0.0
           },
           {
@@ -107,11 +107,11 @@
           {
             "age_group": "18-25",
             "total": 275,
-            "accepted": 163,
-            "not_accepted": 112,
+            "accepted": 164,
+            "not_accepted": 111,
             "cured": 0,
-            "accepted_pct": 59.27,
-            "not_accepted_pct": 40.73,
+            "accepted_pct": 59.64,
+            "not_accepted_pct": 40.36,
             "cured_pct": 0.0
           },
           {
@@ -147,7 +147,7 @@
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 25,
-          "PENDING CURE": 13,
+          "PENDING CURE": 12,
           "PENDING": 2
         },
         "ethnicity": {
@@ -179,11 +179,11 @@
           {
             "race": "HISPANIC OR LATINO",
             "total": 85,
-            "accepted": 52,
-            "not_accepted": 33,
+            "accepted": 53,
+            "not_accepted": 32,
             "cured": 0,
-            "accepted_pct": 61.18,
-            "not_accepted_pct": 38.82,
+            "accepted_pct": 62.35,
+            "not_accepted_pct": 37.65,
             "cured_pct": 0.0
           }
         ]
@@ -1290,39 +1290,39 @@
       {
         "county_desc": "BRUNSWICK",
         "returned": 4521,
-        "accepted": 2747,
-        "curable": 134,
-        "cured": 107,
+        "accepted": 2751,
+        "curable": 132,
+        "cured": 109,
         "rejected": 859,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 3858,
-            "accepted": 2359,
-            "not_accepted": 1499,
+            "accepted": 2361,
+            "not_accepted": 1497,
             "cured": 0,
-            "accepted_pct": 61.15,
-            "not_accepted_pct": 38.85,
+            "accepted_pct": 61.2,
+            "not_accepted_pct": 38.8,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 370,
-            "accepted": 236,
-            "not_accepted": 134,
+            "accepted": 237,
+            "not_accepted": 133,
             "cured": 0,
-            "accepted_pct": 63.78,
-            "not_accepted_pct": 36.22,
+            "accepted_pct": 64.05,
+            "not_accepted_pct": 35.95,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 178,
-            "accepted": 100,
-            "not_accepted": 78,
+            "accepted": 101,
+            "not_accepted": 77,
             "cured": 0,
-            "accepted_pct": 56.18,
-            "not_accepted_pct": 43.82,
+            "accepted_pct": 56.74,
+            "not_accepted_pct": 43.26,
             "cured_pct": 0.0
           },
           {
@@ -1380,38 +1380,38 @@
           {
             "age_group": "26-40",
             "total": 345,
-            "accepted": 208,
-            "not_accepted": 137,
+            "accepted": 210,
+            "not_accepted": 135,
             "cured": 0,
-            "accepted_pct": 60.29,
-            "not_accepted_pct": 39.71,
+            "accepted_pct": 60.87,
+            "not_accepted_pct": 39.13,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
             "total": 1083,
-            "accepted": 626,
-            "not_accepted": 457,
+            "accepted": 627,
+            "not_accepted": 456,
             "cured": 0,
-            "accepted_pct": 57.8,
-            "not_accepted_pct": 42.2,
+            "accepted_pct": 57.89,
+            "not_accepted_pct": 42.11,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 2867,
-            "accepted": 1791,
-            "not_accepted": 1076,
+            "accepted": 1792,
+            "not_accepted": 1075,
             "cured": 0,
-            "accepted_pct": 62.47,
-            "not_accepted_pct": 37.53,
+            "accepted_pct": 62.5,
+            "not_accepted_pct": 37.5,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 87,
           "PENDING": 15,
-          "PENDING CURE": 30,
+          "PENDING CURE": 28,
           "ASSISTANT INFO INCOMPLETE": 2
         },
         "ethnicity": {
@@ -1423,21 +1423,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 2323,
-            "accepted": 1462,
-            "not_accepted": 861,
+            "accepted": 1464,
+            "not_accepted": 859,
             "cured": 0,
-            "accepted_pct": 62.94,
-            "not_accepted_pct": 37.06,
+            "accepted_pct": 63.02,
+            "not_accepted_pct": 36.98,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 2149,
-            "accepted": 1262,
-            "not_accepted": 887,
+            "accepted": 1264,
+            "not_accepted": 885,
             "cured": 0,
-            "accepted_pct": 58.72,
-            "not_accepted_pct": 41.28,
+            "accepted_pct": 58.82,
+            "not_accepted_pct": 41.18,
             "cured_pct": 0.0
           },
           {
@@ -1455,19 +1455,19 @@
       {
         "county_desc": "BUNCOMBE",
         "returned": 7024,
-        "accepted": 4545,
-        "curable": 71,
-        "cured": 65,
+        "accepted": 4549,
+        "curable": 67,
+        "cured": 69,
         "rejected": 1200,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 5928,
-            "accepted": 3826,
-            "not_accepted": 2102,
+            "accepted": 3829,
+            "not_accepted": 2099,
             "cured": 0,
-            "accepted_pct": 64.54,
-            "not_accepted_pct": 35.46,
+            "accepted_pct": 64.59,
+            "not_accepted_pct": 35.41,
             "cured_pct": 0.0
           },
           {
@@ -1493,11 +1493,11 @@
           {
             "race": "OTHER",
             "total": 136,
-            "accepted": 83,
-            "not_accepted": 53,
+            "accepted": 84,
+            "not_accepted": 52,
             "cured": 0,
-            "accepted_pct": 61.03,
-            "not_accepted_pct": 38.97,
+            "accepted_pct": 61.76,
+            "not_accepted_pct": 38.24,
             "cured_pct": 0.0
           },
           {
@@ -1555,26 +1555,26 @@
           {
             "age_group": "41-65",
             "total": 1767,
-            "accepted": 1168,
-            "not_accepted": 599,
+            "accepted": 1169,
+            "not_accepted": 598,
             "cured": 0,
-            "accepted_pct": 66.1,
-            "not_accepted_pct": 33.9,
+            "accepted_pct": 66.16,
+            "not_accepted_pct": 33.84,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 3343,
-            "accepted": 2201,
-            "not_accepted": 1142,
+            "accepted": 2204,
+            "not_accepted": 1139,
             "cured": 0,
-            "accepted_pct": 65.84,
-            "not_accepted_pct": 34.16,
+            "accepted_pct": 65.93,
+            "not_accepted_pct": 34.07,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 21,
+          "PENDING CURE": 17,
           "WITNESS INFO INCOMPLETE": 45,
           "PENDING": 4,
           "ASSISTANT INFO INCOMPLETE": 1
@@ -1588,31 +1588,31 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 4036,
-            "accepted": 2602,
-            "not_accepted": 1434,
+            "accepted": 2604,
+            "not_accepted": 1432,
             "cured": 0,
-            "accepted_pct": 64.47,
-            "not_accepted_pct": 35.53,
+            "accepted_pct": 64.52,
+            "not_accepted_pct": 35.48,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 2850,
-            "accepted": 1853,
-            "not_accepted": 997,
+            "accepted": 1854,
+            "not_accepted": 996,
             "cured": 0,
-            "accepted_pct": 65.02,
-            "not_accepted_pct": 34.98,
+            "accepted_pct": 65.05,
+            "not_accepted_pct": 34.95,
             "cured_pct": 0.0
           },
           {
             "race": "HISPANIC OR LATINO",
             "total": 138,
-            "accepted": 90,
-            "not_accepted": 48,
+            "accepted": 91,
+            "not_accepted": 47,
             "cured": 0,
-            "accepted_pct": 65.22,
-            "not_accepted_pct": 34.78,
+            "accepted_pct": 65.94,
+            "not_accepted_pct": 34.06,
             "cured_pct": 0.0
           }
         ]
@@ -3449,7 +3449,7 @@
       {
         "county_desc": "COLUMBUS",
         "returned": 336,
-        "accepted": 231,
+        "accepted": 232,
         "curable": 0,
         "cured": 0,
         "rejected": 33,
@@ -3457,11 +3457,11 @@
           {
             "race": "WHITE",
             "total": 181,
-            "accepted": 127,
-            "not_accepted": 54,
+            "accepted": 128,
+            "not_accepted": 53,
             "cured": 0,
-            "accepted_pct": 70.17,
-            "not_accepted_pct": 29.83,
+            "accepted_pct": 70.72,
+            "not_accepted_pct": 29.28,
             "cured_pct": 0.0
           },
           {
@@ -3529,11 +3529,11 @@
           {
             "age_group": "26-40",
             "total": 48,
-            "accepted": 31,
-            "not_accepted": 17,
+            "accepted": 32,
+            "not_accepted": 16,
             "cured": 0,
-            "accepted_pct": 64.58,
-            "not_accepted_pct": 35.42,
+            "accepted_pct": 66.67,
+            "not_accepted_pct": 33.33,
             "cured_pct": 0.0
           },
           {
@@ -3577,11 +3577,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 105,
-            "accepted": 69,
-            "not_accepted": 36,
+            "accepted": 70,
+            "not_accepted": 35,
             "cured": 0,
-            "accepted_pct": 65.71,
-            "not_accepted_pct": 34.29,
+            "accepted_pct": 66.67,
+            "not_accepted_pct": 33.33,
             "cured_pct": 0.0
           },
           {
@@ -3762,29 +3762,29 @@
       {
         "county_desc": "CUMBERLAND",
         "returned": 3771,
-        "accepted": 2240,
-        "curable": 43,
-        "cured": 62,
+        "accepted": 2247,
+        "curable": 39,
+        "cured": 66,
         "rejected": 441,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 1491,
-            "accepted": 935,
-            "not_accepted": 556,
+            "accepted": 938,
+            "not_accepted": 553,
             "cured": 0,
-            "accepted_pct": 62.71,
-            "not_accepted_pct": 37.29,
+            "accepted_pct": 62.91,
+            "not_accepted_pct": 37.09,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 1293,
-            "accepted": 764,
-            "not_accepted": 529,
+            "accepted": 767,
+            "not_accepted": 526,
             "cured": 0,
-            "accepted_pct": 59.09,
-            "not_accepted_pct": 40.91,
+            "accepted_pct": 59.32,
+            "not_accepted_pct": 40.68,
             "cured_pct": 0.0
           },
           {
@@ -3810,11 +3810,11 @@
           {
             "race": "ASIAN",
             "total": 83,
-            "accepted": 50,
-            "not_accepted": 33,
+            "accepted": 51,
+            "not_accepted": 32,
             "cured": 0,
-            "accepted_pct": 60.24,
-            "not_accepted_pct": 39.76,
+            "accepted_pct": 61.45,
+            "not_accepted_pct": 38.55,
             "cured_pct": 0.0
           },
           {
@@ -3852,11 +3852,11 @@
           {
             "age_group": "18-25",
             "total": 447,
-            "accepted": 219,
-            "not_accepted": 228,
+            "accepted": 221,
+            "not_accepted": 226,
             "cured": 0,
-            "accepted_pct": 48.99,
-            "not_accepted_pct": 51.01,
+            "accepted_pct": 49.44,
+            "not_accepted_pct": 50.56,
             "cured_pct": 0.0
           },
           {
@@ -3872,26 +3872,26 @@
           {
             "age_group": "41-65",
             "total": 1210,
-            "accepted": 702,
-            "not_accepted": 508,
+            "accepted": 705,
+            "not_accepted": 505,
             "cured": 0,
-            "accepted_pct": 58.02,
-            "not_accepted_pct": 41.98,
+            "accepted_pct": 58.26,
+            "not_accepted_pct": 41.74,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 1114,
-            "accepted": 730,
-            "not_accepted": 384,
+            "accepted": 732,
+            "not_accepted": 382,
             "cured": 0,
-            "accepted_pct": 65.53,
-            "not_accepted_pct": 34.47,
+            "accepted_pct": 65.71,
+            "not_accepted_pct": 34.29,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 35,
+          "PENDING CURE": 31,
           "PENDING": 8
         },
         "ethnicity": {
@@ -3903,21 +3903,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 1985,
-            "accepted": 1238,
-            "not_accepted": 747,
+            "accepted": 1243,
+            "not_accepted": 742,
             "cured": 0,
-            "accepted_pct": 62.37,
-            "not_accepted_pct": 37.63,
+            "accepted_pct": 62.62,
+            "not_accepted_pct": 37.38,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 1603,
-            "accepted": 911,
-            "not_accepted": 692,
+            "accepted": 913,
+            "not_accepted": 690,
             "cured": 0,
-            "accepted_pct": 56.83,
-            "not_accepted_pct": 43.17,
+            "accepted_pct": 56.96,
+            "not_accepted_pct": 43.04,
             "cured_pct": 0.0
           },
           {
@@ -5028,7 +5028,7 @@
       {
         "county_desc": "FORSYTH",
         "returned": 7559,
-        "accepted": 4634,
+        "accepted": 4635,
         "curable": 170,
         "cured": 0,
         "rejected": 1141,
@@ -5036,11 +5036,11 @@
           {
             "race": "WHITE",
             "total": 5317,
-            "accepted": 3388,
-            "not_accepted": 1929,
+            "accepted": 3389,
+            "not_accepted": 1928,
             "cured": 0,
-            "accepted_pct": 63.72,
-            "not_accepted_pct": 36.28,
+            "accepted_pct": 63.74,
+            "not_accepted_pct": 36.26,
             "cured_pct": 0.0
           },
           {
@@ -5108,11 +5108,11 @@
           {
             "age_group": "18-25",
             "total": 968,
-            "accepted": 549,
-            "not_accepted": 419,
+            "accepted": 550,
+            "not_accepted": 418,
             "cured": 0,
-            "accepted_pct": 56.71,
-            "not_accepted_pct": 43.29,
+            "accepted_pct": 56.82,
+            "not_accepted_pct": 43.18,
             "cured_pct": 0.0
           },
           {
@@ -5160,11 +5160,11 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 5206,
-            "accepted": 3283,
-            "not_accepted": 1923,
+            "accepted": 3284,
+            "not_accepted": 1922,
             "cured": 0,
-            "accepted_pct": 63.06,
-            "not_accepted_pct": 36.94,
+            "accepted_pct": 63.08,
+            "not_accepted_pct": 36.92,
             "cured_pct": 0.0
           },
           {
@@ -5193,9 +5193,9 @@
         "county_desc": "FRANKLIN",
         "returned": 1077,
         "accepted": 702,
-        "curable": 8,
+        "curable": 7,
         "cured": 34,
-        "rejected": 165,
+        "rejected": 166,
         "race_pct": [
           {
             "race": "WHITE",
@@ -5302,8 +5302,7 @@
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 6,
-          "PENDING": 1,
-          "PENDING CURE": 1
+          "PENDING": 1
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 603,
@@ -5349,7 +5348,7 @@
         "accepted": 1780,
         "curable": 21,
         "cured": 8,
-        "rejected": 333,
+        "rejected": 335,
         "race_pct": [
           {
             "race": "WHITE",
@@ -6084,19 +6083,19 @@
       {
         "county_desc": "GUILFORD",
         "returned": 7377,
-        "accepted": 4625,
-        "curable": 129,
-        "cured": 93,
+        "accepted": 4627,
+        "curable": 127,
+        "cured": 95,
         "rejected": 1086,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 4627,
-            "accepted": 3027,
-            "not_accepted": 1600,
+            "accepted": 3029,
+            "not_accepted": 1598,
             "cured": 0,
-            "accepted_pct": 65.42,
-            "not_accepted_pct": 34.58,
+            "accepted_pct": 65.46,
+            "not_accepted_pct": 34.54,
             "cured_pct": 0.0
           },
           {
@@ -6164,11 +6163,11 @@
           {
             "age_group": "18-25",
             "total": 1037,
-            "accepted": 585,
-            "not_accepted": 452,
+            "accepted": 587,
+            "not_accepted": 450,
             "cured": 0,
-            "accepted_pct": 56.41,
-            "not_accepted_pct": 43.59,
+            "accepted_pct": 56.61,
+            "not_accepted_pct": 43.39,
             "cured_pct": 0.0
           },
           {
@@ -6203,7 +6202,7 @@
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 60,
+          "PENDING CURE": 58,
           "WITNESS INFO INCOMPLETE": 66,
           "PENDING": 3
         },
@@ -6216,21 +6215,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 5040,
-            "accepted": 3213,
-            "not_accepted": 1827,
+            "accepted": 3214,
+            "not_accepted": 1826,
             "cured": 0,
-            "accepted_pct": 63.75,
-            "not_accepted_pct": 36.25,
+            "accepted_pct": 63.77,
+            "not_accepted_pct": 36.23,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 2159,
-            "accepted": 1316,
-            "not_accepted": 843,
+            "accepted": 1317,
+            "not_accepted": 842,
             "cured": 0,
-            "accepted_pct": 60.95,
-            "not_accepted_pct": 39.05,
+            "accepted_pct": 61.0,
+            "not_accepted_pct": 39.0,
             "cured_pct": 0.0
           },
           {
@@ -7972,7 +7971,7 @@
         "accepted": 468,
         "curable": 4,
         "cured": 5,
-        "rejected": 101,
+        "rejected": 102,
         "race_pct": [
           {
             "race": "WHITE",
@@ -9036,39 +9035,39 @@
       {
         "county_desc": "MECKLENBURG",
         "returned": 21987,
-        "accepted": 13417,
-        "curable": 76,
-        "cured": 238,
-        "rejected": 3939,
+        "accepted": 13426,
+        "curable": 70,
+        "cured": 244,
+        "rejected": 3943,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 14113,
-            "accepted": 8838,
-            "not_accepted": 5275,
+            "accepted": 8843,
+            "not_accepted": 5270,
             "cured": 0,
-            "accepted_pct": 62.62,
-            "not_accepted_pct": 37.38,
+            "accepted_pct": 62.66,
+            "not_accepted_pct": 37.34,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 3849,
-            "accepted": 2124,
-            "not_accepted": 1725,
+            "accepted": 2126,
+            "not_accepted": 1723,
             "cured": 0,
-            "accepted_pct": 55.18,
-            "not_accepted_pct": 44.82,
+            "accepted_pct": 55.24,
+            "not_accepted_pct": 44.76,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 1963,
-            "accepted": 1287,
-            "not_accepted": 676,
+            "accepted": 1289,
+            "not_accepted": 674,
             "cured": 0,
-            "accepted_pct": 65.56,
-            "not_accepted_pct": 34.44,
+            "accepted_pct": 65.66,
+            "not_accepted_pct": 34.34,
             "cured_pct": 0.0
           },
           {
@@ -9116,46 +9115,46 @@
           {
             "age_group": "18-25",
             "total": 4153,
-            "accepted": 2277,
-            "not_accepted": 1876,
+            "accepted": 2280,
+            "not_accepted": 1873,
             "cured": 0,
-            "accepted_pct": 54.83,
-            "not_accepted_pct": 45.17,
+            "accepted_pct": 54.9,
+            "not_accepted_pct": 45.1,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 4058,
-            "accepted": 2331,
-            "not_accepted": 1727,
+            "accepted": 2333,
+            "not_accepted": 1725,
             "cured": 0,
-            "accepted_pct": 57.44,
-            "not_accepted_pct": 42.56,
+            "accepted_pct": 57.49,
+            "not_accepted_pct": 42.51,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
             "total": 5758,
-            "accepted": 3611,
-            "not_accepted": 2147,
+            "accepted": 3614,
+            "not_accepted": 2144,
             "cured": 0,
-            "accepted_pct": 62.71,
-            "not_accepted_pct": 37.29,
+            "accepted_pct": 62.76,
+            "not_accepted_pct": 37.24,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 8018,
-            "accepted": 5198,
-            "not_accepted": 2820,
+            "accepted": 5199,
+            "not_accepted": 2819,
             "cured": 0,
-            "accepted_pct": 64.83,
-            "not_accepted_pct": 35.17,
+            "accepted_pct": 64.84,
+            "not_accepted_pct": 35.16,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 74,
+          "PENDING CURE": 68,
           "PENDING": 2
         },
         "ethnicity": {
@@ -9167,21 +9166,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 14409,
-            "accepted": 8923,
-            "not_accepted": 5486,
+            "accepted": 8927,
+            "not_accepted": 5482,
             "cured": 0,
-            "accepted_pct": 61.93,
-            "not_accepted_pct": 38.07,
+            "accepted_pct": 61.95,
+            "not_accepted_pct": 38.05,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 6744,
-            "accepted": 4036,
-            "not_accepted": 2708,
+            "accepted": 4041,
+            "not_accepted": 2703,
             "cured": 0,
-            "accepted_pct": 59.85,
-            "not_accepted_pct": 40.15,
+            "accepted_pct": 59.92,
+            "not_accepted_pct": 40.08,
             "cured_pct": 0.0
           },
           {
@@ -9464,19 +9463,19 @@
       {
         "county_desc": "MOORE",
         "returned": 2326,
-        "accepted": 1620,
-        "curable": 45,
-        "cured": 26,
-        "rejected": 261,
+        "accepted": 1624,
+        "curable": 43,
+        "cured": 28,
+        "rejected": 264,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 1810,
-            "accepted": 1268,
-            "not_accepted": 542,
+            "accepted": 1272,
+            "not_accepted": 538,
             "cured": 0,
-            "accepted_pct": 70.06,
-            "not_accepted_pct": 29.94,
+            "accepted_pct": 70.28,
+            "not_accepted_pct": 29.72,
             "cured_pct": 0.0
           },
           {
@@ -9554,11 +9553,11 @@
           {
             "age_group": "26-40",
             "total": 332,
-            "accepted": 225,
-            "not_accepted": 107,
+            "accepted": 227,
+            "not_accepted": 105,
             "cured": 0,
-            "accepted_pct": 67.77,
-            "not_accepted_pct": 32.23,
+            "accepted_pct": 68.37,
+            "not_accepted_pct": 31.63,
             "cured_pct": 0.0
           },
           {
@@ -9574,17 +9573,17 @@
           {
             "age_group": "66+",
             "total": 1157,
-            "accepted": 815,
-            "not_accepted": 342,
+            "accepted": 817,
+            "not_accepted": 340,
             "cured": 0,
-            "accepted_pct": 70.44,
-            "not_accepted_pct": 29.56,
+            "accepted_pct": 70.61,
+            "not_accepted_pct": 29.39,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 35,
-          "PENDING CURE": 9,
+          "PENDING CURE": 7,
           "ASSISTANT INFO INCOMPLETE": 1
         },
         "ethnicity": {
@@ -9596,11 +9595,11 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 1514,
-            "accepted": 1069,
-            "not_accepted": 445,
+            "accepted": 1073,
+            "not_accepted": 441,
             "cured": 0,
-            "accepted_pct": 70.61,
-            "not_accepted_pct": 29.39,
+            "accepted_pct": 70.87,
+            "not_accepted_pct": 29.13,
             "cured_pct": 0.0
           },
           {
@@ -9800,39 +9799,39 @@
       {
         "county_desc": "NEW HANOVER",
         "returned": 4996,
-        "accepted": 3141,
-        "curable": 131,
-        "cured": 69,
+        "accepted": 3149,
+        "curable": 124,
+        "cured": 77,
         "rejected": 667,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 4056,
-            "accepted": 2561,
-            "not_accepted": 1495,
+            "accepted": 2566,
+            "not_accepted": 1490,
             "cured": 0,
-            "accepted_pct": 63.14,
-            "not_accepted_pct": 36.86,
+            "accepted_pct": 63.26,
+            "not_accepted_pct": 36.74,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 519,
-            "accepted": 341,
-            "not_accepted": 178,
+            "accepted": 340,
+            "not_accepted": 179,
             "cured": 0,
-            "accepted_pct": 65.7,
-            "not_accepted_pct": 34.3,
+            "accepted_pct": 65.51,
+            "not_accepted_pct": 34.49,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 247,
-            "accepted": 141,
-            "not_accepted": 106,
+            "accepted": 145,
+            "not_accepted": 102,
             "cured": 0,
-            "accepted_pct": 57.09,
-            "not_accepted_pct": 42.91,
+            "accepted_pct": 58.7,
+            "not_accepted_pct": 41.3,
             "cured_pct": 0.0
           },
           {
@@ -9880,11 +9879,11 @@
           {
             "age_group": "18-25",
             "total": 674,
-            "accepted": 357,
-            "not_accepted": 317,
+            "accepted": 358,
+            "not_accepted": 316,
             "cured": 0,
-            "accepted_pct": 52.97,
-            "not_accepted_pct": 47.03,
+            "accepted_pct": 53.12,
+            "not_accepted_pct": 46.88,
             "cured_pct": 0.0
           },
           {
@@ -9900,28 +9899,28 @@
           {
             "age_group": "41-65",
             "total": 1303,
-            "accepted": 816,
-            "not_accepted": 487,
+            "accepted": 817,
+            "not_accepted": 486,
             "cured": 0,
-            "accepted_pct": 62.62,
-            "not_accepted_pct": 37.38,
+            "accepted_pct": 62.7,
+            "not_accepted_pct": 37.3,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 2311,
-            "accepted": 1521,
-            "not_accepted": 790,
+            "accepted": 1527,
+            "not_accepted": 784,
             "cured": 0,
-            "accepted_pct": 65.82,
-            "not_accepted_pct": 34.18,
+            "accepted_pct": 66.08,
+            "not_accepted_pct": 33.92,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 50,
+          "PENDING CURE": 42,
           "WITNESS INFO INCOMPLETE": 73,
-          "PENDING": 8
+          "PENDING": 9
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 2989,
@@ -9932,21 +9931,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 2989,
-            "accepted": 1932,
-            "not_accepted": 1057,
+            "accepted": 1938,
+            "not_accepted": 1051,
             "cured": 0,
-            "accepted_pct": 64.64,
-            "not_accepted_pct": 35.36,
+            "accepted_pct": 64.84,
+            "not_accepted_pct": 35.16,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 1939,
-            "accepted": 1171,
-            "not_accepted": 768,
+            "accepted": 1173,
+            "not_accepted": 766,
             "cured": 0,
-            "accepted_pct": 60.39,
-            "not_accepted_pct": 39.61,
+            "accepted_pct": 60.5,
+            "not_accepted_pct": 39.5,
             "cured_pct": 0.0
           },
           {
@@ -11182,9 +11181,9 @@
       {
         "county_desc": "PITT",
         "returned": 1460,
-        "accepted": 867,
-        "curable": 32,
-        "cured": 15,
+        "accepted": 868,
+        "curable": 31,
+        "cured": 16,
         "rejected": 186,
         "race_pct": [
           {
@@ -11200,11 +11199,11 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 375,
-            "accepted": 182,
-            "not_accepted": 193,
+            "accepted": 183,
+            "not_accepted": 192,
             "cured": 0,
-            "accepted_pct": 48.53,
-            "not_accepted_pct": 51.47,
+            "accepted_pct": 48.8,
+            "not_accepted_pct": 51.2,
             "cured_pct": 0.0
           },
           {
@@ -11282,11 +11281,11 @@
           {
             "age_group": "41-65",
             "total": 419,
-            "accepted": 260,
-            "not_accepted": 159,
+            "accepted": 261,
+            "not_accepted": 158,
             "cured": 0,
-            "accepted_pct": 62.05,
-            "not_accepted_pct": 37.95,
+            "accepted_pct": 62.29,
+            "not_accepted_pct": 37.71,
             "cured_pct": 0.0
           },
           {
@@ -11302,7 +11301,7 @@
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 15,
-          "PENDING CURE": 16,
+          "PENDING CURE": 15,
           "PHOTO ID CURABLE": 1
         },
         "ethnicity": {
@@ -11314,11 +11313,11 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 1022,
-            "accepted": 605,
-            "not_accepted": 417,
+            "accepted": 606,
+            "not_accepted": 416,
             "cured": 0,
-            "accepted_pct": 59.2,
-            "not_accepted_pct": 40.8,
+            "accepted_pct": 59.3,
+            "not_accepted_pct": 40.7,
             "cured_pct": 0.0
           },
           {
@@ -11792,8 +11791,8 @@
       {
         "county_desc": "ROBESON",
         "returned": 462,
-        "accepted": 242,
-        "curable": 9,
+        "accepted": 243,
+        "curable": 10,
         "cured": 0,
         "rejected": 70,
         "race_pct": [
@@ -11840,11 +11839,11 @@
           {
             "race": "OTHER",
             "total": 33,
-            "accepted": 12,
-            "not_accepted": 21,
+            "accepted": 13,
+            "not_accepted": 20,
             "cured": 0,
-            "accepted_pct": 36.36,
-            "not_accepted_pct": 63.64,
+            "accepted_pct": 39.39,
+            "not_accepted_pct": 60.61,
             "cured_pct": 0.0
           },
           {
@@ -11882,11 +11881,11 @@
           {
             "age_group": "26-40",
             "total": 85,
-            "accepted": 35,
-            "not_accepted": 50,
+            "accepted": 36,
+            "not_accepted": 49,
             "cured": 0,
-            "accepted_pct": 41.18,
-            "not_accepted_pct": 58.82,
+            "accepted_pct": 42.35,
+            "not_accepted_pct": 57.65,
             "cured_pct": 0.0
           },
           {
@@ -11911,7 +11910,8 @@
           }
         ],
         "curable_categories": {
-          "WITNESS INFO INCOMPLETE": 9
+          "WITNESS INFO INCOMPLETE": 9,
+          "PENDING CURE": 1
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 347,
@@ -11942,11 +11942,11 @@
           {
             "race": "HISPANIC OR LATINO",
             "total": 27,
-            "accepted": 12,
-            "not_accepted": 15,
+            "accepted": 13,
+            "not_accepted": 14,
             "cured": 0,
-            "accepted_pct": 44.44,
-            "not_accepted_pct": 55.56,
+            "accepted_pct": 48.15,
+            "not_accepted_pct": 51.85,
             "cured_pct": 0.0
           }
         ]
@@ -12114,7 +12114,7 @@
       {
         "county_desc": "ROWAN",
         "returned": 1506,
-        "accepted": 964,
+        "accepted": 965,
         "curable": 23,
         "cured": 15,
         "rejected": 175,
@@ -12122,11 +12122,11 @@
           {
             "race": "WHITE",
             "total": 1064,
-            "accepted": 700,
-            "not_accepted": 364,
+            "accepted": 701,
+            "not_accepted": 363,
             "cured": 0,
-            "accepted_pct": 65.79,
-            "not_accepted_pct": 34.21,
+            "accepted_pct": 65.88,
+            "not_accepted_pct": 34.12,
             "cured_pct": 0.0
           },
           {
@@ -12194,11 +12194,11 @@
           {
             "age_group": "18-25",
             "total": 132,
-            "accepted": 64,
-            "not_accepted": 68,
+            "accepted": 65,
+            "not_accepted": 67,
             "cured": 0,
-            "accepted_pct": 48.48,
-            "not_accepted_pct": 51.52,
+            "accepted_pct": 49.24,
+            "not_accepted_pct": 50.76,
             "cured_pct": 0.0
           },
           {
@@ -12256,11 +12256,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 482,
-            "accepted": 290,
-            "not_accepted": 192,
+            "accepted": 291,
+            "not_accepted": 191,
             "cured": 0,
-            "accepted_pct": 60.17,
-            "not_accepted_pct": 39.83,
+            "accepted_pct": 60.37,
+            "not_accepted_pct": 39.63,
             "cured_pct": 0.0
           },
           {
@@ -13053,7 +13053,7 @@
         "accepted": 552,
         "curable": 12,
         "cured": 2,
-        "rejected": 99,
+        "rejected": 100,
         "race_pct": [
           {
             "race": "WHITE",
@@ -13615,7 +13615,7 @@
       {
         "county_desc": "UNION",
         "returned": 3550,
-        "accepted": 2214,
+        "accepted": 2215,
         "curable": 0,
         "cured": 1,
         "rejected": 536,
@@ -13633,11 +13633,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 770,
-            "accepted": 471,
-            "not_accepted": 299,
+            "accepted": 472,
+            "not_accepted": 298,
             "cured": 0,
-            "accepted_pct": 61.17,
-            "not_accepted_pct": 38.83,
+            "accepted_pct": 61.3,
+            "not_accepted_pct": 38.7,
             "cured_pct": 0.0
           },
           {
@@ -13705,11 +13705,11 @@
           {
             "age_group": "18-25",
             "total": 879,
-            "accepted": 460,
-            "not_accepted": 419,
+            "accepted": 461,
+            "not_accepted": 418,
             "cured": 0,
-            "accepted_pct": 52.33,
-            "not_accepted_pct": 47.67,
+            "accepted_pct": 52.45,
+            "not_accepted_pct": 47.55,
             "cured_pct": 0.0
           },
           {
@@ -13763,11 +13763,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 1245,
-            "accepted": 771,
-            "not_accepted": 474,
+            "accepted": 772,
+            "not_accepted": 473,
             "cured": 0,
-            "accepted_pct": 61.93,
-            "not_accepted_pct": 38.07,
+            "accepted_pct": 62.01,
+            "not_accepted_pct": 37.99,
             "cured_pct": 0.0
           },
           {
@@ -13938,49 +13938,49 @@
       {
         "county_desc": "WAKE",
         "returned": 29217,
-        "accepted": 19356,
-        "curable": 435,
-        "cured": 372,
-        "rejected": 4254,
+        "accepted": 19365,
+        "curable": 426,
+        "cured": 381,
+        "rejected": 4257,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 19850,
-            "accepted": 13342,
-            "not_accepted": 6508,
+            "accepted": 13348,
+            "not_accepted": 6502,
             "cured": 0,
-            "accepted_pct": 67.21,
-            "not_accepted_pct": 32.79,
+            "accepted_pct": 67.24,
+            "not_accepted_pct": 32.76,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 2837,
-            "accepted": 1947,
-            "not_accepted": 890,
+            "accepted": 1948,
+            "not_accepted": 889,
             "cured": 0,
-            "accepted_pct": 68.63,
-            "not_accepted_pct": 31.37,
+            "accepted_pct": 68.66,
+            "not_accepted_pct": 31.34,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 2808,
-            "accepted": 1663,
-            "not_accepted": 1145,
+            "accepted": 1664,
+            "not_accepted": 1144,
             "cured": 0,
-            "accepted_pct": 59.22,
-            "not_accepted_pct": 40.78,
+            "accepted_pct": 59.26,
+            "not_accepted_pct": 40.74,
             "cured_pct": 0.0
           },
           {
             "race": "ASIAN",
             "total": 2010,
-            "accepted": 1318,
-            "not_accepted": 692,
+            "accepted": 1319,
+            "not_accepted": 691,
             "cured": 0,
-            "accepted_pct": 65.57,
-            "not_accepted_pct": 34.43,
+            "accepted_pct": 65.62,
+            "not_accepted_pct": 34.38,
             "cured_pct": 0.0
           },
           {
@@ -14028,48 +14028,48 @@
           {
             "age_group": "18-25",
             "total": 4959,
-            "accepted": 2849,
-            "not_accepted": 2110,
+            "accepted": 2853,
+            "not_accepted": 2106,
             "cured": 0,
-            "accepted_pct": 57.45,
-            "not_accepted_pct": 42.55,
+            "accepted_pct": 57.53,
+            "not_accepted_pct": 42.47,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 5357,
-            "accepted": 3341,
-            "not_accepted": 2016,
+            "accepted": 3343,
+            "not_accepted": 2014,
             "cured": 0,
-            "accepted_pct": 62.37,
-            "not_accepted_pct": 37.63,
+            "accepted_pct": 62.4,
+            "not_accepted_pct": 37.6,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
             "total": 8789,
-            "accepted": 5948,
-            "not_accepted": 2841,
+            "accepted": 5949,
+            "not_accepted": 2840,
             "cured": 0,
-            "accepted_pct": 67.68,
-            "not_accepted_pct": 32.32,
+            "accepted_pct": 67.69,
+            "not_accepted_pct": 32.31,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
             "total": 10112,
-            "accepted": 7218,
-            "not_accepted": 2894,
+            "accepted": 7220,
+            "not_accepted": 2892,
             "cured": 0,
-            "accepted_pct": 71.38,
-            "not_accepted_pct": 28.62,
+            "accepted_pct": 71.4,
+            "not_accepted_pct": 28.6,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 142,
+          "PENDING CURE": 135,
           "WITNESS INFO INCOMPLETE": 281,
-          "PENDING": 12
+          "PENDING": 10
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 18766,
@@ -14080,21 +14080,21 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 18766,
-            "accepted": 12627,
-            "not_accepted": 6139,
+            "accepted": 12634,
+            "not_accepted": 6132,
             "cured": 0,
-            "accepted_pct": 67.29,
-            "not_accepted_pct": 32.71,
+            "accepted_pct": 67.32,
+            "not_accepted_pct": 32.68,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 9524,
-            "accepted": 6132,
-            "not_accepted": 3392,
+            "accepted": 6134,
+            "not_accepted": 3390,
             "cured": 0,
-            "accepted_pct": 64.38,
-            "not_accepted_pct": 35.62,
+            "accepted_pct": 64.41,
+            "not_accepted_pct": 35.59,
             "cured_pct": 0.0
           },
           {
@@ -14534,7 +14534,7 @@
         "accepted": 621,
         "curable": 23,
         "cured": 8,
-        "rejected": 95,
+        "rejected": 96,
         "race_pct": [
           {
             "race": "WHITE",
@@ -14846,9 +14846,9 @@
       {
         "county_desc": "WILSON",
         "returned": 721,
-        "accepted": 471,
-        "curable": 2,
-        "cured": 8,
+        "accepted": 473,
+        "curable": 1,
+        "cured": 9,
         "rejected": 78,
         "race_pct": [
           {
@@ -14864,11 +14864,11 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 233,
-            "accepted": 160,
-            "not_accepted": 73,
+            "accepted": 162,
+            "not_accepted": 71,
             "cured": 0,
-            "accepted_pct": 68.67,
-            "not_accepted_pct": 31.33,
+            "accepted_pct": 69.53,
+            "not_accepted_pct": 30.47,
             "cured_pct": 0.0
           },
           {
@@ -14946,11 +14946,11 @@
           {
             "age_group": "41-65",
             "total": 183,
-            "accepted": 117,
-            "not_accepted": 66,
+            "accepted": 119,
+            "not_accepted": 64,
             "cured": 0,
-            "accepted_pct": 63.93,
-            "not_accepted_pct": 36.07,
+            "accepted_pct": 65.03,
+            "not_accepted_pct": 34.97,
             "cured_pct": 0.0
           },
           {
@@ -14965,7 +14965,7 @@
           }
         ],
         "curable_categories": {
-          "PENDING CURE": 2
+          "PENDING CURE": 1
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 448,
@@ -14986,11 +14986,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 256,
-            "accepted": 150,
-            "not_accepted": 106,
+            "accepted": 152,
+            "not_accepted": 104,
             "cured": 0,
-            "accepted_pct": 58.59,
-            "not_accepted_pct": 41.41,
+            "accepted_pct": 59.38,
+            "not_accepted_pct": 40.62,
             "cured_pct": 0.0
           },
           {
@@ -15008,19 +15008,19 @@
       {
         "county_desc": "YADKIN",
         "returned": 353,
-        "accepted": 230,
-        "curable": 6,
-        "cured": 5,
+        "accepted": 231,
+        "curable": 5,
+        "cured": 6,
         "rejected": 43,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 287,
-            "accepted": 191,
-            "not_accepted": 96,
+            "accepted": 192,
+            "not_accepted": 95,
             "cured": 0,
-            "accepted_pct": 66.55,
-            "not_accepted_pct": 33.45,
+            "accepted_pct": 66.9,
+            "not_accepted_pct": 33.1,
             "cured_pct": 0.0
           },
           {
@@ -15098,17 +15098,17 @@
           {
             "age_group": "66+",
             "total": 165,
-            "accepted": 121,
-            "not_accepted": 44,
+            "accepted": 122,
+            "not_accepted": 43,
             "cured": 0,
-            "accepted_pct": 73.33,
-            "not_accepted_pct": 26.67,
+            "accepted_pct": 73.94,
+            "not_accepted_pct": 26.06,
             "cured_pct": 0.0
           }
         ],
         "curable_categories": {
           "WITNESS INFO INCOMPLETE": 4,
-          "PENDING CURE": 2
+          "PENDING CURE": 1
         },
         "ethnicity": {
           "NOT HISPANIC OR NOT LATINO": 230,
@@ -15119,11 +15119,11 @@
           {
             "race": "NOT HISPANIC OR NOT LATINO",
             "total": 230,
-            "accepted": 156,
-            "not_accepted": 74,
+            "accepted": 157,
+            "not_accepted": 73,
             "cured": 0,
-            "accepted_pct": 67.83,
-            "not_accepted_pct": 32.17,
+            "accepted_pct": 68.26,
+            "not_accepted_pct": 31.74,
             "cured_pct": 0.0
           },
           {
@@ -15151,7 +15151,7 @@
       {
         "county_desc": "YANCEY",
         "returned": 320,
-        "accepted": 213,
+        "accepted": 214,
         "curable": 0,
         "cured": 0,
         "rejected": 41,
@@ -15169,11 +15169,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 27,
-            "accepted": 22,
-            "not_accepted": 5,
+            "accepted": 23,
+            "not_accepted": 4,
             "cured": 0,
-            "accepted_pct": 81.48,
-            "not_accepted_pct": 18.52,
+            "accepted_pct": 85.19,
+            "not_accepted_pct": 14.81,
             "cured_pct": 0.0
           },
           {
@@ -15211,11 +15211,11 @@
           {
             "age_group": "18-25",
             "total": 33,
-            "accepted": 25,
-            "not_accepted": 8,
+            "accepted": 26,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 75.76,
-            "not_accepted_pct": 24.24,
+            "accepted_pct": 78.79,
+            "not_accepted_pct": 21.21,
             "cured_pct": 0.0
           },
           {
@@ -15269,11 +15269,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 127,
-            "accepted": 86,
-            "not_accepted": 41,
+            "accepted": 87,
+            "not_accepted": 40,
             "cured": 0,
-            "accepted_pct": 67.72,
-            "not_accepted_pct": 32.28,
+            "accepted_pct": 68.5,
+            "not_accepted_pct": 31.5,
             "cured_pct": 0.0
           },
           {
@@ -15293,53 +15293,53 @@
       "race_pct": [
         {
           "race": "WHITE",
-          "total": 117971,
-          "accepted": 76497,
-          "not_accepted": 40428,
-          "cured": 1046,
-          "accepted_pct": 64.84,
-          "not_accepted_pct": 34.27,
-          "cured_pct": 0.89
+          "total": 117995,
+          "accepted": 76531,
+          "not_accepted": 40394,
+          "cured": 1070,
+          "accepted_pct": 64.86,
+          "not_accepted_pct": 34.23,
+          "cured_pct": 0.91
         },
         {
           "race": "BLACK OR AFRICAN AMERICAN",
-          "total": 21565,
-          "accepted": 12564,
-          "not_accepted": 8728,
-          "cured": 273,
-          "accepted_pct": 58.26,
-          "not_accepted_pct": 40.47,
-          "cured_pct": 1.27
+          "total": 21575,
+          "accepted": 12578,
+          "not_accepted": 8714,
+          "cured": 283,
+          "accepted_pct": 58.3,
+          "not_accepted_pct": 40.39,
+          "cured_pct": 1.31
         },
         {
           "race": "UNDESIGNATED",
-          "total": 17954,
-          "accepted": 11596,
-          "not_accepted": 6183,
-          "cured": 175,
-          "accepted_pct": 64.59,
-          "not_accepted_pct": 34.44,
-          "cured_pct": 0.97
+          "total": 17957,
+          "accepted": 11601,
+          "not_accepted": 6178,
+          "cured": 178,
+          "accepted_pct": 64.6,
+          "not_accepted_pct": 34.4,
+          "cured_pct": 0.99
         },
         {
           "race": "OTHER",
-          "total": 6135,
-          "accepted": 3533,
-          "not_accepted": 2544,
-          "cured": 58,
-          "accepted_pct": 57.59,
-          "not_accepted_pct": 41.47,
-          "cured_pct": 0.95
+          "total": 6137,
+          "accepted": 3536,
+          "not_accepted": 2541,
+          "cured": 60,
+          "accepted_pct": 57.62,
+          "not_accepted_pct": 41.4,
+          "cured_pct": 0.98
         },
         {
           "race": "ASIAN",
-          "total": 5332,
-          "accepted": 3332,
-          "not_accepted": 1943,
-          "cured": 57,
-          "accepted_pct": 62.49,
-          "not_accepted_pct": 36.44,
-          "cured_pct": 1.07
+          "total": 5334,
+          "accepted": 3334,
+          "not_accepted": 1941,
+          "cured": 59,
+          "accepted_pct": 62.5,
+          "not_accepted_pct": 36.39,
+          "cured_pct": 1.11
         },
         {
           "race": "TWO OR MORE RACES",
@@ -15375,43 +15375,43 @@
       "age_pct": [
         {
           "age_group": "18-25",
-          "total": 24096,
-          "accepted": 13480,
-          "not_accepted": 10438,
-          "cured": 178,
-          "accepted_pct": 55.94,
-          "not_accepted_pct": 43.32,
-          "cured_pct": 0.74
+          "total": 24105,
+          "accepted": 13497,
+          "not_accepted": 10421,
+          "cured": 187,
+          "accepted_pct": 55.99,
+          "not_accepted_pct": 43.23,
+          "cured_pct": 0.78
         },
         {
           "age_group": "26-40",
-          "total": 27312,
-          "accepted": 16514,
-          "not_accepted": 10599,
-          "cured": 199,
-          "accepted_pct": 60.46,
-          "not_accepted_pct": 38.81,
-          "cured_pct": 0.73
+          "total": 27315,
+          "accepted": 16524,
+          "not_accepted": 10589,
+          "cured": 202,
+          "accepted_pct": 60.49,
+          "not_accepted_pct": 38.77,
+          "cured_pct": 0.74
         },
         {
           "age_group": "41-65",
-          "total": 46912,
-          "accepted": 29665,
-          "not_accepted": 16794,
-          "cured": 453,
-          "accepted_pct": 63.24,
-          "not_accepted_pct": 35.8,
-          "cured_pct": 0.97
+          "total": 46923,
+          "accepted": 29678,
+          "not_accepted": 16781,
+          "cured": 464,
+          "accepted_pct": 63.25,
+          "not_accepted_pct": 35.76,
+          "cured_pct": 0.99
         },
         {
           "age_group": "66+",
-          "total": 72020,
-          "accepted": 48717,
-          "not_accepted": 22513,
-          "cured": 790,
-          "accepted_pct": 67.64,
-          "not_accepted_pct": 31.26,
-          "cured_pct": 1.1
+          "total": 72038,
+          "accepted": 48735,
+          "not_accepted": 22495,
+          "cured": 808,
+          "accepted_pct": 67.65,
+          "not_accepted_pct": 31.23,
+          "cured_pct": 1.12
         }
       ],
       "gender": {
@@ -15429,33 +15429,33 @@
       "ethnicity_pct": [
         {
           "race": "NOT HISPANIC OR NOT LATINO",
-          "total": 105694,
-          "accepted": 68448,
-          "not_accepted": 36260,
-          "cured": 986,
-          "accepted_pct": 64.76,
-          "not_accepted_pct": 34.31,
-          "cured_pct": 0.93
+          "total": 105720,
+          "accepted": 68482,
+          "not_accepted": 36226,
+          "cured": 1012,
+          "accepted_pct": 64.78,
+          "not_accepted_pct": 34.27,
+          "cured_pct": 0.96
         },
         {
           "race": "UNDESIGNATED",
-          "total": 59652,
-          "accepted": 37020,
-          "not_accepted": 22039,
-          "cured": 593,
-          "accepted_pct": 62.06,
-          "not_accepted_pct": 36.95,
-          "cured_pct": 0.99
+          "total": 59665,
+          "accepted": 37041,
+          "not_accepted": 22018,
+          "cured": 606,
+          "accepted_pct": 62.08,
+          "not_accepted_pct": 36.9,
+          "cured_pct": 1.02
         },
         {
           "race": "HISPANIC OR LATINO",
-          "total": 4994,
-          "accepted": 2908,
-          "not_accepted": 2045,
-          "cured": 41,
-          "accepted_pct": 58.23,
-          "not_accepted_pct": 40.95,
-          "cured_pct": 0.82
+          "total": 4996,
+          "accepted": 2911,
+          "not_accepted": 2042,
+          "cured": 43,
+          "accepted_pct": 58.27,
+          "not_accepted_pct": 40.87,
+          "cured_pct": 0.86
         }
       ],
       "ethnicity": {
@@ -15465,17 +15465,17 @@
       }
     },
     "raw_status_counts": {
-      "ACCEPTED": 94931,
-      "": 33246,
+      "ACCEPTED": 94945,
+      "": 32930,
       "SPOILED-EV": 18865,
-      "ACCEPTED - EXCEPTION": 11825,
-      "SPOILED": 5070,
-      "ACCEPTED - CURED": 1620,
+      "ACCEPTED - EXCEPTION": 11828,
+      "SPOILED": 5074,
+      "ACCEPTED - CURED": 1661,
       "WITNESS INFO INCOMPLETE": 1252,
-      "PENDING CURE": 710,
-      "RETURNED AFTER DEADLINE": 657,
-      "RETURNED UNDELIVERABLE": 362,
-      "PENDING": 68,
+      "RETURNED AFTER DEADLINE": 939,
+      "PENDING CURE": 671,
+      "RETURNED UNDELIVERABLE": 374,
+      "PENDING": 67,
       "ASSISTANT INFO INCOMPLETE": 27,
       "PHOTO ID CURABLE": 10,
       "SIGNATURE DIFFERENT": 7,
@@ -15488,45 +15488,45 @@
     }
   },
   "absentee_early_voting": {
-    "total_returned": 2734944,
-    "accepted": 2728945,
+    "total_returned": 2734987,
+    "accepted": 2728918,
     "curable": 0,
     "cured": 0,
     "rejected_or_spoiled": 0,
     "pct_curable_of_returned": 0.0,
     "sdr": {
-      "total_sdr_ballots": 49245,
-      "failed_verification": 159,
+      "total_sdr_ballots": 49268,
+      "failed_verification": 214,
       "cured": 0,
-      "pct_failed_of_sdr": 0.32
+      "pct_failed_of_sdr": 0.43
     },
     "by_county": [
       {
         "county_desc": "ALAMANCE",
         "returned": 44448,
-        "accepted": 44385,
+        "accepted": 44381,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 999,
-        "sdr_failed": 24,
+        "sdr_failed": 28,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 28079,
-            "accepted": 28056,
-            "not_accepted": 23,
+            "accepted": 28055,
+            "not_accepted": 24,
             "cured": 0,
-            "accepted_pct": 99.92,
-            "not_accepted_pct": 0.08,
+            "accepted_pct": 99.91,
+            "not_accepted_pct": 0.09,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 10853,
-            "accepted": 10822,
-            "not_accepted": 31,
+            "accepted": 10821,
+            "not_accepted": 32,
             "cured": 0,
             "accepted_pct": 99.71,
             "not_accepted_pct": 0.29,
@@ -15545,11 +15545,11 @@
           {
             "race": "OTHER",
             "total": 2030,
-            "accepted": 2027,
-            "not_accepted": 3,
+            "accepted": 2025,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.85,
-            "not_accepted_pct": 0.15,
+            "accepted_pct": 99.75,
+            "not_accepted_pct": 0.25,
             "cured_pct": 0.0
           },
           {
@@ -15597,11 +15597,11 @@
           {
             "age_group": "18-25",
             "total": 3540,
-            "accepted": 3523,
-            "not_accepted": 17,
+            "accepted": 3520,
+            "not_accepted": 20,
             "cured": 0,
-            "accepted_pct": 99.52,
-            "not_accepted_pct": 0.48,
+            "accepted_pct": 99.44,
+            "not_accepted_pct": 0.56,
             "cured_pct": 0.0
           },
           {
@@ -15627,11 +15627,11 @@
           {
             "age_group": "66+",
             "total": 16176,
-            "accepted": 16161,
-            "not_accepted": 15,
+            "accepted": 16160,
+            "not_accepted": 16,
             "cured": 0,
-            "accepted_pct": 99.91,
-            "not_accepted_pct": 0.09,
+            "accepted_pct": 99.9,
+            "not_accepted_pct": 0.1,
             "cured_pct": 0.0
           }
         ]
@@ -16004,12 +16004,12 @@
       {
         "county_desc": "ASHE",
         "returned": 6735,
-        "accepted": 6731,
+        "accepted": 6730,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 54,
-        "sdr_failed": 0,
+        "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -16025,11 +16025,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 366,
-            "accepted": 366,
-            "not_accepted": 0,
+            "accepted": 365,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.73,
+            "not_accepted_pct": 0.27,
             "cured_pct": 0.0
           },
           {
@@ -16117,11 +16117,11 @@
           {
             "age_group": "66+",
             "total": 3458,
-            "accepted": 3455,
-            "not_accepted": 3,
+            "accepted": 3454,
+            "not_accepted": 4,
             "cured": 0,
-            "accepted_pct": 99.91,
-            "not_accepted_pct": 0.09,
+            "accepted_pct": 99.88,
+            "not_accepted_pct": 0.12,
             "cured_pct": 0.0
           }
         ]
@@ -16648,12 +16648,12 @@
       },
       {
         "county_desc": "BRUNSWICK",
-        "returned": 60069,
+        "returned": 60070,
         "accepted": 60046,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 633,
+        "sdr_total": 634,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
@@ -16669,12 +16669,12 @@
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
-            "total": 3715,
+            "total": 3716,
             "accepted": 3714,
-            "not_accepted": 1,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.95,
+            "not_accepted_pct": 0.05,
             "cured_pct": 0.0
           },
           {
@@ -16771,9 +16771,9 @@
           },
           {
             "age_group": "66+",
-            "total": 37239,
+            "total": 37240,
             "accepted": 37221,
-            "not_accepted": 18,
+            "not_accepted": 19,
             "cured": 0,
             "accepted_pct": 99.95,
             "not_accepted_pct": 0.05,
@@ -16783,20 +16783,20 @@
       },
       {
         "county_desc": "BUNCOMBE",
-        "returned": 97086,
-        "accepted": 97022,
+        "returned": 97087,
+        "accepted": 97018,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 1403,
-        "sdr_failed": 10,
+        "sdr_failed": 14,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 83689,
+            "total": 83690,
             "accepted": 83646,
-            "not_accepted": 43,
+            "not_accepted": 44,
             "cured": 0,
             "accepted_pct": 99.95,
             "not_accepted_pct": 0.05,
@@ -16805,11 +16805,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 5998,
-            "accepted": 5985,
-            "not_accepted": 13,
+            "accepted": 5981,
+            "not_accepted": 17,
             "cured": 0,
-            "accepted_pct": 99.78,
-            "not_accepted_pct": 0.22,
+            "accepted_pct": 99.72,
+            "not_accepted_pct": 0.28,
             "cured_pct": 0.0
           },
           {
@@ -16887,21 +16887,21 @@
           {
             "age_group": "26-40",
             "total": 17066,
-            "accepted": 17051,
-            "not_accepted": 15,
+            "accepted": 17049,
+            "not_accepted": 17,
             "cured": 0,
-            "accepted_pct": 99.91,
-            "not_accepted_pct": 0.09,
+            "accepted_pct": 99.9,
+            "not_accepted_pct": 0.1,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
-            "total": 37881,
-            "accepted": 37864,
-            "not_accepted": 17,
+            "total": 37882,
+            "accepted": 37862,
+            "not_accepted": 20,
             "cured": 0,
-            "accepted_pct": 99.96,
-            "not_accepted_pct": 0.04,
+            "accepted_pct": 99.95,
+            "not_accepted_pct": 0.05,
             "cured_pct": 0.0
           },
           {
@@ -17189,19 +17189,19 @@
       {
         "county_desc": "CALDWELL",
         "returned": 18345,
-        "accepted": 18328,
+        "accepted": 18327,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 188,
-        "sdr_failed": 0,
+        "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 15760,
-            "accepted": 15745,
-            "not_accepted": 15,
+            "accepted": 15744,
+            "not_accepted": 16,
             "cured": 0,
             "accepted_pct": 99.9,
             "not_accepted_pct": 0.1,
@@ -17282,11 +17282,11 @@
           {
             "age_group": "18-25",
             "total": 862,
-            "accepted": 861,
-            "not_accepted": 1,
+            "accepted": 860,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.88,
-            "not_accepted_pct": 0.12,
+            "accepted_pct": 99.77,
+            "not_accepted_pct": 0.23,
             "cured_pct": 0.0
           },
           {
@@ -17719,42 +17719,42 @@
       {
         "county_desc": "CATAWBA",
         "returned": 39480,
-        "accepted": 39442,
+        "accepted": 39443,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 554,
-        "sdr_failed": 7,
+        "sdr_failed": 6,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 32396,
-            "accepted": 32369,
-            "not_accepted": 27,
+            "accepted": 32368,
+            "not_accepted": 28,
             "cured": 0,
-            "accepted_pct": 99.92,
-            "not_accepted_pct": 0.08,
+            "accepted_pct": 99.91,
+            "not_accepted_pct": 0.09,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 3165,
-            "accepted": 3163,
-            "not_accepted": 2,
+            "accepted": 3164,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 99.94,
-            "not_accepted_pct": 0.06,
+            "accepted_pct": 99.97,
+            "not_accepted_pct": 0.03,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 1869,
-            "accepted": 1864,
-            "not_accepted": 5,
+            "accepted": 1865,
+            "not_accepted": 4,
             "cured": 0,
-            "accepted_pct": 99.73,
-            "not_accepted_pct": 0.27,
+            "accepted_pct": 99.79,
+            "not_accepted_pct": 0.21,
             "cured_pct": 0.0
           },
           {
@@ -17822,8 +17822,8 @@
           {
             "age_group": "41-65",
             "total": 16043,
-            "accepted": 16033,
-            "not_accepted": 10,
+            "accepted": 16034,
+            "not_accepted": 9,
             "cured": 0,
             "accepted_pct": 99.94,
             "not_accepted_pct": 0.06,
@@ -17843,7 +17843,7 @@
       },
       {
         "county_desc": "CHATHAM",
-        "returned": 32483,
+        "returned": 32484,
         "accepted": 32477,
         "curable": 0,
         "cured": 0,
@@ -17854,8 +17854,8 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 24523,
-            "accepted": 24519,
+            "total": 24524,
+            "accepted": 24520,
             "not_accepted": 4,
             "cured": 0,
             "accepted_pct": 99.98,
@@ -17875,11 +17875,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 2981,
-            "accepted": 2980,
-            "not_accepted": 1,
+            "accepted": 2979,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.93,
+            "not_accepted_pct": 0.07,
             "cured_pct": 0.0
           },
           {
@@ -17937,11 +17937,11 @@
           {
             "age_group": "18-25",
             "total": 1818,
-            "accepted": 1818,
-            "not_accepted": 0,
+            "accepted": 1817,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.94,
+            "not_accepted_pct": 0.06,
             "cured_pct": 0.0
           },
           {
@@ -17966,8 +17966,8 @@
           },
           {
             "age_group": "66+",
-            "total": 14984,
-            "accepted": 14982,
+            "total": 14985,
+            "accepted": 14983,
             "not_accepted": 2,
             "cured": 0,
             "accepted_pct": 99.99,
@@ -18373,7 +18373,7 @@
       },
       {
         "county_desc": "CLEVELAND",
-        "returned": 20458,
+        "returned": 20459,
         "accepted": 20413,
         "curable": 0,
         "cured": 0,
@@ -18384,12 +18384,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 13698,
+            "total": 13699,
             "accepted": 13675,
-            "not_accepted": 23,
+            "not_accepted": 24,
             "cured": 0,
-            "accepted_pct": 99.83,
-            "not_accepted_pct": 0.17,
+            "accepted_pct": 99.82,
+            "not_accepted_pct": 0.18,
             "cured_pct": 0.0
           },
           {
@@ -18486,12 +18486,12 @@
           },
           {
             "age_group": "66+",
-            "total": 8926,
+            "total": 8927,
             "accepted": 8906,
-            "not_accepted": 20,
+            "not_accepted": 21,
             "cured": 0,
-            "accepted_pct": 99.78,
-            "not_accepted_pct": 0.22,
+            "accepted_pct": 99.76,
+            "not_accepted_pct": 0.24,
             "cured_pct": 0.0
           }
         ]
@@ -18736,8 +18736,8 @@
           },
           {
             "age_group": "26-40",
-            "total": 2641,
-            "accepted": 2632,
+            "total": 2642,
+            "accepted": 2633,
             "not_accepted": 9,
             "cured": 0,
             "accepted_pct": 99.66,
@@ -18756,8 +18756,8 @@
           },
           {
             "age_group": "66+",
-            "total": 13598,
-            "accepted": 13568,
+            "total": 13597,
+            "accepted": 13567,
             "not_accepted": 30,
             "cured": 0,
             "accepted_pct": 99.78,
@@ -18769,19 +18769,19 @@
       {
         "county_desc": "CUMBERLAND",
         "returned": 60013,
-        "accepted": 59956,
+        "accepted": 59953,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 1155,
-        "sdr_failed": 0,
+        "sdr_failed": 4,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 30418,
-            "accepted": 30388,
-            "not_accepted": 30,
+            "accepted": 30387,
+            "not_accepted": 31,
             "cured": 0,
             "accepted_pct": 99.9,
             "not_accepted_pct": 0.1,
@@ -18790,11 +18790,11 @@
           {
             "race": "WHITE",
             "total": 21495,
-            "accepted": 21478,
-            "not_accepted": 17,
+            "accepted": 21476,
+            "not_accepted": 19,
             "cured": 0,
-            "accepted_pct": 99.92,
-            "not_accepted_pct": 0.08,
+            "accepted_pct": 99.91,
+            "not_accepted_pct": 0.09,
             "cured_pct": 0.0
           },
           {
@@ -18862,28 +18862,28 @@
           {
             "age_group": "18-25",
             "total": 3978,
-            "accepted": 3974,
-            "not_accepted": 4,
+            "accepted": 3972,
+            "not_accepted": 6,
             "cured": 0,
-            "accepted_pct": 99.9,
-            "not_accepted_pct": 0.1,
+            "accepted_pct": 99.85,
+            "not_accepted_pct": 0.15,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 7744,
-            "accepted": 7735,
-            "not_accepted": 9,
+            "accepted": 7733,
+            "not_accepted": 11,
             "cured": 0,
-            "accepted_pct": 99.88,
-            "not_accepted_pct": 0.12,
+            "accepted_pct": 99.86,
+            "not_accepted_pct": 0.14,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
             "total": 26203,
-            "accepted": 26184,
-            "not_accepted": 19,
+            "accepted": 26185,
+            "not_accepted": 18,
             "cured": 0,
             "accepted_pct": 99.93,
             "not_accepted_pct": 0.07,
@@ -19549,42 +19549,42 @@
       {
         "county_desc": "DURHAM",
         "returned": 112999,
-        "accepted": 112802,
+        "accepted": 112787,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 3484,
-        "sdr_failed": 19,
+        "sdr_failed": 34,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 60029,
-            "accepted": 59968,
-            "not_accepted": 61,
+            "accepted": 59961,
+            "not_accepted": 68,
             "cured": 0,
-            "accepted_pct": 99.9,
-            "not_accepted_pct": 0.1,
+            "accepted_pct": 99.89,
+            "not_accepted_pct": 0.11,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 33096,
-            "accepted": 33010,
-            "not_accepted": 86,
+            "accepted": 33006,
+            "not_accepted": 90,
             "cured": 0,
-            "accepted_pct": 99.74,
-            "not_accepted_pct": 0.26,
+            "accepted_pct": 99.73,
+            "not_accepted_pct": 0.27,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 9930,
-            "accepted": 9895,
-            "not_accepted": 35,
+            "accepted": 9892,
+            "not_accepted": 38,
             "cured": 0,
-            "accepted_pct": 99.65,
-            "not_accepted_pct": 0.35,
+            "accepted_pct": 99.62,
+            "not_accepted_pct": 0.38,
             "cured_pct": 0.0
           },
           {
@@ -19600,11 +19600,11 @@
           {
             "race": "ASIAN",
             "total": 3795,
-            "accepted": 3791,
-            "not_accepted": 4,
+            "accepted": 3790,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.89,
-            "not_accepted_pct": 0.11,
+            "accepted_pct": 99.87,
+            "not_accepted_pct": 0.13,
             "cured_pct": 0.0
           },
           {
@@ -19642,28 +19642,28 @@
           {
             "age_group": "18-25",
             "total": 11110,
-            "accepted": 11082,
-            "not_accepted": 28,
+            "accepted": 11072,
+            "not_accepted": 38,
             "cured": 0,
-            "accepted_pct": 99.75,
-            "not_accepted_pct": 0.25,
+            "accepted_pct": 99.66,
+            "not_accepted_pct": 0.34,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 29744,
-            "accepted": 29696,
-            "not_accepted": 48,
+            "accepted": 29692,
+            "not_accepted": 52,
             "cured": 0,
-            "accepted_pct": 99.84,
-            "not_accepted_pct": 0.16,
+            "accepted_pct": 99.83,
+            "not_accepted_pct": 0.17,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
             "total": 40528,
-            "accepted": 40465,
-            "not_accepted": 63,
+            "accepted": 40464,
+            "not_accepted": 64,
             "cured": 0,
             "accepted_pct": 99.84,
             "not_accepted_pct": 0.16,
@@ -19808,20 +19808,20 @@
       },
       {
         "county_desc": "FORSYTH",
-        "returned": 104363,
-        "accepted": 104186,
+        "returned": 104365,
+        "accepted": 104187,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 2327,
+        "sdr_total": 2329,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 64873,
-            "accepted": 64797,
-            "not_accepted": 76,
+            "total": 64875,
+            "accepted": 64798,
+            "not_accepted": 77,
             "cured": 0,
             "accepted_pct": 99.88,
             "not_accepted_pct": 0.12,
@@ -19911,8 +19911,8 @@
           },
           {
             "age_group": "26-40",
-            "total": 16656,
-            "accepted": 16629,
+            "total": 16657,
+            "accepted": 16630,
             "not_accepted": 27,
             "cured": 0,
             "accepted_pct": 99.84,
@@ -19921,9 +19921,9 @@
           },
           {
             "age_group": "41-65",
-            "total": 40551,
+            "total": 40552,
             "accepted": 40491,
-            "not_accepted": 60,
+            "not_accepted": 61,
             "cured": 0,
             "accepted_pct": 99.85,
             "not_accepted_pct": 0.15,
@@ -20079,12 +20079,12 @@
       {
         "county_desc": "GASTON",
         "returned": 53516,
-        "accepted": 53437,
+        "accepted": 53436,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 912,
-        "sdr_failed": 1,
+        "sdr_failed": 2,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -20120,11 +20120,11 @@
           {
             "race": "OTHER",
             "total": 1753,
-            "accepted": 1753,
-            "not_accepted": 0,
+            "accepted": 1752,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.94,
+            "not_accepted_pct": 0.06,
             "cured_pct": 0.0
           },
           {
@@ -20172,11 +20172,11 @@
           {
             "age_group": "18-25",
             "total": 3082,
-            "accepted": 3076,
-            "not_accepted": 6,
+            "accepted": 3075,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 99.81,
-            "not_accepted_pct": 0.19,
+            "accepted_pct": 99.77,
+            "not_accepted_pct": 0.23,
             "cured_pct": 0.0
           },
           {
@@ -20723,7 +20723,7 @@
       },
       {
         "county_desc": "GUILFORD",
-        "returned": 141895,
+        "returned": 141896,
         "accepted": 141644,
         "curable": 0,
         "cured": 0,
@@ -20734,8 +20734,8 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 76455,
-            "accepted": 76358,
+            "total": 76456,
+            "accepted": 76359,
             "not_accepted": 97,
             "cured": 0,
             "accepted_pct": 99.87,
@@ -20745,8 +20745,8 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 49749,
-            "accepted": 49622,
-            "not_accepted": 127,
+            "accepted": 49621,
+            "not_accepted": 128,
             "cured": 0,
             "accepted_pct": 99.74,
             "not_accepted_pct": 0.26,
@@ -20846,9 +20846,9 @@
           },
           {
             "age_group": "66+",
-            "total": 49987,
+            "total": 49988,
             "accepted": 49877,
-            "not_accepted": 110,
+            "not_accepted": 111,
             "cured": 0,
             "accepted_pct": 99.78,
             "not_accepted_pct": 0.22,
@@ -20993,7 +20993,7 @@
       },
       {
         "county_desc": "HARNETT",
-        "returned": 29118,
+        "returned": 29119,
         "accepted": 28848,
         "curable": 0,
         "cured": 0,
@@ -21004,12 +21004,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 18110,
+            "total": 18111,
             "accepted": 17970,
-            "not_accepted": 140,
+            "not_accepted": 141,
             "cured": 0,
-            "accepted_pct": 99.23,
-            "not_accepted_pct": 0.77,
+            "accepted_pct": 99.22,
+            "not_accepted_pct": 0.78,
             "cured_pct": 0.0
           },
           {
@@ -21107,17 +21107,17 @@
           {
             "age_group": "41-65",
             "total": 12815,
-            "accepted": 12693,
-            "not_accepted": 122,
+            "accepted": 12692,
+            "not_accepted": 123,
             "cured": 0,
-            "accepted_pct": 99.05,
-            "not_accepted_pct": 0.95,
+            "accepted_pct": 99.04,
+            "not_accepted_pct": 0.96,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
-            "total": 10118,
-            "accepted": 10027,
+            "total": 10119,
+            "accepted": 10028,
             "not_accepted": 91,
             "cured": 0,
             "accepted_pct": 99.1,
@@ -21253,20 +21253,20 @@
       },
       {
         "county_desc": "HENDERSON",
-        "returned": 39510,
+        "returned": 39512,
         "accepted": 39460,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 444,
-        "sdr_failed": 1,
+        "sdr_total": 445,
+        "sdr_failed": 3,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 35172,
+            "total": 35174,
             "accepted": 35127,
-            "not_accepted": 45,
+            "not_accepted": 47,
             "cured": 0,
             "accepted_pct": 99.87,
             "not_accepted_pct": 0.13,
@@ -21346,22 +21346,22 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 1604,
+            "total": 1605,
             "accepted": 1603,
-            "not_accepted": 1,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.94,
-            "not_accepted_pct": 0.06,
+            "accepted_pct": 99.88,
+            "not_accepted_pct": 0.12,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
-            "total": 4403,
+            "total": 4404,
             "accepted": 4399,
-            "not_accepted": 4,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.91,
-            "not_accepted_pct": 0.09,
+            "accepted_pct": 99.89,
+            "not_accepted_pct": 0.11,
             "cured_pct": 0.0
           },
           {
@@ -22023,7 +22023,7 @@
       },
       {
         "county_desc": "JOHNSTON",
-        "returned": 54364,
+        "returned": 54367,
         "accepted": 54281,
         "curable": 0,
         "cured": 0,
@@ -22034,12 +22034,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 35013,
+            "total": 35015,
             "accepted": 34964,
-            "not_accepted": 49,
+            "not_accepted": 51,
             "cured": 0,
-            "accepted_pct": 99.86,
-            "not_accepted_pct": 0.14,
+            "accepted_pct": 99.85,
+            "not_accepted_pct": 0.15,
             "cured_pct": 0.0
           },
           {
@@ -22064,12 +22064,12 @@
           },
           {
             "race": "OTHER",
-            "total": 2508,
+            "total": 2509,
             "accepted": 2506,
-            "not_accepted": 2,
+            "not_accepted": 3,
             "cured": 0,
-            "accepted_pct": 99.92,
-            "not_accepted_pct": 0.08,
+            "accepted_pct": 99.88,
+            "not_accepted_pct": 0.12,
             "cured_pct": 0.0
           },
           {
@@ -22117,17 +22117,17 @@
           {
             "age_group": "18-25",
             "total": 3888,
-            "accepted": 3881,
-            "not_accepted": 7,
+            "accepted": 3880,
+            "not_accepted": 8,
             "cured": 0,
-            "accepted_pct": 99.82,
-            "not_accepted_pct": 0.18,
+            "accepted_pct": 99.79,
+            "not_accepted_pct": 0.21,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
-            "total": 8471,
-            "accepted": 8455,
+            "total": 8472,
+            "accepted": 8456,
             "not_accepted": 16,
             "cured": 0,
             "accepted_pct": 99.81,
@@ -22136,9 +22136,9 @@
           },
           {
             "age_group": "41-65",
-            "total": 24646,
+            "total": 24647,
             "accepted": 24614,
-            "not_accepted": 32,
+            "not_accepted": 33,
             "cured": 0,
             "accepted_pct": 99.87,
             "not_accepted_pct": 0.13,
@@ -22146,12 +22146,12 @@
           },
           {
             "age_group": "66+",
-            "total": 17359,
+            "total": 17360,
             "accepted": 17331,
-            "not_accepted": 28,
+            "not_accepted": 29,
             "cured": 0,
-            "accepted_pct": 99.84,
-            "not_accepted_pct": 0.16,
+            "accepted_pct": 99.83,
+            "not_accepted_pct": 0.17,
             "cured_pct": 0.0
           }
         ]
@@ -22418,12 +22418,12 @@
       },
       {
         "county_desc": "LENOIR",
-        "returned": 13075,
-        "accepted": 12935,
+        "returned": 13076,
+        "accepted": 12936,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 201,
+        "sdr_total": 202,
         "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
@@ -22439,22 +22439,22 @@
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
-            "total": 5569,
+            "total": 5570,
             "accepted": 5501,
-            "not_accepted": 68,
+            "not_accepted": 69,
             "cured": 0,
-            "accepted_pct": 98.78,
-            "not_accepted_pct": 1.22,
+            "accepted_pct": 98.76,
+            "not_accepted_pct": 1.24,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 668,
-            "accepted": 660,
-            "not_accepted": 8,
+            "accepted": 661,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 98.8,
-            "not_accepted_pct": 1.2,
+            "accepted_pct": 98.95,
+            "not_accepted_pct": 1.05,
             "cured_pct": 0.0
           },
           {
@@ -22522,17 +22522,17 @@
           {
             "age_group": "26-40",
             "total": 1224,
-            "accepted": 1208,
-            "not_accepted": 16,
+            "accepted": 1207,
+            "not_accepted": 17,
             "cured": 0,
-            "accepted_pct": 98.69,
-            "not_accepted_pct": 1.31,
+            "accepted_pct": 98.61,
+            "not_accepted_pct": 1.39,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
-            "total": 5036,
-            "accepted": 4980,
+            "total": 5037,
+            "accepted": 4981,
             "not_accepted": 56,
             "cured": 0,
             "accepted_pct": 98.89,
@@ -22542,11 +22542,11 @@
           {
             "age_group": "66+",
             "total": 6213,
-            "accepted": 6151,
-            "not_accepted": 62,
+            "accepted": 6152,
+            "not_accepted": 61,
             "cured": 0,
-            "accepted_pct": 99.0,
-            "not_accepted_pct": 1.0,
+            "accepted_pct": 99.02,
+            "not_accepted_pct": 0.98,
             "cured_pct": 0.0
           }
         ]
@@ -23188,12 +23188,12 @@
       },
       {
         "county_desc": "MECKLENBURG",
-        "returned": 290494,
-        "accepted": 288225,
+        "returned": 290495,
+        "accepted": 288226,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5971,
+        "sdr_total": 5972,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
@@ -23229,8 +23229,8 @@
           },
           {
             "race": "OTHER",
-            "total": 15292,
-            "accepted": 15214,
+            "total": 15293,
+            "accepted": 15215,
             "not_accepted": 78,
             "cured": 0,
             "accepted_pct": 99.49,
@@ -23291,8 +23291,8 @@
           },
           {
             "age_group": "26-40",
-            "total": 66120,
-            "accepted": 65681,
+            "total": 66121,
+            "accepted": 65682,
             "not_accepted": 439,
             "cured": 0,
             "accepted_pct": 99.34,
@@ -23459,12 +23459,12 @@
       {
         "county_desc": "MONTGOMERY",
         "returned": 4788,
-        "accepted": 4788,
+        "accepted": 4785,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 53,
-        "sdr_failed": 0,
+        "sdr_failed": 3,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -23490,11 +23490,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 272,
-            "accepted": 272,
-            "not_accepted": 0,
+            "accepted": 269,
+            "not_accepted": 3,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 98.9,
+            "not_accepted_pct": 1.1,
             "cured_pct": 0.0
           },
           {
@@ -23542,11 +23542,11 @@
           {
             "age_group": "18-25",
             "total": 256,
-            "accepted": 256,
-            "not_accepted": 0,
+            "accepted": 255,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.61,
+            "not_accepted_pct": 0.39,
             "cured_pct": 0.0
           },
           {
@@ -23572,11 +23572,11 @@
           {
             "age_group": "66+",
             "total": 2454,
-            "accepted": 2454,
-            "not_accepted": 0,
+            "accepted": 2452,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.92,
+            "not_accepted_pct": 0.08,
             "cured_pct": 0.0
           }
         ]
@@ -23584,12 +23584,12 @@
       {
         "county_desc": "MOORE",
         "returned": 27014,
-        "accepted": 27007,
+        "accepted": 27006,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 315,
-        "sdr_failed": 0,
+        "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -23615,11 +23615,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 1119,
-            "accepted": 1118,
-            "not_accepted": 1,
+            "accepted": 1117,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.91,
-            "not_accepted_pct": 0.09,
+            "accepted_pct": 99.82,
+            "not_accepted_pct": 0.18,
             "cured_pct": 0.0
           },
           {
@@ -23677,11 +23677,11 @@
           {
             "age_group": "18-25",
             "total": 1048,
-            "accepted": 1048,
-            "not_accepted": 0,
+            "accepted": 1047,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.9,
+            "not_accepted_pct": 0.1,
             "cured_pct": 0.0
           },
           {
@@ -23719,12 +23719,12 @@
       {
         "county_desc": "NASH",
         "returned": 28279,
-        "accepted": 28224,
+        "accepted": 28223,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 415,
-        "sdr_failed": 6,
+        "sdr_failed": 7,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -23740,11 +23740,11 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 12319,
-            "accepted": 12283,
-            "not_accepted": 36,
+            "accepted": 12282,
+            "not_accepted": 37,
             "cured": 0,
-            "accepted_pct": 99.71,
-            "not_accepted_pct": 0.29,
+            "accepted_pct": 99.7,
+            "not_accepted_pct": 0.3,
             "cured_pct": 0.0
           },
           {
@@ -23812,11 +23812,11 @@
           {
             "age_group": "18-25",
             "total": 1718,
-            "accepted": 1711,
-            "not_accepted": 7,
+            "accepted": 1710,
+            "not_accepted": 8,
             "cured": 0,
-            "accepted_pct": 99.59,
-            "not_accepted_pct": 0.41,
+            "accepted_pct": 99.53,
+            "not_accepted_pct": 0.47,
             "cured_pct": 0.0
           },
           {
@@ -23853,43 +23853,43 @@
       },
       {
         "county_desc": "NEW HANOVER",
-        "returned": 67332,
-        "accepted": 67237,
+        "returned": 67333,
+        "accepted": 67233,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 1101,
-        "sdr_failed": 9,
+        "sdr_failed": 17,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 54366,
-            "accepted": 54302,
-            "not_accepted": 64,
+            "total": 54367,
+            "accepted": 54305,
+            "not_accepted": 62,
             "cured": 0,
-            "accepted_pct": 99.88,
-            "not_accepted_pct": 0.12,
+            "accepted_pct": 99.89,
+            "not_accepted_pct": 0.11,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 6055,
-            "accepted": 6041,
-            "not_accepted": 14,
+            "accepted": 6042,
+            "not_accepted": 13,
             "cured": 0,
-            "accepted_pct": 99.77,
-            "not_accepted_pct": 0.23,
+            "accepted_pct": 99.79,
+            "not_accepted_pct": 0.21,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 4661,
-            "accepted": 4654,
-            "not_accepted": 7,
+            "accepted": 4647,
+            "not_accepted": 14,
             "cured": 0,
-            "accepted_pct": 99.85,
-            "not_accepted_pct": 0.15,
+            "accepted_pct": 99.7,
+            "not_accepted_pct": 0.3,
             "cured_pct": 0.0
           },
           {
@@ -23905,11 +23905,11 @@
           {
             "race": "ASIAN",
             "total": 472,
-            "accepted": 471,
-            "not_accepted": 1,
+            "accepted": 470,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.79,
-            "not_accepted_pct": 0.21,
+            "accepted_pct": 99.58,
+            "not_accepted_pct": 0.42,
             "cured_pct": 0.0
           },
           {
@@ -23947,27 +23947,27 @@
           {
             "age_group": "18-25",
             "total": 4150,
-            "accepted": 4134,
-            "not_accepted": 16,
+            "accepted": 4130,
+            "not_accepted": 20,
             "cured": 0,
-            "accepted_pct": 99.61,
-            "not_accepted_pct": 0.39,
+            "accepted_pct": 99.52,
+            "not_accepted_pct": 0.48,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 9546,
-            "accepted": 9531,
-            "not_accepted": 15,
+            "accepted": 9530,
+            "not_accepted": 16,
             "cured": 0,
-            "accepted_pct": 99.84,
-            "not_accepted_pct": 0.16,
+            "accepted_pct": 99.83,
+            "not_accepted_pct": 0.17,
             "cured_pct": 0.0
           },
           {
             "age_group": "41-65",
-            "total": 25606,
-            "accepted": 25574,
+            "total": 25607,
+            "accepted": 25575,
             "not_accepted": 32,
             "cured": 0,
             "accepted_pct": 99.88,
@@ -24249,42 +24249,42 @@
       {
         "county_desc": "ORANGE",
         "returned": 52919,
-        "accepted": 52715,
+        "accepted": 52711,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 1699,
-        "sdr_failed": 12,
+        "sdr_failed": 16,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 38158,
-            "accepted": 38020,
-            "not_accepted": 138,
+            "accepted": 38018,
+            "not_accepted": 140,
             "cured": 0,
-            "accepted_pct": 99.64,
-            "not_accepted_pct": 0.36,
+            "accepted_pct": 99.63,
+            "not_accepted_pct": 0.37,
             "cured_pct": 0.0
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 5064,
-            "accepted": 5045,
-            "not_accepted": 19,
+            "accepted": 5044,
+            "not_accepted": 20,
             "cured": 0,
-            "accepted_pct": 99.62,
-            "not_accepted_pct": 0.38,
+            "accepted_pct": 99.61,
+            "not_accepted_pct": 0.39,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
             "total": 4761,
-            "accepted": 4736,
-            "not_accepted": 25,
+            "accepted": 4735,
+            "not_accepted": 26,
             "cured": 0,
-            "accepted_pct": 99.47,
-            "not_accepted_pct": 0.53,
+            "accepted_pct": 99.45,
+            "not_accepted_pct": 0.55,
             "cured_pct": 0.0
           },
           {
@@ -24342,21 +24342,21 @@
           {
             "age_group": "18-25",
             "total": 7457,
-            "accepted": 7414,
-            "not_accepted": 43,
+            "accepted": 7412,
+            "not_accepted": 45,
             "cured": 0,
-            "accepted_pct": 99.42,
-            "not_accepted_pct": 0.58,
+            "accepted_pct": 99.4,
+            "not_accepted_pct": 0.6,
             "cured_pct": 0.0
           },
           {
             "age_group": "26-40",
             "total": 8598,
-            "accepted": 8570,
-            "not_accepted": 28,
+            "accepted": 8569,
+            "not_accepted": 29,
             "cured": 0,
-            "accepted_pct": 99.67,
-            "not_accepted_pct": 0.33,
+            "accepted_pct": 99.66,
+            "not_accepted_pct": 0.34,
             "cured_pct": 0.0
           },
           {
@@ -24372,8 +24372,8 @@
           {
             "age_group": "66+",
             "total": 16193,
-            "accepted": 16148,
-            "not_accepted": 45,
+            "accepted": 16147,
+            "not_accepted": 46,
             "cured": 0,
             "accepted_pct": 99.72,
             "not_accepted_pct": 0.28,
@@ -24894,12 +24894,12 @@
       {
         "county_desc": "PERSON",
         "returned": 10132,
-        "accepted": 10129,
+        "accepted": 10128,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 146,
-        "sdr_failed": 2,
+        "sdr_failed": 3,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -24915,11 +24915,11 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 2924,
-            "accepted": 2923,
-            "not_accepted": 1,
+            "accepted": 2922,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.93,
+            "not_accepted_pct": 0.07,
             "cured_pct": 0.0
           },
           {
@@ -24977,11 +24977,11 @@
           {
             "age_group": "18-25",
             "total": 543,
-            "accepted": 541,
-            "not_accepted": 2,
+            "accepted": 540,
+            "not_accepted": 3,
             "cured": 0,
-            "accepted_pct": 99.63,
-            "not_accepted_pct": 0.37,
+            "accepted_pct": 99.45,
+            "not_accepted_pct": 0.55,
             "cured_pct": 0.0
           },
           {
@@ -25693,12 +25693,12 @@
       },
       {
         "county_desc": "ROCKINGHAM",
-        "returned": 22739,
-        "accepted": 22705,
+        "returned": 22741,
+        "accepted": 22707,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 290,
+        "sdr_total": 291,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
@@ -25714,8 +25714,8 @@
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
-            "total": 4618,
-            "accepted": 4607,
+            "total": 4619,
+            "accepted": 4608,
             "not_accepted": 11,
             "cured": 0,
             "accepted_pct": 99.76,
@@ -25724,8 +25724,8 @@
           },
           {
             "race": "UNDESIGNATED",
-            "total": 1263,
-            "accepted": 1261,
+            "total": 1264,
+            "accepted": 1262,
             "not_accepted": 2,
             "cured": 0,
             "accepted_pct": 99.84,
@@ -25776,8 +25776,8 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 997,
-            "accepted": 995,
+            "total": 999,
+            "accepted": 997,
             "not_accepted": 2,
             "cured": 0,
             "accepted_pct": 99.8,
@@ -25818,23 +25818,23 @@
       },
       {
         "county_desc": "ROWAN",
-        "returned": 28596,
-        "accepted": 28571,
+        "returned": 28598,
+        "accepted": 28570,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 513,
-        "sdr_failed": 0,
+        "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 20803,
-            "accepted": 20788,
-            "not_accepted": 15,
+            "total": 20805,
+            "accepted": 20787,
+            "not_accepted": 18,
             "cured": 0,
-            "accepted_pct": 99.93,
-            "not_accepted_pct": 0.07,
+            "accepted_pct": 99.91,
+            "not_accepted_pct": 0.09,
             "cured_pct": 0.0
           },
           {
@@ -25932,8 +25932,8 @@
           {
             "age_group": "41-65",
             "total": 10961,
-            "accepted": 10956,
-            "not_accepted": 5,
+            "accepted": 10955,
+            "not_accepted": 6,
             "cured": 0,
             "accepted_pct": 99.95,
             "not_accepted_pct": 0.05,
@@ -25941,19 +25941,19 @@
           },
           {
             "age_group": "66+",
-            "total": 12503,
+            "total": 12505,
             "accepted": 12490,
-            "not_accepted": 13,
+            "not_accepted": 15,
             "cured": 0,
-            "accepted_pct": 99.9,
-            "not_accepted_pct": 0.1,
+            "accepted_pct": 99.88,
+            "not_accepted_pct": 0.12,
             "cured_pct": 0.0
           }
         ]
       },
       {
         "county_desc": "RUTHERFORD",
-        "returned": 13272,
+        "returned": 13273,
         "accepted": 13256,
         "curable": 0,
         "cured": 0,
@@ -25964,12 +25964,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 10867,
+            "total": 10868,
             "accepted": 10856,
-            "not_accepted": 11,
+            "not_accepted": 12,
             "cured": 0,
-            "accepted_pct": 99.9,
-            "not_accepted_pct": 0.1,
+            "accepted_pct": 99.89,
+            "not_accepted_pct": 0.11,
             "cured_pct": 0.0
           },
           {
@@ -26057,17 +26057,17 @@
           {
             "age_group": "41-65",
             "total": 5126,
-            "accepted": 5120,
-            "not_accepted": 6,
+            "accepted": 5119,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 99.88,
-            "not_accepted_pct": 0.12,
+            "accepted_pct": 99.86,
+            "not_accepted_pct": 0.14,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
-            "total": 6252,
-            "accepted": 6247,
+            "total": 6253,
+            "accepted": 6248,
             "not_accepted": 5,
             "cured": 0,
             "accepted_pct": 99.92,
@@ -26204,12 +26204,12 @@
       {
         "county_desc": "SCOTLAND",
         "returned": 7111,
-        "accepted": 7110,
+        "accepted": 7109,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 109,
-        "sdr_failed": 0,
+        "sdr_failed": 1,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -26225,11 +26225,11 @@
           {
             "race": "BLACK OR AFRICAN AMERICAN",
             "total": 2896,
-            "accepted": 2896,
-            "not_accepted": 0,
+            "accepted": 2895,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.97,
+            "not_accepted_pct": 0.03,
             "cured_pct": 0.0
           },
           {
@@ -26307,11 +26307,11 @@
           {
             "age_group": "26-40",
             "total": 657,
-            "accepted": 657,
-            "not_accepted": 0,
+            "accepted": 656,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.85,
+            "not_accepted_pct": 0.15,
             "cured_pct": 0.0
           },
           {
@@ -26474,22 +26474,22 @@
       {
         "county_desc": "STOKES",
         "returned": 9901,
-        "accepted": 9898,
+        "accepted": 9897,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 127,
-        "sdr_failed": 1,
+        "sdr_failed": 2,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 8772,
-            "accepted": 8769,
-            "not_accepted": 3,
+            "accepted": 8768,
+            "not_accepted": 4,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.95,
+            "not_accepted_pct": 0.05,
             "cured_pct": 0.0
           },
           {
@@ -26587,11 +26587,11 @@
           {
             "age_group": "41-65",
             "total": 3961,
-            "accepted": 3960,
-            "not_accepted": 1,
+            "accepted": 3959,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.95,
+            "not_accepted_pct": 0.05,
             "cured_pct": 0.0
           },
           {
@@ -26609,12 +26609,12 @@
       {
         "county_desc": "SURRY",
         "returned": 15610,
-        "accepted": 15600,
+        "accepted": 15599,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 165,
-        "sdr_failed": 3,
+        "sdr_failed": 4,
         "sdr_cured": 0,
         "race_pct": [
           {
@@ -26630,11 +26630,11 @@
           {
             "race": "UNDESIGNATED",
             "total": 826,
-            "accepted": 822,
-            "not_accepted": 4,
+            "accepted": 821,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.52,
-            "not_accepted_pct": 0.48,
+            "accepted_pct": 99.39,
+            "not_accepted_pct": 0.61,
             "cured_pct": 0.0
           },
           {
@@ -26732,18 +26732,18 @@
           {
             "age_group": "66+",
             "total": 7105,
-            "accepted": 7101,
-            "not_accepted": 4,
+            "accepted": 7100,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.94,
-            "not_accepted_pct": 0.06,
+            "accepted_pct": 99.93,
+            "not_accepted_pct": 0.07,
             "cured_pct": 0.0
           }
         ]
       },
       {
         "county_desc": "SWAIN",
-        "returned": 3197,
+        "returned": 3198,
         "accepted": 3187,
         "curable": 0,
         "cured": 0,
@@ -26754,12 +26754,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 2606,
+            "total": 2607,
             "accepted": 2600,
-            "not_accepted": 6,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 99.77,
-            "not_accepted_pct": 0.23,
+            "accepted_pct": 99.73,
+            "not_accepted_pct": 0.27,
             "cured_pct": 0.0
           },
           {
@@ -26826,8 +26826,8 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 131,
-            "accepted": 130,
+            "total": 132,
+            "accepted": 131,
             "not_accepted": 1,
             "cured": 0,
             "accepted_pct": 99.24,
@@ -26847,11 +26847,11 @@
           {
             "age_group": "41-65",
             "total": 1240,
-            "accepted": 1236,
-            "not_accepted": 4,
+            "accepted": 1235,
+            "not_accepted": 5,
             "cured": 0,
-            "accepted_pct": 99.68,
-            "not_accepted_pct": 0.32,
+            "accepted_pct": 99.6,
+            "not_accepted_pct": 0.4,
             "cured_pct": 0.0
           },
           {
@@ -27128,23 +27128,23 @@
       },
       {
         "county_desc": "UNION",
-        "returned": 65901,
+        "returned": 65902,
         "accepted": 65870,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 994,
+        "sdr_total": 995,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 43825,
+            "total": 43826,
             "accepted": 43810,
-            "not_accepted": 15,
+            "not_accepted": 16,
             "cured": 0,
-            "accepted_pct": 99.97,
-            "not_accepted_pct": 0.03,
+            "accepted_pct": 99.96,
+            "not_accepted_pct": 0.04,
             "cured_pct": 0.0
           },
           {
@@ -27221,8 +27221,8 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 5177,
-            "accepted": 5172,
+            "total": 5178,
+            "accepted": 5173,
             "not_accepted": 5,
             "cured": 0,
             "accepted_pct": 99.9,
@@ -27242,8 +27242,8 @@
           {
             "age_group": "41-65",
             "total": 32006,
-            "accepted": 31993,
-            "not_accepted": 13,
+            "accepted": 31992,
+            "not_accepted": 14,
             "cured": 0,
             "accepted_pct": 99.96,
             "not_accepted_pct": 0.04,
@@ -27398,20 +27398,20 @@
       },
       {
         "county_desc": "WAKE",
-        "returned": 334606,
-        "accepted": 334116,
+        "returned": 334617,
+        "accepted": 334124,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 5679,
+        "sdr_total": 5687,
         "sdr_failed": 8,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 211761,
-            "accepted": 211547,
-            "not_accepted": 214,
+            "total": 211762,
+            "accepted": 211546,
+            "not_accepted": 216,
             "cured": 0,
             "accepted_pct": 99.9,
             "not_accepted_pct": 0.1,
@@ -27419,22 +27419,22 @@
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
-            "total": 62721,
-            "accepted": 62580,
-            "not_accepted": 141,
+            "total": 62725,
+            "accepted": 62583,
+            "not_accepted": 142,
             "cured": 0,
-            "accepted_pct": 99.78,
-            "not_accepted_pct": 0.22,
+            "accepted_pct": 99.77,
+            "not_accepted_pct": 0.23,
             "cured_pct": 0.0
           },
           {
             "race": "UNDESIGNATED",
-            "total": 26846,
-            "accepted": 26765,
-            "not_accepted": 81,
+            "total": 26851,
+            "accepted": 26769,
+            "not_accepted": 82,
             "cured": 0,
-            "accepted_pct": 99.7,
-            "not_accepted_pct": 0.3,
+            "accepted_pct": 99.69,
+            "not_accepted_pct": 0.31,
             "cured_pct": 0.0
           },
           {
@@ -27449,8 +27449,8 @@
           },
           {
             "race": "ASIAN",
-            "total": 14336,
-            "accepted": 14320,
+            "total": 14337,
+            "accepted": 14321,
             "not_accepted": 16,
             "cured": 0,
             "accepted_pct": 99.89,
@@ -27460,11 +27460,11 @@
           {
             "race": "TWO OR MORE RACES",
             "total": 1709,
-            "accepted": 1701,
-            "not_accepted": 8,
+            "accepted": 1702,
+            "not_accepted": 7,
             "cured": 0,
-            "accepted_pct": 99.53,
-            "not_accepted_pct": 0.47,
+            "accepted_pct": 99.59,
+            "not_accepted_pct": 0.41,
             "cured_pct": 0.0
           },
           {
@@ -27491,9 +27491,9 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 29753,
-            "accepted": 29650,
-            "not_accepted": 103,
+            "total": 29758,
+            "accepted": 29654,
+            "not_accepted": 104,
             "cured": 0,
             "accepted_pct": 99.65,
             "not_accepted_pct": 0.35,
@@ -27501,9 +27501,9 @@
           },
           {
             "age_group": "26-40",
-            "total": 68246,
-            "accepted": 68118,
-            "not_accepted": 128,
+            "total": 68248,
+            "accepted": 68119,
+            "not_accepted": 129,
             "cured": 0,
             "accepted_pct": 99.81,
             "not_accepted_pct": 0.19,
@@ -27511,9 +27511,9 @@
           },
           {
             "age_group": "41-65",
-            "total": 144778,
-            "accepted": 144611,
-            "not_accepted": 167,
+            "total": 144781,
+            "accepted": 144613,
+            "not_accepted": 168,
             "cured": 0,
             "accepted_pct": 99.88,
             "not_accepted_pct": 0.12,
@@ -27521,8 +27521,8 @@
           },
           {
             "age_group": "66+",
-            "total": 91829,
-            "accepted": 91737,
+            "total": 91830,
+            "accepted": 91738,
             "not_accepted": 92,
             "cured": 0,
             "accepted_pct": 99.9,
@@ -27784,22 +27784,22 @@
       {
         "county_desc": "WATAUGA",
         "returned": 16203,
-        "accepted": 16190,
+        "accepted": 16188,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
         "sdr_total": 723,
-        "sdr_failed": 0,
+        "sdr_failed": 2,
         "sdr_cured": 0,
         "race_pct": [
           {
             "race": "WHITE",
             "total": 14521,
-            "accepted": 14509,
-            "not_accepted": 12,
+            "accepted": 14507,
+            "not_accepted": 14,
             "cured": 0,
-            "accepted_pct": 99.92,
-            "not_accepted_pct": 0.08,
+            "accepted_pct": 99.9,
+            "not_accepted_pct": 0.1,
             "cured_pct": 0.0
           },
           {
@@ -27877,11 +27877,11 @@
           {
             "age_group": "18-25",
             "total": 3790,
-            "accepted": 3784,
-            "not_accepted": 6,
+            "accepted": 3782,
+            "not_accepted": 8,
             "cured": 0,
-            "accepted_pct": 99.84,
-            "not_accepted_pct": 0.16,
+            "accepted_pct": 99.79,
+            "not_accepted_pct": 0.21,
             "cured_pct": 0.0
           },
           {
@@ -28053,7 +28053,7 @@
       },
       {
         "county_desc": "WILKES",
-        "returned": 11112,
+        "returned": 11113,
         "accepted": 11111,
         "curable": 0,
         "cured": 0,
@@ -28064,12 +28064,12 @@
         "race_pct": [
           {
             "race": "WHITE",
-            "total": 9889,
+            "total": 9890,
             "accepted": 9888,
-            "not_accepted": 1,
+            "not_accepted": 2,
             "cured": 0,
-            "accepted_pct": 99.99,
-            "not_accepted_pct": 0.01,
+            "accepted_pct": 99.98,
+            "not_accepted_pct": 0.02,
             "cured_pct": 0.0
           },
           {
@@ -28157,17 +28157,17 @@
           {
             "age_group": "41-65",
             "total": 4148,
-            "accepted": 4148,
-            "not_accepted": 0,
+            "accepted": 4147,
+            "not_accepted": 1,
             "cured": 0,
-            "accepted_pct": 100.0,
-            "not_accepted_pct": 0.0,
+            "accepted_pct": 99.98,
+            "not_accepted_pct": 0.02,
             "cured_pct": 0.0
           },
           {
             "age_group": "66+",
-            "total": 5492,
-            "accepted": 5491,
+            "total": 5493,
+            "accepted": 5492,
             "not_accepted": 1,
             "cured": 0,
             "accepted_pct": 99.98,
@@ -28178,12 +28178,12 @@
       },
       {
         "county_desc": "WILSON",
-        "returned": 18512,
-        "accepted": 18481,
+        "returned": 18520,
+        "accepted": 18489,
         "curable": 0,
         "cured": 0,
         "rejected": 0,
-        "sdr_total": 324,
+        "sdr_total": 331,
         "sdr_failed": 0,
         "sdr_cured": 0,
         "race_pct": [
@@ -28199,8 +28199,8 @@
           },
           {
             "race": "BLACK OR AFRICAN AMERICAN",
-            "total": 8005,
-            "accepted": 7996,
+            "total": 8009,
+            "accepted": 8000,
             "not_accepted": 9,
             "cured": 0,
             "accepted_pct": 99.89,
@@ -28209,8 +28209,8 @@
           },
           {
             "race": "UNDESIGNATED",
-            "total": 716,
-            "accepted": 716,
+            "total": 718,
+            "accepted": 718,
             "not_accepted": 0,
             "cured": 0,
             "accepted_pct": 100.0,
@@ -28229,8 +28229,8 @@
           },
           {
             "race": "ASIAN",
-            "total": 79,
-            "accepted": 79,
+            "total": 80,
+            "accepted": 80,
             "not_accepted": 0,
             "cured": 0,
             "accepted_pct": 100.0,
@@ -28259,8 +28259,8 @@
           },
           {
             "race": "NATIVE HAWAIIAN OR PACIFIC ISLANDER",
-            "total": 2,
-            "accepted": 2,
+            "total": 3,
+            "accepted": 3,
             "not_accepted": 0,
             "cured": 0,
             "accepted_pct": 100.0,
@@ -28271,8 +28271,8 @@
         "age_pct": [
           {
             "age_group": "18-25",
-            "total": 1144,
-            "accepted": 1142,
+            "total": 1148,
+            "accepted": 1146,
             "not_accepted": 2,
             "cured": 0,
             "accepted_pct": 99.83,
@@ -28291,8 +28291,8 @@
           },
           {
             "age_group": "41-65",
-            "total": 7362,
-            "accepted": 7355,
+            "total": 7363,
+            "accepted": 7356,
             "not_accepted": 7,
             "cured": 0,
             "accepted_pct": 99.9,
@@ -28301,8 +28301,8 @@
           },
           {
             "age_group": "66+",
-            "total": 7730,
-            "accepted": 7712,
+            "total": 7733,
+            "accepted": 7715,
             "not_accepted": 18,
             "cured": 0,
             "accepted_pct": 99.77,
@@ -29113,10 +29113,10 @@
         },
         {
           "site": "COOPERATIVE EXTENSION",
-          "returned": 4361,
+          "returned": 4362,
           "race": {
             "WHITE": 3575,
-            "BLACK OR AFRICAN AMERICAN": 445,
+            "BLACK OR AFRICAN AMERICAN": 446,
             "UNDESIGNATED": 234,
             "OTHER": 70,
             "INDIAN AMERICAN OR ALASKA NATIVE": 20,
@@ -29128,7 +29128,7 @@
             "18-25": 109,
             "26-40": 323,
             "41-65": 1571,
-            "66+": 2358
+            "66+": 2359
           }
         }
       ],
@@ -29271,9 +29271,9 @@
         },
         {
           "site": "BLACK MOUNTAIN BRANCH LIBRARY",
-          "returned": 6723,
+          "returned": 6724,
           "race": {
-            "WHITE": 6094,
+            "WHITE": 6095,
             "UNDESIGNATED": 324,
             "BLACK OR AFRICAN AMERICAN": 136,
             "OTHER": 115,
@@ -29285,7 +29285,7 @@
           "age": {
             "18-25": 283,
             "26-40": 845,
-            "41-65": 2332,
+            "41-65": 2333,
             "66+": 3263
           }
         },
@@ -29807,9 +29807,9 @@
       "CHATHAM": [
         {
           "site": "CCCC HEALTH SCIENCE BUILDING",
-          "returned": 13297,
+          "returned": 13298,
           "race": {
-            "WHITE": 10649,
+            "WHITE": 10650,
             "UNDESIGNATED": 1235,
             "BLACK OR AFRICAN AMERICAN": 685,
             "OTHER": 350,
@@ -29822,7 +29822,7 @@
             "18-25": 667,
             "26-40": 1479,
             "41-65": 5163,
-            "66+": 5988
+            "66+": 5989
           }
         },
         {
@@ -29972,9 +29972,9 @@
       "CLEVELAND": [
         {
           "site": "CLEVELAND COUNTY BOARD OF ELECTIONS OFFICE",
-          "returned": 11214,
+          "returned": 11215,
           "race": {
-            "WHITE": 6835,
+            "WHITE": 6836,
             "BLACK OR AFRICAN AMERICAN": 3586,
             "UNDESIGNATED": 566,
             "OTHER": 152,
@@ -29986,7 +29986,7 @@
             "18-25": 525,
             "26-40": 1204,
             "41-65": 4397,
-            "66+": 5088
+            "66+": 5089
           }
         },
         {
@@ -30138,9 +30138,9 @@
           },
           "age": {
             "18-25": 550,
-            "26-40": 1431,
+            "26-40": 1432,
             "41-65": 4901,
-            "66+": 7006
+            "66+": 7005
           }
         },
         {
@@ -30523,9 +30523,9 @@
       "DAVIE": [
         {
           "site": "BERMUDA RUN TOWN HALL",
-          "returned": 5800,
+          "returned": 5799,
           "race": {
-            "WHITE": 5132,
+            "WHITE": 5131,
             "UNDESIGNATED": 339,
             "BLACK OR AFRICAN AMERICAN": 199,
             "OTHER": 69,
@@ -30537,14 +30537,14 @@
             "18-25": 233,
             "26-40": 535,
             "41-65": 2263,
-            "66+": 2769
+            "66+": 2768
           }
         },
         {
           "site": "DAVIE COUNTY BOARD OF ELECTIONS OFFICE",
-          "returned": 4240,
+          "returned": 4241,
           "race": {
-            "WHITE": 3369,
+            "WHITE": 3370,
             "BLACK OR AFRICAN AMERICAN": 460,
             "UNDESIGNATED": 257,
             "OTHER": 123,
@@ -30556,7 +30556,7 @@
             "18-25": 242,
             "26-40": 391,
             "41-65": 1563,
-            "66+": 2044
+            "66+": 2045
           }
         },
         {
@@ -30897,9 +30897,9 @@
         },
         {
           "site": "LEWISVILLE LIBRARY",
-          "returned": 10855,
+          "returned": 10857,
           "race": {
-            "WHITE": 9207,
+            "WHITE": 9209,
             "BLACK OR AFRICAN AMERICAN": 620,
             "UNDESIGNATED": 526,
             "OTHER": 278,
@@ -30909,8 +30909,8 @@
           },
           "age": {
             "18-25": 608,
-            "26-40": 1350,
-            "41-65": 4491,
+            "26-40": 1351,
+            "41-65": 4492,
             "66+": 4406
           }
         },
@@ -31510,10 +31510,10 @@
         },
         {
           "site": "CRAFT RECREATION CENTER",
-          "returned": 12084,
+          "returned": 12085,
           "race": {
             "BLACK OR AFRICAN AMERICAN": 6736,
-            "WHITE": 4090,
+            "WHITE": 4091,
             "UNDESIGNATED": 541,
             "OTHER": 402,
             "ASIAN": 220,
@@ -31525,7 +31525,7 @@
             "18-25": 1000,
             "26-40": 1971,
             "41-65": 5240,
-            "66+": 3873
+            "66+": 3874
           }
         },
         {
@@ -31960,9 +31960,9 @@
         },
         {
           "site": "EV OVERHILLS- ANDERSON CREEK FIRE DEPT",
-          "returned": 4538,
+          "returned": 4539,
           "race": {
-            "WHITE": 2134,
+            "WHITE": 2135,
             "BLACK OR AFRICAN AMERICAN": 1609,
             "UNDESIGNATED": 384,
             "OTHER": 269,
@@ -31975,7 +31975,7 @@
             "18-25": 340,
             "26-40": 748,
             "41-65": 2317,
-            "66+": 1133
+            "66+": 1134
           }
         }
       ],
@@ -32022,9 +32022,9 @@
       "HENDERSON": [
         {
           "site": "HENDERSON COUNTY BOARD OF ELECTIONS OFFICE",
-          "returned": 21300,
+          "returned": 21301,
           "race": {
-            "WHITE": 18984,
+            "WHITE": 18985,
             "UNDESIGNATED": 1021,
             "OTHER": 580,
             "BLACK OR AFRICAN AMERICAN": 517,
@@ -32034,7 +32034,7 @@
             "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 2
           },
           "age": {
-            "18-25": 888,
+            "18-25": 889,
             "26-40": 2095,
             "41-65": 6921,
             "66+": 11396
@@ -32042,9 +32042,9 @@
         },
         {
           "site": "FLETCHER TOWN HALL",
-          "returned": 8450,
+          "returned": 8451,
           "race": {
-            "WHITE": 7337,
+            "WHITE": 7338,
             "UNDESIGNATED": 527,
             "BLACK OR AFRICAN AMERICAN": 261,
             "OTHER": 214,
@@ -32055,7 +32055,7 @@
           },
           "age": {
             "18-25": 361,
-            "26-40": 1329,
+            "26-40": 1330,
             "41-65": 3513,
             "66+": 3247
           }
@@ -32455,12 +32455,12 @@
         },
         {
           "site": "ARCHER LODGE COMMUNITY BUILDING",
-          "returned": 12169,
+          "returned": 12171,
           "race": {
-            "WHITE": 8319,
+            "WHITE": 8320,
             "BLACK OR AFRICAN AMERICAN": 2180,
             "UNDESIGNATED": 995,
-            "OTHER": 499,
+            "OTHER": 500,
             "ASIAN": 104,
             "TWO OR MORE RACES": 40,
             "INDIAN AMERICAN OR ALASKA NATIVE": 31,
@@ -32468,16 +32468,16 @@
           },
           "age": {
             "18-25": 833,
-            "26-40": 1936,
-            "41-65": 5882,
+            "26-40": 1937,
+            "41-65": 5883,
             "66+": 3518
           }
         },
         {
           "site": "THE BRIDGE CHURCH",
-          "returned": 9502,
+          "returned": 9503,
           "race": {
-            "WHITE": 5736,
+            "WHITE": 5737,
             "BLACK OR AFRICAN AMERICAN": 2483,
             "UNDESIGNATED": 581,
             "OTHER": 580,
@@ -32490,7 +32490,7 @@
             "18-25": 720,
             "26-40": 1256,
             "41-65": 3653,
-            "66+": 3873
+            "66+": 3874
           }
         },
         {
@@ -32599,9 +32599,9 @@
         },
         {
           "site": "MARTIN C FREEMAN CENTER",
-          "returned": 5235,
+          "returned": 5236,
           "race": {
-            "BLACK OR AFRICAN AMERICAN": 4108,
+            "BLACK OR AFRICAN AMERICAN": 4109,
             "WHITE": 751,
             "UNDESIGNATED": 284,
             "OTHER": 56,
@@ -32613,7 +32613,7 @@
           "age": {
             "18-25": 229,
             "26-40": 489,
-            "41-65": 1991,
+            "41-65": 1992,
             "66+": 2526
           }
         },
@@ -33015,11 +33015,11 @@
         },
         {
           "site": "MALLARD CREEK REC CENTER",
-          "returned": 12666,
+          "returned": 12667,
           "race": {
             "BLACK OR AFRICAN AMERICAN": 6873,
             "WHITE": 3684,
-            "UNDESIGNATED": 981,
+            "UNDESIGNATED": 982,
             "OTHER": 682,
             "ASIAN": 356,
             "TWO OR MORE RACES": 69,
@@ -33027,7 +33027,7 @@
           },
           "age": {
             "18-25": 1322,
-            "26-40": 3497,
+            "26-40": 3498,
             "41-65": 5541,
             "66+": 2306
           }
@@ -33314,8 +33314,8 @@
           "race": {
             "BLACK OR AFRICAN AMERICAN": 4074,
             "WHITE": 1411,
-            "UNDESIGNATED": 379,
-            "OTHER": 318,
+            "UNDESIGNATED": 378,
+            "OTHER": 319,
             "ASIAN": 91,
             "TWO OR MORE RACES": 49,
             "INDIAN AMERICAN OR ALASKA NATIVE": 6
@@ -33588,9 +33588,9 @@
         },
         {
           "site": "PINE VALLEY LIBRARY",
-          "returned": 18292,
+          "returned": 18293,
           "race": {
-            "WHITE": 15531,
+            "WHITE": 15532,
             "UNDESIGNATED": 1216,
             "BLACK OR AFRICAN AMERICAN": 892,
             "OTHER": 409,
@@ -33602,7 +33602,7 @@
           "age": {
             "18-25": 1039,
             "26-40": 2684,
-            "41-65": 6968,
+            "41-65": 6969,
             "66+": 7601
           }
         },
@@ -34454,10 +34454,10 @@
         },
         {
           "site": "MADISON MAYODAN LIBRARY",
-          "returned": 6219,
+          "returned": 6220,
           "race": {
             "WHITE": 4948,
-            "BLACK OR AFRICAN AMERICAN": 691,
+            "BLACK OR AFRICAN AMERICAN": 692,
             "UNDESIGNATED": 438,
             "OTHER": 104,
             "ASIAN": 17,
@@ -34465,7 +34465,7 @@
             "INDIAN AMERICAN OR ALASKA NATIVE": 6
           },
           "age": {
-            "18-25": 272,
+            "18-25": 273,
             "26-40": 634,
             "41-65": 2498,
             "66+": 2815
@@ -34492,18 +34492,18 @@
         },
         {
           "site": "ROCKINGHAM COUNTY BOARD OF ELECTIONS OFFICE",
-          "returned": 4364,
+          "returned": 4365,
           "race": {
             "WHITE": 3657,
             "BLACK OR AFRICAN AMERICAN": 430,
-            "UNDESIGNATED": 209,
+            "UNDESIGNATED": 210,
             "OTHER": 49,
             "ASIAN": 8,
             "TWO OR MORE RACES": 6,
             "INDIAN AMERICAN OR ALASKA NATIVE": 5
           },
           "age": {
-            "18-25": 183,
+            "18-25": 184,
             "26-40": 384,
             "41-65": 1703,
             "66+": 2094
@@ -34553,9 +34553,9 @@
         },
         {
           "site": "ROCKWELL AMERICAN LEGION BUILDING",
-          "returned": 6540,
+          "returned": 6542,
           "race": {
-            "WHITE": 5933,
+            "WHITE": 5935,
             "UNDESIGNATED": 317,
             "BLACK OR AFRICAN AMERICAN": 169,
             "OTHER": 91,
@@ -34567,7 +34567,7 @@
             "18-25": 271,
             "26-40": 681,
             "41-65": 2627,
-            "66+": 2961
+            "66+": 2963
           }
         }
       ],
@@ -34593,9 +34593,9 @@
         },
         {
           "site": "ISOTHERMAL",
-          "returned": 6235,
+          "returned": 6236,
           "race": {
-            "WHITE": 4955,
+            "WHITE": 4956,
             "BLACK OR AFRICAN AMERICAN": 749,
             "UNDESIGNATED": 349,
             "OTHER": 139,
@@ -34607,7 +34607,7 @@
             "18-25": 379,
             "26-40": 639,
             "41-65": 2480,
-            "66+": 2737
+            "66+": 2738
           }
         }
       ],
@@ -34873,9 +34873,9 @@
       "SWAIN": [
         {
           "site": "SWAIN COUNTY BOARD OF ELECTIONS OFFICE",
-          "returned": 2393,
+          "returned": 2394,
           "race": {
-            "WHITE": 2205,
+            "WHITE": 2206,
             "UNDESIGNATED": 101,
             "INDIAN AMERICAN OR ALASKA NATIVE": 40,
             "OTHER": 22,
@@ -34884,7 +34884,7 @@
             "TWO OR MORE RACES": 6
           },
           "age": {
-            "18-25": 96,
+            "18-25": 97,
             "26-40": 198,
             "41-65": 925,
             "66+": 1174
@@ -34995,9 +34995,9 @@
         },
         {
           "site": "HEMBY BRIDGE VFD",
-          "returned": 10030,
+          "returned": 10031,
           "race": {
-            "WHITE": 6792,
+            "WHITE": 6793,
             "UNDESIGNATED": 1541,
             "BLACK OR AFRICAN AMERICAN": 1178,
             "OTHER": 296,
@@ -35006,7 +35006,7 @@
             "INDIAN AMERICAN OR ALASKA NATIVE": 24
           },
           "age": {
-            "18-25": 736,
+            "18-25": 737,
             "26-40": 1317,
             "41-65": 4722,
             "66+": 3255
@@ -35151,11 +35151,11 @@
       "WAKE": [
         {
           "site": "JOHN M. BROWN COMMUNITY CENTER",
-          "returned": 28384,
+          "returned": 28385,
           "race": {
             "WHITE": 19765,
             "UNDESIGNATED": 2249,
-            "ASIAN": 2403,
+            "ASIAN": 2404,
             "BLACK OR AFRICAN AMERICAN": 2115,
             "OTHER": 1616,
             "INDIAN AMERICAN OR ALASKA NATIVE": 134,
@@ -35165,7 +35165,7 @@
             "18-25": 2273,
             "26-40": 4898,
             "41-65": 14374,
-            "66+": 6839
+            "66+": 6840
           }
         },
         {
@@ -35269,11 +35269,11 @@
         },
         {
           "site": "JOHN CHAVIS MEMORIAL PARK COMMUNITY CENTER",
-          "returned": 21949,
+          "returned": 21950,
           "race": {
             "BLACK OR AFRICAN AMERICAN": 10439,
             "WHITE": 8311,
-            "UNDESIGNATED": 2001,
+            "UNDESIGNATED": 2002,
             "OTHER": 716,
             "ASIAN": 320,
             "TWO OR MORE RACES": 128,
@@ -35282,7 +35282,7 @@
           },
           "age": {
             "18-25": 1818,
-            "26-40": 5924,
+            "26-40": 5925,
             "41-65": 8919,
             "66+": 5288
           }
@@ -35369,11 +35369,11 @@
         },
         {
           "site": "AVERY STREET RECREATION CENTER ANNEX",
-          "returned": 16151,
+          "returned": 16153,
           "race": {
             "WHITE": 8474,
-            "BLACK OR AFRICAN AMERICAN": 5154,
-            "UNDESIGNATED": 1332,
+            "BLACK OR AFRICAN AMERICAN": 5155,
+            "UNDESIGNATED": 1333,
             "OTHER": 777,
             "ASIAN": 298,
             "TWO OR MORE RACES": 72,
@@ -35382,16 +35382,16 @@
           },
           "age": {
             "18-25": 1241,
-            "26-40": 3404,
-            "41-65": 6364,
+            "26-40": 3405,
+            "41-65": 6365,
             "66+": 5142
           }
         },
         {
           "site": "KNIGHTDALE RECREATION CENTER",
-          "returned": 15822,
+          "returned": 15823,
           "race": {
-            "BLACK OR AFRICAN AMERICAN": 6784,
+            "BLACK OR AFRICAN AMERICAN": 6785,
             "WHITE": 6465,
             "UNDESIGNATED": 1323,
             "OTHER": 817,
@@ -35401,7 +35401,7 @@
             "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 5
           },
           "age": {
-            "18-25": 1239,
+            "18-25": 1240,
             "26-40": 3488,
             "41-65": 7210,
             "66+": 3885
@@ -35409,11 +35409,11 @@
         },
         {
           "site": "NCSU WESTERN BLVD BUSINESS SERVICES",
-          "returned": 14537,
+          "returned": 14541,
           "race": {
             "WHITE": 9607,
-            "UNDESIGNATED": 1953,
-            "BLACK OR AFRICAN AMERICAN": 1290,
+            "UNDESIGNATED": 1955,
+            "BLACK OR AFRICAN AMERICAN": 1292,
             "OTHER": 749,
             "ASIAN": 762,
             "TWO OR MORE RACES": 130,
@@ -35421,7 +35421,7 @@
             "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 1
           },
           "age": {
-            "18-25": 5082,
+            "18-25": 5086,
             "26-40": 3691,
             "41-65": 3799,
             "66+": 1965
@@ -35449,11 +35449,11 @@
         },
         {
           "site": "WAKE COUNTY COMMONS BUILDING",
-          "returned": 10579,
+          "returned": 10580,
           "race": {
             "BLACK OR AFRICAN AMERICAN": 5257,
             "WHITE": 3249,
-            "UNDESIGNATED": 1098,
+            "UNDESIGNATED": 1099,
             "OTHER": 625,
             "TWO OR MORE RACES": 93,
             "ASIAN": 241,
@@ -35462,7 +35462,7 @@
           "age": {
             "18-25": 994,
             "26-40": 2628,
-            "41-65": 4512,
+            "41-65": 4513,
             "66+": 2445
           }
         },
@@ -35488,9 +35488,9 @@
         },
         {
           "site": "BEECH BLUFF COUNTY PARK",
-          "returned": 5953,
+          "returned": 5954,
           "race": {
-            "WHITE": 4641,
+            "WHITE": 4642,
             "UNDESIGNATED": 446,
             "BLACK OR AFRICAN AMERICAN": 531,
             "OTHER": 226,
@@ -35501,7 +35501,7 @@
           "age": {
             "18-25": 405,
             "26-40": 1259,
-            "41-65": 2715,
+            "41-65": 2716,
             "66+": 1574
           }
         }
@@ -35747,9 +35747,9 @@
         },
         {
           "site": "PLEASANT HILL FIRE DEPARTMENT",
-          "returned": 1814,
+          "returned": 1815,
           "race": {
-            "WHITE": 1663,
+            "WHITE": 1664,
             "UNDESIGNATED": 106,
             "BLACK OR AFRICAN AMERICAN": 27,
             "OTHER": 16,
@@ -35759,7 +35759,7 @@
             "18-25": 61,
             "26-40": 133,
             "41-65": 756,
-            "66+": 864
+            "66+": 865
           }
         },
         {
@@ -35785,31 +35785,31 @@
       "WILSON": [
         {
           "site": "WILSON COUNTY BOARD OF ELECTIONS",
-          "returned": 11876,
+          "returned": 11882,
           "race": {
-            "BLACK OR AFRICAN AMERICAN": 6270,
+            "BLACK OR AFRICAN AMERICAN": 6273,
             "WHITE": 4508,
             "OTHER": 533,
-            "UNDESIGNATED": 460,
-            "ASIAN": 48,
+            "UNDESIGNATED": 461,
+            "ASIAN": 49,
             "TWO OR MORE RACES": 31,
             "INDIAN AMERICAN OR ALASKA NATIVE": 25,
-            "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 1
+            "NATIVE HAWAIIAN OR PACIFIC ISLANDER": 2
           },
           "age": {
-            "18-25": 777,
+            "18-25": 781,
             "26-40": 1488,
             "41-65": 4806,
-            "66+": 4805
+            "66+": 4807
           }
         },
         {
           "site": "WILSON COUNTY AGRICULTURE CENTER",
-          "returned": 6636,
+          "returned": 6638,
           "race": {
             "WHITE": 4423,
-            "BLACK OR AFRICAN AMERICAN": 1735,
-            "UNDESIGNATED": 256,
+            "BLACK OR AFRICAN AMERICAN": 1736,
+            "UNDESIGNATED": 257,
             "OTHER": 176,
             "ASIAN": 31,
             "INDIAN AMERICAN OR ALASKA NATIVE": 8,
@@ -35819,8 +35819,8 @@
           "age": {
             "18-25": 367,
             "26-40": 788,
-            "41-65": 2556,
-            "66+": 2925
+            "41-65": 2557,
+            "66+": 2926
           }
         }
       ],
@@ -35873,39 +35873,39 @@
       "race_pct": [
         {
           "race": "WHITE",
-          "total": 1807500,
-          "accepted": 1804364,
-          "not_accepted": 3136,
+          "total": 1807519,
+          "accepted": 1804351,
+          "not_accepted": 3168,
           "cured": 0,
-          "accepted_pct": 99.83,
-          "not_accepted_pct": 0.17,
+          "accepted_pct": 99.82,
+          "not_accepted_pct": 0.18,
           "cured_pct": 0.0
         },
         {
           "race": "BLACK OR AFRICAN AMERICAN",
-          "total": 590199,
-          "accepted": 588230,
-          "not_accepted": 1969,
+          "total": 590210,
+          "accepted": 588229,
+          "not_accepted": 1981,
           "cured": 0,
-          "accepted_pct": 99.67,
-          "not_accepted_pct": 0.33,
+          "accepted_pct": 99.66,
+          "not_accepted_pct": 0.34,
           "cured_pct": 0.0
         },
         {
           "race": "UNDESIGNATED",
-          "total": 172574,
-          "accepted": 172092,
-          "not_accepted": 482,
+          "total": 172582,
+          "accepted": 172079,
+          "not_accepted": 503,
           "cured": 0,
-          "accepted_pct": 99.72,
-          "not_accepted_pct": 0.28,
+          "accepted_pct": 99.71,
+          "not_accepted_pct": 0.29,
           "cured_pct": 0.0
         },
         {
           "race": "OTHER",
-          "total": 95479,
-          "accepted": 95245,
-          "not_accepted": 234,
+          "total": 95481,
+          "accepted": 95243,
+          "not_accepted": 238,
           "cured": 0,
           "accepted_pct": 99.75,
           "not_accepted_pct": 0.25,
@@ -35913,9 +35913,9 @@
         },
         {
           "race": "ASIAN",
-          "total": 45396,
+          "total": 45398,
           "accepted": 45284,
-          "not_accepted": 112,
+          "not_accepted": 114,
           "cured": 0,
           "accepted_pct": 99.75,
           "not_accepted_pct": 0.25,
@@ -35934,17 +35934,17 @@
         {
           "race": "TWO OR MORE RACES",
           "total": 10867,
-          "accepted": 10834,
-          "not_accepted": 33,
+          "accepted": 10835,
+          "not_accepted": 32,
           "cured": 0,
-          "accepted_pct": 99.7,
-          "not_accepted_pct": 0.3,
+          "accepted_pct": 99.71,
+          "not_accepted_pct": 0.29,
           "cured_pct": 0.0
         },
         {
           "race": "NATIVE HAWAIIAN OR PACIFIC ISLANDER",
-          "total": 282,
-          "accepted": 280,
+          "total": 283,
+          "accepted": 281,
           "not_accepted": 2,
           "cured": 0,
           "accepted_pct": 99.29,
@@ -35955,19 +35955,19 @@
       "age_pct": [
         {
           "age_group": "18-25",
-          "total": 193902,
-          "accepted": 193293,
-          "not_accepted": 609,
+          "total": 193916,
+          "accepted": 193274,
+          "not_accepted": 642,
           "cured": 0,
-          "accepted_pct": 99.69,
-          "not_accepted_pct": 0.31,
+          "accepted_pct": 99.67,
+          "not_accepted_pct": 0.33,
           "cured_pct": 0.0
         },
         {
           "age_group": "26-40",
-          "total": 408208,
-          "accepted": 407145,
-          "not_accepted": 1063,
+          "total": 408215,
+          "accepted": 407138,
+          "not_accepted": 1077,
           "cured": 0,
           "accepted_pct": 99.74,
           "not_accepted_pct": 0.26,
@@ -35975,9 +35975,9 @@
         },
         {
           "age_group": "41-65",
-          "total": 1104739,
-          "accepted": 1102308,
-          "not_accepted": 2431,
+          "total": 1104748,
+          "accepted": 1102305,
+          "not_accepted": 2443,
           "cured": 0,
           "accepted_pct": 99.78,
           "not_accepted_pct": 0.22,
@@ -35985,43 +35985,43 @@
         },
         {
           "age_group": "66+",
-          "total": 1028095,
-          "accepted": 1026199,
-          "not_accepted": 1896,
+          "total": 1028108,
+          "accepted": 1026201,
+          "not_accepted": 1907,
           "cured": 0,
-          "accepted_pct": 99.82,
-          "not_accepted_pct": 0.18,
+          "accepted_pct": 99.81,
+          "not_accepted_pct": 0.19,
           "cured_pct": 0.0
         }
       ],
       "gender": {
-        "F": 1452342,
-        "M": 1126666,
-        "U": 155930
+        "F": 1452364,
+        "M": 1126682,
+        "U": 155935
       },
       "party": {
-        "UNA": 957733,
-        "DEM": 1047802,
-        "REP": 720945,
+        "UNA": 957747,
+        "DEM": 1047823,
+        "REP": 720953,
         "LIB": 7294,
         "GRE": 1170
       },
       "ethnicity_pct": [
         {
           "race": "NOT HISPANIC OR NOT LATINO",
-          "total": 1890424,
-          "accepted": 1886753,
-          "not_accepted": 3671,
+          "total": 1890447,
+          "accepted": 1886747,
+          "not_accepted": 3700,
           "cured": 0,
-          "accepted_pct": 99.81,
-          "not_accepted_pct": 0.19,
+          "accepted_pct": 99.8,
+          "not_accepted_pct": 0.2,
           "cured_pct": 0.0
         },
         {
           "race": "UNDESIGNATED",
-          "total": 749675,
-          "accepted": 747601,
-          "not_accepted": 2074,
+          "total": 749690,
+          "accepted": 747587,
+          "not_accepted": 2103,
           "cured": 0,
           "accepted_pct": 99.72,
           "not_accepted_pct": 0.28,
@@ -36029,19 +36029,19 @@
         },
         {
           "race": "HISPANIC OR LATINO",
-          "total": 94845,
-          "accepted": 94591,
-          "not_accepted": 254,
+          "total": 94850,
+          "accepted": 94584,
+          "not_accepted": 266,
           "cured": 0,
-          "accepted_pct": 99.73,
-          "not_accepted_pct": 0.27,
+          "accepted_pct": 99.72,
+          "not_accepted_pct": 0.28,
           "cured_pct": 0.0
         }
       ],
       "ethnicity": {
-        "NOT HISPANIC OR NOT LATINO": 1890424,
-        "UNDESIGNATED": 749675,
-        "HISPANIC OR LATINO": 94845
+        "NOT HISPANIC OR NOT LATINO": 1890447,
+        "UNDESIGNATED": 749690,
+        "HISPANIC OR LATINO": 94850
       }
     }
   },
@@ -36537,27 +36537,27 @@
   },
   "outstanding_ballots": {
     "sent": 167108,
-    "accepted": 108376,
+    "accepted": 108434,
     "spoiled_ev": 18865,
-    "received_not_counted": 4704,
-    "outstanding": 54028,
+    "received_not_counted": 4989,
+    "outstanding": 53685,
     "pct_spoiled_ev": 11.29,
     "by_county": [
       {
         "county": "ALAMANCE",
         "sent": 2389,
-        "accepted": 1641,
+        "accepted": 1642,
         "spoiled_ev": 238,
-        "received_not_counted": 59,
-        "outstanding": 689
+        "received_not_counted": 64,
+        "outstanding": 683
       },
       {
         "county": "ALEXANDER",
         "sent": 220,
         "accepted": 132,
         "spoiled_ev": 19,
-        "received_not_counted": 15,
-        "outstanding": 73
+        "received_not_counted": 16,
+        "outstanding": 72
       },
       {
         "county": "ALLEGHANY",
@@ -36588,16 +36588,16 @@
         "sent": 172,
         "accepted": 96,
         "spoiled_ev": 26,
-        "received_not_counted": 10,
-        "outstanding": 66
+        "received_not_counted": 11,
+        "outstanding": 65
       },
       {
         "county": "BEAUFORT",
         "sent": 415,
         "accepted": 273,
         "spoiled_ev": 60,
-        "received_not_counted": 12,
-        "outstanding": 130
+        "received_not_counted": 13,
+        "outstanding": 129
       },
       {
         "county": "BERTIE",
@@ -36618,18 +36618,18 @@
       {
         "county": "BRUNSWICK",
         "sent": 4456,
-        "accepted": 2747,
+        "accepted": 2751,
         "spoiled_ev": 640,
         "received_not_counted": 235,
-        "outstanding": 1474
+        "outstanding": 1470
       },
       {
         "county": "BUNCOMBE",
         "sent": 6914,
-        "accepted": 4545,
+        "accepted": 4549,
         "spoiled_ev": 981,
-        "received_not_counted": 158,
-        "outstanding": 2211
+        "received_not_counted": 169,
+        "outstanding": 2196
       },
       {
         "county": "BURKE",
@@ -36644,16 +36644,16 @@
         "sent": 3726,
         "accepted": 2537,
         "spoiled_ev": 405,
-        "received_not_counted": 49,
-        "outstanding": 1140
+        "received_not_counted": 53,
+        "outstanding": 1136
       },
       {
         "county": "CALDWELL",
         "sent": 722,
         "accepted": 464,
         "spoiled_ev": 79,
-        "received_not_counted": 25,
-        "outstanding": 233
+        "received_not_counted": 35,
+        "outstanding": 223
       },
       {
         "county": "CAMDEN",
@@ -36684,16 +36684,16 @@
         "sent": 1914,
         "accepted": 1264,
         "spoiled_ev": 188,
-        "received_not_counted": 98,
-        "outstanding": 552
+        "received_not_counted": 107,
+        "outstanding": 543
       },
       {
         "county": "CHATHAM",
         "sent": 2315,
         "accepted": 1589,
         "spoiled_ev": 303,
-        "received_not_counted": 41,
-        "outstanding": 685
+        "received_not_counted": 42,
+        "outstanding": 684
       },
       {
         "county": "CHEROKEE",
@@ -36730,26 +36730,26 @@
       {
         "county": "COLUMBUS",
         "sent": 331,
-        "accepted": 231,
+        "accepted": 232,
         "spoiled_ev": 28,
         "received_not_counted": 1,
-        "outstanding": 99
+        "outstanding": 98
       },
       {
         "county": "CRAVEN",
         "sent": 1545,
         "accepted": 1064,
         "spoiled_ev": 123,
-        "received_not_counted": 43,
-        "outstanding": 438
+        "received_not_counted": 47,
+        "outstanding": 434
       },
       {
         "county": "CUMBERLAND",
         "sent": 3732,
-        "accepted": 2240,
+        "accepted": 2247,
         "spoiled_ev": 317,
         "received_not_counted": 84,
-        "outstanding": 1408
+        "outstanding": 1401
       },
       {
         "county": "CURRITUCK",
@@ -36780,8 +36780,8 @@
         "sent": 530,
         "accepted": 348,
         "spoiled_ev": 62,
-        "received_not_counted": 14,
-        "outstanding": 168
+        "received_not_counted": 16,
+        "outstanding": 166
       },
       {
         "county": "DUPLIN",
@@ -36804,32 +36804,32 @@
         "sent": 265,
         "accepted": 154,
         "spoiled_ev": 37,
-        "received_not_counted": 8,
-        "outstanding": 103
+        "received_not_counted": 9,
+        "outstanding": 102
       },
       {
         "county": "FORSYTH",
         "sent": 7395,
-        "accepted": 4634,
+        "accepted": 4635,
         "spoiled_ev": 825,
         "received_not_counted": 425,
-        "outstanding": 2336
+        "outstanding": 2335
       },
       {
         "county": "FRANKLIN",
         "sent": 1064,
         "accepted": 702,
         "spoiled_ev": 138,
-        "received_not_counted": 8,
-        "outstanding": 354
+        "received_not_counted": 9,
+        "outstanding": 353
       },
       {
         "county": "GASTON",
         "sent": 2722,
         "accepted": 1780,
         "spoiled_ev": 260,
-        "received_not_counted": 57,
-        "outstanding": 885
+        "received_not_counted": 61,
+        "outstanding": 881
       },
       {
         "county": "GATES",
@@ -36866,10 +36866,10 @@
       {
         "county": "GUILFORD",
         "sent": 7324,
-        "accepted": 4625,
+        "accepted": 4627,
         "spoiled_ev": 789,
         "received_not_counted": 246,
-        "outstanding": 2453
+        "outstanding": 2451
       },
       {
         "county": "HALIFAX",
@@ -36964,8 +36964,8 @@
         "sent": 721,
         "accepted": 468,
         "spoiled_ev": 74,
-        "received_not_counted": 20,
-        "outstanding": 233
+        "received_not_counted": 21,
+        "outstanding": 232
       },
       {
         "county": "LENOIR",
@@ -37012,16 +37012,16 @@
         "sent": 423,
         "accepted": 254,
         "spoiled_ev": 52,
-        "received_not_counted": 20,
-        "outstanding": 149
+        "received_not_counted": 22,
+        "outstanding": 147
       },
       {
         "county": "MECKLENBURG",
         "sent": 21941,
-        "accepted": 13417,
+        "accepted": 13426,
         "spoiled_ev": 2803,
-        "received_not_counted": 538,
-        "outstanding": 7986
+        "received_not_counted": 671,
+        "outstanding": 7844
       },
       {
         "county": "MITCHELL",
@@ -37042,26 +37042,26 @@
       {
         "county": "MOORE",
         "sent": 2289,
-        "accepted": 1620,
+        "accepted": 1624,
         "spoiled_ev": 184,
-        "received_not_counted": 54,
-        "outstanding": 615
+        "received_not_counted": 55,
+        "outstanding": 610
       },
       {
         "county": "NASH",
         "sent": 841,
         "accepted": 545,
         "spoiled_ev": 81,
-        "received_not_counted": 56,
-        "outstanding": 240
+        "received_not_counted": 59,
+        "outstanding": 237
       },
       {
         "county": "NEW HANOVER",
         "sent": 4924,
-        "accepted": 3141,
+        "accepted": 3149,
         "spoiled_ev": 547,
-        "received_not_counted": 218,
-        "outstanding": 1565
+        "received_not_counted": 229,
+        "outstanding": 1546
       },
       {
         "county": "NORTHAMPTON",
@@ -37130,10 +37130,10 @@
       {
         "county": "PITT",
         "sent": 1431,
-        "accepted": 867,
+        "accepted": 868,
         "spoiled_ev": 154,
         "received_not_counted": 23,
-        "outstanding": 541
+        "outstanding": 540
       },
       {
         "county": "POLK",
@@ -37148,8 +37148,8 @@
         "sent": 1304,
         "accepted": 865,
         "spoiled_ev": 99,
-        "received_not_counted": 59,
-        "outstanding": 380
+        "received_not_counted": 63,
+        "outstanding": 376
       },
       {
         "county": "RICHMOND",
@@ -37162,10 +37162,10 @@
       {
         "county": "ROBESON",
         "sent": 461,
-        "accepted": 242,
+        "accepted": 243,
         "spoiled_ev": 52,
-        "received_not_counted": 31,
-        "outstanding": 188
+        "received_not_counted": 34,
+        "outstanding": 184
       },
       {
         "county": "ROCKINGHAM",
@@ -37178,10 +37178,10 @@
       {
         "county": "ROWAN",
         "sent": 1479,
-        "accepted": 964,
+        "accepted": 965,
         "spoiled_ev": 126,
-        "received_not_counted": 43,
-        "outstanding": 472
+        "received_not_counted": 52,
+        "outstanding": 462
       },
       {
         "county": "RUTHERFORD",
@@ -37204,8 +37204,8 @@
         "sent": 238,
         "accepted": 158,
         "spoiled_ev": 15,
-        "received_not_counted": 3,
-        "outstanding": 77
+        "received_not_counted": 5,
+        "outstanding": 75
       },
       {
         "county": "STANLY",
@@ -37228,8 +37228,8 @@
         "sent": 831,
         "accepted": 552,
         "spoiled_ev": 75,
-        "received_not_counted": 19,
-        "outstanding": 260
+        "received_not_counted": 20,
+        "outstanding": 259
       },
       {
         "county": "SWAIN",
@@ -37258,10 +37258,10 @@
       {
         "county": "UNION",
         "sent": 3517,
-        "accepted": 2214,
+        "accepted": 2215,
         "spoiled_ev": 416,
         "received_not_counted": 1,
-        "outstanding": 1302
+        "outstanding": 1301
       },
       {
         "county": "VANCE",
@@ -37274,10 +37274,10 @@
       {
         "county": "WAKE",
         "sent": 29149,
-        "accepted": 19356,
+        "accepted": 19365,
         "spoiled_ev": 3477,
-        "received_not_counted": 906,
-        "outstanding": 8887
+        "received_not_counted": 962,
+        "outstanding": 8822
       },
       {
         "county": "WARREN",
@@ -37300,16 +37300,16 @@
         "sent": 895,
         "accepted": 625,
         "spoiled_ev": 97,
-        "received_not_counted": 27,
-        "outstanding": 243
+        "received_not_counted": 28,
+        "outstanding": 242
       },
       {
         "county": "WAYNE",
         "sent": 969,
         "accepted": 621,
         "spoiled_ev": 79,
-        "received_not_counted": 40,
-        "outstanding": 308
+        "received_not_counted": 41,
+        "outstanding": 307
       },
       {
         "county": "WILKES",
@@ -37322,31 +37322,31 @@
       {
         "county": "WILSON",
         "sent": 715,
-        "accepted": 471,
+        "accepted": 473,
         "spoiled_ev": 56,
-        "received_not_counted": 16,
-        "outstanding": 228
+        "received_not_counted": 17,
+        "outstanding": 225
       },
       {
         "county": "YADKIN",
         "sent": 347,
-        "accepted": 230,
+        "accepted": 231,
         "spoiled_ev": 32,
         "received_not_counted": 13,
-        "outstanding": 104
+        "outstanding": 103
       },
       {
         "county": "YANCEY",
         "sent": 315,
-        "accepted": 213,
+        "accepted": 214,
         "spoiled_ev": 36,
-        "received_not_counted": 1,
-        "outstanding": 101
+        "received_not_counted": 2,
+        "outstanding": 99
       }
     ]
   },
   "provisional": {
-    "total": 36326,
+    "total": 36678,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -37354,11 +37354,11 @@
     "by_county": [
       {
         "county_name": "ALAMANCE",
-        "count": 417
+        "count": 581
       },
       {
         "county_name": "ALEXANDER",
-        "count": 77
+        "count": 81
       },
       {
         "county_name": "ALLEGHANY",
@@ -37366,7 +37366,7 @@
       },
       {
         "county_name": "ANSON",
-        "count": 139
+        "count": 140
       },
       {
         "county_name": "ASHE",
@@ -37382,11 +37382,11 @@
       },
       {
         "county_name": "BERTIE",
-        "count": 79
+        "count": 83
       },
       {
         "county_name": "BLADEN",
-        "count": 67
+        "count": 79
       },
       {
         "county_name": "BRUNSWICK",
@@ -37394,11 +37394,11 @@
       },
       {
         "county_name": "BUNCOMBE",
-        "count": 917
+        "count": 912
       },
       {
         "county_name": "BURKE",
-        "count": 97
+        "count": 100
       },
       {
         "county_name": "CABARRUS",
@@ -37414,7 +37414,7 @@
       },
       {
         "county_name": "CARTERET",
-        "count": 259
+        "count": 258
       },
       {
         "county_name": "CASWELL",
@@ -37442,7 +37442,7 @@
       },
       {
         "county_name": "CLEVELAND",
-        "count": 325
+        "count": 322
       },
       {
         "county_name": "COLUMBUS",
@@ -37454,7 +37454,7 @@
       },
       {
         "county_name": "CUMBERLAND",
-        "count": 1197
+        "count": 1195
       },
       {
         "county_name": "CURRITUCK",
@@ -37462,11 +37462,11 @@
       },
       {
         "county_name": "DARE",
-        "count": 84
+        "count": 86
       },
       {
         "county_name": "DAVIDSON",
-        "count": 616
+        "count": 614
       },
       {
         "county_name": "DAVIE",
@@ -37486,11 +37486,11 @@
       },
       {
         "county_name": "FORSYTH",
-        "count": 1937
+        "count": 1941
       },
       {
         "county_name": "FRANKLIN",
-        "count": 282
+        "count": 283
       },
       {
         "county_name": "GASTON",
@@ -37506,7 +37506,7 @@
       },
       {
         "county_name": "GRANVILLE",
-        "count": 204
+        "count": 243
       },
       {
         "county_name": "GREENE",
@@ -37514,7 +37514,7 @@
       },
       {
         "county_name": "GUILFORD",
-        "count": 1534
+        "count": 1554
       },
       {
         "county_name": "HALIFAX",
@@ -37522,7 +37522,7 @@
       },
       {
         "county_name": "HARNETT",
-        "count": 895
+        "count": 898
       },
       {
         "county_name": "HAYWOOD",
@@ -37566,15 +37566,15 @@
       },
       {
         "county_name": "LENOIR",
-        "count": 252
+        "count": 251
       },
       {
         "county_name": "LINCOLN",
-        "count": 248
+        "count": 249
       },
       {
         "county_name": "MACON",
-        "count": 48
+        "count": 66
       },
       {
         "county_name": "MADISON",
@@ -37582,7 +37582,7 @@
       },
       {
         "county_name": "MARTIN",
-        "count": 25
+        "count": 31
       },
       {
         "county_name": "MCDOWELL",
@@ -37590,7 +37590,7 @@
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 3202
+        "count": 3181
       },
       {
         "county_name": "MITCHELL",
@@ -37646,7 +37646,7 @@
       },
       {
         "county_name": "PITT",
-        "count": 998
+        "count": 1089
       },
       {
         "county_name": "POLK",
@@ -37666,23 +37666,23 @@
       },
       {
         "county_name": "ROCKINGHAM",
-        "count": 341
+        "count": 340
       },
       {
         "county_name": "ROWAN",
-        "count": 476
+        "count": 475
       },
       {
         "county_name": "RUTHERFORD",
-        "count": 189
+        "count": 190
       },
       {
         "county_name": "SAMPSON",
-        "count": 161
+        "count": 167
       },
       {
         "county_name": "SCOTLAND",
-        "count": 130
+        "count": 131
       },
       {
         "county_name": "STANLY",
@@ -37710,11 +37710,11 @@
       },
       {
         "county_name": "VANCE",
-        "count": 125
+        "count": 130
       },
       {
         "county_name": "WAKE",
-        "count": 3337
+        "count": 3338
       },
       {
         "county_name": "WARREN",
@@ -37730,15 +37730,15 @@
       },
       {
         "county_name": "WAYNE",
-        "count": 470
+        "count": 473
       },
       {
         "county_name": "WILKES",
-        "count": 126
+        "count": 127
       },
       {
         "county_name": "WILSON",
-        "count": 339
+        "count": 337
       },
       {
         "county_name": "YADKIN",
@@ -37750,53 +37750,53 @@
       }
     ],
     "not_counted_reasons": {
-      "": 36326
+      "": 36678
     },
     "voted_reasons": {
-      "NO RECORD OF REGISTRATION": 16501,
-      "DL/SSN PROVISIONAL": 6088,
-      "INCORRECT PRECINCT": 4000,
-      "PREVIOUSLY REMOVED": 2526,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2082,
-      "UNREPORTED MOVE": 1932,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1147,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 816,
-      "JURISDICTION DISPUTE": 604,
-      "VOTER ALREADY VOTED": 328,
-      "HAVA ID NOT PROVIDED": 219,
-      "INCORRECT PARTY": 37,
+      "NO RECORD OF REGISTRATION": 16533,
+      "DL/SSN PROVISIONAL": 6163,
+      "INCORRECT PRECINCT": 4058,
+      "PREVIOUSLY REMOVED": 2628,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2105,
+      "UNREPORTED MOVE": 2030,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1151,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 811,
+      "JURISDICTION DISPUTE": 576,
+      "VOTER ALREADY VOTED": 330,
+      "HAVA ID NOT PROVIDED": 217,
+      "INCORRECT PARTY": 31,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 20,
       "VOTED DURING EXTENDED HOURS": 14,
-      "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 12
+      "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 11
     },
     "demographics": {
       "race": {
-        "\u0000": 10671,
-        "W": 10650,
-        "B": 8315,
-        "U": 3714,
-        "O": 1654,
-        "A": 550,
-        "M": 438,
-        "I": 306,
-        "P": 28
+        "W": 10752,
+        "\u0000": 10752,
+        "B": 8397,
+        "U": 3778,
+        "O": 1666,
+        "A": 551,
+        "M": 447,
+        "I": 308,
+        "P": 27
       },
       "gender": {
-        "F": 13870,
-        "M": 11061,
-        "\u0000": 8564,
-        "U": 2831
+        "F": 14010,
+        "M": 11164,
+        "\u0000": 8630,
+        "U": 2874
       },
       "party": {
-        "DEM": 15935,
-        "UNA": 12532,
-        "REP": 7653,
-        "LIB": 170,
+        "DEM": 16082,
+        "UNA": 12645,
+        "REP": 7739,
+        "LIB": 176,
         "GRE": 36
       }
     },
     "raw_status_counts": {
-      "PENDING": 36326
+      "PENDING": 36678
     }
   }
 }
