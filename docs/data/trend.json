@@ -649,14 +649,14 @@
   },
   {
     "date": "2026-11-08",
-    "mail_curable": 2027,
-    "mail_cured": 1661,
+    "mail_curable": 2025,
+    "mail_cured": 1663,
     "mail_pct_curable": 1.2,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 49268,
+    "ev_sdr_total": 49269,
     "ev_sdr_failed": 214,
-    "prov_total": 36678,
+    "prov_total": 36896,
     "prov_approved": 0
   }
 ]
