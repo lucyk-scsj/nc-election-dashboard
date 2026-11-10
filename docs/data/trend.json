@@ -673,14 +673,14 @@
   },
   {
     "date": "2026-11-10",
-    "mail_curable": 2024,
-    "mail_cured": 1664,
-    "mail_pct_curable": 1.2,
+    "mail_curable": 1958,
+    "mail_cured": 1722,
+    "mail_pct_curable": 1.16,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 49269,
-    "ev_sdr_failed": 214,
-    "prov_total": 36917,
+    "ev_sdr_total": 49271,
+    "ev_sdr_failed": 323,
+    "prov_total": 36868,
     "prov_approved": 0
   }
 ]
