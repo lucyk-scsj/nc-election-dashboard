@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T14:45:26.778224+00:00",
+  "generated_at": "2026-11-11T16:06:16.899593+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37761,15 +37761,15 @@
       "": 36839
     },
     "voted_reasons": {
-      "NO RECORD OF REGISTRATION": 16251,
-      "DL/SSN PROVISIONAL": 6383,
-      "INCORRECT PRECINCT": 4196,
+      "NO RECORD OF REGISTRATION": 16252,
+      "DL/SSN PROVISIONAL": 6384,
+      "INCORRECT PRECINCT": 4199,
       "UNREPORTED MOVE": 2475,
       "PREVIOUSLY REMOVED": 2437,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2145,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1106,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 727,
-      "JURISDICTION DISPUTE": 545,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2146,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1105,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 725,
+      "JURISDICTION DISPUTE": 542,
       "VOTER ALREADY VOTED": 306,
       "HAVA ID NOT PROVIDED": 215,
       "INCORRECT PARTY": 18,
@@ -37779,9 +37779,9 @@
     },
     "demographics": {
       "race": {
-        "\u0000": 10839,
+        "\u0000": 10838,
         "W": 10804,
-        "B": 8399,
+        "B": 8400,
         "U": 3813,
         "O": 1656,
         "A": 554,
@@ -37797,8 +37797,8 @@
       },
       "party": {
         "DEM": 16106,
-        "UNA": 12717,
-        "REP": 7796,
+        "UNA": 12718,
+        "REP": 7795,
         "LIB": 184,
         "GRE": 36
       }
