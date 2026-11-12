@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T14:37:05.066896+00:00",
+  "generated_at": "2026-11-12T18:44:17.675090+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37349,7 +37349,7 @@
     ]
   },
   "provisional": {
-    "total": 36839,
+    "total": 36837,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -37525,7 +37525,7 @@
       },
       {
         "county_name": "HARNETT",
-        "count": 894
+        "count": 893
       },
       {
         "county_name": "HAYWOOD",
@@ -37745,7 +37745,7 @@
       },
       {
         "county_name": "WILSON",
-        "count": 322
+        "count": 321
       },
       {
         "county_name": "YADKIN",
@@ -37757,29 +37757,29 @@
       }
     ],
     "not_counted_reasons": {
-      "": 36839
+      "": 36837
     },
     "voted_reasons": {
-      "NO RECORD OF REGISTRATION": 16251,
+      "NO RECORD OF REGISTRATION": 16232,
       "DL/SSN PROVISIONAL": 6384,
-      "INCORRECT PRECINCT": 4199,
-      "UNREPORTED MOVE": 2475,
-      "PREVIOUSLY REMOVED": 2437,
+      "INCORRECT PRECINCT": 4175,
+      "UNREPORTED MOVE": 2540,
+      "PREVIOUSLY REMOVED": 2421,
       "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2149,
       "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1104,
-      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 725,
-      "JURISDICTION DISPUTE": 542,
-      "VOTER ALREADY VOTED": 306,
-      "HAVA ID NOT PROVIDED": 214,
+      "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 719,
+      "JURISDICTION DISPUTE": 541,
+      "VOTER ALREADY VOTED": 305,
+      "HAVA ID NOT PROVIDED": 215,
       "INCORRECT PARTY": 18,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 17,
-      "VOTED DURING EXTENDED HOURS": 11,
+      "VOTED DURING EXTENDED HOURS": 10,
       "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 7
     },
     "demographics": {
       "race": {
         "\u0000": 10838,
-        "W": 10804,
+        "W": 10802,
         "B": 8400,
         "U": 3813,
         "O": 1656,
@@ -37789,21 +37789,21 @@
         "P": 27
       },
       "gender": {
-        "F": 14046,
+        "F": 14044,
         "M": 11189,
         "\u0000": 8719,
         "U": 2885
       },
       "party": {
         "DEM": 16103,
-        "UNA": 12722,
+        "UNA": 12720,
         "REP": 7794,
         "LIB": 184,
         "GRE": 36
       }
     },
     "raw_status_counts": {
-      "PENDING": 36839
+      "PENDING": 36837
     }
   }
 }
