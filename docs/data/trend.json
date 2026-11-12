@@ -697,13 +697,13 @@
   },
   {
     "date": "2026-11-12",
-    "mail_curable": 1735,
+    "mail_curable": 1734,
     "mail_cured": 1787,
     "mail_pct_curable": 1.03,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 49278,
-    "ev_sdr_failed": 397,
+    "ev_sdr_total": 49286,
+    "ev_sdr_failed": 365,
     "prov_total": 36839,
     "prov_approved": 0
   }
