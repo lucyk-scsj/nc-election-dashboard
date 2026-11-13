@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T13:59:04.385956+00:00",
+  "generated_at": "2026-11-13T17:01:54.321793+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37334,7 +37334,7 @@
     ]
   },
   "provisional": {
-    "total": 36837,
+    "total": 36866,
     "approved": 0,
     "not_counted": 0,
     "partial": 0,
@@ -37650,7 +37650,7 @@
       },
       {
         "county_name": "ROBESON",
-        "count": 530
+        "count": 559
       },
       {
         "county_name": "ROCKINGHAM",
@@ -37742,20 +37742,20 @@
       }
     ],
     "not_counted_reasons": {
-      "": 36837
+      "": 36866
     },
     "voted_reasons": {
-      "NO RECORD OF REGISTRATION": 16234,
-      "DL/SSN PROVISIONAL": 6382,
-      "INCORRECT PRECINCT": 4173,
-      "UNREPORTED MOVE": 2538,
-      "PREVIOUSLY REMOVED": 2420,
+      "NO RECORD OF REGISTRATION": 16241,
+      "DL/SSN PROVISIONAL": 6392,
+      "INCORRECT PRECINCT": 4178,
+      "UNREPORTED MOVE": 2541,
+      "PREVIOUSLY REMOVED": 2423,
       "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2149,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1104,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1111,
       "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 718,
       "JURISDICTION DISPUTE": 542,
       "VOTER ALREADY VOTED": 312,
-      "HAVA ID NOT PROVIDED": 213,
+      "HAVA ID NOT PROVIDED": 207,
       "INCORRECT PARTY": 18,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 17,
       "VOTED DURING EXTENDED HOURS": 10,
@@ -37763,32 +37763,32 @@
     },
     "demographics": {
       "race": {
-        "\u0000": 10838,
-        "W": 10802,
-        "B": 8400,
+        "\u0000": 10845,
+        "W": 10807,
+        "B": 8408,
         "U": 3813,
-        "O": 1656,
+        "O": 1661,
         "A": 554,
         "M": 448,
-        "I": 299,
+        "I": 303,
         "P": 27
       },
       "gender": {
-        "F": 14045,
-        "M": 11188,
-        "\u0000": 8719,
+        "F": 14057,
+        "M": 11202,
+        "\u0000": 8722,
         "U": 2885
       },
       "party": {
-        "DEM": 16102,
-        "UNA": 12721,
-        "REP": 7794,
+        "DEM": 16113,
+        "UNA": 12731,
+        "REP": 7802,
         "LIB": 184,
         "GRE": 36
       }
     },
     "raw_status_counts": {
-      "PENDING": 36837
+      "PENDING": 36866
     }
   }
 }
