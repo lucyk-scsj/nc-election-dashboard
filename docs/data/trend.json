@@ -721,14 +721,14 @@
   },
   {
     "date": "2026-11-14",
-    "mail_curable": 1717,
-    "mail_cured": 1792,
-    "mail_pct_curable": 1.02,
+    "mail_curable": 1710,
+    "mail_cured": 1790,
+    "mail_pct_curable": 1.01,
     "ev_curable": 0,
     "ev_cured": 0,
-    "ev_sdr_total": 49290,
-    "ev_sdr_failed": 283,
-    "prov_total": 36866,
-    "prov_approved": 0
+    "ev_sdr_total": 49309,
+    "ev_sdr_failed": 302,
+    "prov_total": 36865,
+    "prov_approved": 16287
   }
 ]
