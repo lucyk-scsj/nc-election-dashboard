@@ -417,7 +417,10 @@ footer a{text-decoration:underline;}
     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px">
       <div style="display:flex;gap:6px;flex-wrap:wrap" id="map-toggle-btns">
         <button class="map-toggle active" data-metric="curable_pct">Outstanding Curable %</button>
+        <button class="map-toggle" data-metric="mail_accepted_pct">Mail Accepted %</button>
         <button class="map-toggle" data-metric="sdr_failed">SDR Failed</button>
+        <button class="map-toggle" data-metric="sdr_total">SDR Total</button>
+        <button class="map-toggle" data-metric="prov_approved_pct">Provisionals Approved %</button>
         <button class="map-toggle" data-metric="prov_not_counted_pct">Provisionals Not Counted %</button>
         <button class="map-toggle" data-metric="total_returned">Total Returned</button>
       </div>
@@ -1352,10 +1355,25 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
       color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
     },
+    mail_accepted_pct:{
+      label:'Mail Accepted (%)',
+      fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
+    },
     sdr_failed:{
       label:'SDR Failed Verification',
       fmt:v=>v==null?'no data':fmt(v),
       color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
+    },
+    sdr_total:{
+      label:'SDR Total',
+      fmt:v=>v==null?'no data':fmt(v),
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x4F,0x8F],v/mx),
+    },
+    prov_approved_pct:{
+      label:'Provisionals Approved (%)',
+      fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
+      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
     },
     prov_not_counted_pct:{
       label:'Provisionals Not Counted (%)',
@@ -1384,7 +1402,10 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     const d=countyDataMap[countyName];
     if(!d)return null;
     if(currentMetric==='curable_pct')return d.total_returned>0?d.curable/d.total_returned:null;
+    if(currentMetric==='mail_accepted_pct')return d.total_returned>0?(d.accepted||0)/d.total_returned:null;
     if(currentMetric==='sdr_failed')return d.sdr_failed||null;
+    if(currentMetric==='sdr_total')return d.sdr_total||null;
+    if(currentMetric==='prov_approved_pct')return (d.prov_total||0)>0?(d.prov_approved||0)/d.prov_total:null;
     if(currentMetric==='prov_not_counted_pct')return (d.prov_total||0)>0?(d.prov_not_counted/d.prov_total):null;
     if(currentMetric==='total_returned')return d.total_returned||null;
     return null;
@@ -1614,6 +1635,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       if(!countyDataMap[n])countyDataMap[n]={};
       countyDataMap[n].total_returned=(r.returned||0);
       countyDataMap[n].curable=(r.curable||0);
+      countyDataMap[n].accepted=(r.accepted||0);
     });
     // early voting — SDR failed lives here
     const evRows=(data&&data.absentee_early_voting&&data.absentee_early_voting.by_county)||[];
@@ -1622,6 +1644,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       if(!n)return;
       if(!countyDataMap[n])countyDataMap[n]={};
       countyDataMap[n].sdr_failed=(r.sdr_failed||0);
+      countyDataMap[n].sdr_total=(r.sdr_total||0);
     });
     // provisional — key is provisional, rows in by_county, county field is county_name
     const provRows=(data&&data.provisional&&data.provisional.by_county)||[];
@@ -1630,6 +1653,8 @@ document.getElementById('prov-county-filter').addEventListener('change',function
       if(!n)return;
       if(!countyDataMap[n])countyDataMap[n]={};
       countyDataMap[n].prov_total=(r.count||0);
+      countyDataMap[n].prov_not_counted=(r.not_counted||0);
+      countyDataMap[n].prov_approved=(r.approved||0);
     });
     renderSVGMap();
   }
