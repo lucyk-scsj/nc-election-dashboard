@@ -1043,10 +1043,15 @@ function renderProvTab(county){
 
   const isCounty=!!county;
   let total=p.total,approved=p.approved,notCounted=p.not_counted,partial=p.partial;
+  let countyVotedReasons=null;
   if(isCounty){
     const cr=(p.by_county||[]).find(r=>
       (r.county_name||'').toUpperCase()===county.toUpperCase());
-    total=cr?.count||0; approved=0; notCounted=0; partial=0;
+    total=cr?.count||0;
+    approved=cr?.approved||0;
+    notCounted=cr?.not_counted||0;
+    partial=cr?.partial||0;
+    countyVotedReasons=cr?.voted_reasons||null;
   }
 
   document.getElementById('prov-kpis').innerHTML=kpiHTML([
@@ -1085,9 +1090,14 @@ function renderProvTab(county){
 
   // voted reasons chart (why ballots were cast provisionally)
   const votedReasonsSection=document.getElementById('prov-voted-reasons-section');
-  const votedReasons=topN(p.voted_reasons,8);
-  if(!isCounty&&votedReasons.length>0){
-    if(votedReasonsSection) votedReasonsSection.style.display='';
+  const votedReasonsData=isCounty?(countyVotedReasons||{}):p.voted_reasons;
+  const votedReasons=topN(votedReasonsData,8);
+  if(votedReasons.length>0){
+    if(votedReasonsSection){
+      votedReasonsSection.style.display='';
+      const note=votedReasonsSection.querySelector('.section-note');
+      if(note) note.textContent=isCounty?`${county} county — top reasons`:'statewide — top reasons';
+    }
     hbar('chart-prov-voted-reasons',votedReasons.map(r=>r[0]),votedReasons.map(r=>r[1]),P.gold);
   } else if(votedReasonsSection){
     votedReasonsSection.style.display='none';
@@ -1103,9 +1113,23 @@ function renderProvTab(county){
 
   if(!isCounty){
     document.getElementById('prov-county-section').style.display='';
-    countyTable('prov-county-table',p.by_county,['county_name','count'],null);
+    // custom county table: county | cast | approved | approved% | top reason
+    const ctbody=document.querySelector('#prov-county-table tbody');
+    const cthead=document.querySelector('#prov-county-table thead tr');
+    if(cthead) cthead.innerHTML='<th>County</th><th>Cast</th><th>Approved</th><th>Approved %</th><th>Top reason cast provisionally</th>';
+    if(ctbody){
+      const rows=(p.by_county||[]).slice().sort((a,b)=>(b.count||0)-(a.count||0));
+      ctbody.innerHTML=rows.map(r=>{
+        const topReason=r.voted_reasons?Object.entries(r.voted_reasons).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—':'—';
+        const appPct=r.count?(r.approved/r.count*100).toFixed(1)+'%':'—';
+        return `<tr><td>${r.county_name}</td><td>${fmt(r.count)}</td><td>${fmt(r.approved)}</td><td>${appPct}</td><td style="font-size:12px">${topReason}</td></tr>`;
+      }).join('')||'<tr><td colspan="5">No data yet.</td></tr>';
+    }
     document.getElementById('prov-csv-btn').onclick=()=>{
-      csvDownload(p.by_county||[],'2026-nc-provisional');
+      csvDownload((p.by_county||[]).map(r=>({
+        county:r.county_name, cast:r.count, approved:r.approved,
+        not_counted:r.not_counted, partial:r.partial, pct_approved:r.pct_approved
+      })),'2026-nc-provisional');
     };
   } else {
     document.getElementById('prov-county-section').style.display='none';

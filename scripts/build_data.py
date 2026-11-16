@@ -614,9 +614,20 @@ def summarize_provisional(df):
     approved    = int(sc.get("APPROVED", 0))
     not_counted = int(sc.get("NOT COUNTED", 0))
     partial     = int(sc.get("PARTIAL", 0))
-    by_county   = (df.groupby("county_name").size()
-                   .reset_index(name="count").to_dict(orient="records")
-                   if "county_name" in df else [])
+    if "county_name" in df:
+        def _county_row(grp):
+            sc_c = grp["pv_status"].value_counts().to_dict() if "pv_status" in grp else {}
+            cast = len(grp)
+            app  = int(sc_c.get("APPROVED", 0))
+            nc   = int(sc_c.get("NOT COUNTED", 0))
+            part = int(sc_c.get("PARTIAL", 0))
+            vr   = grp["pv_voted_reason"].value_counts().to_dict() if "pv_voted_reason" in grp else {}
+            return {"count": cast, "approved": app, "not_counted": nc, "partial": part,
+                    "pct_approved": pct(app, cast), "voted_reasons": vr}
+        by_county = [{"county_name": cn, **_county_row(g)}
+                     for cn, g in df.groupby("county_name")]
+    else:
+        by_county = []
     reasons = (df["not_counted_reason"].value_counts().to_dict()
                if "not_counted_reason" in df else {})
     voted_reasons = (df["pv_voted_reason"].value_counts().to_dict()
