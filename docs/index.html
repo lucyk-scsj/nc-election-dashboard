@@ -1353,37 +1353,44 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     curable_pct:{
       label:'Outstanding Curable Mail Ballots (%)',
       fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
+      hi:[0xD0,0x57,0x44],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],t),
     },
     mail_accepted_pct:{
       label:'Mail Accepted (%)',
       fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
+      hi:[0x46,0x8F,0x7A],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],t),
     },
     sdr_failed:{
       label:'SDR Failed Verification',
       fmt:v=>v==null?'no data':fmt(v),
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
+      hi:[0xD0,0x57,0x44],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],t),
     },
     sdr_total:{
       label:'SDR Total',
       fmt:v=>v==null?'no data':fmt(v),
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x4F,0x8F],v/mx),
+      hi:[0x46,0x4F,0x8F],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0x46,0x4F,0x8F],t),
     },
     prov_approved_pct:{
       label:'Provisionals Approved (%)',
       fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
+      hi:[0x46,0x8F,0x7A],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],t),
     },
     prov_not_counted_pct:{
       label:'Provisionals Not Counted (%)',
       fmt:v=>v==null?'no data':(v*100).toFixed(1)+'%',
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],v/mx),
+      hi:[0xD0,0x57,0x44],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0xD0,0x57,0x44],t),
     },
     total_returned:{
       label:'Total Returned',
       fmt:v=>v==null?'no data':fmt(v),
-      color:(v,mx)=>v==null?null:interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],v/mx),
+      hi:[0x46,0x8F,0x7A],
+      color:t=>interpColor([0xF2,0xF0,0xEE],[0x46,0x8F,0x7A],t),
     },
   };
 
@@ -1416,9 +1423,11 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     if(!svg)return;
     const cfg=METRIC_CONFIG[currentMetric];
 
-    // compute max for color scale
+    // compute min→max for color scale so variation is visible even in tight ranges
     let vals=Object.keys(NC_COUNTY_PATHS).map(n=>getCountyValue(n)).filter(v=>v!=null);
     const maxVal=vals.length?Math.max(...vals):1;
+    const minVal=vals.length?Math.min(...vals):0;
+    const scaleRange=maxVal-minVal||1;
 
     svg.setAttribute('viewBox','0 0 960 400');
     svg.innerHTML='';
@@ -1435,7 +1444,7 @@ document.getElementById('prov-county-filter').addEventListener('change',function
 
     Object.entries(NC_COUNTY_PATHS).forEach(([name,pathD])=>{
       const val=getCountyValue(name);
-      const fillColor=cfg.color(val,maxVal)||'#DEDAD7';
+      const fillColor=val!=null?cfg.color((val-minVal)/scaleRange):'#DEDAD7';
 
       const g=document.createElementNS(ns,'g');
       g.setAttribute('style','cursor:pointer');
@@ -1478,17 +1487,15 @@ document.getElementById('prov-county-filter').addEventListener('change',function
     });
 
     // legend
-    renderLegend(maxVal,cfg);
+    renderLegend(minVal,maxVal,cfg);
   }
 
-  function renderLegend(maxVal,cfg){
+  function renderLegend(minVal,maxVal,cfg){
     const el=document.getElementById('map-legend');
     if(!el)return;
-    if(currentMetric==='sdr_failed'||currentMetric==='total_returned'){
-      el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,${currentMetric==='total_returned'?'#468F7A':'#D05744'});display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;0 → ${cfg.fmt(maxVal)}`;
-    } else {
-      el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,#D05744);display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;0% → ${cfg.fmt(maxVal)}`;
-    }
+    const hi=cfg.hi||[0xD0,0x57,0x44];
+    const hiHex='#'+hi.map(x=>x.toString(16).padStart(2,'0')).join('');
+    el.innerHTML=`<span style="width:80px;height:8px;background:linear-gradient(to right,#F2F0EE,${hiHex});display:inline-block;border-radius:2px;vertical-align:middle"></span>&nbsp;${cfg.fmt(minVal)} → ${cfg.fmt(maxVal)}`;
   }
 
   // ── county detail panel ────────────────────────────────────────────────────
