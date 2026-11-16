@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T13:16:44.037210+00:00",
+  "generated_at": "2026-11-16T14:24:52.505133+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37345,403 +37345,1904 @@
     "by_county": [
       {
         "county_name": "ALAMANCE",
-        "count": 721
+        "count": 721,
+        "approved": 329,
+        "not_counted": 371,
+        "partial": 21,
+        "pct_approved": 45.63,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 363,
+          "DL/SSN PROVISIONAL": 130,
+          "UNREPORTED MOVE": 56,
+          "INCORRECT PRECINCT": 47,
+          "PREVIOUSLY REMOVED": 40,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 38,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 18,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 14,
+          "HAVA ID NOT PROVIDED": 10,
+          "VOTER ALREADY VOTED": 5
+        }
       },
       {
         "county_name": "ALEXANDER",
-        "count": 83
+        "count": 83,
+        "approved": 36,
+        "not_counted": 47,
+        "partial": 0,
+        "pct_approved": 43.37,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 29,
+          "DL/SSN PROVISIONAL": 17,
+          "PREVIOUSLY REMOVED": 13,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 10,
+          "UNREPORTED MOVE": 4,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "VOTER ALREADY VOTED": 2
+        }
       },
       {
         "county_name": "ALLEGHANY",
-        "count": 15
+        "count": 15,
+        "approved": 10,
+        "not_counted": 5,
+        "partial": 0,
+        "pct_approved": 66.67,
+        "voted_reasons": {
+          "PREVIOUSLY REMOVED": 4,
+          "NO RECORD OF REGISTRATION": 4,
+          "DL/SSN PROVISIONAL": 2,
+          "INCORRECT PRECINCT": 2,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "INCORRECT PARTY": 1,
+          "UNREPORTED MOVE": 1
+        }
       },
       {
         "county_name": "ANSON",
-        "count": 150
+        "count": 150,
+        "approved": 87,
+        "not_counted": 60,
+        "partial": 3,
+        "pct_approved": 58.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 60,
+          "PREVIOUSLY REMOVED": 32,
+          "DL/SSN PROVISIONAL": 26,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 8,
+          "JURISDICTION DISPUTE": 7,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 3,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "HAVA ID NOT PROVIDED": 2,
+          "VOTER ALREADY VOTED": 2,
+          "UNREPORTED MOVE": 2,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "ASHE",
-        "count": 82
+        "count": 82,
+        "approved": 42,
+        "not_counted": 40,
+        "partial": 0,
+        "pct_approved": 51.22,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 44,
+          "INCORRECT PRECINCT": 18,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 9,
+          "PREVIOUSLY REMOVED": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "HAVA ID NOT PROVIDED": 1,
+          "DL/SSN PROVISIONAL": 1
+        }
       },
       {
         "county_name": "AVERY",
-        "count": 162
+        "count": 162,
+        "approved": 0,
+        "not_counted": 0,
+        "partial": 0,
+        "pct_approved": 0.0,
+        "voted_reasons": {
+          "INCORRECT PRECINCT": 58,
+          "NO RECORD OF REGISTRATION": 42,
+          "JURISDICTION DISPUTE": 20,
+          "PREVIOUSLY REMOVED": 14,
+          "DL/SSN PROVISIONAL": 11,
+          "UNREPORTED MOVE": 6,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2
+        }
       },
       {
         "county_name": "BEAUFORT",
-        "count": 171
+        "count": 171,
+        "approved": 97,
+        "not_counted": 74,
+        "partial": 0,
+        "pct_approved": 56.73,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 62,
+          "PREVIOUSLY REMOVED": 42,
+          "DL/SSN PROVISIONAL": 37,
+          "INCORRECT PRECINCT": 9,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 6,
+          "UNREPORTED MOVE": 6,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "VOTER ALREADY VOTED": 2
+        }
       },
       {
         "county_name": "BERTIE",
-        "count": 84
+        "count": 84,
+        "approved": 39,
+        "not_counted": 45,
+        "partial": 0,
+        "pct_approved": 46.43,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 45,
+          "INCORRECT PRECINCT": 10,
+          "PREVIOUSLY REMOVED": 9,
+          "DL/SSN PROVISIONAL": 9,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "JURISDICTION DISPUTE": 1,
+          "VOTER ALREADY VOTED": 1,
+          "HAVA ID NOT PROVIDED": 1,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1
+        }
       },
       {
         "county_name": "BLADEN",
-        "count": 116
+        "count": 116,
+        "approved": 53,
+        "not_counted": 63,
+        "partial": 0,
+        "pct_approved": 45.69,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 62,
+          "DL/SSN PROVISIONAL": 28,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 7,
+          "UNREPORTED MOVE": 6,
+          "VOTER ALREADY VOTED": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "JURISDICTION DISPUTE": 1,
+          "PREVIOUSLY REMOVED": 1,
+          "INCORRECT PRECINCT": 1
+        }
       },
       {
         "county_name": "BRUNSWICK",
-        "count": 502
+        "count": 502,
+        "approved": 252,
+        "not_counted": 234,
+        "partial": 16,
+        "pct_approved": 50.2,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 207,
+          "DL/SSN PROVISIONAL": 121,
+          "INCORRECT PRECINCT": 82,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 32,
+          "PREVIOUSLY REMOVED": 27,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 21,
+          "UNREPORTED MOVE": 7,
+          "VOTER ALREADY VOTED": 3,
+          "HAVA ID NOT PROVIDED": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "BUNCOMBE",
-        "count": 912
+        "count": 912,
+        "approved": 452,
+        "not_counted": 360,
+        "partial": 100,
+        "pct_approved": 49.56,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 345,
+          "DL/SSN PROVISIONAL": 150,
+          "INCORRECT PRECINCT": 119,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 96,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 92,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 39,
+          "PREVIOUSLY REMOVED": 33,
+          "UNREPORTED MOVE": 17,
+          "VOTER ALREADY VOTED": 14,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 3,
+          "HAVA ID NOT PROVIDED": 2,
+          "JURISDICTION DISPUTE": 2
+        }
       },
       {
         "county_name": "BURKE",
-        "count": 137
+        "count": 137,
+        "approved": 95,
+        "not_counted": 42,
+        "partial": 0,
+        "pct_approved": 69.34,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 64,
+          "NO RECORD OF REGISTRATION": 34,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 16,
+          "PREVIOUSLY REMOVED": 11,
+          "JURISDICTION DISPUTE": 5,
+          "INCORRECT PRECINCT": 4,
+          "UNREPORTED MOVE": 3
+        }
       },
       {
         "county_name": "CABARRUS",
-        "count": 1021
+        "count": 1021,
+        "approved": 357,
+        "not_counted": 608,
+        "partial": 56,
+        "pct_approved": 34.97,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 619,
+          "DL/SSN PROVISIONAL": 109,
+          "INCORRECT PRECINCT": 98,
+          "UNREPORTED MOVE": 46,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 41,
+          "PREVIOUSLY REMOVED": 37,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 35,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 19,
+          "HAVA ID NOT PROVIDED": 11,
+          "VOTER ALREADY VOTED": 5,
+          "INCORRECT PARTY": 1
+        }
       },
       {
         "county_name": "CALDWELL",
-        "count": 228
+        "count": 228,
+        "approved": 117,
+        "not_counted": 104,
+        "partial": 7,
+        "pct_approved": 51.32,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 86,
+          "UNREPORTED MOVE": 74,
+          "PREVIOUSLY REMOVED": 32,
+          "INCORRECT PRECINCT": 20,
+          "DL/SSN PROVISIONAL": 9,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 6,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "CAMDEN",
-        "count": 14
+        "count": 14,
+        "approved": 8,
+        "not_counted": 5,
+        "partial": 1,
+        "pct_approved": 57.14,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 10,
+          "UNREPORTED MOVE": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 1,
+          "DL/SSN PROVISIONAL": 1
+        }
       },
       {
         "county_name": "CARTERET",
-        "count": 257
+        "count": 257,
+        "approved": 122,
+        "not_counted": 134,
+        "partial": 1,
+        "pct_approved": 47.47,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 111,
+          "INCORRECT PRECINCT": 43,
+          "PREVIOUSLY REMOVED": 36,
+          "UNREPORTED MOVE": 19,
+          "DL/SSN PROVISIONAL": 16,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 13,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 10,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "JURISDICTION DISPUTE": 3,
+          "HAVA ID NOT PROVIDED": 1,
+          "VOTER ALREADY VOTED": 1,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "CASWELL",
-        "count": 33
+        "count": 33,
+        "approved": 20,
+        "not_counted": 13,
+        "partial": 0,
+        "pct_approved": 60.61,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 13,
+          "DL/SSN PROVISIONAL": 12,
+          "UNREPORTED MOVE": 3,
+          "PREVIOUSLY REMOVED": 3,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "CATAWBA",
-        "count": 391
+        "count": 391,
+        "approved": 0,
+        "not_counted": 0,
+        "partial": 0,
+        "pct_approved": 0.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 176,
+          "DL/SSN PROVISIONAL": 133,
+          "INCORRECT PRECINCT": 25,
+          "PREVIOUSLY REMOVED": 21,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 9,
+          "JURISDICTION DISPUTE": 6,
+          "VOTER ALREADY VOTED": 6,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "UNREPORTED MOVE": 1,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "CHATHAM",
-        "count": 295
+        "count": 295,
+        "approved": 155,
+        "not_counted": 137,
+        "partial": 3,
+        "pct_approved": 52.54,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 131,
+          "DL/SSN PROVISIONAL": 107,
+          "INCORRECT PRECINCT": 19,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 11,
+          "PREVIOUSLY REMOVED": 10,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 7,
+          "HAVA ID NOT PROVIDED": 4,
+          "VOTER ALREADY VOTED": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "UNREPORTED MOVE": 1,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "CHEROKEE",
-        "count": 23
+        "count": 23,
+        "approved": 14,
+        "not_counted": 9,
+        "partial": 0,
+        "pct_approved": 60.87,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 7,
+          "NO RECORD OF REGISTRATION": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 4,
+          "PREVIOUSLY REMOVED": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "CHOWAN",
-        "count": 45
+        "count": 45,
+        "approved": 27,
+        "not_counted": 18,
+        "partial": 0,
+        "pct_approved": 60.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 18,
+          "PREVIOUSLY REMOVED": 12,
+          "DL/SSN PROVISIONAL": 8,
+          "UNREPORTED MOVE": 4,
+          "VOTER ALREADY VOTED": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 1
+        }
       },
       {
         "county_name": "CLAY",
-        "count": 29
+        "count": 29,
+        "approved": 16,
+        "not_counted": 13,
+        "partial": 0,
+        "pct_approved": 55.17,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 13,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "INCORRECT PRECINCT": 3,
+          "DL/SSN PROVISIONAL": 3,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "PREVIOUSLY REMOVED": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "CLEVELAND",
-        "count": 322
+        "count": 322,
+        "approved": 152,
+        "not_counted": 163,
+        "partial": 7,
+        "pct_approved": 47.2,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 159,
+          "DL/SSN PROVISIONAL": 67,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 32,
+          "PREVIOUSLY REMOVED": 22,
+          "INCORRECT PRECINCT": 18,
+          "HAVA ID NOT PROVIDED": 9,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 8,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 7
+        }
       },
       {
         "county_name": "COLUMBUS",
-        "count": 110
+        "count": 110,
+        "approved": 70,
+        "not_counted": 40,
+        "partial": 0,
+        "pct_approved": 63.64,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 35,
+          "PREVIOUSLY REMOVED": 25,
+          "DL/SSN PROVISIONAL": 23,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 6,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 6,
+          "VOTED DURING EXTENDED HOURS": 4,
+          "JURISDICTION DISPUTE": 3,
+          "UNREPORTED MOVE": 3,
+          "INCORRECT PRECINCT": 2,
+          "VOTER ALREADY VOTED": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "CRAVEN",
-        "count": 334
+        "count": 334,
+        "approved": 116,
+        "not_counted": 182,
+        "partial": 36,
+        "pct_approved": 34.73,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 234,
+          "DL/SSN PROVISIONAL": 35,
+          "INCORRECT PRECINCT": 26,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 10,
+          "PREVIOUSLY REMOVED": 7,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 7,
+          "JURISDICTION DISPUTE": 4,
+          "VOTER ALREADY VOTED": 3,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 3,
+          "UNREPORTED MOVE": 2,
+          "INCORRECT PARTY": 1,
+          "HAVA ID NOT PROVIDED": 1,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "CUMBERLAND",
-        "count": 1165
+        "count": 1165,
+        "approved": 498,
+        "not_counted": 601,
+        "partial": 66,
+        "pct_approved": 42.75,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 433,
+          "UNREPORTED MOVE": 244,
+          "DL/SSN PROVISIONAL": 230,
+          "INCORRECT PRECINCT": 115,
+          "JURISDICTION DISPUTE": 75,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 35,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 10,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 4,
+          "HAVA ID NOT PROVIDED": 2,
+          "PREVIOUSLY REMOVED": 2,
+          "VOTER ALREADY VOTED": 2,
+          "VOTED DURING EXTENDED HOURS": 1
+        }
       },
       {
         "county_name": "CURRITUCK",
-        "count": 127
+        "count": 127,
+        "approved": 77,
+        "not_counted": 50,
+        "partial": 0,
+        "pct_approved": 60.63,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 58,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 23,
+          "INCORRECT PRECINCT": 18,
+          "UNREPORTED MOVE": 13,
+          "DL/SSN PROVISIONAL": 11,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 4
+        }
       },
       {
         "county_name": "DARE",
-        "count": 93
+        "count": 93,
+        "approved": 47,
+        "not_counted": 46,
+        "partial": 0,
+        "pct_approved": 50.54,
+        "voted_reasons": {
+          "PREVIOUSLY REMOVED": 28,
+          "NO RECORD OF REGISTRATION": 27,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 16,
+          "DL/SSN PROVISIONAL": 8,
+          "UNREPORTED MOVE": 5,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "DAVIDSON",
-        "count": 612
+        "count": 612,
+        "approved": 251,
+        "not_counted": 348,
+        "partial": 13,
+        "pct_approved": 41.01,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 384,
+          "DL/SSN PROVISIONAL": 105,
+          "INCORRECT PRECINCT": 44,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 21,
+          "PREVIOUSLY REMOVED": 14,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 13,
+          "JURISDICTION DISPUTE": 12,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 10,
+          "UNREPORTED MOVE": 4,
+          "VOTER ALREADY VOTED": 2,
+          "HAVA ID NOT PROVIDED": 2,
+          "INCORRECT PARTY": 1
+        }
       },
       {
         "county_name": "DAVIE",
-        "count": 65
+        "count": 65,
+        "approved": 32,
+        "not_counted": 33,
+        "partial": 0,
+        "pct_approved": 49.23,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 23,
+          "DL/SSN PROVISIONAL": 19,
+          "PREVIOUSLY REMOVED": 14,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 6,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "DUPLIN",
-        "count": 147
+        "count": 147,
+        "approved": 90,
+        "not_counted": 57,
+        "partial": 0,
+        "pct_approved": 61.22,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 62,
+          "DL/SSN PROVISIONAL": 60,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 8,
+          "INCORRECT PRECINCT": 6,
+          "PREVIOUSLY REMOVED": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2,
+          "HAVA ID NOT PROVIDED": 1,
+          "JURISDICTION DISPUTE": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "DURHAM",
-        "count": 2175
+        "count": 2175,
+        "approved": 890,
+        "not_counted": 1020,
+        "partial": 265,
+        "pct_approved": 40.92,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 808,
+          "INCORRECT PRECINCT": 367,
+          "DL/SSN PROVISIONAL": 359,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 246,
+          "PREVIOUSLY REMOVED": 204,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 66,
+          "UNREPORTED MOVE": 66,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 26,
+          "JURISDICTION DISPUTE": 14,
+          "VOTER ALREADY VOTED": 11,
+          "HAVA ID NOT PROVIDED": 7,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "EDGECOMBE",
-        "count": 113
+        "count": 113,
+        "approved": 82,
+        "not_counted": 31,
+        "partial": 0,
+        "pct_approved": 72.57,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 56,
+          "NO RECORD OF REGISTRATION": 29,
+          "PREVIOUSLY REMOVED": 13,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "UNREPORTED MOVE": 4,
+          "INCORRECT PRECINCT": 3,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "FORSYTH",
-        "count": 1931
+        "count": 1931,
+        "approved": 811,
+        "not_counted": 727,
+        "partial": 393,
+        "pct_approved": 42.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 981,
+          "DL/SSN PROVISIONAL": 216,
+          "JURISDICTION DISPUTE": 209,
+          "INCORRECT PRECINCT": 115,
+          "PREVIOUSLY REMOVED": 113,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 110,
+          "UNREPORTED MOVE": 89,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 45,
+          "VOTER ALREADY VOTED": 15,
+          "HAVA ID NOT PROVIDED": 14,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 13,
+          "INCORRECT PARTY": 10,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "FRANKLIN",
-        "count": 285
+        "count": 285,
+        "approved": 98,
+        "not_counted": 169,
+        "partial": 18,
+        "pct_approved": 34.39,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 150,
+          "DL/SSN PROVISIONAL": 50,
+          "UNREPORTED MOVE": 25,
+          "PREVIOUSLY REMOVED": 22,
+          "INCORRECT PRECINCT": 14,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 8,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 6,
+          "JURISDICTION DISPUTE": 5,
+          "HAVA ID NOT PROVIDED": 3,
+          "VOTER ALREADY VOTED": 2
+        }
       },
       {
         "county_name": "GASTON",
-        "count": 747
+        "count": 747,
+        "approved": 283,
+        "not_counted": 436,
+        "partial": 28,
+        "pct_approved": 37.88,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 420,
+          "UNREPORTED MOVE": 105,
+          "DL/SSN PROVISIONAL": 76,
+          "INCORRECT PRECINCT": 42,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 30,
+          "PREVIOUSLY REMOVED": 27,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 26,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 13,
+          "VOTER ALREADY VOTED": 7,
+          "HAVA ID NOT PROVIDED": 1
+        }
       },
       {
         "county_name": "GATES",
-        "count": 49
+        "count": 49,
+        "approved": 36,
+        "not_counted": 13,
+        "partial": 0,
+        "pct_approved": 73.47,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 15,
+          "NO RECORD OF REGISTRATION": 11,
+          "PREVIOUSLY REMOVED": 9,
+          "UNREPORTED MOVE": 6,
+          "INCORRECT PRECINCT": 5,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1
+        }
       },
       {
         "county_name": "GRAHAM",
-        "count": 41
+        "count": 41,
+        "approved": 27,
+        "not_counted": 14,
+        "partial": 0,
+        "pct_approved": 65.85,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 11,
+          "PREVIOUSLY REMOVED": 10,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 10,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2,
+          "DL/SSN PROVISIONAL": 2,
+          "UNREPORTED MOVE": 2
+        }
       },
       {
         "county_name": "GRANVILLE",
-        "count": 248
+        "count": 248,
+        "approved": 144,
+        "not_counted": 95,
+        "partial": 9,
+        "pct_approved": 58.06,
+        "voted_reasons": {
+          "UNREPORTED MOVE": 87,
+          "NO RECORD OF REGISTRATION": 79,
+          "DL/SSN PROVISIONAL": 41,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 26,
+          "PREVIOUSLY REMOVED": 7,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "VOTER ALREADY VOTED": 1,
+          "HAVA ID NOT PROVIDED": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "GREENE",
-        "count": 86
+        "count": 86,
+        "approved": 39,
+        "not_counted": 47,
+        "partial": 0,
+        "pct_approved": 45.35,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 36,
+          "UNREPORTED MOVE": 13,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 11,
+          "DL/SSN PROVISIONAL": 10,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "INCORRECT PRECINCT": 5,
+          "HAVA ID NOT PROVIDED": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "GUILFORD",
-        "count": 1577
+        "count": 1577,
+        "approved": 630,
+        "not_counted": 819,
+        "partial": 128,
+        "pct_approved": 39.95,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 746,
+          "DL/SSN PROVISIONAL": 284,
+          "INCORRECT PRECINCT": 128,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 100,
+          "UNREPORTED MOVE": 87,
+          "PREVIOUSLY REMOVED": 71,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 68,
+          "JURISDICTION DISPUTE": 33,
+          "VOTER ALREADY VOTED": 25,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 20,
+          "HAVA ID NOT PROVIDED": 14,
+          "VOTED DURING EXTENDED HOURS": 1
+        }
       },
       {
         "county_name": "HALIFAX",
-        "count": 98
+        "count": 98,
+        "approved": 79,
+        "not_counted": 18,
+        "partial": 1,
+        "pct_approved": 80.61,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 34,
+          "PREVIOUSLY REMOVED": 14,
+          "NO RECORD OF REGISTRATION": 13,
+          "INCORRECT PRECINCT": 13,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 6,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 4,
+          "UNREPORTED MOVE": 3,
+          "JURISDICTION DISPUTE": 2,
+          "VOTER ALREADY VOTED": 2,
+          "HAVA ID NOT PROVIDED": 2
+        }
       },
       {
         "county_name": "HARNETT",
-        "count": 893
+        "count": 893,
+        "approved": 499,
+        "not_counted": 389,
+        "partial": 5,
+        "pct_approved": 55.88,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 461,
+          "DL/SSN PROVISIONAL": 155,
+          "INCORRECT PRECINCT": 126,
+          "UNREPORTED MOVE": 95,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 28,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 15,
+          "VOTER ALREADY VOTED": 8,
+          "JURISDICTION DISPUTE": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "PREVIOUSLY REMOVED": 1
+        }
       },
       {
         "county_name": "HAYWOOD",
-        "count": 46
+        "count": 46,
+        "approved": 23,
+        "not_counted": 23,
+        "partial": 0,
+        "pct_approved": 50.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 22,
+          "DL/SSN PROVISIONAL": 10,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 6,
+          "PREVIOUSLY REMOVED": 6,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "HENDERSON",
-        "count": 116
+        "count": 116,
+        "approved": 52,
+        "not_counted": 64,
+        "partial": 0,
+        "pct_approved": 44.83,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 52,
+          "PREVIOUSLY REMOVED": 26,
+          "DL/SSN PROVISIONAL": 17,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 8,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "INCORRECT PRECINCT": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "HERTFORD",
-        "count": 96
+        "count": 96,
+        "approved": 66,
+        "not_counted": 30,
+        "partial": 0,
+        "pct_approved": 68.75,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 45,
+          "DL/SSN PROVISIONAL": 23,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 9,
+          "UNREPORTED MOVE": 9,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "PREVIOUSLY REMOVED": 2,
+          "JURISDICTION DISPUTE": 2,
+          "VOTER ALREADY VOTED": 2,
+          "INCORRECT PARTY": 1
+        }
       },
       {
         "county_name": "HOKE",
-        "count": 164
+        "count": 164,
+        "approved": 59,
+        "not_counted": 105,
+        "partial": 0,
+        "pct_approved": 35.98,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 90,
+          "INCORRECT PRECINCT": 23,
+          "UNREPORTED MOVE": 22,
+          "PREVIOUSLY REMOVED": 14,
+          "DL/SSN PROVISIONAL": 14,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 1
+        }
       },
       {
         "county_name": "HYDE",
-        "count": 21
+        "count": 21,
+        "approved": 12,
+        "not_counted": 9,
+        "partial": 0,
+        "pct_approved": 57.14,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 6,
+          "INCORRECT PRECINCT": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "NO RECORD OF REGISTRATION": 3,
+          "UNREPORTED MOVE": 3,
+          "PREVIOUSLY REMOVED": 1
+        }
       },
       {
         "county_name": "IREDELL",
-        "count": 479
+        "count": 479,
+        "approved": 198,
+        "not_counted": 254,
+        "partial": 27,
+        "pct_approved": 41.34,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 261,
+          "INCORRECT PRECINCT": 100,
+          "DL/SSN PROVISIONAL": 52,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 35,
+          "PREVIOUSLY REMOVED": 16,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 7,
+          "HAVA ID NOT PROVIDED": 2,
+          "UNREPORTED MOVE": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "VOTER ALREADY VOTED": 1,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "JACKSON",
-        "count": 262
+        "count": 262,
+        "approved": 98,
+        "not_counted": 164,
+        "partial": 0,
+        "pct_approved": 37.4,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 134,
+          "UNREPORTED MOVE": 50,
+          "INCORRECT PRECINCT": 30,
+          "PREVIOUSLY REMOVED": 18,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 15,
+          "DL/SSN PROVISIONAL": 13,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1
+        }
       },
       {
         "county_name": "JOHNSTON",
-        "count": 990
+        "count": 990,
+        "approved": 351,
+        "not_counted": 613,
+        "partial": 26,
+        "pct_approved": 35.45,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 620,
+          "DL/SSN PROVISIONAL": 171,
+          "INCORRECT PRECINCT": 72,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 48,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 25,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 19,
+          "PREVIOUSLY REMOVED": 13,
+          "UNREPORTED MOVE": 9,
+          "VOTER ALREADY VOTED": 7,
+          "JURISDICTION DISPUTE": 6
+        }
       },
       {
         "county_name": "JONES",
-        "count": 37
+        "count": 37,
+        "approved": 21,
+        "not_counted": 16,
+        "partial": 0,
+        "pct_approved": 56.76,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 11,
+          "DL/SSN PROVISIONAL": 8,
+          "UNREPORTED MOVE": 7,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "PREVIOUSLY REMOVED": 3
+        }
       },
       {
         "county_name": "LEE",
-        "count": 157
+        "count": 157,
+        "approved": 81,
+        "not_counted": 76,
+        "partial": 0,
+        "pct_approved": 51.59,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 67,
+          "DL/SSN PROVISIONAL": 30,
+          "PREVIOUSLY REMOVED": 18,
+          "INCORRECT PRECINCT": 16,
+          "UNREPORTED MOVE": 8,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 6,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 6,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 4,
+          "HAVA ID NOT PROVIDED": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "LENOIR",
-        "count": 251
+        "count": 251,
+        "approved": 128,
+        "not_counted": 120,
+        "partial": 3,
+        "pct_approved": 51.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 126,
+          "DL/SSN PROVISIONAL": 83,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 13,
+          "PREVIOUSLY REMOVED": 11,
+          "INCORRECT PRECINCT": 8,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "UNREPORTED MOVE": 3,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "LINCOLN",
-        "count": 249
+        "count": 249,
+        "approved": 111,
+        "not_counted": 138,
+        "partial": 0,
+        "pct_approved": 44.58,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 122,
+          "DL/SSN PROVISIONAL": 45,
+          "UNREPORTED MOVE": 34,
+          "PREVIOUSLY REMOVED": 20,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 11,
+          "INCORRECT PRECINCT": 11,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "HAVA ID NOT PROVIDED": 1,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "MACON",
-        "count": 82
+        "count": 82,
+        "approved": 46,
+        "not_counted": 36,
+        "partial": 0,
+        "pct_approved": 56.1,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 30,
+          "INCORRECT PRECINCT": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 11,
+          "UNREPORTED MOVE": 10,
+          "PREVIOUSLY REMOVED": 10,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "DL/SSN PROVISIONAL": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "MADISON",
-        "count": 84
+        "count": 84,
+        "approved": 31,
+        "not_counted": 50,
+        "partial": 3,
+        "pct_approved": 36.9,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 36,
+          "DL/SSN PROVISIONAL": 16,
+          "PREVIOUSLY REMOVED": 13,
+          "INCORRECT PRECINCT": 5,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "UNREPORTED MOVE": 3,
+          "JURISDICTION DISPUTE": 2
+        }
       },
       {
         "county_name": "MARTIN",
-        "count": 73
+        "count": 73,
+        "approved": 32,
+        "not_counted": 34,
+        "partial": 7,
+        "pct_approved": 43.84,
+        "voted_reasons": {
+          "UNREPORTED MOVE": 28,
+          "NO RECORD OF REGISTRATION": 17,
+          "DL/SSN PROVISIONAL": 13,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "INCORRECT PRECINCT": 3,
+          "HAVA ID NOT PROVIDED": 3,
+          "PREVIOUSLY REMOVED": 3,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "MCDOWELL",
-        "count": 94
+        "count": 94,
+        "approved": 44,
+        "not_counted": 50,
+        "partial": 0,
+        "pct_approved": 46.81,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 44,
+          "UNREPORTED MOVE": 17,
+          "DL/SSN PROVISIONAL": 12,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 7,
+          "PREVIOUSLY REMOVED": 6,
+          "INCORRECT PRECINCT": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2
+        }
       },
       {
         "county_name": "MECKLENBURG",
-        "count": 3137
+        "count": 3137,
+        "approved": 1330,
+        "not_counted": 1379,
+        "partial": 428,
+        "pct_approved": 42.4,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 1293,
+          "DL/SSN PROVISIONAL": 547,
+          "INCORRECT PRECINCT": 447,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 284,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 142,
+          "PREVIOUSLY REMOVED": 130,
+          "UNREPORTED MOVE": 117,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 62,
+          "HAVA ID NOT PROVIDED": 51,
+          "VOTER ALREADY VOTED": 36,
+          "JURISDICTION DISPUTE": 26,
+          "INCORRECT PARTY": 1,
+          "VOTED DURING EXTENDED HOURS": 1
+        }
       },
       {
         "county_name": "MITCHELL",
-        "count": 32
+        "count": 32,
+        "approved": 19,
+        "not_counted": 13,
+        "partial": 0,
+        "pct_approved": 59.38,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 12,
+          "DL/SSN PROVISIONAL": 5,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "UNREPORTED MOVE": 1,
+          "JURISDICTION DISPUTE": 1,
+          "PREVIOUSLY REMOVED": 1,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "MONTGOMERY",
-        "count": 80
+        "count": 80,
+        "approved": 35,
+        "not_counted": 43,
+        "partial": 2,
+        "pct_approved": 43.75,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 33,
+          "DL/SSN PROVISIONAL": 25,
+          "PREVIOUSLY REMOVED": 11,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 4,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "UNREPORTED MOVE": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "MOORE",
-        "count": 408
+        "count": 408,
+        "approved": 187,
+        "not_counted": 191,
+        "partial": 30,
+        "pct_approved": 45.83,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 144,
+          "UNREPORTED MOVE": 71,
+          "INCORRECT PRECINCT": 58,
+          "PREVIOUSLY REMOVED": 46,
+          "DL/SSN PROVISIONAL": 38,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 19,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 19,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 8,
+          "HAVA ID NOT PROVIDED": 3,
+          "VOTER ALREADY VOTED": 2
+        }
       },
       {
         "county_name": "NASH",
-        "count": 452
+        "count": 452,
+        "approved": 221,
+        "not_counted": 207,
+        "partial": 24,
+        "pct_approved": 48.89,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 187,
+          "DL/SSN PROVISIONAL": 173,
+          "PREVIOUSLY REMOVED": 20,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 17,
+          "INCORRECT PRECINCT": 16,
+          "VOTER ALREADY VOTED": 10,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 8,
+          "UNREPORTED MOVE": 7,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 7,
+          "HAVA ID NOT PROVIDED": 4,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1,
+          "JURISDICTION DISPUTE": 1,
+          "INCORRECT PARTY": 1
+        }
       },
       {
         "county_name": "NEW HANOVER",
-        "count": 1025
+        "count": 1025,
+        "approved": 444,
+        "not_counted": 450,
+        "partial": 131,
+        "pct_approved": 43.32,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 422,
+          "INCORRECT PRECINCT": 218,
+          "DL/SSN PROVISIONAL": 177,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 55,
+          "PREVIOUSLY REMOVED": 50,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 40,
+          "JURISDICTION DISPUTE": 22,
+          "UNREPORTED MOVE": 17,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 16,
+          "VOTER ALREADY VOTED": 7,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "NORTHAMPTON",
-        "count": 44
+        "count": 44,
+        "approved": 36,
+        "not_counted": 8,
+        "partial": 0,
+        "pct_approved": 81.82,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 10,
+          "DL/SSN PROVISIONAL": 7,
+          "PREVIOUSLY REMOVED": 6,
+          "VOTER ALREADY VOTED": 5,
+          "INCORRECT PRECINCT": 4
+        }
       },
       {
         "county_name": "ONSLOW",
-        "count": 459
+        "count": 459,
+        "approved": 229,
+        "not_counted": 208,
+        "partial": 22,
+        "pct_approved": 49.89,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 231,
+          "DL/SSN PROVISIONAL": 68,
+          "INCORRECT PRECINCT": 64,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 36,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 21,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 11,
+          "PREVIOUSLY REMOVED": 10,
+          "UNREPORTED MOVE": 9,
+          "VOTER ALREADY VOTED": 6,
+          "JURISDICTION DISPUTE": 2,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "ORANGE",
-        "count": 610
+        "count": 610,
+        "approved": 186,
+        "not_counted": 412,
+        "partial": 12,
+        "pct_approved": 30.49,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 385,
+          "DL/SSN PROVISIONAL": 106,
+          "INCORRECT PRECINCT": 31,
+          "UNREPORTED MOVE": 27,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 22,
+          "HAVA ID NOT PROVIDED": 13,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 12,
+          "PREVIOUSLY REMOVED": 11,
+          "VOTER ALREADY VOTED": 2,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "PAMLICO",
-        "count": 59
+        "count": 59,
+        "approved": 37,
+        "not_counted": 22,
+        "partial": 0,
+        "pct_approved": 62.71,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 34,
+          "PREVIOUSLY REMOVED": 10,
+          "DL/SSN PROVISIONAL": 8,
+          "JURISDICTION DISPUTE": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "INCORRECT PRECINCT": 1,
+          "UNREPORTED MOVE": 1
+        }
       },
       {
         "county_name": "PASQUOTANK",
-        "count": 206
+        "count": 206,
+        "approved": 67,
+        "not_counted": 134,
+        "partial": 5,
+        "pct_approved": 32.52,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 154,
+          "DL/SSN PROVISIONAL": 16,
+          "PREVIOUSLY REMOVED": 14,
+          "INCORRECT PRECINCT": 10,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "UNREPORTED MOVE": 2,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "PENDER",
-        "count": 259
+        "count": 259,
+        "approved": 134,
+        "not_counted": 125,
+        "partial": 0,
+        "pct_approved": 51.74,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 97,
+          "UNREPORTED MOVE": 78,
+          "DL/SSN PROVISIONAL": 42,
+          "PREVIOUSLY REMOVED": 24,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "HAVA ID NOT PROVIDED": 2
+        }
       },
       {
         "county_name": "PERQUIMANS",
-        "count": 39
+        "count": 39,
+        "approved": 17,
+        "not_counted": 22,
+        "partial": 0,
+        "pct_approved": 43.59,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 20,
+          "UNREPORTED MOVE": 8,
+          "INCORRECT PRECINCT": 3,
+          "PREVIOUSLY REMOVED": 2,
+          "DL/SSN PROVISIONAL": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "JURISDICTION DISPUTE": 1,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1
+        }
       },
       {
         "county_name": "PERSON",
-        "count": 105
+        "count": 105,
+        "approved": 63,
+        "not_counted": 42,
+        "partial": 0,
+        "pct_approved": 60.0,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 37,
+          "DL/SSN PROVISIONAL": 36,
+          "UNREPORTED MOVE": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 10,
+          "PREVIOUSLY REMOVED": 4,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2
+        }
       },
       {
         "county_name": "PITT",
-        "count": 1107
+        "count": 1107,
+        "approved": 618,
+        "not_counted": 353,
+        "partial": 136,
+        "pct_approved": 55.83,
+        "voted_reasons": {
+          "UNREPORTED MOVE": 448,
+          "NO RECORD OF REGISTRATION": 335,
+          "DL/SSN PROVISIONAL": 117,
+          "PREVIOUSLY REMOVED": 74,
+          "INCORRECT PRECINCT": 73,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 21,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 20,
+          "VOTER ALREADY VOTED": 7,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 7,
+          "HAVA ID NOT PROVIDED": 5
+        }
       },
       {
         "county_name": "POLK",
-        "count": 79
+        "count": 79,
+        "approved": 46,
+        "not_counted": 33,
+        "partial": 0,
+        "pct_approved": 58.23,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 24,
+          "JURISDICTION DISPUTE": 20,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 14,
+          "INCORRECT PRECINCT": 6,
+          "DL/SSN PROVISIONAL": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3,
+          "PREVIOUSLY REMOVED": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "RANDOLPH",
-        "count": 370
+        "count": 370,
+        "approved": 169,
+        "not_counted": 185,
+        "partial": 16,
+        "pct_approved": 45.68,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 174,
+          "DL/SSN PROVISIONAL": 90,
+          "PREVIOUSLY REMOVED": 40,
+          "INCORRECT PRECINCT": 29,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 23,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "VOTER ALREADY VOTED": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 4,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "RICHMOND",
-        "count": 146
+        "count": 146,
+        "approved": 76,
+        "not_counted": 70,
+        "partial": 0,
+        "pct_approved": 52.05,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 46,
+          "PREVIOUSLY REMOVED": 32,
+          "INCORRECT PRECINCT": 23,
+          "DL/SSN PROVISIONAL": 20,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 4,
+          "VOTER ALREADY VOTED": 2,
+          "JURISDICTION DISPUTE": 1,
+          "UNREPORTED MOVE": 1
+        }
       },
       {
         "county_name": "ROBESON",
-        "count": 559
+        "count": 559,
+        "approved": 315,
+        "not_counted": 228,
+        "partial": 16,
+        "pct_approved": 56.35,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 164,
+          "NO RECORD OF REGISTRATION": 145,
+          "PREVIOUSLY REMOVED": 110,
+          "INCORRECT PRECINCT": 36,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 27,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 22,
+          "UNREPORTED MOVE": 18,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 16,
+          "JURISDICTION DISPUTE": 11,
+          "VOTER ALREADY VOTED": 5,
+          "HAVA ID NOT PROVIDED": 4,
+          "VOTED DURING EXTENDED HOURS": 1
+        }
       },
       {
         "county_name": "ROCKINGHAM",
-        "count": 340
+        "count": 340,
+        "approved": 230,
+        "not_counted": 110,
+        "partial": 0,
+        "pct_approved": 67.65,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 116,
+          "DL/SSN PROVISIONAL": 87,
+          "PREVIOUSLY REMOVED": 60,
+          "INCORRECT PRECINCT": 30,
+          "UNREPORTED MOVE": 19,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 9,
+          "VOTER ALREADY VOTED": 4,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "VOTED DURING EXTENDED HOURS": 1
+        }
       },
       {
         "county_name": "ROWAN",
-        "count": 472
+        "count": 472,
+        "approved": 153,
+        "not_counted": 314,
+        "partial": 5,
+        "pct_approved": 32.42,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 281,
+          "UNREPORTED MOVE": 61,
+          "DL/SSN PROVISIONAL": 59,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 37,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 10,
+          "PREVIOUSLY REMOVED": 10,
+          "HAVA ID NOT PROVIDED": 9,
+          "INCORRECT PRECINCT": 5
+        }
       },
       {
         "county_name": "RUTHERFORD",
-        "count": 192
+        "count": 192,
+        "approved": 92,
+        "not_counted": 100,
+        "partial": 0,
+        "pct_approved": 47.92,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 108,
+          "INCORRECT PRECINCT": 34,
+          "DL/SSN PROVISIONAL": 33,
+          "JURISDICTION DISPUTE": 6,
+          "PREVIOUSLY REMOVED": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 1,
+          "UNREPORTED MOVE": 1,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "SAMPSON",
-        "count": 167
+        "count": 167,
+        "approved": 101,
+        "not_counted": 52,
+        "partial": 14,
+        "pct_approved": 60.48,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 50,
+          "NO RECORD OF REGISTRATION": 47,
+          "PREVIOUSLY REMOVED": 26,
+          "INCORRECT PRECINCT": 16,
+          "VOTER ALREADY VOTED": 11,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 8,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "UNREPORTED MOVE": 4
+        }
       },
       {
         "county_name": "SCOTLAND",
-        "count": 131
+        "count": 131,
+        "approved": 55,
+        "not_counted": 76,
+        "partial": 0,
+        "pct_approved": 41.98,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 60,
+          "PREVIOUSLY REMOVED": 41,
+          "DL/SSN PROVISIONAL": 16,
+          "INCORRECT PRECINCT": 11,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1,
+          "UNREPORTED MOVE": 1,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "STANLY",
-        "count": 270
+        "count": 270,
+        "approved": 154,
+        "not_counted": 113,
+        "partial": 3,
+        "pct_approved": 57.04,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 129,
+          "DL/SSN PROVISIONAL": 58,
+          "INCORRECT PRECINCT": 47,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 15,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 10,
+          "PREVIOUSLY REMOVED": 5,
+          "VOTER ALREADY VOTED": 3,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 3
+        }
       },
       {
         "county_name": "STOKES",
-        "count": 62
+        "count": 62,
+        "approved": 45,
+        "not_counted": 17,
+        "partial": 0,
+        "pct_approved": 72.58,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 15,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "DL/SSN PROVISIONAL": 11,
+          "UNREPORTED MOVE": 11,
+          "INCORRECT PRECINCT": 6,
+          "PREVIOUSLY REMOVED": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2
+        }
       },
       {
         "county_name": "SURRY",
-        "count": 244
+        "count": 244,
+        "approved": 137,
+        "not_counted": 96,
+        "partial": 11,
+        "pct_approved": 56.15,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 70,
+          "INCORRECT PRECINCT": 48,
+          "PREVIOUSLY REMOVED": 38,
+          "DL/SSN PROVISIONAL": 29,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 22,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 17,
+          "UNREPORTED MOVE": 17,
+          "HAVA ID NOT PROVIDED": 2,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "SWAIN",
-        "count": 71
+        "count": 71,
+        "approved": 32,
+        "not_counted": 39,
+        "partial": 0,
+        "pct_approved": 45.07,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 38,
+          "PREVIOUSLY REMOVED": 10,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 8,
+          "DL/SSN PROVISIONAL": 7,
+          "JURISDICTION DISPUTE": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "TRANSYLVANIA",
-        "count": 103
+        "count": 103,
+        "approved": 52,
+        "not_counted": 51,
+        "partial": 0,
+        "pct_approved": 50.49,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 49,
+          "INCORRECT PRECINCT": 23,
+          "PREVIOUSLY REMOVED": 7,
+          "UNREPORTED MOVE": 6,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "DL/SSN PROVISIONAL": 5,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 4,
+          "VOTER ALREADY VOTED": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "JURISDICTION DISPUTE": 1
+        }
       },
       {
         "county_name": "TYRRELL",
-        "count": 7
+        "count": 7,
+        "approved": 6,
+        "not_counted": 1,
+        "partial": 0,
+        "pct_approved": 85.71,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 5,
+          "JURISDICTION DISPUTE": 1,
+          "UNREPORTED MOVE": 1
+        }
       },
       {
         "county_name": "UNION",
-        "count": 803
+        "count": 803,
+        "approved": 426,
+        "not_counted": 356,
+        "partial": 21,
+        "pct_approved": 53.05,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 424,
+          "DL/SSN PROVISIONAL": 162,
+          "INCORRECT PRECINCT": 100,
+          "PREVIOUSLY REMOVED": 30,
+          "UNREPORTED MOVE": 28,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 22,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 17,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 7,
+          "HAVA ID NOT PROVIDED": 6,
+          "VOTER ALREADY VOTED": 4,
+          "JURISDICTION DISPUTE": 3
+        }
       },
       {
         "county_name": "VANCE",
-        "count": 128
+        "count": 128,
+        "approved": 91,
+        "not_counted": 36,
+        "partial": 1,
+        "pct_approved": 71.09,
+        "voted_reasons": {
+          "DL/SSN PROVISIONAL": 51,
+          "PREVIOUSLY REMOVED": 37,
+          "NO RECORD OF REGISTRATION": 28,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "INCORRECT PRECINCT": 2,
+          "VOTER ALREADY VOTED": 2,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 2,
+          "HAVA ID NOT PROVIDED": 1
+        }
       },
       {
         "county_name": "WAKE",
-        "count": 3338
+        "count": 3338,
+        "approved": 1277,
+        "not_counted": 1545,
+        "partial": 516,
+        "pct_approved": 38.26,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 1228,
+          "DL/SSN PROVISIONAL": 585,
+          "INCORRECT PRECINCT": 566,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 281,
+          "PREVIOUSLY REMOVED": 244,
+          "UNREPORTED MOVE": 217,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 122,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 72,
+          "VOTER ALREADY VOTED": 22,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "WARREN",
-        "count": 56
+        "count": 56,
+        "approved": 23,
+        "not_counted": 33,
+        "partial": 0,
+        "pct_approved": 41.07,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 25,
+          "DL/SSN PROVISIONAL": 14,
+          "INCORRECT PRECINCT": 5,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 4,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "UNREPORTED MOVE": 2,
+          "INCORRECT PARTY": 1,
+          "PREVIOUSLY REMOVED": 1,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "WASHINGTON",
-        "count": 36
+        "count": 36,
+        "approved": 19,
+        "not_counted": 17,
+        "partial": 0,
+        "pct_approved": 52.78,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 18,
+          "DL/SSN PROVISIONAL": 9,
+          "JURISDICTION DISPUTE": 3,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "UNREPORTED MOVE": 1,
+          "PREVIOUSLY REMOVED": 1,
+          "VOTER ALREADY VOTED": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1
+        }
       },
       {
         "county_name": "WATAUGA",
-        "count": 344
+        "count": 344,
+        "approved": 44,
+        "not_counted": 89,
+        "partial": 211,
+        "pct_approved": 12.79,
+        "voted_reasons": {
+          "INCORRECT PRECINCT": 210,
+          "NO RECORD OF REGISTRATION": 75,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 13,
+          "DL/SSN PROVISIONAL": 12,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 11,
+          "PREVIOUSLY REMOVED": 7,
+          "UNREPORTED MOVE": 6,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 6,
+          "VOTER ALREADY VOTED": 2,
+          "JURISDICTION DISPUTE": 1,
+          "ID NOT PROVIDED - EXCEPTION -RELIGIOUS OBJECTION": 1
+        }
       },
       {
         "county_name": "WAYNE",
-        "count": 471
+        "count": 471,
+        "approved": 217,
+        "not_counted": 219,
+        "partial": 35,
+        "pct_approved": 46.07,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 188,
+          "DL/SSN PROVISIONAL": 87,
+          "PREVIOUSLY REMOVED": 69,
+          "INCORRECT PRECINCT": 66,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 28,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 16,
+          "UNREPORTED MOVE": 11,
+          "VOTER ALREADY VOTED": 3,
+          "HAVA ID NOT PROVIDED": 3
+        }
       },
       {
         "county_name": "WILKES",
-        "count": 128
+        "count": 128,
+        "approved": 78,
+        "not_counted": 50,
+        "partial": 0,
+        "pct_approved": 60.94,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 52,
+          "DL/SSN PROVISIONAL": 21,
+          "INCORRECT PRECINCT": 17,
+          "PREVIOUSLY REMOVED": 13,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 5,
+          "VOTER ALREADY VOTED": 3,
+          "JURISDICTION DISPUTE": 2,
+          "VOTED DURING EXTENDED HOURS": 1,
+          "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 1,
+          "UNREPORTED MOVE": 1
+        }
       },
       {
         "county_name": "WILSON",
-        "count": 321
+        "count": 321,
+        "approved": 132,
+        "not_counted": 155,
+        "partial": 34,
+        "pct_approved": 41.12,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 148,
+          "DL/SSN PROVISIONAL": 59,
+          "INCORRECT PRECINCT": 29,
+          "PREVIOUSLY REMOVED": 28,
+          "VOTER ALREADY VOTED": 15,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 14,
+          "UNREPORTED MOVE": 12,
+          "JURISDICTION DISPUTE": 9,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 4,
+          "HAVA ID NOT PROVIDED": 2,
+          "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 1
+        }
       },
       {
         "county_name": "YADKIN",
-        "count": 58
+        "count": 58,
+        "approved": 31,
+        "not_counted": 27,
+        "partial": 0,
+        "pct_approved": 53.45,
+        "voted_reasons": {
+          "NO RECORD OF REGISTRATION": 27,
+          "INCORRECT PRECINCT": 14,
+          "DL/SSN PROVISIONAL": 8,
+          "PREVIOUSLY REMOVED": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 2,
+          "VOTER ALREADY VOTED": 1
+        }
       },
       {
         "county_name": "YANCEY",
-        "count": 57
+        "count": 57,
+        "approved": 31,
+        "not_counted": 26,
+        "partial": 0,
+        "pct_approved": 54.39,
+        "voted_reasons": {
+          "PREVIOUSLY REMOVED": 12,
+          "NO RECORD OF REGISTRATION": 12,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 11,
+          "UNREPORTED MOVE": 8,
+          "DL/SSN PROVISIONAL": 5,
+          "INCORRECT PRECINCT": 4,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 3,
+          "JURISDICTION DISPUTE": 1,
+          "VOTER ALREADY VOTED": 1
+        }
       }
     ],
     "not_counted_reasons": {
