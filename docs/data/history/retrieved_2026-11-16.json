@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T14:45:00.715332+00:00",
+  "generated_at": "2026-11-16T19:28:22.036510+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37338,10 +37338,10 @@
   },
   "provisional": {
     "total": 36865,
-    "approved": 16287,
-    "not_counted": 17109,
-    "partial": 2916,
-    "pct_approved": 44.18,
+    "approved": 16154,
+    "not_counted": 16955,
+    "partial": 2882,
+    "pct_approved": 43.82,
     "by_county": [
       {
         "county_name": "ALAMANCE",
@@ -37796,10 +37796,10 @@
       {
         "county_name": "CRAVEN",
         "count": 334,
-        "approved": 116,
-        "not_counted": 182,
+        "approved": 115,
+        "not_counted": 183,
         "partial": 36,
-        "pct_approved": 34.73,
+        "pct_approved": 34.43,
         "voted_reasons": {
           "NO RECORD OF REGISTRATION": 234,
           "DL/SSN PROVISIONAL": 35,
@@ -39190,10 +39190,10 @@
       {
         "county_name": "WILSON",
         "count": 321,
-        "approved": 132,
-        "not_counted": 155,
-        "partial": 34,
-        "pct_approved": 41.12,
+        "approved": 0,
+        "not_counted": 0,
+        "partial": 0,
+        "pct_approved": 0.0,
         "voted_reasons": {
           "NO RECORD OF REGISTRATION": 148,
           "DL/SSN PROVISIONAL": 59,
@@ -39246,22 +39246,22 @@
       }
     ],
     "not_counted_reasons": {
-      "\u0000": 16287,
-      "NOT REGISTERED": 11636,
-      "VOTING OUT OF PRECINCT": 2754,
-      "REGISTRATION AFTER DEADLINE": 2067,
-      "REMOVED": 1332,
-      "ID NOT PROVIDED": 991,
-      "": 553,
-      "MOVED OUT OF COUNTY MORE THAN 30 DAYS": 384,
-      "OTHER": 271,
-      "PREVIOUSLY DENIED": 248,
+      "\u0000": 16154,
+      "NOT REGISTERED": 11539,
+      "VOTING OUT OF PRECINCT": 2719,
+      "REGISTRATION AFTER DEADLINE": 2055,
+      "REMOVED": 1321,
+      "ID NOT PROVIDED": 975,
+      "": 874,
+      "MOVED OUT OF COUNTY MORE THAN 30 DAYS": 381,
+      "OTHER": 266,
+      "PREVIOUSLY DENIED": 246,
       "INELIGIBLE TO VOTE": 116,
       "PROVISIONAL APPLICATION INCOMPLETE/ILLEGIBLE": 80,
-      "VOTER ALREADY VOTED": 75,
+      "VOTER ALREADY VOTED": 69,
       "NOT ELIGIBLE TO VOTE IN CURRENT ELECTION": 48,
       "TRANSACTION CANCELLED": 10,
-      "BALLOT MISSING FROM ENVELOPE": 8,
+      "BALLOT MISSING FROM ENVELOPE": 7,
       "NON-MATCHING SIGNATURE": 3,
       "WRONG PARTY BALLOT": 1,
       "EXTENDED HOURS ORDER INVALIDATED": 1
@@ -39310,10 +39310,10 @@
       }
     },
     "raw_status_counts": {
-      "NOT COUNTED": 17109,
-      "APPROVED": 16287,
-      "PARTIAL": 2916,
-      "PENDING": 553
+      "NOT COUNTED": 16955,
+      "APPROVED": 16154,
+      "PARTIAL": 2882,
+      "PENDING": 874
     }
   }
 }
