@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T05:00:02.613431+00:00",
+  "generated_at": "2026-11-17T16:13:14.112244+00:00",
   "election_date": "2026-11-03",
   "election_label": "2026 General Election",
   "status": "ok",
@@ -37338,10 +37338,10 @@
   },
   "provisional": {
     "total": 36865,
-    "approved": 16154,
-    "not_counted": 16955,
-    "partial": 2882,
-    "pct_approved": 43.82,
+    "approved": 16503,
+    "not_counted": 17281,
+    "partial": 2919,
+    "pct_approved": 44.77,
     "by_county": [
       {
         "county_name": "ALAMANCE",
@@ -37666,16 +37666,16 @@
       {
         "county_name": "CATAWBA",
         "count": 391,
-        "approved": 0,
-        "not_counted": 0,
-        "partial": 0,
-        "pct_approved": 0.0,
+        "approved": 222,
+        "not_counted": 166,
+        "partial": 3,
+        "pct_approved": 56.78,
         "voted_reasons": {
           "NO RECORD OF REGISTRATION": 176,
-          "DL/SSN PROVISIONAL": 133,
+          "DL/SSN PROVISIONAL": 134,
           "INCORRECT PRECINCT": 25,
           "PREVIOUSLY REMOVED": 21,
-          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 12,
+          "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 11,
           "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 9,
           "JURISDICTION DISPUTE": 6,
           "VOTER ALREADY VOTED": 6,
@@ -38437,10 +38437,9 @@
         "voted_reasons": {
           "UNREPORTED MOVE": 28,
           "NO RECORD OF REGISTRATION": 17,
-          "DL/SSN PROVISIONAL": 13,
-          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 3,
+          "DL/SSN PROVISIONAL": 14,
+          "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 5,
           "INCORRECT PRECINCT": 3,
-          "HAVA ID NOT PROVIDED": 3,
           "PREVIOUSLY REMOVED": 3,
           "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2,
           "JURISDICTION DISPUTE": 1
@@ -39190,10 +39189,10 @@
       {
         "county_name": "WILSON",
         "count": 321,
-        "approved": 0,
-        "not_counted": 0,
-        "partial": 0,
-        "pct_approved": 0.0,
+        "approved": 127,
+        "not_counted": 160,
+        "partial": 34,
+        "pct_approved": 39.56,
         "voted_reasons": {
           "NO RECORD OF REGISTRATION": 148,
           "DL/SSN PROVISIONAL": 59,
@@ -39246,38 +39245,38 @@
       }
     ],
     "not_counted_reasons": {
-      "\u0000": 16154,
-      "NOT REGISTERED": 11539,
-      "VOTING OUT OF PRECINCT": 2719,
-      "REGISTRATION AFTER DEADLINE": 2055,
-      "REMOVED": 1321,
-      "ID NOT PROVIDED": 975,
-      "": 874,
-      "MOVED OUT OF COUNTY MORE THAN 30 DAYS": 381,
-      "OTHER": 266,
-      "PREVIOUSLY DENIED": 246,
+      "\u0000": 16503,
+      "NOT REGISTERED": 11774,
+      "VOTING OUT OF PRECINCT": 2757,
+      "REGISTRATION AFTER DEADLINE": 2075,
+      "REMOVED": 1345,
+      "ID NOT PROVIDED": 995,
+      "MOVED OUT OF COUNTY MORE THAN 30 DAYS": 387,
+      "OTHER": 271,
+      "PREVIOUSLY DENIED": 248,
+      "": 162,
       "INELIGIBLE TO VOTE": 116,
-      "PROVISIONAL APPLICATION INCOMPLETE/ILLEGIBLE": 80,
-      "VOTER ALREADY VOTED": 69,
+      "PROVISIONAL APPLICATION INCOMPLETE/ILLEGIBLE": 82,
+      "VOTER ALREADY VOTED": 79,
       "NOT ELIGIBLE TO VOTE IN CURRENT ELECTION": 48,
       "TRANSACTION CANCELLED": 10,
-      "BALLOT MISSING FROM ENVELOPE": 7,
+      "BALLOT MISSING FROM ENVELOPE": 8,
       "NON-MATCHING SIGNATURE": 3,
       "WRONG PARTY BALLOT": 1,
       "EXTENDED HOURS ORDER INVALIDATED": 1
     },
     "voted_reasons": {
       "NO RECORD OF REGISTRATION": 16241,
-      "DL/SSN PROVISIONAL": 6391,
+      "DL/SSN PROVISIONAL": 6393,
       "INCORRECT PRECINCT": 4178,
       "UNREPORTED MOVE": 2541,
       "PREVIOUSLY REMOVED": 2423,
-      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2149,
-      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1112,
+      "ID NOT PROVIDED - EXCEPTION -REASONABLE IMPEDIMENT": 2148,
+      "ID NOT PROVIDED - NO EXCEPTION FORM/RETURN WITH ID": 1114,
       "UNRECOGNIZED ADDRESS (GEOCODE ISSUE)": 718,
       "JURISDICTION DISPUTE": 542,
       "VOTER ALREADY VOTED": 312,
-      "HAVA ID NOT PROVIDED": 206,
+      "HAVA ID NOT PROVIDED": 203,
       "INCORRECT PARTY": 18,
       "ID NOT PROVIDED - EXCEPTION -NATURAL DISASTER": 17,
       "VOTED DURING EXTENDED HOURS": 10,
@@ -39303,17 +39302,17 @@
       },
       "party": {
         "DEM": 16113,
-        "UNA": 12730,
-        "REP": 7802,
+        "UNA": 12729,
+        "REP": 7803,
         "LIB": 184,
         "GRE": 36
       }
     },
     "raw_status_counts": {
-      "NOT COUNTED": 16955,
-      "APPROVED": 16154,
-      "PARTIAL": 2882,
-      "PENDING": 874
+      "NOT COUNTED": 17281,
+      "APPROVED": 16503,
+      "PARTIAL": 2919,
+      "PENDING": 162
     }
   }
 }
